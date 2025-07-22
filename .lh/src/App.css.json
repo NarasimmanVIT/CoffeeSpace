@@ -1,0 +1,78 @@
+{
+    "sourceFile": "src/App.css",
+    "activeCommit": 0,
+    "commits": [
+        {
+            "activePatchIndex": 15,
+            "patches": [
+                {
+                    "date": 1753106890812,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n"
+                },
+                {
+                    "date": 1753106896083,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -4,8 +4,11 @@\n   padding: 2rem;\n   text-align: center;\n }\n \n+body{\n+  \n+}\n \n .logo {\n   height: 6em;\n   padding: 1.5em;\n"
+                },
+                {
+                    "date": 1753106901300,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -5,9 +5,9 @@\n   text-align: center;\n }\n \n body{\n-  \n+  margin: 0;\n }\n \n .logo {\n   height: 6em;\n"
+                },
+                {
+                    "date": 1753106906975,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -6,8 +6,9 @@\n }\n \n body{\n   margin: 0;\n+  padding: ;\n }\n \n .logo {\n   height: 6em;\n"
+                },
+                {
+                    "date": 1753106920407,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -4,12 +4,8 @@\n   padding: 2rem;\n   text-align: center;\n }\n \n-body{\n-  margin: 0;\n-  padding: ;\n-}\n \n .logo {\n   height: 6em;\n   padding: 1.5em;\n"
+                },
+                {
+                    "date": 1753107473179,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,6 +1,6 @@\n #root {\n-  max-width: 1280px;\n+  max-width: 1280p1x;\n   margin: 0 auto;\n   padding: 2rem;\n   text-align: center;\n }\n"
+                },
+                {
+                    "date": 1753107478974,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,6 +1,6 @@\n #root {\n-  max-width: 1280p1x;\n+  max-width: 100;\n   margin: 0 auto;\n   padding: 2rem;\n   text-align: center;\n }\n"
+                },
+                {
+                    "date": 1753108136724,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,12 +1,12 @@\n #root {\n-  max-width: 100;\n+  max-width: 1280px;\n   margin: 0 auto;\n   padding: 2rem;\n   text-align: center;\n }\n \n-\n+.\n .logo {\n   height: 6em;\n   padding: 1.5em;\n   will-change: filter;\n"
+                },
+                {
+                    "date": 1753108141893,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -4,9 +4,9 @@\n   padding: 2rem;\n   text-align: center;\n }\n \n-.\n+.app-c\n .logo {\n   height: 6em;\n   padding: 1.5em;\n   will-change: filter;\n"
+                },
+                {
+                    "date": 1753108147230,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -4,9 +4,9 @@\n   padding: 2rem;\n   text-align: center;\n }\n \n-.app-c\n+.app-container{}\n .logo {\n   height: 6em;\n   padding: 1.5em;\n   will-change: filter;\n"
+                },
+                {
+                    "date": 1753108152888,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -4,9 +4,11 @@\n   padding: 2rem;\n   text-align: center;\n }\n \n-.app-container{}\n+.app-container{\n+  width: 100%;\n+}\n .logo {\n   height: 6em;\n   padding: 1.5em;\n   will-change: filter;\n"
+                },
+                {
+                    "date": 1753109048954,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,6 +1,6 @@\n #root {\n-  max-width: 1280px;\n+  maxwidth: 1280px;\n   margin: 0 auto;\n   padding: 2rem;\n   text-align: center;\n }\n"
+                },
+                {
+                    "date": 1753109055018,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,6 +1,6 @@\n #root {\n-  maxwidth: 1280px;\n+  width: 100p;\n   margin: 0 auto;\n   padding: 2rem;\n   text-align: center;\n }\n"
+                },
+                {
+                    "date": 1753109061462,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,7 +1,7 @@\n #root {\n-  width: 100p;\n-  margin: 0 auto;\n+  width: 100%;\n+  margin: 0 ;\n   padding: 2rem;\n   text-align: center;\n }\n \n"
+                },
+                {
+                    "date": 1753109066924,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,8 +1,8 @@\n #root {\n   width: 100%;\n-  margin: 0 ;\n-  padding: 2rem;\n+  margin: 0;\n+  padding: 0;\n   text-align: center;\n }\n \n .app-container{\n"
+                },
+                {
+                    "date": 1753109072152,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,9 +1,9 @@\n #root {\n   width: 100%;\n   margin: 0;\n   padding: 0;\n-  text-align: center;\n+  text-align: le;\n }\n \n .app-container{\n   width: 100%;\n"
+                }
+            ],
+            "date": 1753106890812,
+            "name": "Commit-0",
+            "content": "#root {\n  max-width: 1280px;\n  margin: 0 auto;\n  padding: 2rem;\n  text-align: center;\n}\n\n\n.logo {\n  height: 6em;\n  padding: 1.5em;\n  will-change: filter;\n  transition: filter 300ms;\n}\n.logo:hover {\n  filter: drop-shadow(0 0 2em #646cffaa);\n}\n.logo.react:hover {\n  filter: drop-shadow(0 0 2em #61dafbaa);\n}\n\n@keyframes logo-spin {\n  from {\n    transform: rotate(0deg);\n  }\n  to {\n    transform: rotate(360deg);\n  }\n}\n\n@media (prefers-reduced-motion: no-preference) {\n  a:nth-of-type(2) .logo {\n    animation: logo-spin infinite 20s linear;\n  }\n}\n\n.card {\n  padding: 2em;\n}\n\n.read-the-docs {\n  color: #888;\n}\n"
+        }
+    ]
+}

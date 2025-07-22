@@ -1,0 +1,42 @@
+{
+    "sourceFile": "src/App.jsx",
+    "activeCommit": 0,
+    "commits": [
+        {
+            "activePatchIndex": 6,
+            "patches": [
+                {
+                    "date": 1753105860625,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n"
+                },
+                {
+                    "date": 1753105865841,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -3,9 +3,8 @@\n import viteLogo from '/vite.svg'\n import './App.css'\n \n function App() {\n-  const [count, setCount] = useState(0)\n \n   return (\n     <>\n       \n"
+                },
+                {
+                    "date": 1753106214513,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -6,9 +6,9 @@\n function App() {\n \n   return (\n     <>\n-      \n+      <\n     </>\n   )\n }\n \n"
+                },
+                {
+                    "date": 1753106220290,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -6,9 +6,9 @@\n function App() {\n \n   return (\n     <>\n-      <\n+      <Navigator\n     </>\n   )\n }\n \n"
+                },
+                {
+                    "date": 1753106386067,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -6,9 +6,9 @@\n function App() {\n \n   return (\n     <>\n-      <Navigator\n+      <Navb />\n     </>\n   )\n }\n \n"
+                },
+                {
+                    "date": 1753118890116,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,14 +1,16 @@\n import { useState } from 'react'\n import reactLogo from './assets/react.svg'\n import viteLogo from '/vite.svg'\n import './App.css'\n+import Navbar from './components/Navbar'\n \n function App() {\n \n   return (\n     <>\n-      <Navb />\n+      <Navbar />\n+      \n     </>\n   )\n }\n \n"
+                },
+                {
+                    "date": 1753118895338,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -0,0 +1,18 @@\n+import { useState } from 'react'\n+import reactLogo from './assets/react.svg'\n+import viteLogo from '/vite.svg'\n+import './App.css'\n+import Navbar from './components/Navbar'\n+import HeroSection from './components/HeroSection'\n+\n+function App() {\n+\n+  return (\n+    <>\n+      <Navbar />\n+      <HeroSection />\n+    </>\n+  )\n+}\n+\n+export default App\n"
+                }
+            ],
+            "date": 1753105860625,
+            "name": "Commit-0",
+            "content": "import { useState } from 'react'\nimport reactLogo from './assets/react.svg'\nimport viteLogo from '/vite.svg'\nimport './App.css'\n\nfunction App() {\n  const [count, setCount] = useState(0)\n\n  return (\n    <>\n      \n    </>\n  )\n}\n\nexport default App\n"
+        }
+    ]
+}

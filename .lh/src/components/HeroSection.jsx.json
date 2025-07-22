@@ -1,0 +1,230 @@
+{
+    "sourceFile": "src/components/HeroSection.jsx",
+    "activeCommit": 0,
+    "commits": [
+        {
+            "activePatchIndex": 53,
+            "patches": [
+                {
+                    "date": 1753118880607,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n"
+                },
+                {
+                    "date": 1753119345594,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -4,13 +4,13 @@\n \r\n const HeroSection = () => {\r\n   return (\r\n     <section className=\"hero-container\">\r\n-      <div className=\"hero-content\">\r\n+      {/* <div className=\"hero-content\">\r\n         <h1>Connect Over Coffee</h1>\r\n         <p>Find meaningful connections and spark real conversations.</p>\r\n         <button className=\"hero-btn\">Get Started</button>\r\n-      </div>\r\n+      </div> */}\r\n       <div className=\"hero-image\">\r\n         <img src={heroImg} alt=\"Coffee chat\" />\r\n       </div>\r\n     </section>\r\n"
+                },
+                {
+                    "date": 1753119840865,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,19 +1,12 @@\n import React from \"react\";\r\n import \"./HeroSection.css\";\r\n-import heroImg from \"../assets/hero-image.webp\"; // make sure this image exists\r\n+import heroImg from \"../assets/hero-image.webp\"; // Make sure this image is correct\r\n \r\n const HeroSection = () => {\r\n   return (\r\n-    <section className=\"hero-container\">\r\n-      {/* <div className=\"hero-content\">\r\n-        <h1>Connect Over Coffee</h1>\r\n-        <p>Find meaningful connections and spark real conversations.</p>\r\n-        <button className=\"hero-btn\">Get Started</button>\r\n-      </div> */}\r\n-      <div className=\"hero-image\">\r\n-        <img src={heroImg} alt=\"Coffee chat\" />\r\n-      </div>\r\n+    <section className=\"hero-image-only\">\r\n+      <img src={heroImg} alt=\"Hero\" />\r\n     </section>\r\n   );\r\n };\r\n \r\n"
+                },
+                {
+                    "date": 1753119952090,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,11 +1,12 @@\n import React from \"react\";\r\n import \"./HeroSection.css\";\r\n-import heroImg from \"../assets/hero-image.webp\"; // Make sure this image is correct\r\n+import heroImg from \"../assets/hero-image.webp\"; // Make sure image path is correct\r\n \r\n const HeroSection = () => {\r\n   return (\r\n     <section className=\"hero-image-only\">\r\n+      <div className=\"overlay\"></div>\r\n       <img src={heroImg} alt=\"Hero\" />\r\n     </section>\r\n   );\r\n };\r\n"
+                },
+                {
+                    "date": 1753121339677,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,13 +1,26 @@\n import React from \"react\";\r\n import \"./HeroSection.css\";\r\n-import heroImg from \"../assets/hero-image.webp\"; // Make sure image path is correct\r\n+import heroImg from \"../assets/hero-image.webp\"; // Ensure path is correct\r\n \r\n const HeroSection = () => {\r\n   return (\r\n     <section className=\"hero-image-only\">\r\n       <div className=\"overlay\"></div>\r\n       <img src={heroImg} alt=\"Hero\" />\r\n+\r\n+      {/* 👇 Content on top of image */}\r\n+      <div className=\"hero-content\">\r\n+        <h1>India’s Most Loved Payments App</h1>\r\n+        <p>Recharge & pay bills, book flights & movie tickets, open a savings account, invest in stocks & mutual funds, and do a lot more.</p>\r\n+        <div className=\"hero-buttons\">\r\n+          <button className=\"download-btn\">Download Paytm App</button>\r\n+        </div>\r\n+        <div className=\"hero-stats\">\r\n+          <span>350M+ Users</span>\r\n+          <span>50M+ Daily Transactions</span>\r\n+        </div>\r\n+      </div>\r\n     </section>\r\n   );\r\n };\r\n \r\n"
+                },
+                {
+                    "date": 1753121354337,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,26 +1,13 @@\n import React from \"react\";\r\n import \"./HeroSection.css\";\r\n-import heroImg from \"../assets/hero-image.webp\"; // Ensure path is correct\r\n+import heroImg from \"../assets/hero-image.webp\"; // Make sure image path is correct\r\n \r\n const HeroSection = () => {\r\n   return (\r\n     <section className=\"hero-image-only\">\r\n       <div className=\"overlay\"></div>\r\n       <img src={heroImg} alt=\"Hero\" />\r\n-\r\n-      {/* 👇 Content on top of image */}\r\n-      <div className=\"hero-content\">\r\n-        <h1>India’s Most Loved Payments App</h1>\r\n-        <p>Recharge & pay bills, book flights & movie tickets, open a savings account, invest in stocks & mutual funds, and do a lot more.</p>\r\n-        <div className=\"hero-buttons\">\r\n-          <button className=\"download-btn\">Download Paytm App</button>\r\n-        </div>\r\n-        <div className=\"hero-stats\">\r\n-          <span>350M+ Users</span>\r\n-          <span>50M+ Daily Transactions</span>\r\n-        </div>\r\n-      </div>\r\n     </section>\r\n   );\r\n };\r\n \r\n"
+                },
+                {
+                    "date": 1753163640829,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,7 +1,7 @@\n import React from \"react\";\r\n import \"./HeroSection.css\";\r\n-import heroImg from \"../assets/hero-image.webp\"; // Make sure image path is correct\r\n+import heroImg from \"../assets/hero-image.webp\";\r\n \r\n const HeroSection = () => {\r\n   return (\r\n     <section className=\"hero-image-only\">\r\n"
+                },
+                {
+                    "date": 1753163709481,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,13 +1,27 @@\n import React from \"react\";\r\n import \"./HeroSection.css\";\r\n-import heroImg from \"../assets/hero-image.webp\";\r\n+import heroImg from \"../assets/hero-image.webp\"; // Make sure image path is correct\r\n \r\n const HeroSection = () => {\r\n   return (\r\n     <section className=\"hero-image-only\">\r\n       <div className=\"overlay\"></div>\r\n       <img src={heroImg} alt=\"Hero\" />\r\n+      \r\n+      {/* 💥 Hero Content Above Image */}\r\n+      <div className=\"hero-content\">\r\n+        <h1>\r\n+          Connect with entrepreneurs <br /> who share your vision\r\n+        </h1>\r\n+        <p>\r\n+          Discover your tribe, collaborate on ideas, and <br /> turn your passion into reality.\r\n+        </p>\r\n+        <div className=\"hero-buttons\">\r\n+          <button className=\"btn-primary\">Get Started</button>\r\n+          <button className=\"btn-secondary\">Learn More</button>\r\n+        </div>\r\n+      </div>\r\n     </section>\r\n   );\r\n };\r\n \r\n"
+                },
+                {
+                    "date": 1753163849547,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -4,24 +4,22 @@\n \r\n const HeroSection = () => {\r\n   return (\r\n     <section className=\"hero-image-only\">\r\n-      <div className=\"overlay\"></div>\r\n-      <img src={heroImg} alt=\"Hero\" />\r\n-      \r\n-      {/* 💥 Hero Content Above Image */}\r\n       <div className=\"hero-content\">\r\n         <h1>\r\n-          Connect with entrepreneurs <br /> who share your vision\r\n+          Connect with Entrepreneurs\r\n+          <br />\r\n+          <span className=\"highlight-text\">who share your vision</span>\r\n         </h1>\r\n-        <p>\r\n-          Discover your tribe, collaborate on ideas, and <br /> turn your passion into reality.\r\n-        </p>\r\n+        <p>Discover opportunities. Build meaningful partnerships.</p>\r\n         <div className=\"hero-buttons\">\r\n-          <button className=\"btn-primary\">Get Started</button>\r\n-          <button className=\"btn-secondary\">Learn More</button>\r\n+          <button className=\"primary-btn\">Get Started</button>\r\n+          <button className=\"secondary-btn\">Learn More</button>\r\n         </div>\r\n       </div>\r\n+      <div className=\"overlay\"></div>\r\n+      <img src={heroImg} alt=\"Hero\" />\r\n     </section>\r\n   );\r\n };\r\n \r\n"
+                },
+                {
+                    "date": 1753163856452,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,7 +1,7 @@\n import React from \"react\";\r\n import \"./HeroSection.css\";\r\n-import heroImg from \"../assets/hero-image.webp\"; // Make sure image path is correct\r\n+import heroImg from \"../assets/hero-image.webp\"; /\r\n \r\n const HeroSection = () => {\r\n   return (\r\n     <section className=\"hero-image-only\">\r\n"
+                },
+                {
+                    "date": 1753164143216,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -0,0 +1,25 @@\n+import React from \"react\";\r\n+import \"./HeroSection.css\";\r\n+import heroImg from \"../assets/hero-image.webp\"; // Make sure image path is correct\r\n+\r\n+const HeroSection = () => {\r\n+  return (\r\n+    <section className=\"hero-image-only\">\r\n+      <div className=\"overlay\"></div>\r\n+      <img src={heroImg} alt=\"Hero\" />\r\n+      <div className=\"hero-content\">\r\n+        <h1>\r\n+          Connect with <br />\r\n+          <span className=\"highlight-text\">entrepreneurs</span>\r\n+        </h1>\r\n+        <p>who share your vision.</p>\r\n+        <div className=\"hero-buttons\">\r\n+          <button className=\"btn btn-primary\">Discover Now</button>\r\n+          <button className=\"btn btn-secondary\">Join Us</button>\r\n+        </div>\r\n+      </div>\r\n+    </section>\r\n+  );\r\n+};\r\n+\r\n+export default HeroSection;\n\\ No newline at end of file\n"
+                },
+                {
+                    "date": 1753164271994,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -9,9 +9,9 @@\n       <img src={heroImg} alt=\"Hero\" />\r\n       <div className=\"hero-content\">\r\n         <h1>\r\n           Connect with <br />\r\n-          <span className=\"highlight-text\">entrepreneurs</span>\r\n+          <span className=\"highlight-text\">ntrepreneurs</span>\r\n         </h1>\r\n         <p>who share your vision.</p>\r\n         <div className=\"hero-buttons\">\r\n           <button className=\"btn btn-primary\">Discover Now</button>\r\n@@ -21,31 +21,5 @@\n     </section>\r\n   );\r\n };\r\n \r\n-export default HeroSection;\n-import React from \"react\";\r\n-import \"./HeroSection.css\";\r\n-import heroImg from \"../assets/hero-image.webp\"; /\r\n-\r\n-const HeroSection = () => {\r\n-  return (\r\n-    <section className=\"hero-image-only\">\r\n-      <div className=\"hero-content\">\r\n-        <h1>\r\n-          Connect with Entrepreneurs\r\n-          <br />\r\n-          <span className=\"highlight-text\">who share your vision</span>\r\n-        </h1>\r\n-        <p>Discover opportunities. Build meaningful partnerships.</p>\r\n-        <div className=\"hero-buttons\">\r\n-          <button className=\"primary-btn\">Get Started</button>\r\n-          <button className=\"secondary-btn\">Learn More</button>\r\n-        </div>\r\n-      </div>\r\n-      <div className=\"overlay\"></div>\r\n-      <img src={heroImg} alt=\"Hero\" />\r\n-    </section>\r\n-  );\r\n-};\r\n-\r\n export default HeroSection;\n\\ No newline at end of file\n"
+                },
+                {
+                    "date": 1753164794533,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -9,11 +9,11 @@\n       <img src={heroImg} alt=\"Hero\" />\r\n       <div className=\"hero-content\">\r\n         <h1>\r\n           Connect with <br />\r\n-          <span className=\"highlight-text\">ntrepreneurs</span>\r\n+          <span className=\"highlight-text\">Entrepreneurs</span>\r\n         </h1>\r\n-        <p>who share your vision.</p>\r\n+        <p>who share your vision</p>\r\n         <div className=\"hero-buttons\">\r\n           <button className=\"btn btn-primary\">Discover Now</button>\r\n           <button className=\"btn btn-secondary\">Join Us</button>\r\n         </div>\r\n"
+                },
+                {
+                    "date": 1753165198327,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -12,8 +12,14 @@\n           Connect with <br />\r\n           <span className=\"highlight-text\">Entrepreneurs</span>\r\n         </h1>\r\n         <p>who share your vision</p>\r\n+\r\n+        {/* New paragraph added below hero content p */}\r\n+        <p className=\"hero-subtext\">\r\n+          Whether you're launching a startup or scaling a business, find your tribe and grow together.\r\n+        </p>\r\n+\r\n         <div className=\"hero-buttons\">\r\n           <button className=\"btn btn-primary\">Discover Now</button>\r\n           <button className=\"btn btn-secondary\">Join Us</button>\r\n         </div>\r\n"
+                },
+                {
+                    "date": 1753165203742,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -13,9 +13,9 @@\n           <span className=\"highlight-text\">Entrepreneurs</span>\r\n         </h1>\r\n         <p>who share your vision</p>\r\n \r\n-        {/* New paragraph added below hero content p */}\r\n+        \r\n         <p className=\"hero-subtext\">\r\n           Whether you're launching a startup or scaling a business, find your tribe and grow together.\r\n         </p>\r\n \r\n"
+                },
+                {
+                    "date": 1753166538633,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -13,10 +13,9 @@\n           <span className=\"highlight-text\">Entrepreneurs</span>\r\n         </h1>\r\n         <p>who share your vision</p>\r\n \r\n-        \r\n-        <p className=\"hero-subtext\">\r\n+        <p className=\"hero-d\">\r\n           Whether you're launching a startup or scaling a business, find your tribe and grow together.\r\n         </p>\r\n \r\n         <div className=\"hero-buttons\">\r\n"
+                },
+                {
+                    "date": 1753166708070,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -13,11 +13,9 @@\n           <span className=\"highlight-text\">Entrepreneurs</span>\r\n         </h1>\r\n         <p>who share your vision</p>\r\n \r\n-        <p className=\"hero-d\">\r\n-          Whether you're launching a startup or scaling a business, find your tribe and grow together.\r\n-        </p>\r\n+        <p>This is a simple normal paragraph text below the subtitle.</p>\r\n \r\n         <div className=\"hero-buttons\">\r\n           <button className=\"btn btn-primary\">Discover Now</button>\r\n           <button className=\"btn btn-secondary\">Join Us</button>\r\n"
+                },
+                {
+                    "date": 1753166775620,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -13,9 +13,9 @@\n           <span className=\"highlight-text\">Entrepreneurs</span>\r\n         </h1>\r\n         <p>who share your vision</p>\r\n \r\n-        <p>This is a simple normal paragraph text below the subtitle.</p>\r\n+        <p >This is a simple normal paragraph text below the subtitle.</p>\r\n \r\n         <div className=\"hero-buttons\">\r\n           <button className=\"btn btn-primary\">Discover Now</button>\r\n           <button className=\"btn btn-secondary\">Join Us</button>\r\n"
+                },
+                {
+                    "date": 1753166781700,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -13,9 +13,9 @@\n           <span className=\"highlight-text\">Entrepreneurs</span>\r\n         </h1>\r\n         <p>who share your vision</p>\r\n \r\n-        <p >This is a simple normal paragraph text below the subtitle.</p>\r\n+        <p className=\"parah\">This is a simple normal paragraph text below the subtitle.</p>\r\n \r\n         <div className=\"hero-buttons\">\r\n           <button className=\"btn btn-primary\">Discover Now</button>\r\n           <button className=\"btn btn-secondary\">Join Us</button>\r\n"
+                },
+                {
+                    "date": 1753166814400,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -13,9 +13,9 @@\n           <span className=\"highlight-text\">Entrepreneurs</span>\r\n         </h1>\r\n         <p>who share your vision</p>\r\n \r\n-        <p className=\"parah\">This is a simple normal paragraph text below the subtitle.</p>\r\n+        {/* <p className=\"parah\">This is a simple normal paragraph text below the subtitle.</p> */}\r\n \r\n         <div className=\"hero-buttons\">\r\n           <button className=\"btn btn-primary\">Discover Now</button>\r\n           <button className=\"btn btn-secondary\">Join Us</button>\r\n"
+                },
+                {
+                    "date": 1753166943293,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -12,8 +12,9 @@\n           Connect with <br />\r\n           <span className=\"highlight-text\">Entrepreneurs</span>\r\n         </h1>\r\n         <p>who share your vision</p>\r\n+        \r\n \r\n         {/* <p className=\"parah\">This is a simple normal paragraph text below the subtitle.</p> */}\r\n \r\n         <div className=\"hero-buttons\">\r\n"
+                },
+                {
+                    "date": 1753166948714,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -12,10 +12,11 @@\n           Connect with <br />\r\n           <span className=\"highlight-text\">Entrepreneurs</span>\r\n         </h1>\r\n         <p>who share your vision</p>\r\n-        \r\n \r\n+        <div></div>\r\n+\r\n         {/* <p className=\"parah\">This is a simple normal paragraph text below the subtitle.</p> */}\r\n \r\n         <div className=\"hero-buttons\">\r\n           <button className=\"btn btn-primary\">Discover Now</button>\r\n"
+                },
+                {
+                    "date": 1753166955695,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -13,12 +13,14 @@\n           <span className=\"highlight-text\">Entrepreneurs</span>\r\n         </h1>\r\n         <p>who share your vision</p>\r\n \r\n-        <div></div>\r\n+        <div>\r\n \r\n-        {/* <p className=\"parah\">This is a simple normal paragraph text below the subtitle.</p> */}\r\n+        </div>\r\n \r\n+        {/*  */}\r\n+\r\n         <div className=\"hero-buttons\">\r\n           <button className=\"btn btn-primary\">Discover Now</button>\r\n           <button className=\"btn btn-secondary\">Join Us</button>\r\n         </div>\r\n"
+                },
+                {
+                    "date": 1753166962470,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -14,12 +14,12 @@\n         </h1>\r\n         <p>who share your vision</p>\r\n \r\n         <div>\r\n-\r\n+            <p className=\"parah\">This is a simple normal paragraph text below the subtitle.</p>\r\n         </div>\r\n \r\n-        {/*  */}\r\n+       \r\n \r\n         <div className=\"hero-buttons\">\r\n           <button className=\"btn btn-primary\">Discover Now</button>\r\n           <button className=\"btn btn-secondary\">Join Us</button>\r\n"
+                },
+                {
+                    "date": 1753166969053,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -13,14 +13,12 @@\n           <span className=\"highlight-text\">Entrepreneurs</span>\r\n         </h1>\r\n         <p>who share your vision</p>\r\n \r\n-        <div>\r\n+        <div >\r\n             <p className=\"parah\">This is a simple normal paragraph text below the subtitle.</p>\r\n         </div>\r\n \r\n-       \r\n-\r\n         <div className=\"hero-buttons\">\r\n           <button className=\"btn btn-primary\">Discover Now</button>\r\n           <button className=\"btn btn-secondary\">Join Us</button>\r\n         </div>\r\n"
+                },
+                {
+                    "date": 1753166976080,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -13,9 +13,9 @@\n           <span className=\"highlight-text\">Entrepreneurs</span>\r\n         </h1>\r\n         <p>who share your vision</p>\r\n \r\n-        <div >\r\n+        <divc>\r\n             <p className=\"parah\">This is a simple normal paragraph text below the subtitle.</p>\r\n         </div>\r\n \r\n         <div className=\"hero-buttons\">\r\n"
+                },
+                {
+                    "date": 1753166981568,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -13,9 +13,9 @@\n           <span className=\"highlight-text\">Entrepreneurs</span>\r\n         </h1>\r\n         <p>who share your vision</p>\r\n \r\n-        <divc>\r\n+        <div className=\"p\">\r\n             <p className=\"parah\">This is a simple normal paragraph text below the subtitle.</p>\r\n         </div>\r\n \r\n         <div className=\"hero-buttons\">\r\n"
+                },
+                {
+                    "date": 1753166986752,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -13,10 +13,10 @@\n           <span className=\"highlight-text\">Entrepreneurs</span>\r\n         </h1>\r\n         <p>who share your vision</p>\r\n \r\n-        <div className=\"p\">\r\n-            <p className=\"parah\">This is a simple normal paragraph text below the subtitle.</p>\r\n+        <div className=\"parah\">\r\n+            <p >This is a simple normal paragraph text below the subtitle.</p>\r\n         </div>\r\n \r\n         <div className=\"hero-buttons\">\r\n           <button className=\"btn btn-primary\">Discover Now</button>\r\n"
+                },
+                {
+                    "date": 1753167007123,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -13,11 +13,11 @@\n           <span className=\"highlight-text\">Entrepreneurs</span>\r\n         </h1>\r\n         <p>who share your vision</p>\r\n \r\n-        <div className=\"parah\">\r\n-            <p >This is a simple normal paragraph text below the subtitle.</p>\r\n-        </div>\r\n+        {/* <div className=\"parah\">\r\n+            <p>This is a simple normal paragraph text below the subtitle.</p>\r\n+        </div> */}\r\n \r\n         <div className=\"hero-buttons\">\r\n           <button className=\"btn btn-primary\">Discover Now</button>\r\n           <button className=\"btn btn-secondary\">Join Us</button>\r\n"
+                },
+                {
+                    "date": 1753167103646,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -13,11 +13,9 @@\n           <span className=\"highlight-text\">Entrepreneurs</span>\r\n         </h1>\r\n         <p>who share your vision</p>\r\n \r\n-        {/* <div className=\"parah\">\r\n-            <p>This is a simple normal paragraph text below the subtitle.</p>\r\n-        </div> */}\r\n+        \r\n \r\n         <div className=\"hero-buttons\">\r\n           <button className=\"btn btn-primary\">Discover Now</button>\r\n           <button className=\"btn btn-secondary\">Join Us</button>\r\n"
+                },
+                {
+                    "date": 1753167265178,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -13,9 +13,11 @@\n           <span className=\"highlight-text\">Entrepreneurs</span>\r\n         </h1>\r\n         <p>who share your vision</p>\r\n \r\n-        \r\n+        <div>\r\n+            \r\n+        </div>\r\n \r\n         <div className=\"hero-buttons\">\r\n           <button className=\"btn btn-primary\">Discover Now</button>\r\n           <button className=\"btn btn-secondary\">Join Us</button>\r\n"
+                },
+                {
+                    "date": 1753167270597,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -14,9 +14,9 @@\n         </h1>\r\n         <p>who share your vision</p>\r\n \r\n         <div>\r\n-            \r\n+            <p></p>\r\n         </div>\r\n \r\n         <div className=\"hero-buttons\">\r\n           <button className=\"btn btn-primary\">Discover Now</button>\r\n"
+                },
+                {
+                    "date": 1753167275732,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -13,9 +13,9 @@\n           <span className=\"highlight-text\">Entrepreneurs</span>\r\n         </h1>\r\n         <p>who share your vision</p>\r\n \r\n-        <div>\r\n+        <div className=\"para\">\r\n             <p></p>\r\n         </div>\r\n \r\n         <div className=\"hero-buttons\">\r\n"
+                },
+                {
+                    "date": 1753167288607,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -13,10 +13,10 @@\n           <span className=\"highlight-text\">Entrepreneurs</span>\r\n         </h1>\r\n         <p>who share your vision</p>\r\n \r\n-        <div className=\"para\">\r\n-            <p></p>\r\n+        <div className=\"parah\">\r\n+            <p>D</p>\r\n         </div>\r\n \r\n         <div className=\"hero-buttons\">\r\n           <button className=\"btn btn-primary\">Discover Now</button>\r\n"
+                },
+                {
+                    "date": 1753167304682,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -14,9 +14,9 @@\n         </h1>\r\n         <p>who share your vision</p>\r\n \r\n         <div className=\"parah\">\r\n-            <p>D</p>\r\n+            <p>Discover and connect with entrepreneurs who share your interests, industry focus, and business vision for meaningful partnerships.</p>\r\n         </div>\r\n \r\n         <div className=\"hero-buttons\">\r\n           <button className=\"btn btn-primary\">Discover Now</button>\r\n"
+                },
+                {
+                    "date": 1753167311157,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -14,9 +14,9 @@\n         </h1>\r\n         <p>who share your vision</p>\r\n \r\n         <div className=\"parah\">\r\n-            <p>Discover and connect with entrepreneurs who share your interests, industry focus, and business vision for meaningful partnerships.</p>\r\n+            <p>Discover and connect with entrepreneurs who share your  interests, industry focus, and business vision for meaningful partnerships.</p>\r\n         </div>\r\n \r\n         <div className=\"hero-buttons\">\r\n           <button className=\"btn btn-primary\">Discover Now</button>\r\n"
+                },
+                {
+                    "date": 1753167320269,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -14,9 +14,9 @@\n         </h1>\r\n         <p>who share your vision</p>\r\n \r\n         <div className=\"parah\">\r\n-            <p>Discover and connect with entrepreneurs who share your  interests, industry focus, and business vision for meaningful partnerships.</p>\r\n+            <p>Discover and connect with entrepreneurs who share your <br /> interests, industry focus, and business vision for meaningful  partnerships.</p>\r\n         </div>\r\n \r\n         <div className=\"hero-buttons\">\r\n           <button className=\"btn btn-primary\">Discover Now</button>\r\n"
+                },
+                {
+                    "date": 1753167604946,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -14,14 +14,14 @@\n         </h1>\r\n         <p>who share your vision</p>\r\n \r\n         <div className=\"parah\">\r\n-            <p>Discover and connect with entrepreneurs who share your <br /> interests, industry focus, and business vision for meaningful  partnerships.</p>\r\n+            <p>Discover and connect with entrepreneurs who share your <br /> interests, industry focus, and business vision for meaningful <br /> partnerships.</p>\r\n         </div>\r\n \r\n         <div className=\"hero-buttons\">\r\n           <button className=\"btn btn-primary\">Discover Now</button>\r\n-          <button className=\"btn btn-secondary\">Join Us</button>\r\n+          <button className=\"btn btn-secondary\"></button>\r\n         </div>\r\n       </div>\r\n     </section>\r\n   );\r\n"
+                },
+                {
+                    "date": 1753167612402,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -18,10 +18,10 @@\n             <p>Discover and connect with entrepreneurs who share your <br /> interests, industry focus, and business vision for meaningful <br /> partnerships.</p>\r\n         </div>\r\n \r\n         <div className=\"hero-buttons\">\r\n-          <button className=\"btn btn-primary\">Discover Now</button>\r\n-          <button className=\"btn btn-secondary\"></button>\r\n+          <button className=\"btn btn-primary\">Join Us</button>\r\n+          <button className=\"btn btn-secondary\">L</button>\r\n         </div>\r\n       </div>\r\n     </section>\r\n   );\r\n"
+                },
+                {
+                    "date": 1753167620471,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -19,9 +19,9 @@\n         </div>\r\n \r\n         <div className=\"hero-buttons\">\r\n           <button className=\"btn btn-primary\">Join Us</button>\r\n-          <button className=\"btn btn-secondary\">L</button>\r\n+          <button className=\"btn btn-secondary\">Learn M</button>\r\n         </div>\r\n       </div>\r\n     </section>\r\n   );\r\n"
+                },
+                {
+                    "date": 1753167628759,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -18,10 +18,10 @@\n             <p>Discover and connect with entrepreneurs who share your <br /> interests, industry focus, and business vision for meaningful <br /> partnerships.</p>\r\n         </div>\r\n \r\n         <div className=\"hero-buttons\">\r\n-          <button className=\"btn btn-primary\">Join Us</button>\r\n-          <button className=\"btn btn-secondary\">Learn M</button>\r\n+          <button className=\"btn btn-primary\">Join t</button>\r\n+          <button className=\"btn btn-secondary\">Learn More</button>\r\n         </div>\r\n       </div>\r\n     </section>\r\n   );\r\n"
+                },
+                {
+                    "date": 1753167634224,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -18,9 +18,9 @@\n             <p>Discover and connect with entrepreneurs who share your <br /> interests, industry focus, and business vision for meaningful <br /> partnerships.</p>\r\n         </div>\r\n \r\n         <div className=\"hero-buttons\">\r\n-          <button className=\"btn btn-primary\">Join t</button>\r\n+          <button className=\"btn btn-primary\">Join the </button>\r\n           <button className=\"btn btn-secondary\">Learn More</button>\r\n         </div>\r\n       </div>\r\n     </section>\r\n"
+                },
+                {
+                    "date": 1753167645288,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -18,9 +18,9 @@\n             <p>Discover and connect with entrepreneurs who share your <br /> interests, industry focus, and business vision for meaningful <br /> partnerships.</p>\r\n         </div>\r\n \r\n         <div className=\"hero-buttons\">\r\n-          <button className=\"btn btn-primary\">Join the </button>\r\n+          <button className=\"btn btn-primary\">Join the Community </button>\r\n           <button className=\"btn btn-secondary\">Learn More</button>\r\n         </div>\r\n       </div>\r\n     </section>\r\n"
+                },
+                {
+                    "date": 1753167651021,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -18,9 +18,9 @@\n             <p>Discover and connect with entrepreneurs who share your <br /> interests, industry focus, and business vision for meaningful <br /> partnerships.</p>\r\n         </div>\r\n \r\n         <div className=\"hero-buttons\">\r\n-          <button className=\"btn btn-primary\">Join the Community </button>\r\n+          <button className=\"btn btn-primary\">Join the Community -</button>\r\n           <button className=\"btn btn-secondary\">Learn More</button>\r\n         </div>\r\n       </div>\r\n     </section>\r\n"
+                },
+                {
+                    "date": 1753168201854,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -16,11 +16,12 @@\n \r\n         <div className=\"parah\">\r\n             <p>Discover and connect with entrepreneurs who share your <br /> interests, industry focus, and business vision for meaningful <br /> partnerships.</p>\r\n         </div>\r\n+        \r\n \r\n         <div className=\"hero-buttons\">\r\n-          <button className=\"btn btn-primary\">Join the Community -</button>\r\n+          <button className=\"btn btn-primary\">Join the Community </button>\r\n           <button className=\"btn btn-secondary\">Learn More</button>\r\n         </div>\r\n       </div>\r\n     </section>\r\n"
+                },
+                {
+                    "date": 1753168248273,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -16,9 +16,8 @@\n \r\n         <div className=\"parah\">\r\n             <p>Discover and connect with entrepreneurs who share your <br /> interests, industry focus, and business vision for meaningful <br /> partnerships.</p>\r\n         </div>\r\n-        \r\n \r\n         <div className=\"hero-buttons\">\r\n           <button className=\"btn btn-primary\">Join the Community </button>\r\n           <button className=\"btn btn-secondary\">Learn More</button>\r\n"
+                },
+                {
+                    "date": 1753168253947,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -21,8 +21,11 @@\n         <div className=\"hero-buttons\">\r\n           <button className=\"btn btn-primary\">Join the Community </button>\r\n           <button className=\"btn btn-secondary\">Learn More</button>\r\n         </div>\r\n+\r\n+\r\n+        \r\n       </div>\r\n     </section>\r\n   );\r\n };\r\n"
+                },
+                {
+                    "date": 1753168260449,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -22,10 +22,8 @@\n           <button className=\"btn btn-primary\">Join the Community </button>\r\n           <button className=\"btn btn-secondary\">Learn More</button>\r\n         </div>\r\n \r\n-\r\n-        \r\n       </div>\r\n     </section>\r\n   );\r\n };\r\n"
+                },
+                {
+                    "date": 1753171843487,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -22,8 +22,26 @@\n           <button className=\"btn btn-primary\">Join the Community </button>\r\n           <button className=\"btn btn-secondary\">Learn More</button>\r\n         </div>\r\n \r\n+        \r\n+           <div className=\"stats-container\">\r\n+          <div className=\"stat-item\">\r\n+            <div className=\"stat-number\">5000+</div>\r\n+            <div className=\"stat-label\">Entrepreneurs</div>\r\n+          </div>\r\n+          \r\n+          <div className=\"stat-item\">\r\n+            <div className=\"stat-number\">25+</div>\r\n+            <div className=\"stat-label\">Interest Categories</div>\r\n+          </div>\r\n+          <div className=\"stat-item\">\r\n+            <div className=\"stat-number\">200+</div>\r\n+            <div className=\"stat-label\">Partnerships Formed</div>\r\n+          </div>\r\n+        </div>\r\n+\r\n+\r\n       </div>\r\n     </section>\r\n   );\r\n };\r\n"
+                },
+                {
+                    "date": 1753171848580,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -28,9 +28,9 @@\n           <div className=\"stat-item\">\r\n             <div className=\"stat-number\">5000+</div>\r\n             <div className=\"stat-label\">Entrepreneurs</div>\r\n           </div>\r\n-          \r\n+          direct,\r\n           <div className=\"stat-item\">\r\n             <div className=\"stat-number\">25+</div>\r\n             <div className=\"stat-label\">Interest Categories</div>\r\n           </div>\r\n"
+                },
+                {
+                    "date": 1753171856001,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -28,9 +28,9 @@\n           <div className=\"stat-item\">\r\n             <div className=\"stat-number\">5000+</div>\r\n             <div className=\"stat-label\">Entrepreneurs</div>\r\n           </div>\r\n-          direct,\r\n+          <div ></div>\r\n           <div className=\"stat-item\">\r\n             <div className=\"stat-number\">25+</div>\r\n             <div className=\"stat-label\">Interest Categories</div>\r\n           </div>\r\n"
+                },
+                {
+                    "date": 1753171862101,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -28,9 +28,9 @@\n           <div className=\"stat-item\">\r\n             <div className=\"stat-number\">5000+</div>\r\n             <div className=\"stat-label\">Entrepreneurs</div>\r\n           </div>\r\n-          <div ></div>\r\n+          <div className=\"d\"></div>\r\n           <div className=\"stat-item\">\r\n             <div className=\"stat-number\">25+</div>\r\n             <div className=\"stat-label\">Interest Categories</div>\r\n           </div>\r\n"
+                },
+                {
+                    "date": 1753171872331,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -28,13 +28,14 @@\n           <div className=\"stat-item\">\r\n             <div className=\"stat-number\">5000+</div>\r\n             <div className=\"stat-label\">Entrepreneurs</div>\r\n           </div>\r\n-          <div className=\"d\"></div>\r\n+          <div className=\"divider\"></div>\r\n           <div className=\"stat-item\">\r\n             <div className=\"stat-number\">25+</div>\r\n             <div className=\"stat-label\">Interest Categories</div>\r\n           </div>\r\n+          \r\n           <div className=\"stat-item\">\r\n             <div className=\"stat-number\">200+</div>\r\n             <div className=\"stat-label\">Partnerships Formed</div>\r\n           </div>\r\n"
+                },
+                {
+                    "date": 1753172005731,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,7 +1,7 @@\n import React from \"react\";\r\n import \"./HeroSection.css\";\r\n-import heroImg from \"../assets/hero-image.webp\"; // Make sure image path is correct\r\n+import heroImg from \"../assets/hero-image.webp\"; \r\n \r\n const HeroSection = () => {\r\n   return (\r\n     <section className=\"hero-image-only\">\r\n@@ -33,9 +33,9 @@\n           <div className=\"stat-item\">\r\n             <div className=\"stat-number\">25+</div>\r\n             <div className=\"stat-label\">Interest Categories</div>\r\n           </div>\r\n-          \r\n+          <div className=\"divider\"></div>\r\n           <div className=\"stat-item\">\r\n             <div className=\"stat-number\">200+</div>\r\n             <div className=\"stat-label\">Partnerships Formed</div>\r\n           </div>\r\n"
+                }
+            ],
+            "date": 1753118880607,
+            "name": "Commit-0",
+            "content": "import React from \"react\";\r\nimport \"./HeroSection.css\";\r\nimport heroImg from \"../assets/hero-image.webp\"; // make sure this image exists\r\n\r\nconst HeroSection = () => {\r\n  return (\r\n    <section className=\"hero-container\">\r\n      <div className=\"hero-content\">\r\n        <h1>Connect Over Coffee</h1>\r\n        <p>Find meaningful connections and spark real conversations.</p>\r\n        <button className=\"hero-btn\">Get Started</button>\r\n      </div>\r\n      <div className=\"hero-image\">\r\n        <img src={heroImg} alt=\"Coffee chat\" />\r\n      </div>\r\n    </section>\r\n  );\r\n};\r\n\r\nexport default HeroSection;"
+        }
+    ]
+}

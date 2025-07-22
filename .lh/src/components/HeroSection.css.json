@@ -1,0 +1,634 @@
+{
+    "sourceFile": "src/components/HeroSection.css",
+    "activeCommit": 0,
+    "commits": [
+        {
+            "activePatchIndex": 154,
+            "patches": [
+                {
+                    "date": 1753118871125,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n"
+                },
+                {
+                    "date": 1753119831262,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,53 +1,12 @@\n-.hero-container {\r\n-  display: flex;\r\n-  justify-content: space-between;\r\n-  align-items: center;\r\n-  padding: 80px 60px;\r\n-  background: #fff;\r\n-  gap: 50px;\r\n-  flex-wrap: wrap;\r\n+.hero-image-only {\r\n+  width: 100%;\r\n+  margin-top: 0; /* no gap below navbar */\r\n+  padding: 0;\r\n }\r\n \r\n-.hero-content {\r\n-  flex: 1;\r\n-  max-width: 500px;\r\n-}\r\n-\r\n-.hero-content h1 {\r\n-  font-size: 42px;\r\n-  color: #2f2121;\r\n-  margin-bottom: 20px;\r\n-}\r\n-\r\n-.hero-content p {\r\n-  font-size: 18px;\r\n-  color: #8a6969;\r\n-  margin-bottom: 30px;\r\n-}\r\n-\r\n-.hero-btn {\r\n-  padding: 12px 28px;\r\n-  background-color: #2f2121;\r\n-  color: white;\r\n-  border: none;\r\n-  border-radius: 8px;\r\n-  font-size: 16px;\r\n-  cursor: pointer;\r\n-}\r\n-\r\n-.hero-btn:hover {\r\n-  background-color: #473030;\r\n-}\r\n-\r\n-.hero-image {\r\n-  flex: 1;\r\n-  display: flex;\r\n-  justify-content: center;\r\n-}\r\n-\r\n-.hero-image img {\r\n-  max-width: 100%;\r\n+.hero-image-only img {\r\n+  width: 100%;\r\n   height: auto;\r\n-  border-radius: 12px;\r\n+  display: block;\r\n   object-fit: cover;\r\n }\n\\ No newline at end of file\n"
+                },
+                {
+                    "date": 1753120004428,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,12 +1,29 @@\n .hero-image-only {\r\n+  position: relative;\r\n   width: 100%;\r\n-  margin-top: 0; /* no gap below navbar */\r\n+  margin-top: 0;\r\n   padding: 0;\r\n }\r\n \r\n .hero-image-only img {\r\n   width: 100%;\r\n   height: auto;\r\n   display: block;\r\n   object-fit: cover;\r\n+}\r\n+\r\n+/* 🔥 Color overlay */\r\n+.hero-image-only .overlay {\r\n+  position: absolute;\r\n+  top: 0;\r\n+  left: 0;\r\n+  width: 100%;\r\n+  height: 100%;\r\n+  background: linear-gradient(\r\n+    to bottom,\r\n+    rgba(255, 255, 255, 0.9),\r\n+    rgba(255, 255, 255, 0.6)\r\n+  ); /* You can change color as needed */\r\n+  z-index: 1;\r\n+  pointer-events: none;\r\n }\n\\ No newline at end of file\n"
+                },
+                {
+                    "date": 1753120090370,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -11,19 +11,19 @@\n   display: block;\r\n   object-fit: cover;\r\n }\r\n \r\n-/* 🔥 Color overlay */\r\n+/* 🔥 Colored overlay using #CE612B */\r\n .hero-image-only .overlay {\r\n   position: absolute;\r\n   top: 0;\r\n   left: 0;\r\n   width: 100%;\r\n   height: 100%;\r\n   background: linear-gradient(\r\n     to bottom,\r\n-    rgba(255, 255, 255, 0.9),\r\n-    rgba(255, 255, 255, 0.6)\r\n-  ); /* You can change color as needed */\r\n+    rgba(206, 97, 43, 0.8),\r\n+    rgba(206, 97, 43, 0.3)\r\n+  ); /* #CE612B with transparency */\r\n   z-index: 1;\r\n   pointer-events: none;\r\n }\n\\ No newline at end of file\n"
+                },
+                {
+                    "date": 1753120734819,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -20,9 +20,9 @@\n   width: 100%;\r\n   height: 100%;\r\n   background: linear-gradient(\r\n     to bottom,\r\n-    rgba(206, 97, 43, 0.8),\r\n+    rgba(206, 97, 43, 0.),\r\n     rgba(206, 97, 43, 0.3)\r\n   ); /* #CE612B with transparency */\r\n   z-index: 1;\r\n   pointer-events: none;\r\n"
+                },
+                {
+                    "date": 1753120740188,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -20,10 +20,10 @@\n   width: 100%;\r\n   height: 100%;\r\n   background: linear-gradient(\r\n     to bottom,\r\n-    rgba(206, 97, 43, 0.),\r\n-    rgba(206, 97, 43, 0.3)\r\n+    rgba(206, 97, 43, 0.95),\r\n+    rgba(206, 97, 43, 0.7)\r\n   ); /* #CE612B with transparency */\r\n   z-index: 1;\r\n   pointer-events: none;\r\n }\n\\ No newline at end of file\n"
+                },
+                {
+                    "date": 1753120887022,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -21,9 +21,9 @@\n   height: 100%;\r\n   background: linear-gradient(\r\n     to bottom,\r\n     rgba(206, 97, 43, 0.95),\r\n-    rgba(206, 97, 43, 0.7)\r\n+    rgba(206, 97, 43, 0.)\r\n   ); /* #CE612B with transparency */\r\n   z-index: 1;\r\n   pointer-events: none;\r\n }\n\\ No newline at end of file\n"
+                },
+                {
+                    "date": 1753120895366,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -21,9 +21,10 @@\n   height: 100%;\r\n   background: linear-gradient(\r\n     to bottom,\r\n     rgba(206, 97, 43, 0.95),\r\n-    rgba(206, 97, 43, 0.)\r\n+    rgba(206, 97, 43, 0.6)\r\n+\r\n   ); /* #CE612B with transparency */\r\n   z-index: 1;\r\n   pointer-events: none;\r\n }\n\\ No newline at end of file\n"
+                },
+                {
+                    "date": 1753120900728,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -22,9 +22,9 @@\n   background: linear-gradient(\r\n     to bottom,\r\n     rgba(206, 97, 43, 0.95),\r\n     rgba(206, 97, 43, 0.6)\r\n-\r\n   ); /* #CE612B with transparency */\r\n+  b\r\n   z-index: 1;\r\n   pointer-events: none;\r\n }\n\\ No newline at end of file\n"
+                },
+                {
+                    "date": 1753120900822,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -23,8 +23,8 @@\n     to bottom,\r\n     rgba(206, 97, 43, 0.95),\r\n     rgba(206, 97, 43, 0.6)\r\n   ); /* #CE612B with transparency */\r\n-  b\r\n+  ba\r\n   z-index: 1;\r\n   pointer-events: none;\r\n }\n\\ No newline at end of file\n"
+                },
+                {
+                    "date": 1753120908718,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -23,8 +23,8 @@\n     to bottom,\r\n     rgba(206, 97, 43, 0.95),\r\n     rgba(206, 97, 43, 0.6)\r\n   ); /* #CE612B with transparency */\r\n-  ba\r\n+  backd\r\n   z-index: 1;\r\n   pointer-events: none;\r\n }\n\\ No newline at end of file\n"
+                },
+                {
+                    "date": 1753120914088,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -23,8 +23,8 @@\n     to bottom,\r\n     rgba(206, 97, 43, 0.95),\r\n     rgba(206, 97, 43, 0.6)\r\n   ); /* #CE612B with transparency */\r\n-  backd\r\n+  backdrop-filter: blu;\r\n   z-index: 1;\r\n   pointer-events: none;\r\n }\n\\ No newline at end of file\n"
+                },
+                {
+                    "date": 1753120919342,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -23,8 +23,8 @@\n     to bottom,\r\n     rgba(206, 97, 43, 0.95),\r\n     rgba(206, 97, 43, 0.6)\r\n   ); /* #CE612B with transparency */\r\n-  backdrop-filter: blu;\r\n+  backdrop-filter: blur();\r\n   z-index: 1;\r\n   pointer-events: none;\r\n }\n\\ No newline at end of file\n"
+                },
+                {
+                    "date": 1753121129968,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -20,11 +20,10 @@\n   width: 100%;\r\n   height: 100%;\r\n   background: linear-gradient(\r\n     to bottom,\r\n-    rgba(206, 97, 43, 0.95),\r\n-    rgba(206, 97, 43, 0.6)\r\n+    rgba(206, 97, 43, 0.8),\r\n+    rgba(206, 97, 43, 0.3)\r\n   ); /* #CE612B with transparency */\r\n-  backdrop-filter: blur();\r\n   z-index: 1;\r\n   pointer-events: none;\r\n }\n\\ No newline at end of file\n"
+                },
+                {
+                    "date": 1753121318177,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,29 +1,52 @@\n-.hero-image-only {\r\n-  position: relative;\r\n-  width: 100%;\r\n-  margin-top: 0;\r\n-  padding: 0;\r\n+.hero-content {\r\n+  position: absolute;\r\n+  top: 50%;\r\n+  left: 50%;\r\n+  transform: translate(-50%, -50%);\r\n+  z-index: 2;\r\n+  color: white;\r\n+  text-align: center;\r\n+  max-width: 90%;\r\n+  padding: 0 1rem;\r\n }\r\n \r\n-.hero-image-only img {\r\n-  width: 100%;\r\n-  height: auto;\r\n-  display: block;\r\n-  object-fit: cover;\r\n+.hero-content h1 {\r\n+  font-size: 2.5rem;\r\n+  margin-bottom: 1rem;\r\n+  font-weight: bold;\r\n }\r\n \r\n-/* 🔥 Colored overlay using #CE612B */\r\n-.hero-image-only .overlay {\r\n-  position: absolute;\r\n-  top: 0;\r\n-  left: 0;\r\n-  width: 100%;\r\n-  height: 100%;\r\n-  background: linear-gradient(\r\n-    to bottom,\r\n-    rgba(206, 97, 43, 0.8),\r\n-    rgba(206, 97, 43, 0.3)\r\n-  ); /* #CE612B with transparency */\r\n-  z-index: 1;\r\n-  pointer-events: none;\r\n+.hero-content p {\r\n+  font-size: 1.1rem;\r\n+  margin-bottom: 1.5rem;\r\n+  line-height: 1.6;\r\n+}\r\n+\r\n+.hero-buttons {\r\n+  margin-bottom: 1.5rem;\r\n+}\r\n+\r\n+.download-btn {\r\n+  background-color: white;\r\n+  color: #000;\r\n+  border: none;\r\n+  padding: 0.75rem 1.5rem;\r\n+  font-size: 1rem;\r\n+  border-radius: 5px;\r\n+  font-weight: 600;\r\n+  cursor: pointer;\r\n+  transition: 0.3s ease;\r\n+}\r\n+\r\n+.download-btn:hover {\r\n+  background-color: #e0e0e0;\r\n+}\r\n+\r\n+.hero-stats {\r\n+  display: flex;\r\n+  justify-content: center;\r\n+  gap: 2rem;\r\n+  font-size: 1rem;\r\n+  font-weight: 500;\r\n+  flex-wrap: wrap;\r\n }\n\\ No newline at end of file\n"
+                },
+                {
+                    "date": 1753121358491,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,52 +1,30 @@\n-.hero-content {\r\n-  position: absolute;\r\n-  top: 50%;\r\n-  left: 50%;\r\n-  transform: translate(-50%, -50%);\r\n-  z-index: 2;\r\n-  color: white;\r\n-  text-align: center;\r\n-  max-width: 90%;\r\n-  padding: 0 1rem;\r\n+.hero-image-only {\r\n+  position: relative;\r\n+  width: 100%;\r\n+  margin-top: 0;\r\n+  padding: 0;\r\n }\r\n \r\n-.hero-content h1 {\r\n-  font-size: 2.5rem;\r\n-  margin-bottom: 1rem;\r\n-  font-weight: bold;\r\n+.hero-image-only img {\r\n+  width: 100%;\r\n+  height: auto;\r\n+  display: block;\r\n+  object-fit: cover;\r\n }\r\n \r\n-.hero-content p {\r\n-  font-size: 1.1rem;\r\n-  margin-bottom: 1.5rem;\r\n-  line-height: 1.6;\r\n-}\r\n-\r\n-.hero-buttons {\r\n-  margin-bottom: 1.5rem;\r\n-}\r\n-\r\n-.download-btn {\r\n-  background-color: white;\r\n-  color: #000;\r\n-  border: none;\r\n-  padding: 0.75rem 1.5rem;\r\n-  font-size: 1rem;\r\n-  border-radius: 5px;\r\n-  font-weight: 600;\r\n-  cursor: pointer;\r\n-  transition: 0.3s ease;\r\n-}\r\n-\r\n-.download-btn:hover {\r\n-  background-color: #e0e0e0;\r\n-}\r\n-\r\n-.hero-stats {\r\n-  display: flex;\r\n-  justify-content: center;\r\n-  gap: 2rem;\r\n-  font-size: 1rem;\r\n-  font-weight: 500;\r\n-  flex-wrap: wrap;\r\n+/* 🔥 Colored overlay using #CE612B */\r\n+.hero-image-only .overlay {\r\n+  position: absolute;\r\n+  top: 0;\r\n+  left: 0;\r\n+  width: 100%;\r\n+  height: 100%;\r\n+  background: linear-gradient(\r\n+    to bottom,\r\n+    rgba(206, 97, 43, 0.95),\r\n+    rgba(206, 97, 43, 0.6)\r\n+  ); /* #CE612B with transparency */\r\n+  backdrop-filter: blur(2px);\r\n+  z-index: 1;\r\n+  pointer-events: none;\r\n }\n\\ No newline at end of file\n"
+                },
+                {
+                    "date": 1753162809390,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -11,9 +11,9 @@\n   display: block;\r\n   object-fit: cover;\r\n }\r\n \r\n-/* 🔥 Colored overlay using #CE612B */\r\n+/*  Colored overlay using #CE612B */\r\n .hero-image-only .overlay {\r\n   position: absolute;\r\n   top: 0;\r\n   left: 0;\r\n"
+                },
+                {
+                    "date": 1753162821464,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -11,18 +11,18 @@\n   display: block;\r\n   object-fit: cover;\r\n }\r\n \r\n-/*  Colored overlay using #CE612B */\r\n+/* Colored overlay using #CE612B */\r\n .hero-image-only .overlay {\r\n   position: absolute;\r\n   top: 0;\r\n   left: 0;\r\n   width: 100%;\r\n   height: 100%;\r\n   background: linear-gradient(\r\n     to bottom,\r\n-    rgba(206, 97, 43, 0.95),\r\n+    rgba(206, 97, 43, 0.9),\r\n     rgba(206, 97, 43, 0.6)\r\n   ); /* #CE612B with transparency */\r\n   backdrop-filter: blur(2px);\r\n   z-index: 1;\r\n"
+                },
+                {
+                    "date": 1753162828325,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -20,10 +20,10 @@\n   width: 100%;\r\n   height: 100%;\r\n   background: linear-gradient(\r\n     to bottom,\r\n-    rgba(206, 97, 43, 0.9),\r\n-    rgba(206, 97, 43, 0.6)\r\n+    rgba(206, 97, 43, 0.6),\r\n+    rgba(206, 97, 43, 0.3)\r\n   ); /* #CE612B with transparency */\r\n   backdrop-filter: blur(2px);\r\n   z-index: 1;\r\n   pointer-events: none;\r\n"
+                },
+                {
+                    "date": 1753162838446,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -20,9 +20,9 @@\n   width: 100%;\r\n   height: 100%;\r\n   background: linear-gradient(\r\n     to bottom,\r\n-    rgba(206, 97, 43, 0.6),\r\n+    rgba(206, 97, 43, 0.),\r\n     rgba(206, 97, 43, 0.3)\r\n   ); /* #CE612B with transparency */\r\n   backdrop-filter: blur(2px);\r\n   z-index: 1;\r\n"
+                },
+                {
+                    "date": 1753162864781,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -20,10 +20,10 @@\n   width: 100%;\r\n   height: 100%;\r\n   background: linear-gradient(\r\n     to bottom,\r\n-    rgba(206, 97, 43, 0.),\r\n-    rgba(206, 97, 43, 0.3)\r\n+    rgba(206, 97, 43, 0.1),\r\n+    rgba(206, 97, 43, 0.6)\r\n   ); /* #CE612B with transparency */\r\n   backdrop-filter: blur(2px);\r\n   z-index: 1;\r\n   pointer-events: none;\r\n"
+                },
+                {
+                    "date": 1753162870842,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -20,10 +20,10 @@\n   width: 100%;\r\n   height: 100%;\r\n   background: linear-gradient(\r\n     to bottom,\r\n-    rgba(206, 97, 43, 0.1),\r\n-    rgba(206, 97, 43, 0.6)\r\n+    rgba(206, 97, 43, 0.5),\r\n+    rgba(206, 97, 43, 0.2)\r\n   ); /* #CE612B with transparency */\r\n   backdrop-filter: blur(2px);\r\n   z-index: 1;\r\n   pointer-events: none;\r\n"
+                },
+                {
+                    "date": 1753162877780,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -20,9 +20,9 @@\n   width: 100%;\r\n   height: 100%;\r\n   background: linear-gradient(\r\n     to bottom,\r\n-    rgba(206, 97, 43, 0.5),\r\n+    rgba(206, 97, 43, 0.),\r\n     rgba(206, 97, 43, 0.2)\r\n   ); /* #CE612B with transparency */\r\n   backdrop-filter: blur(2px);\r\n   z-index: 1;\r\n"
+                },
+                {
+                    "date": 1753163184749,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -20,11 +20,11 @@\n   width: 100%;\r\n   height: 100%;\r\n   background: linear-gradient(\r\n     to bottom,\r\n-    rgba(206, 97, 43, 0.),\r\n-    rgba(206, 97, 43, 0.2)\r\n+    rgba(206, 97, 43, 0.7),\r\n+    rgba(206, 97, 43, 0.4)\r\n   ); /* #CE612B with transparency */\r\n-  backdrop-filter: blur(2px);\r\n+  backdrop-filter: blur(px);\r\n   z-index: 1;\r\n   pointer-events: none;\r\n }\n\\ No newline at end of file\n"
+                },
+                {
+                    "date": 1753163199210,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -23,8 +23,8 @@\n     to bottom,\r\n     rgba(206, 97, 43, 0.7),\r\n     rgba(206, 97, 43, 0.4)\r\n   ); /* #CE612B with transparency */\r\n-  backdrop-filter: blur(px);\r\n+  backdrop-filter: blur(y.px);\r\n   z-index: 1;\r\n   pointer-events: none;\r\n }\n\\ No newline at end of file\n"
+                },
+                {
+                    "date": 1753163210925,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -23,8 +23,8 @@\n     to bottom,\r\n     rgba(206, 97, 43, 0.7),\r\n     rgba(206, 97, 43, 0.4)\r\n   ); /* #CE612B with transparency */\r\n-  backdrop-filter: blur(y.px);\r\n+  backdrop-filter: blur(0.px);\r\n   z-index: 1;\r\n   pointer-events: none;\r\n }\n\\ No newline at end of file\n"
+                },
+                {
+                    "date": 1753163693675,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -11,9 +11,9 @@\n   display: block;\r\n   object-fit: cover;\r\n }\r\n \r\n-/* Colored overlay using #CE612B */\r\n+/* 🔶 Colored overlay */\r\n .hero-image-only .overlay {\r\n   position: absolute;\r\n   top: 0;\r\n   left: 0;\r\n@@ -22,9 +22,74 @@\n   background: linear-gradient(\r\n     to bottom,\r\n     rgba(206, 97, 43, 0.7),\r\n     rgba(206, 97, 43, 0.4)\r\n-  ); /* #CE612B with transparency */\r\n-  backdrop-filter: blur(0.px);\r\n+  );\r\n+  backdrop-filter: blur(1px);\r\n   z-index: 1;\r\n   pointer-events: none;\r\n+}\r\n+\r\n+/* 🌟 Hero content on top */\r\n+.hero-content {\r\n+  position: absolute;\r\n+  top: 50%;\r\n+  left: 50%;\r\n+  transform: translate(-50%, -50%);\r\n+  z-index: 2;\r\n+  text-align: center;\r\n+  color: white;\r\n+  padding: 20px;\r\n+  max-width: 90%;\r\n+}\r\n+\r\n+.hero-content h1 {\r\n+  font-size: 2.5rem;\r\n+  font-weight: bold;\r\n+  margin-bottom: 1rem;\r\n+  line-height: 1.3;\r\n+}\r\n+\r\n+.hero-content p {\r\n+  font-size: 1.1rem;\r\n+  margin-bottom: 1.5rem;\r\n+  line-height: 1.5;\r\n+}\r\n+\r\n+/* 🔘 Buttons */\r\n+.hero-buttons {\r\n+  display: flex;\r\n+  gap: 1rem;\r\n+  justify-content: center;\r\n+  flex-wrap: wrap;\r\n+}\r\n+\r\n+.btn-primary,\r\n+.btn-secondary {\r\n+  padding: 10px 20px;\r\n+  font-size: 1rem;\r\n+  border: none;\r\n+  border-radius: 30px;\r\n+  cursor: pointer;\r\n+  transition: all 0.3s ease;\r\n+}\r\n+\r\n+.btn-primary {\r\n+  background-color: white;\r\n+  color: #ce612b;\r\n+  font-weight: 600;\r\n+}\r\n+\r\n+.btn-secondary {\r\n+  background-color: transparent;\r\n+  color: white;\r\n+  border: 2px solid white;\r\n+  font-weight: 600;\r\n+}\r\n+\r\n+.btn-primary:hover {\r\n+  background-color: #f7e8e2;\r\n+}\r\n+\r\n+.btn-secondary:hover {\r\n+  background-color: rgba(255, 255, 255, 0.1);\r\n }\n\\ No newline at end of file\n"
+                },
+                {
+                    "date": 1753163916733,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -31,65 +31,56 @@\n \r\n /* 🌟 Hero content on top */\r\n .hero-content {\r\n   position: absolute;\r\n-  top: 50%;\r\n+  top: 25%;\r\n   left: 50%;\r\n-  transform: translate(-50%, -50%);\r\n-  z-index: 2;\r\n+  transform: translate(-50%, -25%);\r\n   text-align: center;\r\n   color: white;\r\n-  padding: 20px;\r\n-  max-width: 90%;\r\n+  z-index: 2;\r\n+  width: 90%;\r\n+  max-width: 800px;\r\n }\r\n \r\n .hero-content h1 {\r\n-  font-size: 2.5rem;\r\n+  font-size: 2.8rem;\r\n   font-weight: bold;\r\n   margin-bottom: 1rem;\r\n-  line-height: 1.3;\r\n }\r\n \r\n+.highlight-text {\r\n+  color: #ffe1c4; /* Different color for \"who share your vision\" */\r\n+  font-size: 2.5rem;\r\n+}\r\n+\r\n .hero-content p {\r\n   font-size: 1.1rem;\r\n   margin-bottom: 1.5rem;\r\n-  line-height: 1.5;\r\n }\r\n \r\n-/* 🔘 Buttons */\r\n .hero-buttons {\r\n   display: flex;\r\n+  justify-content: center;\r\n   gap: 1rem;\r\n-  justify-content: center;\r\n-  flex-wrap: wrap;\r\n }\r\n \r\n-.btn-primary,\r\n-.btn-secondary {\r\n-  padding: 10px 20px;\r\n+.primary-btn,\r\n+.secondary-btn {\r\n+  padding: 0.8rem 1.6rem;\r\n   font-size: 1rem;\r\n   border: none;\r\n-  border-radius: 30px;\r\n+  border-radius: 5px;\r\n   cursor: pointer;\r\n-  transition: all 0.3s ease;\r\n }\r\n \r\n-.btn-primary {\r\n-  background-color: white;\r\n+.primary-btn {\r\n+  background-color: #fff;\r\n   color: #ce612b;\r\n-  font-weight: 600;\r\n+  font-weight: bold;\r\n }\r\n \r\n-.btn-secondary {\r\n+.secondary-btn {\r\n   background-color: transparent;\r\n+  border: 2px solid white;\r\n   color: white;\r\n-  border: 2px solid white;\r\n-  font-weight: 600;\r\n-}\r\n-\r\n-.btn-primary:hover {\r\n-  background-color: #f7e8e2;\r\n-}\r\n-\r\n-.btn-secondary:hover {\r\n-  background-color: rgba(255, 255, 255, 0.1);\r\n }\n\\ No newline at end of file\n"
+                },
+                {
+                    "date": 1753163933779,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -31,9 +31,9 @@\n \r\n /* 🌟 Hero content on top */\r\n .hero-content {\r\n   position: absolute;\r\n-  top: 25%;\r\n+  top: 2%;\r\n   left: 50%;\r\n   transform: translate(-50%, -25%);\r\n   text-align: center;\r\n   color: white;\r\n"
+                },
+                {
+                    "date": 1753163957506,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -31,16 +31,17 @@\n \r\n /* 🌟 Hero content on top */\r\n .hero-content {\r\n   position: absolute;\r\n-  top: 2%;\r\n+  top: 15%;\r\n   left: 50%;\r\n   transform: translate(-50%, -25%);\r\n   text-align: center;\r\n   color: white;\r\n   z-index: 2;\r\n   width: 90%;\r\n   max-width: 800px;\r\n+  \r\n }\r\n \r\n .hero-content h1 {\r\n   font-size: 2.8rem;\r\n"
+                },
+                {
+                    "date": 1753164011033,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -39,13 +39,13 @@\n   color: white;\r\n   z-index: 2;\r\n   width: 90%;\r\n   max-width: 800px;\r\n-  \r\n+\r\n }\r\n \r\n .hero-content h1 {\r\n-  font-size: 2.8rem;\r\n+  font-size: .8rem;\r\n   font-weight: bold;\r\n   margin-bottom: 1rem;\r\n }\r\n \r\n"
+                },
+                {
+                    "date": 1753164153508,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -11,9 +11,9 @@\n   display: block;\r\n   object-fit: cover;\r\n }\r\n \r\n-/* 🔶 Colored overlay */\r\n+/* Overlay color */\r\n .hero-image-only .overlay {\r\n   position: absolute;\r\n   top: 0;\r\n   left: 0;\r\n@@ -28,60 +28,58 @@\n   z-index: 1;\r\n   pointer-events: none;\r\n }\r\n \r\n-/* 🌟 Hero content on top */\r\n+/* Hero content */\r\n .hero-content {\r\n   position: absolute;\r\n-  top: 15%;\r\n+  top: 50%;\r\n   left: 50%;\r\n-  transform: translate(-50%, -25%);\r\n+  transform: translate(-50%, -55%);\r\n+  z-index: 2;\r\n   text-align: center;\r\n   color: white;\r\n-  z-index: 2;\r\n-  width: 90%;\r\n-  max-width: 800px;\r\n-\r\n+  padding: 0 1rem;\r\n }\r\n \r\n .hero-content h1 {\r\n-  font-size: .8rem;\r\n+  font-size: 3.5rem;\r\n   font-weight: bold;\r\n-  margin-bottom: 1rem;\r\n+  margin-bottom: 0.5rem;\r\n+  line-height: 1.2;\r\n }\r\n \r\n .highlight-text {\r\n-  color: #ffe1c4; /* Different color for \"who share your vision\" */\r\n-  font-size: 2.5rem;\r\n+  color: #ffe1c4;\r\n+  font-size: 3rem;\r\n }\r\n \r\n .hero-content p {\r\n-  font-size: 1.1rem;\r\n-  margin-bottom: 1.5rem;\r\n+  font-size: 1.8rem;\r\n+  color: #fff6e9;\r\n+  margin-bottom: 2rem;\r\n }\r\n \r\n .hero-buttons {\r\n   display: flex;\r\n   justify-content: center;\r\n   gap: 1rem;\r\n }\r\n \r\n-.primary-btn,\r\n-.secondary-btn {\r\n+.btn {\r\n   padding: 0.8rem 1.6rem;\r\n   font-size: 1rem;\r\n+  font-weight: 600;\r\n   border: none;\r\n+  cursor: pointer;\r\n   border-radius: 5px;\r\n-  cursor: pointer;\r\n }\r\n \r\n-.primary-btn {\r\n-  background-color: #fff;\r\n-  color: #ce612b;\r\n-  font-weight: bold;\r\n+.btn-primary {\r\n+  background-color: #000;\r\n+  color: #fff;\r\n }\r\n \r\n-.secondary-btn {\r\n-  background-color: transparent;\r\n-  border: 2px solid white;\r\n-  color: white;\r\n+.btn-secondary {\r\n+  background-color: #fff;\r\n+  color: #000;\r\n }\n\\ No newline at end of file\n"
+                },
+                {
+                    "date": 1753164176549,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -31,9 +31,9 @@\n \r\n /* Hero content */\r\n .hero-content {\r\n   position: absolute;\r\n-  top: 50%;\r\n+  top: 5%;\r\n   left: 50%;\r\n   transform: translate(-50%, -55%);\r\n   z-index: 2;\r\n   text-align: center;\r\n"
+                },
+                {
+                    "date": 1753164184103,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -31,9 +31,9 @@\n \r\n /* Hero content */\r\n .hero-content {\r\n   position: absolute;\r\n-  top: 5%;\r\n+  top: 1%;\r\n   left: 50%;\r\n   transform: translate(-50%, -55%);\r\n   z-index: 2;\r\n   text-align: center;\r\n"
+                },
+                {
+                    "date": 1753164228991,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -31,9 +31,9 @@\n \r\n /* Hero content */\r\n .hero-content {\r\n   position: absolute;\r\n-  top: 1%;\r\n+  top: 25%;\r\n   left: 50%;\r\n   transform: translate(-50%, -55%);\r\n   z-index: 2;\r\n   text-align: center;\r\n@@ -41,9 +41,9 @@\n   padding: 0 1rem;\r\n }\r\n \r\n .hero-content h1 {\r\n-  font-size: 3.5rem;\r\n+  font-size: .5rem;\r\n   font-weight: bold;\r\n   margin-bottom: 0.5rem;\r\n   line-height: 1.2;\r\n }\r\n"
+                },
+                {
+                    "date": 1753164241454,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -31,9 +31,9 @@\n \r\n /* Hero content */\r\n .hero-content {\r\n   position: absolute;\r\n-  top: 25%;\r\n+  top: 5%;\r\n   left: 50%;\r\n   transform: translate(-50%, -55%);\r\n   z-index: 2;\r\n   text-align: center;\r\n@@ -41,9 +41,9 @@\n   padding: 0 1rem;\r\n }\r\n \r\n .hero-content h1 {\r\n-  font-size: .5rem;\r\n+  font-size: 4.5rem;\r\n   font-weight: bold;\r\n   margin-bottom: 0.5rem;\r\n   line-height: 1.2;\r\n }\r\n"
+                },
+                {
+                    "date": 1753164249456,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -31,9 +31,9 @@\n \r\n /* Hero content */\r\n .hero-content {\r\n   position: absolute;\r\n-  top: 5%;\r\n+  top: 3%;\r\n   left: 50%;\r\n   transform: translate(-50%, -55%);\r\n   z-index: 2;\r\n   text-align: center;\r\n"
+                },
+                {
+                    "date": 1753164286512,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -31,9 +31,9 @@\n \r\n /* Hero content */\r\n .hero-content {\r\n   position: absolute;\r\n-  top: 3%;\r\n+  top: 28%;\r\n   left: 50%;\r\n   transform: translate(-50%, -55%);\r\n   z-index: 2;\r\n   text-align: center;\r\n@@ -48,9 +48,9 @@\n   line-height: 1.2;\r\n }\r\n \r\n .highlight-text {\r\n-  color: #ffe1c4;\r\n+  color: w;\r\n   font-size: 3rem;\r\n }\r\n \r\n .hero-content p {\r\n"
+                },
+                {
+                    "date": 1753164292560,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -48,10 +48,10 @@\n   line-height: 1.2;\r\n }\r\n \r\n .highlight-text {\r\n-  color: w;\r\n-  font-size: 3rem;\r\n+  color: white;\r\n+  font-size: rem;\r\n }\r\n \r\n .hero-content p {\r\n   font-size: 1.8rem;\r\n"
+                },
+                {
+                    "date": 1753164310873,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -49,9 +49,9 @@\n }\r\n \r\n .highlight-text {\r\n   color: white;\r\n-  font-size: rem;\r\n+  font-size: 4.rem;\r\n }\r\n \r\n .hero-content p {\r\n   font-size: 1.8rem;\r\n"
+                },
+                {
+                    "date": 1753164352887,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -43,15 +43,15 @@\n \r\n .hero-content h1 {\r\n   font-size: 4.5rem;\r\n   font-weight: bold;\r\n-  margin-bottom: 0.5rem;\r\n+  margin-bottom: 0.rem;\r\n   line-height: 1.2;\r\n }\r\n \r\n .highlight-text {\r\n   color: white;\r\n-  font-size: 4.rem;\r\n+  font-size: 4.3rem;\r\n }\r\n \r\n .hero-content p {\r\n   font-size: 1.8rem;\r\n"
+                },
+                {
+                    "date": 1753164380203,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -43,9 +43,9 @@\n \r\n .hero-content h1 {\r\n   font-size: 4.5rem;\r\n   font-weight: bold;\r\n-  margin-bottom: 0.rem;\r\n+  margin-bottom: 0r;\r\n   line-height: 1.2;\r\n }\r\n \r\n .highlight-text {\r\n"
+                },
+                {
+                    "date": 1753164429855,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -43,15 +43,16 @@\n \r\n .hero-content h1 {\r\n   font-size: 4.5rem;\r\n   font-weight: bold;\r\n-  margin-bottom: 0r;\r\n+  margin-bottom: 0.5rem;\r\n   line-height: 1.2;\r\n }\r\n \r\n .highlight-text {\r\n   color: white;\r\n   font-size: 4.3rem;\r\n+  \r\n }\r\n \r\n .hero-content p {\r\n   font-size: 1.8rem;\r\n"
+                },
+                {
+                    "date": 1753164443116,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -45,14 +45,15 @@\n   font-size: 4.5rem;\r\n   font-weight: bold;\r\n   margin-bottom: 0.5rem;\r\n   line-height: 1.2;\r\n+  \r\n }\r\n \r\n .highlight-text {\r\n   color: white;\r\n   font-size: 4.3rem;\r\n-  \r\n+  margin-top: 0;\r\n }\r\n \r\n .hero-content p {\r\n   font-size: 1.8rem;\r\n"
+                },
+                {
+                    "date": 1753164448968,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -45,9 +45,9 @@\n   font-size: 4.5rem;\r\n   font-weight: bold;\r\n   margin-bottom: 0.5rem;\r\n   line-height: 1.2;\r\n-  \r\n+  line-height: 1.;\r\n }\r\n \r\n .highlight-text {\r\n   color: white;\r\n"
+                },
+                {
+                    "date": 1753164455730,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -45,9 +45,9 @@\n   font-size: 4.5rem;\r\n   font-weight: bold;\r\n   margin-bottom: 0.5rem;\r\n   line-height: 1.2;\r\n-  line-height: 1.;\r\n+  line-height: 1.1; \r\n }\r\n \r\n .highlight-text {\r\n   color: white;\r\n"
+                },
+                {
+                    "date": 1753164460865,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -45,9 +45,9 @@\n   font-size: 4.5rem;\r\n   font-weight: bold;\r\n   margin-bottom: 0.5rem;\r\n   line-height: 1.2;\r\n-  line-height: 1.1; \r\n+  line-height: 1.1; /**\r\n }\r\n \r\n .highlight-text {\r\n   color: white;\r\n"
+                },
+                {
+                    "date": 1753164466214,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -45,9 +45,9 @@\n   font-size: 4.5rem;\r\n   font-weight: bold;\r\n   margin-bottom: 0.5rem;\r\n   line-height: 1.2;\r\n-  line-height: 1.1; /**\r\n+  line-height: 1.1; /* slig*/\r\n }\r\n \r\n .highlight-text {\r\n   color: white;\r\n"
+                },
+                {
+                    "date": 1753164472471,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -45,9 +45,9 @@\n   font-size: 4.5rem;\r\n   font-weight: bold;\r\n   margin-bottom: 0.5rem;\r\n   line-height: 1.2;\r\n-  line-height: 1.1; /* slig*/\r\n+  line-height: 1.1; /* slightly t*/\r\n }\r\n \r\n .highlight-text {\r\n   color: white;\r\n"
+                },
+                {
+                    "date": 1753164477911,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -45,9 +45,9 @@\n   font-size: 4.5rem;\r\n   font-weight: bold;\r\n   margin-bottom: 0.5rem;\r\n   line-height: 1.2;\r\n-  line-height: 1.1; /* slightly t*/\r\n+  line-height: 1.1; /* slightly tigh*/\r\n }\r\n \r\n .highlight-text {\r\n   color: white;\r\n"
+                },
+                {
+                    "date": 1753164483162,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -45,9 +45,9 @@\n   font-size: 4.5rem;\r\n   font-weight: bold;\r\n   margin-bottom: 0.5rem;\r\n   line-height: 1.2;\r\n-  line-height: 1.1; /* slightly tigh*/\r\n+  line-height: 1.1; /* slightly tighter line heig*/\r\n }\r\n \r\n .highlight-text {\r\n   color: white;\r\n"
+                },
+                {
+                    "date": 1753164496630,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -43,11 +43,11 @@\n \r\n .hero-content h1 {\r\n   font-size: 4.5rem;\r\n   font-weight: bold;\r\n-  margin-bottom: 0.5rem;\r\n+  margin-bottom: 0.rem;\r\n   line-height: 1.2;\r\n-  line-height: 1.1; /* slightly tighter line heig*/\r\n+  line-height: 1.1; /* slightly tighter line height*/\r\n }\r\n \r\n .highlight-text {\r\n   color: white;\r\n"
+                },
+                {
+                    "date": 1753164532203,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -43,9 +43,9 @@\n \r\n .hero-content h1 {\r\n   font-size: 4.5rem;\r\n   font-weight: bold;\r\n-  margin-bottom: 0.rem;\r\n+  margin-bottom: 02rem;\r\n   line-height: 1.2;\r\n   line-height: 1.1; /* slightly tighter line height*/\r\n }\r\n \r\n"
+                },
+                {
+                    "date": 1753164538776,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -43,9 +43,9 @@\n \r\n .hero-content h1 {\r\n   font-size: 4.5rem;\r\n   font-weight: bold;\r\n-  margin-bottom: 02rem;\r\n+  margin-bottom: 0.rem;\r\n   line-height: 1.2;\r\n   line-height: 1.1; /* slightly tighter line height*/\r\n }\r\n \r\n"
+                },
+                {
+                    "date": 1753164544733,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -43,9 +43,9 @@\n \r\n .hero-content h1 {\r\n   font-size: 4.5rem;\r\n   font-weight: bold;\r\n-  margin-bottom: 0.rem;\r\n+  margin-bottom: 0.2rem;\r\n   line-height: 1.2;\r\n   line-height: 1.1; /* slightly tighter line height*/\r\n }\r\n \r\n"
+                },
+                {
+                    "date": 1753164585683,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -55,9 +55,9 @@\n   margin-top: 0;\r\n }\r\n \r\n .hero-content p {\r\n-  font-size: 1.8rem;\r\n+  font-size: 1.rem;\r\n   color: #fff6e9;\r\n   margin-bottom: 2rem;\r\n }\r\n \r\n"
+                },
+                {
+                    "date": 1753164591526,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -55,9 +55,9 @@\n   margin-top: 0;\r\n }\r\n \r\n .hero-content p {\r\n-  font-size: 1.rem;\r\n+  font-size: 4.5rem;\r\n   color: #fff6e9;\r\n   margin-bottom: 2rem;\r\n }\r\n \r\n"
+                },
+                {
+                    "date": 1753164599824,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -58,8 +58,9 @@\n .hero-content p {\r\n   font-size: 4.5rem;\r\n   color: #fff6e9;\r\n   margin-bottom: 2rem;\r\n+  \r\n }\r\n \r\n .hero-buttons {\r\n   display: flex;\r\n"
+                },
+                {
+                    "date": 1753164606306,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -58,9 +58,9 @@\n .hero-content p {\r\n   font-size: 4.5rem;\r\n   color: #fff6e9;\r\n   margin-bottom: 2rem;\r\n-  \r\n+  width: 8;\r\n }\r\n \r\n .hero-buttons {\r\n   display: flex;\r\n"
+                },
+                {
+                    "date": 1753164613660,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -58,9 +58,9 @@\n .hero-content p {\r\n   font-size: 4.5rem;\r\n   color: #fff6e9;\r\n   margin-bottom: 2rem;\r\n-  width: 8;\r\n+  w\r\n }\r\n \r\n .hero-buttons {\r\n   display: flex;\r\n"
+                },
+                {
+                    "date": 1753164677451,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -57,10 +57,9 @@\n \r\n .hero-content p {\r\n   font-size: 4.5rem;\r\n   color: #fff6e9;\r\n-  margin-bottom: 2rem;\r\n-  w\r\n+  \r\n }\r\n \r\n .hero-buttons {\r\n   display: flex;\r\n"
+                },
+                {
+                    "date": 1753164685160,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -57,9 +57,9 @@\n \r\n .hero-content p {\r\n   font-size: 4.5rem;\r\n   color: #fff6e9;\r\n-  \r\n+  w\r\n }\r\n \r\n .hero-buttons {\r\n   display: flex;\r\n"
+                },
+                {
+                    "date": 1753164690633,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -57,9 +57,9 @@\n \r\n .hero-content p {\r\n   font-size: 4.5rem;\r\n   color: #fff6e9;\r\n-  w\r\n+  white-space: no;\r\n }\r\n \r\n .hero-buttons {\r\n   display: flex;\r\n"
+                },
+                {
+                    "date": 1753164698479,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -57,9 +57,10 @@\n \r\n .hero-content p {\r\n   font-size: 4.5rem;\r\n   color: #fff6e9;\r\n-  white-space: no;\r\n+  white-space: nowrap;\r\n+  m\r\n }\r\n \r\n .hero-buttons {\r\n   display: flex;\r\n"
+                },
+                {
+                    "date": 1753164703685,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -58,9 +58,9 @@\n .hero-content p {\r\n   font-size: 4.5rem;\r\n   color: #fff6e9;\r\n   white-space: nowrap;\r\n-  m\r\n+  margin-top: 0.5rem;\r\n }\r\n \r\n .hero-buttons {\r\n   display: flex;\r\n"
+                },
+                {
+                    "date": 1753164717783,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -59,8 +59,9 @@\n   font-size: 4.5rem;\r\n   color: #fff6e9;\r\n   white-space: nowrap;\r\n   margin-top: 0.5rem;\r\n+  \r\n }\r\n \r\n .hero-buttons {\r\n   display: flex;\r\n"
+                },
+                {
+                    "date": 1753164724045,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -59,9 +59,9 @@\n   font-size: 4.5rem;\r\n   color: #fff6e9;\r\n   white-space: nowrap;\r\n   margin-top: 0.5rem;\r\n-  \r\n+  font-weight: ;\r\n }\r\n \r\n .hero-buttons {\r\n   display: flex;\r\n"
+                },
+                {
+                    "date": 1753164740242,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -58,10 +58,10 @@\n .hero-content p {\r\n   font-size: 4.5rem;\r\n   color: #fff6e9;\r\n   white-space: nowrap;\r\n-  margin-top: 0.5rem;\r\n-  font-weight: ;\r\n+  margin-top: 0.5rem; \r\n+  font-weight: bold;\r\n }\r\n \r\n .hero-buttons {\r\n   display: flex;\r\n"
+                },
+                {
+                    "date": 1753164745496,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -58,9 +58,9 @@\n .hero-content p {\r\n   font-size: 4.5rem;\r\n   color: #fff6e9;\r\n   white-space: nowrap;\r\n-  margin-top: 0.5rem; \r\n+  margin-top: 0.5rem; keeps t\r\n   font-weight: bold;\r\n }\r\n \r\n .hero-buttons {\r\n"
+                },
+                {
+                    "date": 1753164751457,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -58,9 +58,9 @@\n .hero-content p {\r\n   font-size: 4.5rem;\r\n   color: #fff6e9;\r\n   white-space: nowrap;\r\n-  margin-top: 0.5rem; keeps t\r\n+  margin-top: 0.5rem; keeps the text in a single l\r\n   font-weight: bold;\r\n }\r\n \r\n .hero-buttons {\r\n"
+                },
+                {
+                    "date": 1753164751543,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -58,9 +58,9 @@\n .hero-content p {\r\n   font-size: 4.5rem;\r\n   color: #fff6e9;\r\n   white-space: nowrap;\r\n-  margin-top: 0.5rem; keeps the text in a single l\r\n+  margin-top: 0.5rem; keeps the text in a single li\r\n   font-weight: bold;\r\n }\r\n \r\n .hero-buttons {\r\n"
+                },
+                {
+                    "date": 1753164761647,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -58,9 +58,9 @@\n .hero-content p {\r\n   font-size: 4.5rem;\r\n   color: #fff6e9;\r\n   white-space: nowrap;\r\n-  margin-top: 0.5rem; keeps the text in a single li\r\n+ margin-top: 0.5rem; keeps the text in a single line */\r\n   font-weight: bold;\r\n }\r\n \r\n .hero-buttons {\r\n"
+                },
+                {
+                    "date": 1753164766777,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -58,9 +58,9 @@\n .hero-content p {\r\n   font-size: 4.5rem;\r\n   color: #fff6e9;\r\n   white-space: nowrap;\r\n- margin-top: 0.5rem; keeps the text in a single line */\r\n+  margin-top: 0.5rem;  /* keeps the text in a single line */\r\n   font-weight: bold;\r\n }\r\n \r\n .hero-buttons {\r\n"
+                },
+                {
+                    "date": 1753164773927,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -60,8 +60,9 @@\n   color: #fff6e9;\r\n   white-space: nowrap;\r\n   margin-top: 0.5rem;  /* keeps the text in a single line */\r\n   font-weight: bold;\r\n+  \r\n }\r\n \r\n .hero-buttons {\r\n   display: flex;\r\n"
+                },
+                {
+                    "date": 1753164779009,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -60,9 +60,9 @@\n   color: #fff6e9;\r\n   white-space: nowrap;\r\n   margin-top: 0.5rem;  /* keeps the text in a single line */\r\n   font-weight: bold;\r\n-  \r\n+  line-height: 1.1;\r\n }\r\n \r\n .hero-buttons {\r\n   display: flex;\r\n"
+                },
+                {
+                    "date": 1753164853941,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -56,9 +56,9 @@\n }\r\n \r\n .hero-content p {\r\n   font-size: 4.5rem;\r\n-  color: #fff6e9;\r\n+  color: #ED8E5E;\r\n   white-space: nowrap;\r\n   margin-top: 0.5rem;  /* keeps the text in a single line */\r\n   font-weight: bold;\r\n   line-height: 1.1;\r\n"
+                },
+                {
+                    "date": 1753164940009,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -44,9 +44,9 @@\n .hero-content h1 {\r\n   font-size: 4.5rem;\r\n   font-weight: bold;\r\n   margin-bottom: 0.2rem;\r\n-  line-height: 1.2;\r\n+  /* line-height: 1.2; */\r\n   line-height: 1.1; /* slightly tighter line height*/\r\n }\r\n \r\n .highlight-text {\r\n"
+                },
+                {
+                    "date": 1753164954114,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -43,9 +43,9 @@\n \r\n .hero-content h1 {\r\n   font-size: 4.5rem;\r\n   font-weight: bold;\r\n-  margin-bottom: 0.2rem;\r\n+  /* margin-bottom: 0.2rem; */\r\n   /* line-height: 1.2; */\r\n   line-height: 1.1; /* slightly tighter line height*/\r\n }\r\n \r\n"
+                },
+                {
+                    "date": 1753164968222,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -51,9 +51,9 @@\n \r\n .highlight-text {\r\n   color: white;\r\n   font-size: 4.3rem;\r\n-  margin-top: 0;\r\n+  margin-to: 0;\r\n }\r\n \r\n .hero-content p {\r\n   font-size: 4.5rem;\r\n"
+                },
+                {
+                    "date": 1753164997909,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -51,16 +51,16 @@\n \r\n .highlight-text {\r\n   color: white;\r\n   font-size: 4.3rem;\r\n-  margin-to: 0;\r\n+  margin: 0;\r\n }\r\n \r\n .hero-content p {\r\n   font-size: 4.5rem;\r\n   color: #ED8E5E;\r\n   white-space: nowrap;\r\n-  margin-top: 0.5rem;  /* keeps the text in a single line */\r\n+  margin-to: 0.5rem;  /* keeps the text in a single line */\r\n   font-weight: bold;\r\n   line-height: 1.1;\r\n }\r\n \r\n"
+                },
+                {
+                    "date": 1753165005004,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -58,9 +58,9 @@\n .hero-content p {\r\n   font-size: 4.5rem;\r\n   color: #ED8E5E;\r\n   white-space: nowrap;\r\n-  margin-to: 0.5rem;  /* keeps the text in a single line */\r\n+  margin: 0.2rem ;  /* keeps the text in a single line */\r\n   font-weight: bold;\r\n   line-height: 1.1;\r\n }\r\n \r\n"
+                },
+                {
+                    "date": 1753165017257,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -58,9 +58,9 @@\n .hero-content p {\r\n   font-size: 4.5rem;\r\n   color: #ED8E5E;\r\n   white-space: nowrap;\r\n-  margin: 0.2rem ;  /* keeps the text in a single line */\r\n+  margin: 0.2rem 0 0 0;  /*s */\r\n   font-weight: bold;\r\n   line-height: 1.1;\r\n }\r\n \r\n"
+                },
+                {
+                    "date": 1753165022452,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -58,9 +58,9 @@\n .hero-content p {\r\n   font-size: 4.5rem;\r\n   color: #ED8E5E;\r\n   white-space: nowrap;\r\n-  margin: 0.2rem 0 0 0;  /*s */\r\n+  margin: 0.2rem 0 0 0;  /*smaller to margi */\r\n   font-weight: bold;\r\n   line-height: 1.1;\r\n }\r\n \r\n"
+                },
+                {
+                    "date": 1753165221217,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -58,13 +58,14 @@\n .hero-content p {\r\n   font-size: 4.5rem;\r\n   color: #ED8E5E;\r\n   white-space: nowrap;\r\n-  margin: 0.2rem 0 0 0;  /*smaller to margi */\r\n+  margin: 0.2rem 0 0 0;  /*smaller to margin to reduce gap */\r\n   font-weight: bold;\r\n   line-height: 1.1;\r\n }\r\n \r\n+\r\n .hero-buttons {\r\n   display: flex;\r\n   justify-content: center;\r\n   gap: 1rem;\r\n"
+                },
+                {
+                    "date": 1753165341743,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -63,8 +63,18 @@\n   font-weight: bold;\r\n   line-height: 1.1;\r\n }\r\n \r\n+.hero-subtext {\r\n+  font-size: 1.rem;\r\n+  margin-top: 1rem;\r\n+  color: #ffffff;\r\n+  max-width: 700px;\r\n+  margin-left: auto;\r\n+  margin-right: auto;\r\n+  font-weight: 400;\r\n+  line-height: 1.3;\r\n+}\r\n \r\n .hero-buttons {\r\n   display: flex;\r\n   justify-content: center;\r\n"
+                },
+                {
+                    "date": 1753165349280,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -64,15 +64,15 @@\n   line-height: 1.1;\r\n }\r\n \r\n .hero-subtext {\r\n-  font-size: 1.rem;\r\n+  font-size: 1.4rem;\r\n   margin-top: 1rem;\r\n   color: #ffffff;\r\n   max-width: 700px;\r\n   margin-left: auto;\r\n   margin-right: auto;\r\n-  font-weight: 400;\r\n+  font-weight: 00;\r\n   line-height: 1.3;\r\n }\r\n \r\n .hero-buttons {\r\n"
+                },
+                {
+                    "date": 1753165423910,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -58,9 +58,9 @@\n .hero-content p {\r\n   font-size: 4.5rem;\r\n   color: #ED8E5E;\r\n   white-space: nowrap;\r\n-  margin: 0.2rem 0 0 0;  /*smaller to margin to reduce gap */\r\n+  margin: 0.2rem 0 0 0; /*smaller to margin to reduce gap */\r\n   font-weight: bold;\r\n   line-height: 1.1;\r\n }\r\n \r\n"
+                },
+                {
+                    "date": 1753166150287,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -64,15 +64,15 @@\n   line-height: 1.1;\r\n }\r\n \r\n .hero-subtext {\r\n-  font-size: 1.4rem;\r\n+  font-size: 1.rem;\r\n   margin-top: 1rem;\r\n   color: #ffffff;\r\n   max-width: 700px;\r\n   margin-left: auto;\r\n   margin-right: auto;\r\n-  font-weight: 00;\r\n+  font-weight: 400;\r\n   line-height: 1.3;\r\n }\r\n \r\n .hero-buttons {\r\n"
+                },
+                {
+                    "date": 1753166159124,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -64,10 +64,10 @@\n   line-height: 1.1;\r\n }\r\n \r\n .hero-subtext {\r\n-  font-size: 1.rem;\r\n-  margin-top: 1rem;\r\n+  font-size: 1.2rem;\r\n+  margin-top: rem;\r\n   color: #ffffff;\r\n   max-width: 700px;\r\n   margin-left: auto;\r\n   margin-right: auto;\r\n"
+                },
+                {
+                    "date": 1753166181310,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -65,11 +65,11 @@\n }\r\n \r\n .hero-subtext {\r\n   font-size: 1.2rem;\r\n-  margin-top: rem;\r\n+  margin-top: 0.6rem;\r\n   color: #ffffff;\r\n-  max-width: 700px;\r\n+  max-width: 70px;\r\n   margin-left: auto;\r\n   margin-right: auto;\r\n   font-weight: 400;\r\n   line-height: 1.3;\r\n"
+                },
+                {
+                    "date": 1753166188870,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -67,9 +67,9 @@\n .hero-subtext {\r\n   font-size: 1.2rem;\r\n   margin-top: 0.6rem;\r\n   color: #ffffff;\r\n-  max-width: 70px;\r\n+  /* max-width: 650px; */\r\n   margin-left: auto;\r\n   margin-right: auto;\r\n   font-weight: 400;\r\n   line-height: 1.3;\r\n"
+                },
+                {
+                    "date": 1753166266616,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -64,9 +64,9 @@\n   line-height: 1.1;\r\n }\r\n \r\n .hero-subtext {\r\n-  font-size: 1.2rem;\r\n+  font-size: 1.rem;\r\n   margin-top: 0.6rem;\r\n   color: #ffffff;\r\n   /* max-width: 650px; */\r\n   margin-left: auto;\r\n"
+                },
+                {
+                    "date": 1753166277119,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -64,16 +64,17 @@\n   line-height: 1.1;\r\n }\r\n \r\n .hero-subtext {\r\n-  font-size: 1.rem;\r\n+  font-size: 1rem;\r\n   margin-top: 0.6rem;\r\n   color: #ffffff;\r\n   /* max-width: 650px; */\r\n   margin-left: auto;\r\n   margin-right: auto;\r\n   font-weight: 400;\r\n   line-height: 1.3;\r\n+  \r\n }\r\n \r\n .hero-buttons {\r\n   display: flex;\r\n"
+                },
+                {
+                    "date": 1753166283184,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -72,9 +72,9 @@\n   margin-left: auto;\r\n   margin-right: auto;\r\n   font-weight: 400;\r\n   line-height: 1.3;\r\n-  \r\n+  margin-top: 0;\r\n }\r\n \r\n .hero-buttons {\r\n   display: flex;\r\n"
+                },
+                {
+                    "date": 1753166294777,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -72,9 +72,10 @@\n   margin-left: auto;\r\n   margin-right: auto;\r\n   font-weight: 400;\r\n   line-height: 1.3;\r\n-  margin-top: 0;\r\n+  margin-top: 0.5rem;\r\n+  \r\n }\r\n \r\n .hero-buttons {\r\n   display: flex;\r\n"
+                },
+                {
+                    "date": 1753166300418,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -73,9 +73,9 @@\n   margin-right: auto;\r\n   font-weight: 400;\r\n   line-height: 1.3;\r\n   margin-top: 0.5rem;\r\n-  \r\n+  t\r\n }\r\n \r\n .hero-buttons {\r\n   display: flex;\r\n"
+                },
+                {
+                    "date": 1753166309284,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -67,15 +67,15 @@\n .hero-subtext {\r\n   font-size: 1rem;\r\n   margin-top: 0.6rem;\r\n   color: #ffffff;\r\n-  /* max-width: 650px; */\r\n+  /*max-width: 650px; */\r\n   margin-left: auto;\r\n   margin-right: auto;\r\n   font-weight: 400;\r\n   line-height: 1.3;\r\n   margin-top: 0.5rem;\r\n-  t\r\n+  text-align: center;\r\n }\r\n \r\n .hero-buttons {\r\n   display: flex;\r\n"
+                },
+                {
+                    "date": 1753166558392,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -63,13 +63,13 @@\n   font-weight: bold;\r\n   line-height: 1.1;\r\n }\r\n \r\n-.hero-subtext {\r\n+.hero-description {\r\n   font-size: 1rem;\r\n   margin-top: 0.6rem;\r\n   color: #ffffff;\r\n-  /*max-width: 650px; */\r\n+  max-width: 650px;\r\n   margin-left: auto;\r\n   margin-right: auto;\r\n   font-weight: 400;\r\n   line-height: 1.3;\r\n"
+                },
+                {
+                    "date": 1753166568901,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -64,18 +64,18 @@\n   line-height: 1.1;\r\n }\r\n \r\n .hero-description {\r\n-  font-size: 1rem;\r\n+  /* font-size: 1rem;\r\n   margin-top: 0.6rem;\r\n   color: #ffffff;\r\n   max-width: 650px;\r\n   margin-left: auto;\r\n   margin-right: auto;\r\n   font-weight: 400;\r\n   line-height: 1.3;\r\n   margin-top: 0.5rem;\r\n-  text-align: center;\r\n+  text-align: center; */\r\n }\r\n \r\n .hero-buttons {\r\n   display: flex;\r\n"
+                },
+                {
+                    "date": 1753166575186,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -74,8 +74,9 @@\n   font-weight: 400;\r\n   line-height: 1.3;\r\n   margin-top: 0.5rem;\r\n   text-align: center; */\r\n+  font-size: ;\r\n }\r\n \r\n .hero-buttons {\r\n   display: flex;\r\n"
+                },
+                {
+                    "date": 1753166619151,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -63,9 +63,9 @@\n   font-weight: bold;\r\n   line-height: 1.1;\r\n }\r\n \r\n-.hero-description {\r\n+.hero-description  {\r\n   /* font-size: 1rem;\r\n   margin-top: 0.6rem;\r\n   color: #ffffff;\r\n   max-width: 650px;\r\n@@ -74,9 +74,9 @@\n   font-weight: 400;\r\n   line-height: 1.3;\r\n   margin-top: 0.5rem;\r\n   text-align: center; */\r\n-  font-size: ;\r\n+  font-size: 6px;\r\n }\r\n \r\n .hero-buttons {\r\n   display: flex;\r\n"
+                },
+                {
+                    "date": 1753166730762,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -63,9 +63,9 @@\n   font-weight: bold;\r\n   line-height: 1.1;\r\n }\r\n \r\n-.hero-description  {\r\n+/* .hero-description p {\r\n   /* font-size: 1rem;\r\n   margin-top: 0.6rem;\r\n   color: #ffffff;\r\n   max-width: 650px;\r\n@@ -75,9 +75,9 @@\n   line-height: 1.3;\r\n   margin-top: 0.5rem;\r\n   text-align: center; */\r\n   font-size: 6px;\r\n-}\r\n+} */\r\n \r\n .hero-buttons {\r\n   display: flex;\r\n   justify-content: center;\r\n"
+                },
+                {
+                    "date": 1753166737555,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -73,12 +73,16 @@\n   margin-right: auto;\r\n   font-weight: 400;\r\n   line-height: 1.3;\r\n   margin-top: 0.5rem;\r\n-  text-align: center; */\r\n+  text-align: center;\r\n   font-size: 6px;\r\n } */\r\n \r\n+.hero-content p {\r\n+  margin-bottom: 0.5rem; /* Optional: adds space between p and next item */\r\n+}\r\n+\r\n .hero-buttons {\r\n   display: flex;\r\n   justify-content: center;\r\n   gap: 1rem;\r\n"
+                },
+                {
+                    "date": 1753166791963,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -77,9 +77,9 @@\n   text-align: center;\r\n   font-size: 6px;\r\n } */\r\n \r\n-.hero-content p {\r\n+.p {\r\n   margin-bottom: 0.5rem; /* Optional: adds space between p and next item */\r\n }\r\n \r\n .hero-buttons {\r\n"
+                },
+                {
+                    "date": 1753166797394,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -77,9 +77,9 @@\n   text-align: center;\r\n   font-size: 6px;\r\n } */\r\n \r\n-.p {\r\n+.parah {\r\n   margin-bottom: 0.5rem; /* Optional: adds space between p and next item */\r\n }\r\n \r\n .hero-buttons {\r\n"
+                },
+                {
+                    "date": 1753166993768,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -77,9 +77,9 @@\n   text-align: center;\r\n   font-size: 6px;\r\n } */\r\n \r\n-.parah {\r\n+.parah p{\r\n   margin-bottom: 0.5rem; /* Optional: adds space between p and next item */\r\n }\r\n \r\n .hero-buttons {\r\n"
+                },
+                {
+                    "date": 1753167347573,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -78,9 +78,9 @@\n   font-size: 6px;\r\n } */\r\n \r\n .parah p{\r\n-  margin-bottom: 0.5rem; /* Optional: adds space between p and next item */\r\n+  margin-bottom: 0.5rem;\r\n }\r\n \r\n .hero-buttons {\r\n   display: flex;\r\n"
+                },
+                {
+                    "date": 1753167352947,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -79,8 +79,9 @@\n } */\r\n \r\n .parah p{\r\n   margin-bottom: 0.5rem;\r\n+  font-size: ;\r\n }\r\n \r\n .hero-buttons {\r\n   display: flex;\r\n"
+                },
+                {
+                    "date": 1753167358213,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -79,9 +79,9 @@\n } */\r\n \r\n .parah p{\r\n   margin-bottom: 0.5rem;\r\n-  font-size: ;\r\n+  font-size: 1.2r;\r\n }\r\n \r\n .hero-buttons {\r\n   display: flex;\r\n"
+                },
+                {
+                    "date": 1753167364458,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -79,9 +79,10 @@\n } */\r\n \r\n .parah p{\r\n   margin-bottom: 0.5rem;\r\n-  font-size: 1.2r;\r\n+  font-size: 1.2rem;\r\n+  c\r\n }\r\n \r\n .hero-buttons {\r\n   display: flex;\r\n"
+                },
+                {
+                    "date": 1753167364561,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -80,9 +80,9 @@\n \r\n .parah p{\r\n   margin-bottom: 0.5rem;\r\n   font-size: 1.2rem;\r\n-  c\r\n+  co\r\n }\r\n \r\n .hero-buttons {\r\n   display: flex;\r\n"
+                },
+                {
+                    "date": 1753167375991,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -80,9 +80,10 @@\n \r\n .parah p{\r\n   margin-bottom: 0.5rem;\r\n   font-size: 1.2rem;\r\n-  co\r\n+  color: white;\r\n+  \r\n }\r\n \r\n .hero-buttons {\r\n   display: flex;\r\n"
+                },
+                {
+                    "date": 1753167382073,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -81,9 +81,9 @@\n .parah p{\r\n   margin-bottom: 0.5rem;\r\n   font-size: 1.2rem;\r\n   color: white;\r\n-  \r\n+  margin: 1;\r\n }\r\n \r\n .hero-buttons {\r\n   display: flex;\r\n"
+                },
+                {
+                    "date": 1753167388145,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -81,9 +81,9 @@\n .parah p{\r\n   margin-bottom: 0.5rem;\r\n   font-size: 1.2rem;\r\n   color: white;\r\n-  margin: 1;\r\n+  margin: 1rem ;\r\n }\r\n \r\n .hero-buttons {\r\n   display: flex;\r\n"
+                },
+                {
+                    "date": 1753167394069,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -81,9 +81,10 @@\n .parah p{\r\n   margin-bottom: 0.5rem;\r\n   font-size: 1.2rem;\r\n   color: white;\r\n-  margin: 1rem ;\r\n+  margin: 1rem auto;\r\n+  max-width: ;\r\n }\r\n \r\n .hero-buttons {\r\n   display: flex;\r\n"
+                },
+                {
+                    "date": 1753167400103,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -82,9 +82,10 @@\n   margin-bottom: 0.5rem;\r\n   font-size: 1.2rem;\r\n   color: white;\r\n   margin: 1rem auto;\r\n-  max-width: ;\r\n+  max-width: 600px;\r\n+  f\r\n }\r\n \r\n .hero-buttons {\r\n   display: flex;\r\n"
+                },
+                {
+                    "date": 1753167405193,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -83,9 +83,10 @@\n   font-size: 1.2rem;\r\n   color: white;\r\n   margin: 1rem auto;\r\n   max-width: 600px;\r\n-  f\r\n+  font-weight: 400;\r\n+  \r\n }\r\n \r\n .hero-buttons {\r\n   display: flex;\r\n"
+                },
+                {
+                    "date": 1753167410380,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -84,9 +84,9 @@\n   color: white;\r\n   margin: 1rem auto;\r\n   max-width: 600px;\r\n   font-weight: 400;\r\n-  \r\n+  line-height: 1.4;\r\n }\r\n \r\n .hero-buttons {\r\n   display: flex;\r\n"
+                },
+                {
+                    "date": 1753167415837,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -85,8 +85,9 @@\n   margin: 1rem auto;\r\n   max-width: 600px;\r\n   font-weight: 400;\r\n   line-height: 1.4;\r\n+  text-align: ;\r\n }\r\n \r\n .hero-buttons {\r\n   display: flex;\r\n"
+                },
+                {
+                    "date": 1753167440179,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -31,9 +31,9 @@\n \r\n /* Hero content */\r\n .hero-content {\r\n   position: absolute;\r\n-  top: 28%;\r\n+  top: 2%;\r\n   left: 50%;\r\n   transform: translate(-50%, -55%);\r\n   z-index: 2;\r\n   text-align: center;\r\n@@ -85,9 +85,9 @@\n   margin: 1rem auto;\r\n   max-width: 600px;\r\n   font-weight: 400;\r\n   line-height: 1.4;\r\n-  text-align: ;\r\n+  text-align: center;\r\n }\r\n \r\n .hero-buttons {\r\n   display: flex;\r\n"
+                },
+                {
+                    "date": 1753167447136,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -31,9 +31,9 @@\n \r\n /* Hero content */\r\n .hero-content {\r\n   position: absolute;\r\n-  top: 2%;\r\n+  top: 5%;\r\n   left: 50%;\r\n   transform: translate(-50%, -55%);\r\n   z-index: 2;\r\n   text-align: center;\r\n"
+                },
+                {
+                    "date": 1753167453367,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -31,9 +31,9 @@\n \r\n /* Hero content */\r\n .hero-content {\r\n   position: absolute;\r\n-  top: 5%;\r\n+  top: 3%;\r\n   left: 50%;\r\n   transform: translate(-50%, -55%);\r\n   z-index: 2;\r\n   text-align: center;\r\n"
+                },
+                {
+                    "date": 1753167476318,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -31,9 +31,9 @@\n \r\n /* Hero content */\r\n .hero-content {\r\n   position: absolute;\r\n-  top: 3%;\r\n+  top: 35%;\r\n   left: 50%;\r\n   transform: translate(-50%, -55%);\r\n   z-index: 2;\r\n   text-align: center;\r\n@@ -79,9 +79,9 @@\n } */\r\n \r\n .parah p{\r\n   margin-bottom: 0.5rem;\r\n-  font-size: 1.2rem;\r\n+  font-size: 1.rem;\r\n   color: white;\r\n   margin: 1rem auto;\r\n   max-width: 600px;\r\n   font-weight: 400;\r\n"
+                },
+                {
+                    "date": 1753167517596,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -31,9 +31,9 @@\n \r\n /* Hero content */\r\n .hero-content {\r\n   position: absolute;\r\n-  top: 35%;\r\n+  top: 3%;\r\n   left: 50%;\r\n   transform: translate(-50%, -55%);\r\n   z-index: 2;\r\n   text-align: center;\r\n@@ -79,9 +79,9 @@\n } */\r\n \r\n .parah p{\r\n   margin-bottom: 0.5rem;\r\n-  font-size: 1.rem;\r\n+  font-size: 1.5rem;\r\n   color: white;\r\n   margin: 1rem auto;\r\n   max-width: 600px;\r\n   font-weight: 400;\r\n"
+                },
+                {
+                    "date": 1753167524357,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -20,9 +20,9 @@\n   width: 100%;\r\n   height: 100%;\r\n   background: linear-gradient(\r\n     to bottom,\r\n-    rgba(206, 97, 43, 0.7),\r\n+    rgba(206, 97, 43, 0.),\r\n     rgba(206, 97, 43, 0.4)\r\n   );\r\n   backdrop-filter: blur(1px);\r\n   z-index: 1;\r\n@@ -31,9 +31,9 @@\n \r\n /* Hero content */\r\n .hero-content {\r\n   position: absolute;\r\n-  top: 3%;\r\n+  top: 40%;\r\n   left: 50%;\r\n   transform: translate(-50%, -55%);\r\n   z-index: 2;\r\n   text-align: center;\r\n"
+                },
+                {
+                    "date": 1753167700898,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -20,10 +20,10 @@\n   width: 100%;\r\n   height: 100%;\r\n   background: linear-gradient(\r\n     to bottom,\r\n-    rgba(206, 97, 43, 0.),\r\n-    rgba(206, 97, 43, 0.4)\r\n+    rgba(206, 97, 43, 0.9),\r\n+    rgba(206, 97, 43, 0.3)\r\n   );\r\n   backdrop-filter: blur(1px);\r\n   z-index: 1;\r\n   pointer-events: none;\r\n@@ -104,9 +104,9 @@\n   border-radius: 5px;\r\n }\r\n \r\n .btn-primary {\r\n-  background-color: #000;\r\n+  background-color: #DE824D;\r\n   color: #fff;\r\n }\r\n \r\n .btn-secondary {\r\n"
+                },
+                {
+                    "date": 1753167891870,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -109,7 +109,7 @@\n   color: #fff;\r\n }\r\n \r\n .btn-secondary {\r\n-  background-color: #fff;\r\n+  background-color: #DFA377;\r\n   color: #000;\r\n }\n\\ No newline at end of file\n"
+                },
+                {
+                    "date": 1753167977303,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -101,8 +101,9 @@\n   font-weight: 600;\r\n   border: none;\r\n   cursor: pointer;\r\n   border-radius: 5px;\r\n+  \r\n }\r\n \r\n .btn-primary {\r\n   background-color: #DE824D;\r\n"
+                },
+                {
+                    "date": 1753167987064,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -101,9 +101,9 @@\n   font-weight: 600;\r\n   border: none;\r\n   cursor: pointer;\r\n   border-radius: 5px;\r\n-  \r\n+  margin-top: 8;\r\n }\r\n \r\n .btn-primary {\r\n   background-color: #DE824D;\r\n"
+                },
+                {
+                    "date": 1753168001896,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -101,9 +101,9 @@\n   font-weight: 600;\r\n   border: none;\r\n   cursor: pointer;\r\n   border-radius: 5px;\r\n-  margin-top: 8;\r\n+  margin-top: px;\r\n }\r\n \r\n .btn-primary {\r\n   background-color: #DE824D;\r\n"
+                },
+                {
+                    "date": 1753168229010,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -101,9 +101,9 @@\n   font-weight: 600;\r\n   border: none;\r\n   cursor: pointer;\r\n   border-radius: 5px;\r\n-  margin-top: px;\r\n+  margin-top: 10px;\r\n }\r\n \r\n .btn-primary {\r\n   background-color: #DE824D;\r\n@@ -112,5 +112,5 @@\n \r\n .btn-secondary {\r\n   background-color: #DFA377;\r\n   color: #000;\r\n-}\n\\ No newline at end of file\n+}\r\n"
+                },
+                {
+                    "date": 1753168303132,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -113,4 +113,29 @@\n .btn-secondary {\r\n   background-color: #DFA377;\r\n   color: #000;\r\n }\r\n+\r\n+/* Stats Section Styles */\r\n+.stats-container {\r\n+  display: flex;\r\n+  justify-content: center;\r\n+  gap: 3rem;\r\n+  margin: 2rem 0;\r\n+}\r\n+\r\n+.stat-item {\r\n+  text-align: center;\r\n+  color: #ED8E5E;\r\n+}\r\n+\r\n+.stat-number {\r\n+  font-size: 2.5rem;\r\n+  font-weight: bold;\r\n+  line-height: 1;\r\n+}\r\n+\r\n+.stat-label {\r\n+  font-size: 1rem;\r\n+  font-weight: 500;\r\n+  margin-top: 0.5rem;\r\n+}\n\\ No newline at end of file\n"
+                },
+                {
+                    "date": 1753168322293,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -124,9 +124,9 @@\n }\r\n \r\n .stat-item {\r\n   text-align: center;\r\n-  color: #ED8E5E;\r\n+  color: white;\r\n }\r\n \r\n .stat-number {\r\n   font-size: 2.5rem;\r\n"
+                },
+                {
+                    "date": 1753168335111,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -131,8 +131,10 @@\n .stat-number {\r\n   font-size: 2.5rem;\r\n   font-weight: bold;\r\n   line-height: 1;\r\n+  #ED8E5E\r\n+  color: ;\r\n }\r\n \r\n .stat-label {\r\n   font-size: 1rem;\r\n"
+                },
+                {
+                    "date": 1753168342066,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -131,10 +131,9 @@\n .stat-number {\r\n   font-size: 2.5rem;\r\n   font-weight: bold;\r\n   line-height: 1;\r\n-  #ED8E5E\r\n-  color: ;\r\n+  color: #ED8E5E;\r\n }\r\n \r\n .stat-label {\r\n   font-size: 1rem;\r\n"
+                },
+                {
+                    "date": 1753169282392,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -31,9 +31,9 @@\n \r\n /* Hero content */\r\n .hero-content {\r\n   position: absolute;\r\n-  top: 40%;\r\n+  top: 0%;\r\n   left: 50%;\r\n   transform: translate(-50%, -55%);\r\n   z-index: 2;\r\n   text-align: center;\r\n"
+                },
+                {
+                    "date": 1753171900894,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -31,9 +31,9 @@\n \r\n /* Hero content */\r\n .hero-content {\r\n   position: absolute;\r\n-  top: 0%;\r\n+  top: 50%;\r\n   left: 50%;\r\n   transform: translate(-50%, -55%);\r\n   z-index: 2;\r\n   text-align: center;\r\n@@ -120,8 +120,9 @@\n   display: flex;\r\n   justify-content: center;\r\n   gap: 3rem;\r\n   margin: 2rem 0;\r\n+  \r\n }\r\n \r\n .stat-item {\r\n   text-align: center;\r\n"
+                },
+                {
+                    "date": 1753171906990,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -120,11 +120,12 @@\n   display: flex;\r\n   justify-content: center;\r\n   gap: 3rem;\r\n   margin: 2rem 0;\r\n-  \r\n+  align-items: center;\r\n }\r\n \r\n+\r\n .stat-item {\r\n   text-align: center;\r\n   color: white;\r\n }\r\n"
+                },
+                {
+                    "date": 1753171912136,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -123,8 +123,9 @@\n   margin: 2rem 0;\r\n   align-items: center;\r\n }\r\n \r\n+.divide\r\n \r\n .stat-item {\r\n   text-align: center;\r\n   color: white;\r\n"
+                },
+                {
+                    "date": 1753171917491,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -123,9 +123,11 @@\n   margin: 2rem 0;\r\n   align-items: center;\r\n }\r\n \r\n-.divide\r\n+.divider {\r\n+    w\r\n+}\r\n \r\n .stat-item {\r\n   text-align: center;\r\n   color: white;\r\n"
+                },
+                {
+                    "date": 1753171923974,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -124,9 +124,10 @@\n   align-items: center;\r\n }\r\n \r\n .divider {\r\n-    w\r\n+    width: 1px;\r\n+    \r\n }\r\n \r\n .stat-item {\r\n   text-align: center;\r\n"
+                },
+                {
+                    "date": 1753171929530,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -125,9 +125,9 @@\n }\r\n \r\n .divider {\r\n     width: 1px;\r\n-    \r\n+    background-color: r;\r\n }\r\n \r\n .stat-item {\r\n   text-align: center;\r\n"
+                },
+                {
+                    "date": 1753171935728,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -125,9 +125,9 @@\n }\r\n \r\n .divider {\r\n     width: 1px;\r\n-    background-color: r;\r\n+    background-color: rgba();\r\n }\r\n \r\n .stat-item {\r\n   text-align: center;\r\n"
+                },
+                {
+                    "date": 1753171940965,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -125,9 +125,9 @@\n }\r\n \r\n .divider {\r\n     width: 1px;\r\n-    background-color: rgba();\r\n+    background-color: rgba(255,255,2);\r\n }\r\n \r\n .stat-item {\r\n   text-align: center;\r\n"
+                },
+                {
+                    "date": 1753171946086,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -125,9 +125,9 @@\n }\r\n \r\n .divider {\r\n     width: 1px;\r\n-    background-color: rgba(255,255,2);\r\n+    background-color: rgba(255,255,255,0.);\r\n }\r\n \r\n .stat-item {\r\n   text-align: center;\r\n"
+                },
+                {
+                    "date": 1753171953376,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -125,9 +125,10 @@\n }\r\n \r\n .divider {\r\n     width: 1px;\r\n-    background-color: rgba(255,255,255,0.);\r\n+    background-color: rgba(255,255,255,0.5);\r\n+    \r\n }\r\n \r\n .stat-item {\r\n   text-align: center;\r\n"
+                },
+                {
+                    "date": 1753171958475,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -126,9 +126,9 @@\n \r\n .divider {\r\n     width: 1px;\r\n     background-color: rgba(255,255,255,0.5);\r\n-    \r\n+    height: 50;\r\n }\r\n \r\n .stat-item {\r\n   text-align: center;\r\n"
+                },
+                {
+                    "date": 1753171964470,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -126,9 +126,10 @@\n \r\n .divider {\r\n     width: 1px;\r\n     background-color: rgba(255,255,255,0.5);\r\n-    height: 50;\r\n+    height: 50px;\r\n+    align-items: ;\r\n }\r\n \r\n .stat-item {\r\n   text-align: center;\r\n"
+                },
+                {
+                    "date": 1753171970703,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -114,9 +114,9 @@\n   background-color: #DFA377;\r\n   color: #000;\r\n }\r\n \r\n-/* Stats Section Styles */\r\n+/* tats Section Styles */\r\n .stats-container {\r\n   display: flex;\r\n   justify-content: center;\r\n   gap: 3rem;\r\n@@ -127,9 +127,9 @@\n .divider {\r\n     width: 1px;\r\n     background-color: rgba(255,255,255,0.5);\r\n     height: 50px;\r\n-    align-items: ;\r\n+    align-items: center;\r\n }\r\n \r\n .stat-item {\r\n   text-align: center;\r\n"
+                },
+                {
+                    "date": 1753171975924,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -114,9 +114,9 @@\n   background-color: #DFA377;\r\n   color: #000;\r\n }\r\n \r\n-/* tats Section Styles */\r\n+/* stats section tyles */\r\n .stats-container {\r\n   display: flex;\r\n   justify-content: center;\r\n   gap: 3rem;\r\n"
+                },
+                {
+                    "date": 1753171984790,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -28,9 +28,9 @@\n   z-index: 1;\r\n   pointer-events: none;\r\n }\r\n \r\n-/* Hero content */\r\n+/* ero content */\r\n .hero-content {\r\n   position: absolute;\r\n   top: 50%;\r\n   left: 50%;\r\n@@ -114,9 +114,9 @@\n   background-color: #DFA377;\r\n   color: #000;\r\n }\r\n \r\n-/* stats section tyles */\r\n+/* stats section styles */\r\n .stats-container {\r\n   display: flex;\r\n   justify-content: center;\r\n   gap: 3rem;\r\n"
+                },
+                {
+                    "date": 1753171991402,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -11,9 +11,9 @@\n   display: block;\r\n   object-fit: cover;\r\n }\r\n \r\n-/* Overlay color */\r\n+/* verlay color */\r\n .hero-image-only .overlay {\r\n   position: absolute;\r\n   top: 0;\r\n   left: 0;\r\n@@ -28,9 +28,9 @@\n   z-index: 1;\r\n   pointer-events: none;\r\n }\r\n \r\n-/* ero content */\r\n+/* hero content */\r\n .hero-content {\r\n   position: absolute;\r\n   top: 50%;\r\n   left: 50%;\r\n"
+                },
+                {
+                    "date": 1753172438951,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -11,9 +11,9 @@\n   display: block;\r\n   object-fit: cover;\r\n }\r\n \r\n-/* verlay color */\r\n+/* overlay color */\r\n .hero-image-only .overlay {\r\n   position: absolute;\r\n   top: 0;\r\n   left: 0;\r\n@@ -50,9 +50,9 @@\n }\r\n \r\n .highlight-text {\r\n   color: white;\r\n-  font-size: 4.3rem;\r\n+  font-size: 4.rem;\r\n   margin: 0;\r\n }\r\n \r\n .hero-content p {\r\n"
+                },
+                {
+                    "date": 1753172528309,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -50,9 +50,9 @@\n }\r\n \r\n .highlight-text {\r\n   color: white;\r\n-  font-size: 4.rem;\r\n+  font-size: 4.5rem;\r\n   margin: 0;\r\n }\r\n \r\n .hero-content p {\r\n@@ -111,9 +111,9 @@\n }\r\n \r\n .btn-secondary {\r\n   background-color: #DFA377;\r\n-  color: #000;\r\n+  color: w;\r\n }\r\n \r\n /* stats section styles */\r\n .stats-container {\r\n"
+                },
+                {
+                    "date": 1753188306735,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -111,15 +111,15 @@\n }\r\n \r\n .btn-secondary {\r\n   background-color: #DFA377;\r\n-  color: w;\r\n+  color: white;\r\n }\r\n \r\n /* stats section styles */\r\n .stats-container {\r\n   display: flex;\r\n-  justify-content: center;\r\n+  justify-content: center;`\r\n   gap: 3rem;\r\n   margin: 2rem 0;\r\n   align-items: center;\r\n }\r\n"
+                }
+            ],
+            "date": 1753118871125,
+            "name": "Commit-0",
+            "content": ".hero-container {\r\n  display: flex;\r\n  justify-content: space-between;\r\n  align-items: center;\r\n  padding: 80px 60px;\r\n  background: #fff;\r\n  gap: 50px;\r\n  flex-wrap: wrap;\r\n}\r\n\r\n.hero-content {\r\n  flex: 1;\r\n  max-width: 500px;\r\n}\r\n\r\n.hero-content h1 {\r\n  font-size: 42px;\r\n  color: #2f2121;\r\n  margin-bottom: 20px;\r\n}\r\n\r\n.hero-content p {\r\n  font-size: 18px;\r\n  color: #8a6969;\r\n  margin-bottom: 30px;\r\n}\r\n\r\n.hero-btn {\r\n  padding: 12px 28px;\r\n  background-color: #2f2121;\r\n  color: white;\r\n  border: none;\r\n  border-radius: 8px;\r\n  font-size: 16px;\r\n  cursor: pointer;\r\n}\r\n\r\n.hero-btn:hover {\r\n  background-color: #473030;\r\n}\r\n\r\n.hero-image {\r\n  flex: 1;\r\n  display: flex;\r\n  justify-content: center;\r\n}\r\n\r\n.hero-image img {\r\n  max-width: 100%;\r\n  height: auto;\r\n  border-radius: 12px;\r\n  object-fit: cover;\r\n}"
+        }
+    ]
+}

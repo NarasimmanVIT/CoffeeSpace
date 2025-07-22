@@ -1,0 +1,90 @@
+{
+    "sourceFile": "src/index.css",
+    "activeCommit": 0,
+    "commits": [
+        {
+            "activePatchIndex": 18,
+            "patches": [
+                {
+                    "date": 1753105877924,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n"
+                },
+                {
+                    "date": 1753106471943,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -4,9 +4,9 @@\n   font-weight: 400;\n \n   color-scheme: light dark;\n   color: rgba(255, 255, 255, 0.87);\n-  background-color: w;\n+  background-color: rgb(226, 22, 22);\n \n   font-synthesis: none;\n   text-rendering: optimizeLegibility;\n   -webkit-font-smoothing: antialiased;\n"
+                },
+                {
+                    "date": 1753106513909,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -24,9 +24,9 @@\n \n body {\n   margin: 0;\n   display: flex;\n-  place-items: center;\n+  /* place-items: center; */\n   min-width: 320px;\n   min-height: 100vh;\n }\n \n"
+                },
+                {
+                    "date": 1753106926624,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,4 +1,5 @@\n+\n :root {\n   font-family: system-ui, Avenir, Helvetica, Arial, sans-serif;\n   line-height: 1.5;\n   font-weight: 400;\n"
+                },
+                {
+                    "date": 1753108062877,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,5 +1,5 @@\n-\n+*\n :root {\n   font-family: system-ui, Avenir, Helvetica, Arial, sans-serif;\n   line-height: 1.5;\n   font-weight: 400;\n"
+                },
+                {
+                    "date": 1753108068828,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,5 +1,7 @@\n-*\n+*{\n+  margin: ;\n+}\n :root {\n   font-family: system-ui, Avenir, Helvetica, Arial, sans-serif;\n   line-height: 1.5;\n   font-weight: 400;\n"
+                },
+                {
+                    "date": 1753108074338,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,6 +1,8 @@\n *{\n-  margin: ;\n+  margin: 0;\n+  padding: 0;\n+  \n }\n :root {\n   font-family: system-ui, Avenir, Helvetica, Arial, sans-serif;\n   line-height: 1.5;\n"
+                },
+                {
+                    "date": 1753108079478,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,8 +1,8 @@\n *{\n   margin: 0;\n   padding: 0;\n-  \n+  box-sizing: border-box;\n }\n :root {\n   font-family: system-ui, Avenir, Helvetica, Arial, sans-serif;\n   line-height: 1.5;\n"
+                },
+                {
+                    "date": 1753108085947,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -2,8 +2,9 @@\n   margin: 0;\n   padding: 0;\n   box-sizing: border-box;\n }\n+html,b\n :root {\n   font-family: system-ui, Avenir, Helvetica, Arial, sans-serif;\n   line-height: 1.5;\n   font-weight: 400;\n"
+                },
+                {
+                    "date": 1753108091034,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -2,9 +2,9 @@\n   margin: 0;\n   padding: 0;\n   box-sizing: border-box;\n }\n-html,b\n+html,body,\n :root {\n   font-family: system-ui, Avenir, Helvetica, Arial, sans-serif;\n   line-height: 1.5;\n   font-weight: 400;\n"
+                },
+                {
+                    "date": 1753108097631,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -2,9 +2,11 @@\n   margin: 0;\n   padding: 0;\n   box-sizing: border-box;\n }\n-html,body,\n+html,body, #root{\n+  w\n+}\n :root {\n   font-family: system-ui, Avenir, Helvetica, Arial, sans-serif;\n   line-height: 1.5;\n   font-weight: 400;\n"
+                },
+                {
+                    "date": 1753108097732,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -3,9 +3,9 @@\n   padding: 0;\n   box-sizing: border-box;\n }\n html,body, #root{\n-  w\n+  wi\n }\n :root {\n   font-family: system-ui, Avenir, Helvetica, Arial, sans-serif;\n   line-height: 1.5;\n"
+                },
+                {
+                    "date": 1753108103650,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -3,9 +3,10 @@\n   padding: 0;\n   box-sizing: border-box;\n }\n html,body, #root{\n-  wi\n+  width: 100%;\n+  h\n }\n :root {\n   font-family: system-ui, Avenir, Helvetica, Arial, sans-serif;\n   line-height: 1.5;\n"
+                },
+                {
+                    "date": 1753108109559,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -4,9 +4,10 @@\n   box-sizing: border-box;\n }\n html,body, #root{\n   width: 100%;\n-  h\n+  height: 100%;\n+  f\n }\n :root {\n   font-family: system-ui, Avenir, Helvetica, Arial, sans-serif;\n   line-height: 1.5;\n"
+                },
+                {
+                    "date": 1753108116739,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -5,9 +5,9 @@\n }\n html,body, #root{\n   width: 100%;\n   height: 100%;\n-  f\n+  font-family: Arial, Helvetica, sans-serif;\n }\n :root {\n   font-family: system-ui, Avenir, Helvetica, Arial, sans-serif;\n   line-height: 1.5;\n"
+                },
+                {
+                    "date": 1753108896276,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -6,8 +6,9 @@\n html,body, #root{\n   width: 100%;\n   height: 100%;\n   font-family: Arial, Helvetica, sans-serif;\n+  \n }\n :root {\n   font-family: system-ui, Avenir, Helvetica, Arial, sans-serif;\n   line-height: 1.5;\n"
+                },
+                {
+                    "date": 1753108901696,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -6,9 +6,10 @@\n html,body, #root{\n   width: 100%;\n   height: 100%;\n   font-family: Arial, Helvetica, sans-serif;\n-  \n+  margin: 0;\n+  p\n }\n :root {\n   font-family: system-ui, Avenir, Helvetica, Arial, sans-serif;\n   line-height: 1.5;\n"
+                },
+                {
+                    "date": 1753108946434,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -7,9 +7,9 @@\n   width: 100%;\n   height: 100%;\n   font-family: Arial, Helvetica, sans-serif;\n   margin: 0;\n-  p\n+  padding: 0;\n }\n :root {\n   font-family: system-ui, Avenir, Helvetica, Arial, sans-serif;\n   line-height: 1.5;\n@@ -39,8 +39,9 @@\n   display: flex;\n   /* place-items: center; */\n   min-width: 320px;\n   min-height: 100vh;\n+  \n }\n \n h1 {\n   font-size: 3.2em;\n"
+                },
+                {
+                    "date": 1753119757626,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -16,9 +16,9 @@\n   font-weight: 400;\n \n   color-scheme: light dark;\n   color: rgba(255, 255, 255, 0.87);\n-  background-color: rgb(226, 22, 22);\n+  background-color: w;\n \n   font-synthesis: none;\n   text-rendering: optimizeLegibility;\n   -webkit-font-smoothing: antialiased;\n@@ -39,9 +39,9 @@\n   display: flex;\n   /* place-items: center; */\n   min-width: 320px;\n   min-height: 100vh;\n-  \n+  padding: 0;\n }\n \n h1 {\n   font-size: 3.2em;\n"
+                }
+            ],
+            "date": 1753105877924,
+            "name": "Commit-0",
+            "content": ":root {\n  font-family: system-ui, Avenir, Helvetica, Arial, sans-serif;\n  line-height: 1.5;\n  font-weight: 400;\n\n  color-scheme: light dark;\n  color: rgba(255, 255, 255, 0.87);\n  background-color: w;\n\n  font-synthesis: none;\n  text-rendering: optimizeLegibility;\n  -webkit-font-smoothing: antialiased;\n  -moz-osx-font-smoothing: grayscale;\n}\n\na {\n  font-weight: 500;\n  color: #646cff;\n  text-decoration: inherit;\n}\na:hover {\n  color: #535bf2;\n}\n\nbody {\n  margin: 0;\n  display: flex;\n  place-items: center;\n  min-width: 320px;\n  min-height: 100vh;\n}\n\nh1 {\n  font-size: 3.2em;\n  line-height: 1.1;\n}\n\nbutton {\n  border-radius: 8px;\n  border: 1px solid transparent;\n  padding: 0.6em 1.2em;\n  font-size: 1em;\n  font-weight: 500;\n  font-family: inherit;\n  background-color: #1a1a1a;\n  cursor: pointer;\n  transition: border-color 0.25s;\n}\nbutton:hover {\n  border-color: #646cff;\n}\nbutton:focus,\nbutton:focus-visible {\n  outline: 4px auto -webkit-focus-ring-color;\n}\n\n@media (prefers-color-scheme: light) {\n  :root {\n    color: #213547;\n    background-color: #ffffff;\n  }\n  a:hover {\n    color: #747bff;\n  }\n  button {\n    background-color: #f9f9f9;\n  }\n}\n"
+        }
+    ]
+}
