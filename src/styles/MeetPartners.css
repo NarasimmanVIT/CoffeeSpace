@@ -1,0 +1,61 @@
+.app-container {
+  width: 100%;
+  background-color: #faf8f4;
+  padding: 40px 20px;
+  min-height: 100vh;
+  text-align: center;
+  overflow-x: hidden;
+}
+
+h1 {
+  font-size: 3rem;
+  font-family: ui-sans-serif, system-ui, sans-serif;
+  color: #30251d;
+  font-weight: 700;
+  margin-bottom: 1.5rem;
+}
+
+.subtitle {
+  color: #847062;
+  font-size: 1.25rem;
+  font-family: ui-sans-serif, system-ui, sans-serif;
+  max-width: 750px;
+  margin: 0 auto 40px;
+  line-height: 1.75rem;
+}
+
+.cards-wrapper {
+  display: flex;
+  justify-content: space-evenly;
+  flex-wrap: wrap;
+  gap: 30px;
+  margin-bottom: 40px;
+  width: 100%;
+  margin-left: auto;
+  margin-right: auto;
+  box-sizing: border-box;
+  padding: 0 20px;
+}
+
+.view-all-btn {
+  background: linear-gradient(90deg, #9c4f2f, #f4712b, #c8801a);
+  color: white;
+  border: none;
+  padding: 12px 24px;
+  font-size: 16px;
+  font-weight: 500;
+  border-radius: 8px;
+  cursor: pointer;
+  font-family: ui-sans-serif, system-ui, sans-serif;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.15);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.view-all-btn:hover {
+  transform: scale(1.05);
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.15);
+}
+
+.view-all-btn:hover {
+  background-color: #6e3e1d;
+}
