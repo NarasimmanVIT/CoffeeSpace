@@ -1,0 +1,78 @@
+{
+    "sourceFile": "src/components/Messages/Sidebar.css",
+    "activeCommit": 0,
+    "commits": [
+        {
+            "activePatchIndex": 15,
+            "patches": [
+                {
+                    "date": 1753424191411,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n"
+                },
+                {
+                    "date": 1753424860568,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,6 +1,6 @@\n .sidebar {\r\n-  width: 25%;\r\n+  width: 3;\r\n   background-color: #f2f2f2;\r\n   border-right: 1px solid #ddd;\r\n   padding: 16px;\r\n   overflow-y: auto;\r\n"
+                },
+                {
+                    "date": 1753424869144,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,7 +1,7 @@\n .sidebar {\r\n-  width: 3;\r\n-  background-color: #f2f2f2;\r\n+  width: 300px;\r\n+  background-color: #f;\r\n   border-right: 1px solid #ddd;\r\n   padding: 16px;\r\n   overflow-y: auto;\r\n }\r\n"
+                },
+                {
+                    "date": 1753424879234,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,9 +1,9 @@\n .sidebar {\r\n   width: 300px;\r\n-  background-color: #f;\r\n+  background-color: #fff;\r\n   border-right: 1px solid #ddd;\r\n-  padding: 16px;\r\n+  padding: 1px;\r\n   overflow-y: auto;\r\n }\r\n \r\n .sidebar-title {\r\n"
+                },
+                {
+                    "date": 1753424884939,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,10 +1,11 @@\n .sidebar {\r\n   width: 300px;\r\n   background-color: #fff;\r\n   border-right: 1px solid #ddd;\r\n-  padding: 1px;\r\n+  padding: 20px;\r\n   overflow-y: auto;\r\n+  \r\n }\r\n \r\n .sidebar-title {\r\n   font-size: 20px;\r\n"
+                },
+                {
+                    "date": 1753424891860,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -3,9 +3,9 @@\n   background-color: #fff;\r\n   border-right: 1px solid #ddd;\r\n   padding: 20px;\r\n   overflow-y: auto;\r\n-  \r\n+  box-sizing: ;\r\n }\r\n \r\n .sidebar-title {\r\n   font-size: 20px;\r\n"
+                },
+                {
+                    "date": 1753424909894,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -3,12 +3,13 @@\n   background-color: #fff;\r\n   border-right: 1px solid #ddd;\r\n   padding: 20px;\r\n   overflow-y: auto;\r\n-  box-sizing: ;\r\n+  box-sizing: border-box;\r\n }\r\n \r\n .sidebar-title {\r\n   font-size: 20px;\r\n   font-weight: bold;\r\n   margin-bottom: 16px;\r\n+  \r\n }\n\\ No newline at end of file\n"
+                },
+                {
+                    "date": 1753424914948,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -10,6 +10,6 @@\n .sidebar-title {\r\n   font-size: 20px;\r\n   font-weight: bold;\r\n   margin-bottom: 16px;\r\n-  \r\n+  color: #3;\r\n }\n\\ No newline at end of file\n"
+                },
+                {
+                    "date": 1753424930907,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -7,9 +7,9 @@\n   box-sizing: border-box;\r\n }\r\n \r\n .sidebar-title {\r\n-  font-size: 20px;\r\n+  font-size: 2px;\r\n   font-weight: bold;\r\n   margin-bottom: 16px;\r\n-  color: #3;\r\n+  color: #333;\r\n }\n\\ No newline at end of file\n"
+                },
+                {
+                    "date": 1753427852771,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -0,0 +1,16 @@\n+.sidebar {\r\n+  width: 300px;\r\n+  background-color: #fff;\r\n+  border-right: 1px solid #ddd;\r\n+  padding: 20px;\r\n+  overflow-y: auto;\r\n+  box-sizing: border-box;\r\n+  \r\n+}\r\n+\r\n+.sidebar-title {\r\n+  font-size: 22px;\r\n+  font-weight: bold;\r\n+  margin-bottom: 16px;\r\n+  color: #333;\r\n+}\n\\ No newline at end of file\n"
+                },
+                {
+                    "date": 1753427858376,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -4,28 +4,13 @@\n   border-right: 1px solid #ddd;\r\n   padding: 20px;\r\n   overflow-y: auto;\r\n   box-sizing: border-box;\r\n-  \r\n+  margin-top: 4;\r\n }\r\n \r\n .sidebar-title {\r\n   font-size: 22px;\r\n   font-weight: bold;\r\n   margin-bottom: 16px;\r\n   color: #333;\r\n-}\n-.sidebar {\r\n-  width: 300px;\r\n-  background-color: #fff;\r\n-  border-right: 1px solid #ddd;\r\n-  padding: 20px;\r\n-  overflow-y: auto;\r\n-  box-sizing: border-box;\r\n-}\r\n-\r\n-.sidebar-title {\r\n-  font-size: 2px;\r\n-  font-weight: bold;\r\n-  margin-bottom: 16px;\r\n-  color: #333;\r\n }\n\\ No newline at end of file\n"
+                },
+                {
+                    "date": 1753427871242,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -4,9 +4,9 @@\n   border-right: 1px solid #ddd;\r\n   padding: 20px;\r\n   overflow-y: auto;\r\n   box-sizing: border-box;\r\n-  margin-top: 4;\r\n+  \r\n }\r\n \r\n .sidebar-title {\r\n   font-size: 22px;\r\n"
+                },
+                {
+                    "date": 1753427876521,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -4,9 +4,9 @@\n   border-right: 1px solid #ddd;\r\n   padding: 20px;\r\n   overflow-y: auto;\r\n   box-sizing: border-box;\r\n-  \r\n+  margin-left: 3;\r\n }\r\n \r\n .sidebar-title {\r\n   font-size: 22px;\r\n"
+                },
+                {
+                    "date": 1753427887731,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -4,9 +4,9 @@\n   border-right: 1px solid #ddd;\r\n   padding: 20px;\r\n   overflow-y: auto;\r\n   box-sizing: border-box;\r\n-  margin-left: 3;\r\n+ \r\n }\r\n \r\n .sidebar-title {\r\n   font-size: 22px;\r\n"
+                },
+                {
+                    "date": 1753521467501,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,9 +1,9 @@\n .sidebar {\r\n   width: 300px;\r\n   background-color: #fff;\r\n   border-right: 1px solid #ddd;\r\n-  padding: 20px;\r\n+  padding: 2px;\r\n   overflow-y: auto;\r\n   box-sizing: border-box;\r\n }\r\n \r\n"
+                },
+                {
+                    "date": 1753521493059,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -5,9 +5,9 @@\n   padding: 16px;\r\n   overflow-y: auto;\r\n   box-sizing: border-box;\r\n   height: 100%;\r\n-  d\r\n+  di\r\n }\r\n \r\n .sidebar-title {\r\n   font-size: 22px;\r\n"
+                }
+            ],
+            "date": 1753424191411,
+            "name": "Commit-0",
+            "content": ".sidebar {\r\n  width: 25%;\r\n  background-color: #f2f2f2;\r\n  border-right: 1px solid #ddd;\r\n  padding: 16px;\r\n  overflow-y: auto;\r\n}\r\n\r\n.sidebar-title {\r\n  font-size: 20px;\r\n  font-weight: bold;\r\n  margin-bottom: 16px;\r\n}"
+        }
+    ]
+}

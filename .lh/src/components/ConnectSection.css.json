@@ -1,0 +1,310 @@
+{
+    "sourceFile": "src/components/ConnectSection.css",
+    "activeCommit": 0,
+    "commits": [
+        {
+            "activePatchIndex": 73,
+            "patches": [
+                {
+                    "date": 1753252630819,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n"
+                },
+                {
+                    "date": 1753252811046,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,8 +1,8 @@\n .connect-section {\r\n   width: 100%;\r\n   padding: 60px 20px;\r\n-  background-color: #ffffff;\r\n+  background-color: #F9F7F5;\r\n   box-sizing: border-box;\r\n }\r\n \r\n .connect-top {\r\n"
+                },
+                {
+                    "date": 1753252834342,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -11,9 +11,9 @@\n   text-align: center;\r\n }\r\n \r\n .connect-top h2 {\r\n-  font-size: 28px;\r\n+  font-size: 2px;\r\n   margin-bottom: 16px;\r\n   color: #333;\r\n }\r\n \r\n"
+                },
+                {
+                    "date": 1753252861223,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -11,11 +11,12 @@\n   text-align: center;\r\n }\r\n \r\n .connect-top h2 {\r\n-  font-size: 2px;\r\n+  font-size: 32px;\r\n   margin-bottom: 16px;\r\n   color: #333;\r\n+  \r\n }\r\n \r\n .connect-top p {\r\n   font-size: 15px;\r\n"
+                },
+                {
+                    "date": 1753252867147,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -14,9 +14,9 @@\n .connect-top h2 {\r\n   font-size: 32px;\r\n   margin-bottom: 16px;\r\n   color: #333;\r\n-  \r\n+  font-weight: ;\r\n }\r\n \r\n .connect-top p {\r\n   font-size: 15px;\r\n"
+                },
+                {
+                    "date": 1753252888919,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -10,13 +10,13 @@\n   margin: 0 auto 60px auto;\r\n   text-align: center;\r\n }\r\n \r\n-.connect-top h2 {\r\n+.connect-top h {\r\n   font-size: 32px;\r\n   margin-bottom: 16px;\r\n   color: #333;\r\n-  font-weight: ;\r\n+  font-weight: bold;\r\n }\r\n \r\n .connect-top p {\r\n   font-size: 15px;\r\n"
+                },
+                {
+                    "date": 1753252910530,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -10,10 +10,10 @@\n   margin: 0 auto 60px auto;\r\n   text-align: center;\r\n }\r\n \r\n-.connect-top h {\r\n-  font-size: 32px;\r\n+.connect-top h1 {\r\n+  font-size: 3px;\r\n   margin-bottom: 16px;\r\n   color: #333;\r\n   font-weight: bold;\r\n }\r\n"
+                },
+                {
+                    "date": 1753252919864,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -11,9 +11,9 @@\n   text-align: center;\r\n }\r\n \r\n .connect-top h1 {\r\n-  font-size: 3px;\r\n+  font-size: 6px;\r\n   margin-bottom: 16px;\r\n   color: #333;\r\n   font-weight: bold;\r\n }\r\n"
+                },
+                {
+                    "date": 1753252926611,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -11,9 +11,9 @@\n   text-align: center;\r\n }\r\n \r\n .connect-top h1 {\r\n-  font-size: 6px;\r\n+  font-size: 4px;\r\n   margin-bottom: 16px;\r\n   color: #333;\r\n   font-weight: bold;\r\n }\r\n"
+                },
+                {
+                    "date": 1753252939477,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -11,9 +11,9 @@\n   text-align: center;\r\n }\r\n \r\n .connect-top h1 {\r\n-  font-size: 4px;\r\n+  font-size: 5px;\r\n   margin-bottom: 16px;\r\n   color: #333;\r\n   font-weight: bold;\r\n }\r\n"
+                },
+                {
+                    "date": 1753252956759,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -11,12 +11,13 @@\n   text-align: center;\r\n }\r\n \r\n .connect-top h1 {\r\n-  font-size: 5px;\r\n+  font-size: 45px;\r\n   margin-bottom: 16px;\r\n   color: #333;\r\n   font-weight: bold;\r\n+  \r\n }\r\n \r\n .connect-top p {\r\n   font-size: 15px;\r\n"
+                },
+                {
+                    "date": 1753252962042,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -15,9 +15,9 @@\n   font-size: 45px;\r\n   margin-bottom: 16px;\r\n   color: #333;\r\n   font-weight: bold;\r\n-  \r\n+  margin-top: 10p;\r\n }\r\n \r\n .connect-top p {\r\n   font-size: 15px;\r\n"
+                },
+                {
+                    "date": 1753253010332,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -15,13 +15,13 @@\n   font-size: 45px;\r\n   margin-bottom: 16px;\r\n   color: #333;\r\n   font-weight: bold;\r\n-  margin-top: 10p;\r\n+  margin-top: 10px;\r\n }\r\n \r\n .connect-top p {\r\n-  font-size: 15px;\r\n+  font-size: 1px;\r\n   color: #666;\r\n   max-width: 600px;\r\n   margin: 0 auto;\r\n }\r\n"
+                },
+                {
+                    "date": 1753253049371,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -19,11 +19,11 @@\n   margin-top: 10px;\r\n }\r\n \r\n .connect-top p {\r\n-  font-size: 1px;\r\n+  font-size: 17px;\r\n   color: #666;\r\n-  max-width: 600px;\r\n+  max-width: 60px;\r\n   margin: 0 auto;\r\n }\r\n \r\n .connect-boxes {\r\n"
+                },
+                {
+                    "date": 1753253062176,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -19,11 +19,11 @@\n   margin-top: 10px;\r\n }\r\n \r\n .connect-top p {\r\n-  font-size: 17px;\r\n+  font-size: 1px;\r\n   color: #666;\r\n-  max-width: 60px;\r\n+  max-width: 650px;\r\n   margin: 0 auto;\r\n }\r\n \r\n .connect-boxes {\r\n"
+                },
+                {
+                    "date": 1753253068532,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -19,11 +19,11 @@\n   margin-top: 10px;\r\n }\r\n \r\n .connect-top p {\r\n-  font-size: 1px;\r\n+  font-size: 20px;\r\n   color: #666;\r\n-  max-width: 650px;\r\n+  max-width: 60px;\r\n   margin: 0 auto;\r\n }\r\n \r\n .connect-boxes {\r\n"
+                },
+                {
+                    "date": 1753253080276,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -21,9 +21,9 @@\n \r\n .connect-top p {\r\n   font-size: 20px;\r\n   color: #666;\r\n-  max-width: 60px;\r\n+  max-width: 70px;\r\n   margin: 0 auto;\r\n }\r\n \r\n .connect-boxes {\r\n"
+                },
+                {
+                    "date": 1753253094923,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -19,11 +19,11 @@\n   margin-top: 10px;\r\n }\r\n \r\n .connect-top p {\r\n-  font-size: 20px;\r\n+  font-size: 2px;\r\n   color: #666;\r\n-  max-width: 70px;\r\n+  max-width: 750px;\r\n   margin: 0 auto;\r\n }\r\n \r\n .connect-boxes {\r\n"
+                },
+                {
+                    "date": 1753253105513,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -19,9 +19,9 @@\n   margin-top: 10px;\r\n }\r\n \r\n .connect-top p {\r\n-  font-size: 2px;\r\n+  font-size: 1px;\r\n   color: #666;\r\n   max-width: 750px;\r\n   margin: 0 auto;\r\n }\r\n"
+                },
+                {
+                    "date": 1753253159127,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -0,0 +1,114 @@\n+.connect-section {\r\n+  width: 100%;\r\n+  padding: 60px 20px;\r\n+  background-color: #F9F7F5;\r\n+  box-sizing: border-box;\r\n+}\r\n+\r\n+.connect-top {\r\n+  max-width: 1200px;\r\n+  margin: 0 auto 60px auto;\r\n+  text-align: center;\r\n+}\r\n+\r\n+.connect-top h1 {\r\n+  font-size: 45px;\r\n+  margin-bottom: 16px;\r\n+  color: #333;\r\n+  font-weight: bold;\r\n+  margin-top: 10px;\r\n+}\r\n+\r\n+.connect-top p {\r\n+  font-size: 19px;\r\n+  color: #666;\r\n+  max-width: 750px;\r\n+  margin: 0 auto;\r\n+}\r\n+\r\n+.connect-boxes {\r\n+  display: flex;\r\n+  flex-wrap: wrap;\r\n+  justify-content: center;\r\n+  gap: 16px;\r\n+  margin-top: 40px;\r\n+}\r\n+\r\n+.connect-box {\r\n+  flex: 1 1 200px;\r\n+  border: 1px solid #ccc;\r\n+  border-radius: 12px;\r\n+  padding: 16px;\r\n+  font-size: 14px;\r\n+  background-color: #fff;\r\n+  box-shadow: 0 2px 5px rgba(0,0,0,0.05);\r\n+  transition: all 0.3s ease;\r\n+}\r\n+\r\n+.connect-box:hover {\r\n+  box-shadow: 0 4px 10px rgba(0,0,0,0.1);\r\n+}\r\n+\r\n+/* Bottom Section */\r\n+.connect-bottom {\r\n+  background-color: #FFFFFF;\r\n+  padding: 60px 20px;\r\n+  border-radius: 20px;\r\n+  max-width: 1100px;\r\n+  margin: 0 auto;\r\n+  text-align: center;\r\n+  box-shadow: inset 0 0 8px rgba(0,0,0,0.05);\r\n+}\r\n+\r\n+.connect-bottom h2 {\r\n+  font-size: 28px;\r\n+  color: #333;\r\n+  margin-bottom: 16px;\r\n+}\r\n+\r\n+.connect-bottom p {\r\n+  font-size: 15px;\r\n+  color: #666;\r\n+  max-width: 600px;\r\n+  margin: 0 auto 32px auto;\r\n+}\r\n+\r\n+.connect-buttons {\r\n+  display: flex;\r\n+  flex-wrap: wrap;\r\n+  justify-content: center;\r\n+  gap: 20px;\r\n+}\r\n+\r\n+.connect-btn {\r\n+  border: 1px solid #ccc;\r\n+  padding: 14px 24px;\r\n+  border-radius: 12px;\r\n+  background-color: #fff;\r\n+  font-size: 14px;\r\n+  color: #444;\r\n+  cursor: pointer;\r\n+  transition: box-shadow 0.3s ease;\r\n+}\r\n+\r\n+.connect-btn:hover {\r\n+  box-shadow: 0 4px 10px rgba(0,0,0,0.1);\r\n+}\r\n+\r\n+/* Responsive */\r\n+@media (max-width: 768px) {\r\n+  .connect-top h2,\r\n+  .connect-bottom h2 {\r\n+    font-size: 22px;\r\n+  }\r\n+\r\n+  .connect-boxes,\r\n+  .connect-buttons {\r\n+    flex-direction: column;\r\n+    gap: 12px;\r\n+  }\r\n+\r\n+  .connect-btn {\r\n+    width: 100%;\r\n+  }\r\n+}\n\\ No newline at end of file\n"
+                },
+                {
+                    "date": 1753253377441,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -50,122 +50,8 @@\n }\r\n \r\n /* Bottom Section */\r\n .connect-bottom {\r\n-  background-color: #FFFFFF;\r\n-  padding: 60px 20px;\r\n-  border-radius: 20px;\r\n-  max-width: 1100px;\r\n-  margin: 0 auto;\r\n-  text-align: center;\r\n-  box-shadow: inset 0 0 8px rgba(0,0,0,0.05);\r\n-}\r\n-\r\n-.connect-bottom h2 {\r\n-  font-size: 28px;\r\n-  color: #333;\r\n-  margin-bottom: 16px;\r\n-}\r\n-\r\n-.connect-bottom p {\r\n-  font-size: 15px;\r\n-  color: #666;\r\n-  max-width: 600px;\r\n-  margin: 0 auto 32px auto;\r\n-}\r\n-\r\n-.connect-buttons {\r\n-  display: flex;\r\n-  flex-wrap: wrap;\r\n-  justify-content: center;\r\n-  gap: 20px;\r\n-}\r\n-\r\n-.connect-btn {\r\n-  border: 1px solid #ccc;\r\n-  padding: 14px 24px;\r\n-  border-radius: 12px;\r\n-  background-color: #fff;\r\n-  font-size: 14px;\r\n-  color: #444;\r\n-  cursor: pointer;\r\n-  transition: box-shadow 0.3s ease;\r\n-}\r\n-\r\n-.connect-btn:hover {\r\n-  box-shadow: 0 4px 10px rgba(0,0,0,0.1);\r\n-}\r\n-\r\n-/* Responsive */\r\n-@media (max-width: 768px) {\r\n-  .connect-top h2,\r\n-  .connect-bottom h2 {\r\n-    font-size: 22px;\r\n-  }\r\n-\r\n-  .connect-boxes,\r\n-  .connect-buttons {\r\n-    flex-direction: column;\r\n-    gap: 12px;\r\n-  }\r\n-\r\n-  .connect-btn {\r\n-    width: 100%;\r\n-  }\r\n-}\n-.connect-section {\r\n-  width: 100%;\r\n-  padding: 60px 20px;\r\n-  background-color: #F9F7F5;\r\n-  box-sizing: border-box;\r\n-}\r\n-\r\n-.connect-top {\r\n-  max-width: 1200px;\r\n-  margin: 0 auto 60px auto;\r\n-  text-align: center;\r\n-}\r\n-\r\n-.connect-top h1 {\r\n-  font-size: 45px;\r\n-  margin-bottom: 16px;\r\n-  color: #333;\r\n-  font-weight: bold;\r\n-  margin-top: 10px;\r\n-}\r\n-\r\n-.connect-top p {\r\n-  font-size: 1px;\r\n-  color: #666;\r\n-  max-width: 750px;\r\n-  margin: 0 auto;\r\n-}\r\n-\r\n-.connect-boxes {\r\n-  display: flex;\r\n-  flex-wrap: wrap;\r\n-  justify-content: center;\r\n-  gap: 16px;\r\n-  margin-top: 40px;\r\n-}\r\n-\r\n-.connect-box {\r\n-  flex: 1 1 200px;\r\n-  border: 1px solid #ccc;\r\n-  border-radius: 12px;\r\n-  padding: 16px;\r\n-  font-size: 14px;\r\n-  background-color: #fff;\r\n-  box-shadow: 0 2px 5px rgba(0,0,0,0.05);\r\n-  transition: all 0.3s ease;\r\n-}\r\n-\r\n-.connect-box:hover {\r\n-  box-shadow: 0 4px 10px rgba(0,0,0,0.1);\r\n-}\r\n-\r\n-/* Bottom Section */\r\n-.connect-bottom {\r\n   background-color: #f9f9f9;\r\n   padding: 60px 20px;\r\n   border-radius: 20px;\r\n   max-width: 1100px;\r\n"
+                },
+                {
+                    "date": 1753253404943,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -0,0 +1,114 @@\n+.connect-section {\r\n+  width: 100%;\r\n+  padding: 60px 20px;\r\n+  background-color: #F9F7F5;\r\n+  box-sizing: border-box;\r\n+}\r\n+\r\n+.connect-top {\r\n+  max-width: 1200px;\r\n+  margin: 0 auto 60px auto;\r\n+  text-align: center;\r\n+}\r\n+\r\n+.connect-top h1 {\r\n+  font-size: 45px;\r\n+  margin-bottom: 16px;\r\n+  color: #333;\r\n+  font-weight: bold;\r\n+  margin-top: 10px;\r\n+}\r\n+\r\n+.connect-top p {\r\n+  font-size: 19px;\r\n+  color: #666;\r\n+  max-width: 750px;\r\n+  margin: 0 auto;\r\n+}\r\n+\r\n+.connect-boxes {\r\n+  display: flex;\r\n+  flex-wrap: wrap;\r\n+  justify-content: center;\r\n+  gap: 16px;\r\n+  margin-top: 40px;\r\n+}\r\n+\r\n+.connect-box {\r\n+  flex: 1 1 200px;\r\n+  border: 1px solid #ccc;\r\n+  border-radius: 12px;\r\n+  padding: 16px;\r\n+  font-size: 14px;\r\n+  background-color: #fff;\r\n+  box-shadow: 0 2px 5px rgba(0,0,0,0.05);\r\n+  transition: all 0.3s ease;\r\n+}\r\n+\r\n+.connect-box:hover {\r\n+  box-shadow: 0 4px 10px rgba(0,0,0,0.1);\r\n+}\r\n+\r\n+/* Bottom Section */\r\n+.connect-bottom {\r\n+  background-color: #FFFFFF;\r\n+  padding: 60px 20px;\r\n+  border-radius: 20px;\r\n+  max-width: 1100px;\r\n+  margin: 0 auto;\r\n+  text-align: center;\r\n+  box-shadow: inset 0 0 8px rgba(0,0,0,0.05);\r\n+}\r\n+\r\n+.connect-bottom h2 {\r\n+  font-size: 28px;\r\n+  color: #333;\r\n+  margin-bottom: 16px;\r\n+}\r\n+\r\n+.connect-bottom p {\r\n+  font-size: 15px;\r\n+  color: #666;\r\n+  max-width: 600px;\r\n+  margin: 0 auto 32px auto;\r\n+}\r\n+\r\n+.connect-buttons {\r\n+  display: flex;\r\n+  flex-wrap: wrap;\r\n+  justify-content: center;\r\n+  gap: 20px;\r\n+}\r\n+\r\n+.connect-btn {\r\n+  border: 1px solid #ccc;\r\n+  padding: 14px 24px;\r\n+  border-radius: 12px;\r\n+  background-color: #fff;\r\n+  font-size: 14px;\r\n+  color: #444;\r\n+  cursor: pointer;\r\n+  transition: box-shadow 0.3s ease;\r\n+}\r\n+\r\n+.connect-btn:hover {\r\n+  box-shadow: 0 4px 10px rgba(0,0,0,0.1);\r\n+}\r\n+\r\n+/* Responsive */\r\n+@media (max-width: 768px) {\r\n+  .connect-top h2,\r\n+  .connect-bottom h2 {\r\n+    font-size: 22px;\r\n+  }\r\n+\r\n+  .connect-boxes,\r\n+  .connect-buttons {\r\n+    flex-direction: column;\r\n+    gap: 12px;\r\n+  }\r\n+\r\n+  .connect-btn {\r\n+    width: 100%;\r\n+  }\r\n+}\n\\ No newline at end of file\n"
+                },
+                {
+                    "date": 1753253436137,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -39,9 +39,9 @@\n   border: 1px solid #ccc;\r\n   border-radius: 12px;\r\n   padding: 16px;\r\n   font-size: 14px;\r\n-  background-color: #fff;\r\n+  background-color: #FFFFFF;\r\n   box-shadow: 0 2px 5px rgba(0,0,0,0.05);\r\n   transition: all 0.3s ease;\r\n }\r\n \r\n@@ -110,119 +110,5 @@\n \r\n   .connect-btn {\r\n     width: 100%;\r\n   }\r\n-}\n-.connect-section {\r\n-  width: 100%;\r\n-  padding: 60px 20px;\r\n-  background-color: #F9F7F5;\r\n-  box-sizing: border-box;\r\n-}\r\n-\r\n-.connect-top {\r\n-  max-width: 1200px;\r\n-  margin: 0 auto 60px auto;\r\n-  text-align: center;\r\n-}\r\n-\r\n-.connect-top h1 {\r\n-  font-size: 45px;\r\n-  margin-bottom: 16px;\r\n-  color: #333;\r\n-  font-weight: bold;\r\n-  margin-top: 10px;\r\n-}\r\n-\r\n-.connect-top p {\r\n-  font-size: 19px;\r\n-  color: #666;\r\n-  max-width: 750px;\r\n-  margin: 0 auto;\r\n-}\r\n-\r\n-.connect-boxes {\r\n-  display: flex;\r\n-  flex-wrap: wrap;\r\n-  justify-content: center;\r\n-  gap: 16px;\r\n-  margin-top: 40px;\r\n-}\r\n-\r\n-.connect-box {\r\n-  flex: 1 1 200px;\r\n-  border: 1px solid #ccc;\r\n-  border-radius: 12px;\r\n-  padding: 16px;\r\n-  font-size: 14px;\r\n-  background-color: #fff;\r\n-  box-shadow: 0 2px 5px rgba(0,0,0,0.05);\r\n-  transition: all 0.3s ease;\r\n-}\r\n-\r\n-.connect-box:hover {\r\n-  box-shadow: 0 4px 10px rgba(0,0,0,0.1);\r\n-}\r\n-\r\n-/* Bottom Section */\r\n-.connect-bottom {\r\n-  background-color: #f9f9f9;\r\n-  padding: 60px 20px;\r\n-  border-radius: 20px;\r\n-  max-width: 1100px;\r\n-  margin: 0 auto;\r\n-  text-align: center;\r\n-  box-shadow: inset 0 0 8px rgba(0,0,0,0.05);\r\n-}\r\n-\r\n-.connect-bottom h2 {\r\n-  font-size: 28px;\r\n-  color: #333;\r\n-  margin-bottom: 16px;\r\n-}\r\n-\r\n-.connect-bottom p {\r\n-  font-size: 15px;\r\n-  color: #666;\r\n-  max-width: 600px;\r\n-  margin: 0 auto 32px auto;\r\n-}\r\n-\r\n-.connect-buttons {\r\n-  display: flex;\r\n-  flex-wrap: wrap;\r\n-  justify-content: center;\r\n-  gap: 20px;\r\n-}\r\n-\r\n-.connect-btn {\r\n-  border: 1px solid #ccc;\r\n-  padding: 14px 24px;\r\n-  border-radius: 12px;\r\n-  background-color: #fff;\r\n-  font-size: 14px;\r\n-  color: #444;\r\n-  cursor: pointer;\r\n-  transition: box-shadow 0.3s ease;\r\n-}\r\n-\r\n-.connect-btn:hover {\r\n-  box-shadow: 0 4px 10px rgba(0,0,0,0.1);\r\n-}\r\n-\r\n-/* Responsive */\r\n-@media (max-width: 768px) {\r\n-  .connect-top h2,\r\n-  .connect-bottom h2 {\r\n-    font-size: 22px;\r\n-  }\r\n-\r\n-  .connect-boxes,\r\n-  .connect-buttons {\r\n-    flex-direction: column;\r\n-    gap: 12px;\r\n-  }\r\n-\r\n-  .connect-btn {\r\n-    width: 100%;\r\n-  }\r\n }\n\\ No newline at end of file\n"
+                },
+                {
+                    "date": 1753253473038,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,8 +1,8 @@\n .connect-section {\r\n   width: 100%;\r\n   padding: 60px 20px;\r\n-  background-color: #F9F7F5;\r\n+  background-color: #F6F1E9;\r\n   box-sizing: border-box;\r\n }\r\n \r\n .connect-top {\r\n"
+                },
+                {
+                    "date": 1753253502537,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -53,9 +53,9 @@\n .connect-bottom {\r\n   background-color: #FFFFFF;\r\n   padding: 60px 20px;\r\n   border-radius: 20px;\r\n-  max-width: 1100px;\r\n+  max-width: 100px;\r\n   margin: 0 auto;\r\n   text-align: center;\r\n   box-shadow: inset 0 0 8px rgba(0,0,0,0.05);\r\n }\r\n"
+                },
+                {
+                    "date": 1753253513609,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -53,9 +53,9 @@\n .connect-bottom {\r\n   background-color: #FFFFFF;\r\n   padding: 60px 20px;\r\n   border-radius: 20px;\r\n-  max-width: 100px;\r\n+  max-width: 9px;\r\n   margin: 0 auto;\r\n   text-align: center;\r\n   box-shadow: inset 0 0 8px rgba(0,0,0,0.05);\r\n }\r\n"
+                },
+                {
+                    "date": 1753253580490,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -53,9 +53,9 @@\n .connect-bottom {\r\n   background-color: #FFFFFF;\r\n   padding: 60px 20px;\r\n   border-radius: 20px;\r\n-  max-width: 9px;\r\n+  max-width: 900px;\r\n   margin: 0 auto;\r\n   text-align: center;\r\n   box-shadow: inset 0 0 8px rgba(0,0,0,0.05);\r\n }\r\n@@ -68,9 +68,9 @@\n \r\n .connect-bottom p {\r\n   font-size: 15px;\r\n   color: #666;\r\n-  max-width: 600px;\r\n+  max-width: 60px;\r\n   margin: 0 auto 32px auto;\r\n }\r\n \r\n .connect-buttons {\r\n"
+                },
+                {
+                    "date": 1753254553356,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -68,9 +68,9 @@\n \r\n .connect-bottom p {\r\n   font-size: 15px;\r\n   color: #666;\r\n-  max-width: 60px;\r\n+  max-width: 750px;\r\n   margin: 0 auto 32px auto;\r\n }\r\n \r\n .connect-buttons {\r\n@@ -94,8 +94,9 @@\n .connect-btn:hover {\r\n   box-shadow: 0 4px 10px rgba(0,0,0,0.1);\r\n }\r\n \r\n+\r\n /* Responsive */\r\n @media (max-width: 768px) {\r\n   .connect-top h2,\r\n   .connect-bottom h2 {\r\n"
+                },
+                {
+                    "date": 1753254633291,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -94,9 +94,27 @@\n .connect-btn:hover {\r\n   box-shadow: 0 4px 10px rgba(0,0,0,0.1);\r\n }\r\n \r\n+.connect-icon {\r\n+  font-size: 35px;\r\n+  color: #d2691e;\r\n+  margin-bottom: 15px;\r\n+}\r\n \r\n+.connect-box h3 {\r\n+  font-size: 18px;\r\n+  margin-bottom: 10px;\r\n+  color: #222;\r\n+  \r\n+}\r\n+\r\n+.connect-box p {\r\n+  font-size: 14px;\r\n+  color: #555;\r\n+  line-height: 1.5;\r\n+}\r\n+\r\n /* Responsive */\r\n @media (max-width: 768px) {\r\n   .connect-top h2,\r\n   .connect-bottom h2 {\r\n"
+                },
+                {
+                    "date": 1753254643991,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -104,9 +104,9 @@\n .connect-box h3 {\r\n   font-size: 18px;\r\n   margin-bottom: 10px;\r\n   color: #222;\r\n-  \r\n+  font-weight: 8;\r\n }\r\n \r\n .connect-box p {\r\n   font-size: 14px;\r\n"
+                },
+                {
+                    "date": 1753254649649,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -104,9 +104,9 @@\n .connect-box h3 {\r\n   font-size: 18px;\r\n   margin-bottom: 10px;\r\n   color: #222;\r\n-  font-weight: 8;\r\n+  font-weight: 80;\r\n }\r\n \r\n .connect-box p {\r\n   font-size: 14px;\r\n"
+                },
+                {
+                    "date": 1753254661204,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -104,9 +104,9 @@\n .connect-box h3 {\r\n   font-size: 18px;\r\n   margin-bottom: 10px;\r\n   color: #222;\r\n-  font-weight: 80;\r\n+  font-weight: 00;\r\n }\r\n \r\n .connect-box p {\r\n   font-size: 14px;\r\n"
+                },
+                {
+                    "date": 1753254672740,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -104,9 +104,9 @@\n .connect-box h3 {\r\n   font-size: 18px;\r\n   margin-bottom: 10px;\r\n   color: #222;\r\n-  font-weight: 00;\r\n+  font-weight: 60;\r\n }\r\n \r\n .connect-box p {\r\n   font-size: 14px;\r\n"
+                },
+                {
+                    "date": 1753254725421,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -104,15 +104,16 @@\n .connect-box h3 {\r\n   font-size: 18px;\r\n   margin-bottom: 10px;\r\n   color: #222;\r\n-  font-weight: 60;\r\n+  font-weight: 600;\r\n }\r\n \r\n .connect-box p {\r\n   font-size: 14px;\r\n   color: #555;\r\n   line-height: 1.5;\r\n+  \r\n }\r\n \r\n /* Responsive */\r\n @media (max-width: 768px) {\r\n"
+                },
+                {
+                    "date": 1753254737878,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -111,8 +111,9 @@\n .connect-box p {\r\n   font-size: 14px;\r\n   color: #555;\r\n   line-height: 1.5;\r\n+  align-items: center;\r\n   \r\n }\r\n \r\n /* Responsive */\r\n"
+                },
+                {
+                    "date": 1753254749634,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -112,9 +112,9 @@\n   font-size: 14px;\r\n   color: #555;\r\n   line-height: 1.5;\r\n   align-items: center;\r\n-  \r\n+  max-width: 3;\r\n }\r\n \r\n /* Responsive */\r\n @media (max-width: 768px) {\r\n"
+                },
+                {
+                    "date": 1753254757219,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -112,9 +112,9 @@\n   font-size: 14px;\r\n   color: #555;\r\n   line-height: 1.5;\r\n   align-items: center;\r\n-  max-width: 3;\r\n+  max-height: ;\r\n }\r\n \r\n /* Responsive */\r\n @media (max-width: 768px) {\r\n"
+                },
+                {
+                    "date": 1753254768694,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -112,9 +112,9 @@\n   font-size: 14px;\r\n   color: #555;\r\n   line-height: 1.5;\r\n   align-items: center;\r\n-  max-height: ;\r\n+  max-height: 200px\r\n }\r\n \r\n /* Responsive */\r\n @media (max-width: 768px) {\r\n"
+                },
+                {
+                    "date": 1753254815357,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -108,13 +108,12 @@\n   font-weight: 600;\r\n }\r\n \r\n .connect-box p {\r\n-  font-size: 14px;\r\n+  font-size: 1px;\r\n   color: #555;\r\n   line-height: 1.5;\r\n   align-items: center;\r\n-  max-height: 200px\r\n }\r\n \r\n /* Responsive */\r\n @media (max-width: 768px) {\r\n"
+                },
+                {
+                    "date": 1753254836177,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -108,12 +108,13 @@\n   font-weight: 600;\r\n }\r\n \r\n .connect-box p {\r\n-  font-size: 1px;\r\n+  font-size: 16px;\r\n   color: #555;\r\n   line-height: 1.5;\r\n   align-items: center;\r\n+  \r\n }\r\n \r\n /* Responsive */\r\n @media (max-width: 768px) {\r\n"
+                },
+                {
+                    "date": 1753254841252,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -112,9 +112,9 @@\n   font-size: 16px;\r\n   color: #555;\r\n   line-height: 1.5;\r\n   align-items: center;\r\n-  \r\n+  margin-top: 2px;\r\n }\r\n \r\n /* Responsive */\r\n @media (max-width: 768px) {\r\n"
+                },
+                {
+                    "date": 1753254846804,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -112,9 +112,9 @@\n   font-size: 16px;\r\n   color: #555;\r\n   line-height: 1.5;\r\n   align-items: center;\r\n-  margin-top: 2px;\r\n+  margin-top: 1px;\r\n }\r\n \r\n /* Responsive */\r\n @media (max-width: 768px) {\r\n"
+                },
+                {
+                    "date": 1753254859575,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -112,9 +112,9 @@\n   font-size: 16px;\r\n   color: #555;\r\n   line-height: 1.5;\r\n   align-items: center;\r\n-  margin-top: 1px;\r\n+  margin-top: 5;\r\n }\r\n \r\n /* Responsive */\r\n @media (max-width: 768px) {\r\n"
+                },
+                {
+                    "date": 1753254912715,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -109,12 +109,12 @@\n }\r\n \r\n .connect-box p {\r\n   font-size: 16px;\r\n-  color: #555;\r\n+  color: #8a6969;\r\n   line-height: 1.5;\r\n   align-items: center;\r\n-  margin-top: 5;\r\n+  margin-top: 5px;\r\n }\r\n \r\n /* Responsive */\r\n @media (max-width: 768px) {\r\n"
+                },
+                {
+                    "date": 1753254949092,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -22,9 +22,9 @@\n .connect-top p {\r\n   font-size: 19px;\r\n   color: #666;\r\n   max-width: 750px;\r\n-  margin: 0 auto;\r\n+  margin:  auto;\r\n }\r\n \r\n .connect-boxes {\r\n   display: flex;\r\n"
+                },
+                {
+                    "date": 1753254956827,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -22,9 +22,9 @@\n .connect-top p {\r\n   font-size: 19px;\r\n   color: #666;\r\n   max-width: 750px;\r\n-  margin:  auto;\r\n+  margin: 10p auto;\r\n }\r\n \r\n .connect-boxes {\r\n   display: flex;\r\n"
+                },
+                {
+                    "date": 1753254963479,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -22,9 +22,10 @@\n .connect-top p {\r\n   font-size: 19px;\r\n   color: #666;\r\n   max-width: 750px;\r\n-  margin: 10p auto;\r\n+  margin: 0 auto;\r\n+  line-height: ;\r\n }\r\n \r\n .connect-boxes {\r\n   display: flex;\r\n"
+                },
+                {
+                    "date": 1753254971119,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -23,9 +23,9 @@\n   font-size: 19px;\r\n   color: #666;\r\n   max-width: 750px;\r\n   margin: 0 auto;\r\n-  line-height: ;\r\n+  line-height: 1.;\r\n }\r\n \r\n .connect-boxes {\r\n   display: flex;\r\n"
+                },
+                {
+                    "date": 1753254985694,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -12,9 +12,9 @@\n }\r\n \r\n .connect-top h1 {\r\n   font-size: 45px;\r\n-  margin-bottom: 16px;\r\n+  margin-bottom: 1px;\r\n   color: #333;\r\n   font-weight: bold;\r\n   margin-top: 10px;\r\n }\r\n@@ -23,9 +23,8 @@\n   font-size: 19px;\r\n   color: #666;\r\n   max-width: 750px;\r\n   margin: 0 auto;\r\n-  line-height: 1.;\r\n }\r\n \r\n .connect-boxes {\r\n   display: flex;\r\n"
+                },
+                {
+                    "date": 1753255002489,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -12,9 +12,9 @@\n }\r\n \r\n .connect-top h1 {\r\n   font-size: 45px;\r\n-  margin-bottom: 1px;\r\n+  margin-bottom: 2px;\r\n   color: #333;\r\n   font-weight: bold;\r\n   margin-top: 10px;\r\n }\r\n"
+                },
+                {
+                    "date": 1753255012863,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -12,12 +12,13 @@\n }\r\n \r\n .connect-top h1 {\r\n   font-size: 45px;\r\n-  margin-bottom: 2px;\r\n+  margin-bottom: 22px;\r\n   color: #333;\r\n   font-weight: bold;\r\n   margin-top: 10px;\r\n+  \r\n }\r\n \r\n .connect-top p {\r\n   font-size: 19px;\r\n"
+                },
+                {
+                    "date": 1753255025804,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -16,9 +16,9 @@\n   margin-bottom: 22px;\r\n   color: #333;\r\n   font-weight: bold;\r\n   margin-top: 10px;\r\n-  \r\n+  word-spacing: ;\r\n }\r\n \r\n .connect-top p {\r\n   font-size: 19px;\r\n"
+                },
+                {
+                    "date": 1753255047617,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -11,14 +11,14 @@\n   text-align: center;\r\n }\r\n \r\n .connect-top h1 {\r\n-  font-size: 45px;\r\n+  font-size: 4px;\r\n   margin-bottom: 22px;\r\n   color: #333;\r\n   font-weight: bold;\r\n   margin-top: 10px;\r\n-  word-spacing: ;\r\n+  word-spacing: 2px;\r\n }\r\n \r\n .connect-top p {\r\n   font-size: 19px;\r\n"
+                },
+                {
+                    "date": 1753255113180,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -11,9 +11,9 @@\n   text-align: center;\r\n }\r\n \r\n .connect-top h1 {\r\n-  font-size: 4px;\r\n+  font-size: 46px;\r\n   margin-bottom: 22px;\r\n   color: #333;\r\n   font-weight: bold;\r\n   margin-top: 10px;\r\n@@ -32,8 +32,9 @@\n   flex-wrap: wrap;\r\n   justify-content: center;\r\n   gap: 16px;\r\n   margin-top: 40px;\r\n+  \r\n }\r\n \r\n .connect-box {\r\n   flex: 1 1 200px;\r\n"
+                },
+                {
+                    "date": 1753255120847,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -32,9 +32,9 @@\n   flex-wrap: wrap;\r\n   justify-content: center;\r\n   gap: 16px;\r\n   margin-top: 40px;\r\n-  \r\n+  max-height: ;\r\n }\r\n \r\n .connect-box {\r\n   flex: 1 1 200px;\r\n"
+                },
+                {
+                    "date": 1753255132451,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -32,9 +32,9 @@\n   flex-wrap: wrap;\r\n   justify-content: center;\r\n   gap: 16px;\r\n   margin-top: 40px;\r\n-  max-height: ;\r\n+  max-height: 500p;\r\n }\r\n \r\n .connect-box {\r\n   flex: 1 1 200px;\r\n"
+                },
+                {
+                    "date": 1753255140889,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -32,9 +32,9 @@\n   flex-wrap: wrap;\r\n   justify-content: center;\r\n   gap: 16px;\r\n   margin-top: 40px;\r\n-  max-height: 500p;\r\n+  max-height: 00px;\r\n }\r\n \r\n .connect-box {\r\n   flex: 1 1 200px;\r\n"
+                },
+                {
+                    "date": 1753255150500,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -32,9 +32,9 @@\n   flex-wrap: wrap;\r\n   justify-content: center;\r\n   gap: 16px;\r\n   margin-top: 40px;\r\n-  max-height: 00px;\r\n+  \r\n }\r\n \r\n .connect-box {\r\n   flex: 1 1 200px;\r\n"
+                },
+                {
+                    "date": 1753255155793,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -32,9 +32,8 @@\n   flex-wrap: wrap;\r\n   justify-content: center;\r\n   gap: 16px;\r\n   margin-top: 40px;\r\n-  \r\n }\r\n \r\n .connect-box {\r\n   flex: 1 1 200px;\r\n@@ -44,8 +43,9 @@\n   font-size: 14px;\r\n   background-color: #FFFFFF;\r\n   box-shadow: 0 2px 5px rgba(0,0,0,0.05);\r\n   transition: all 0.3s ease;\r\n+  max-height: 1000px;\r\n }\r\n \r\n .connect-box:hover {\r\n   box-shadow: 0 4px 10px rgba(0,0,0,0.1);\r\n"
+                },
+                {
+                    "date": 1753255166468,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -43,9 +43,9 @@\n   font-size: 14px;\r\n   background-color: #FFFFFF;\r\n   box-shadow: 0 2px 5px rgba(0,0,0,0.05);\r\n   transition: all 0.3s ease;\r\n-  max-height: 1000px;\r\n+ \r\n }\r\n \r\n .connect-box:hover {\r\n   box-shadow: 0 4px 10px rgba(0,0,0,0.1);\r\n"
+                },
+                {
+                    "date": 1753255247024,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -36,16 +36,15 @@\n }\r\n \r\n .connect-box {\r\n   flex: 1 1 200px;\r\n-  border: 1px solid #ccc;\r\n+  /* border: 1px solid #ccc; */\r\n   border-radius: 12px;\r\n   padding: 16px;\r\n   font-size: 14px;\r\n   background-color: #FFFFFF;\r\n   box-shadow: 0 2px 5px rgba(0,0,0,0.05);\r\n   transition: all 0.3s ease;\r\n- \r\n }\r\n \r\n .connect-box:hover {\r\n   box-shadow: 0 4px 10px rgba(0,0,0,0.1);\r\n"
+                },
+                {
+                    "date": 1753255266327,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -71,8 +71,9 @@\n   font-size: 15px;\r\n   color: #666;\r\n   max-width: 750px;\r\n   margin: 0 auto 32px auto;\r\n+  \r\n }\r\n \r\n .connect-buttons {\r\n   display: flex;\r\n"
+                },
+                {
+                    "date": 1753255271481,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -71,9 +71,9 @@\n   font-size: 15px;\r\n   color: #666;\r\n   max-width: 750px;\r\n   margin: 0 auto 32px auto;\r\n-  \r\n+  word-spacing: ;\r\n }\r\n \r\n .connect-buttons {\r\n   display: flex;\r\n"
+                },
+                {
+                    "date": 1753255280503,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -71,9 +71,9 @@\n   font-size: 15px;\r\n   color: #666;\r\n   max-width: 750px;\r\n   margin: 0 auto 32px auto;\r\n-  word-spacing: ;\r\n+  word-spacing: px;\r\n }\r\n \r\n .connect-buttons {\r\n   display: flex;\r\n"
+                },
+                {
+                    "date": 1753255293562,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -71,9 +71,9 @@\n   font-size: 15px;\r\n   color: #666;\r\n   max-width: 750px;\r\n   margin: 0 auto 32px auto;\r\n-  word-spacing: px;\r\n+ \r\n }\r\n \r\n .connect-buttons {\r\n   display: flex;\r\n"
+                },
+                {
+                    "date": 1753255300112,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -71,9 +71,8 @@\n   font-size: 15px;\r\n   color: #666;\r\n   max-width: 750px;\r\n   margin: 0 auto 32px auto;\r\n- \r\n }\r\n \r\n .connect-buttons {\r\n   display: flex;\r\n@@ -115,8 +114,9 @@\n   color: #8a6969;\r\n   line-height: 1.5;\r\n   align-items: center;\r\n   margin-top: 5px;\r\n+  \r\n }\r\n \r\n /* Responsive */\r\n @media (max-width: 768px) {\r\n"
+                },
+                {
+                    "date": 1753255311558,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -114,9 +114,9 @@\n   color: #8a6969;\r\n   line-height: 1.5;\r\n   align-items: center;\r\n   margin-top: 5px;\r\n-  \r\n+word-spacing: 2px;\r\n }\r\n \r\n /* Responsive */\r\n @media (max-width: 768px) {\r\n"
+                },
+                {
+                    "date": 1753255331427,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -0,0 +1,138 @@\n+.connect-section {\r\n+  width: 100%;\r\n+  padding: 60px 20px;\r\n+  background-color: #F6F1E9;\r\n+  box-sizing: border-box;\r\n+}\r\n+\r\n+.connect-top {\r\n+  max-width: 1200px;\r\n+  margin: 0 auto 60px auto;\r\n+  text-align: center;\r\n+}\r\n+\r\n+.connect-top h1 {\r\n+  font-size: 46px;\r\n+  margin-bottom: 22px;\r\n+  color: #333;\r\n+  font-weight: bold;\r\n+  margin-top: 10px;\r\n+  word-spacing: 2px;\r\n+}\r\n+\r\n+.connect-top p {\r\n+  font-size: 19px;\r\n+  color: #666;\r\n+  max-width: 750px;\r\n+  margin: 0 auto;\r\n+}\r\n+\r\n+.connect-boxes {\r\n+  display: flex;\r\n+  flex-wrap: wrap;\r\n+  justify-content: center;\r\n+  gap: 16px;\r\n+  margin-top: 40px;\r\n+}\r\n+\r\n+.connect-box {\r\n+  flex: 1 1 200px;\r\n+  /* border: 1px solid #ccc; */\r\n+  border-radius: 12px;\r\n+  padding: 16px;\r\n+  font-size: 14px;\r\n+  background-color: #FFFFFF;\r\n+  box-shadow: 0 2px 5px rgba(0,0,0,0.05);\r\n+  transition: all 0.3s ease;\r\n+  \r\n+}\r\n+\r\n+.connect-box:hover {\r\n+  box-shadow: 0 4px 10px rgba(0,0,0,0.1);\r\n+}\r\n+\r\n+/* Bottom Section */\r\n+.connect-bottom {\r\n+  background-color: #FFFFFF;\r\n+  padding: 60px 20px;\r\n+  border-radius: 20px;\r\n+  max-width: 900px;\r\n+  margin: 0 auto;\r\n+  text-align: center;\r\n+  box-shadow: inset 0 0 8px rgba(0,0,0,0.05);\r\n+}\r\n+\r\n+.connect-bottom h2 {\r\n+  font-size: 28px;\r\n+  color: #333;\r\n+  margin-bottom: 16px;\r\n+}\r\n+\r\n+.connect-bottom p {\r\n+  font-size: 15px;\r\n+  color: #666;\r\n+  max-width: 750px;\r\n+  margin: 0 auto 32px auto;\r\n+}\r\n+\r\n+.connect-buttons {\r\n+  display: flex;\r\n+  flex-wrap: wrap;\r\n+  justify-content: center;\r\n+  gap: 20px;\r\n+}\r\n+\r\n+.connect-btn {\r\n+  border: 1px solid #ccc;\r\n+  padding: 14px 24px;\r\n+  border-radius: 12px;\r\n+  background-color: #fff;\r\n+  font-size: 14px;\r\n+  color: #444;\r\n+  cursor: pointer;\r\n+  transition: box-shadow 0.3s ease;\r\n+}\r\n+\r\n+.connect-btn:hover {\r\n+  box-shadow: 0 4px 10px rgba(0,0,0,0.1);\r\n+}\r\n+\r\n+.connect-icon {\r\n+  font-size: 35px;\r\n+  color: #d2691e;\r\n+  margin-bottom: 15px;\r\n+}\r\n+\r\n+.connect-box h3 {\r\n+  font-size: 18px;\r\n+  margin-bottom: 10px;\r\n+  color: #222;\r\n+  font-weight: 600;\r\n+}\r\n+\r\n+.connect-box p {\r\n+  font-size: 16px;\r\n+  color: #8a6969;\r\n+  line-height: 1.5;\r\n+  align-items: center;\r\n+  margin-top: 5px;\r\n+  word-spacing: 2px;\r\n+}\r\n+\r\n+/* Responsive */\r\n+@media (max-width: 768px) {\r\n+  .connect-top h2,\r\n+  .connect-bottom h2 {\r\n+    font-size: 22px;\r\n+  }\r\n+\r\n+  .connect-boxes,\r\n+  .connect-buttons {\r\n+    flex-direction: column;\r\n+    gap: 12px;\r\n+  }\r\n+\r\n+  .connect-btn {\r\n+    width: 100%;\r\n+  }\r\n+}\n\\ No newline at end of file\n"
+                },
+                {
+                    "date": 1753255336768,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -43,9 +43,9 @@\n   font-size: 14px;\r\n   background-color: #FFFFFF;\r\n   box-shadow: 0 2px 5px rgba(0,0,0,0.05);\r\n   transition: all 0.3s ease;\r\n-  \r\n+  height: auto;\r\n }\r\n \r\n .connect-box:hover {\r\n   box-shadow: 0 4px 10px rgba(0,0,0,0.1);\r\n@@ -134,142 +134,5 @@\n \r\n   .connect-btn {\r\n     width: 100%;\r\n   }\r\n-}\n-.connect-section {\r\n-  width: 100%;\r\n-  padding: 60px 20px;\r\n-  background-color: #F6F1E9;\r\n-  box-sizing: border-box;\r\n-}\r\n-\r\n-.connect-top {\r\n-  max-width: 1200px;\r\n-  margin: 0 auto 60px auto;\r\n-  text-align: center;\r\n-}\r\n-\r\n-.connect-top h1 {\r\n-  font-size: 46px;\r\n-  margin-bottom: 22px;\r\n-  color: #333;\r\n-  font-weight: bold;\r\n-  margin-top: 10px;\r\n-  word-spacing: 2px;\r\n-}\r\n-\r\n-.connect-top p {\r\n-  font-size: 19px;\r\n-  color: #666;\r\n-  max-width: 750px;\r\n-  margin: 0 auto;\r\n-}\r\n-\r\n-.connect-boxes {\r\n-  display: flex;\r\n-  flex-wrap: wrap;\r\n-  justify-content: center;\r\n-  gap: 16px;\r\n-  margin-top: 40px;\r\n-}\r\n-\r\n-.connect-box {\r\n-  flex: 1 1 200px;\r\n-  /* border: 1px solid #ccc; */\r\n-  border-radius: 12px;\r\n-  padding: 16px;\r\n-  font-size: 14px;\r\n-  background-color: #FFFFFF;\r\n-  box-shadow: 0 2px 5px rgba(0,0,0,0.05);\r\n-  transition: all 0.3s ease;\r\n-}\r\n-\r\n-.connect-box:hover {\r\n-  box-shadow: 0 4px 10px rgba(0,0,0,0.1);\r\n-}\r\n-\r\n-/* Bottom Section */\r\n-.connect-bottom {\r\n-  background-color: #FFFFFF;\r\n-  padding: 60px 20px;\r\n-  border-radius: 20px;\r\n-  max-width: 900px;\r\n-  margin: 0 auto;\r\n-  text-align: center;\r\n-  box-shadow: inset 0 0 8px rgba(0,0,0,0.05);\r\n-}\r\n-\r\n-.connect-bottom h2 {\r\n-  font-size: 28px;\r\n-  color: #333;\r\n-  margin-bottom: 16px;\r\n-}\r\n-\r\n-.connect-bottom p {\r\n-  font-size: 15px;\r\n-  color: #666;\r\n-  max-width: 750px;\r\n-  margin: 0 auto 32px auto;\r\n-}\r\n-\r\n-.connect-buttons {\r\n-  display: flex;\r\n-  flex-wrap: wrap;\r\n-  justify-content: center;\r\n-  gap: 20px;\r\n-}\r\n-\r\n-.connect-btn {\r\n-  border: 1px solid #ccc;\r\n-  padding: 14px 24px;\r\n-  border-radius: 12px;\r\n-  background-color: #fff;\r\n-  font-size: 14px;\r\n-  color: #444;\r\n-  cursor: pointer;\r\n-  transition: box-shadow 0.3s ease;\r\n-}\r\n-\r\n-.connect-btn:hover {\r\n-  box-shadow: 0 4px 10px rgba(0,0,0,0.1);\r\n-}\r\n-\r\n-.connect-icon {\r\n-  font-size: 35px;\r\n-  color: #d2691e;\r\n-  margin-bottom: 15px;\r\n-}\r\n-\r\n-.connect-box h3 {\r\n-  font-size: 18px;\r\n-  margin-bottom: 10px;\r\n-  color: #222;\r\n-  font-weight: 600;\r\n-}\r\n-\r\n-.connect-box p {\r\n-  font-size: 16px;\r\n-  color: #8a6969;\r\n-  line-height: 1.5;\r\n-  align-items: center;\r\n-  margin-top: 5px;\r\n-word-spacing: 2px;\r\n-}\r\n-\r\n-/* Responsive */\r\n-@media (max-width: 768px) {\r\n-  .connect-top h2,\r\n-  .connect-bottom h2 {\r\n-    font-size: 22px;\r\n-  }\r\n-\r\n-  .connect-boxes,\r\n-  .connect-buttons {\r\n-    flex-direction: column;\r\n-    gap: 12px;\r\n-  }\r\n-\r\n-  .connect-btn {\r\n-    width: 100%;\r\n-  }\r\n }\n\\ No newline at end of file\n"
+                },
+                {
+                    "date": 1753255473072,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -38,9 +38,9 @@\n .connect-box {\r\n   flex: 1 1 200px;\r\n   /* border: 1px solid #ccc; */\r\n   border-radius: 12px;\r\n-  padding: 16px;\r\n+  padding: 2px;\r\n   font-size: 14px;\r\n   background-color: #FFFFFF;\r\n   box-shadow: 0 2px 5px rgba(0,0,0,0.05);\r\n   transition: all 0.3s ease;\r\n"
+                },
+                {
+                    "date": 1753255489690,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -38,14 +38,15 @@\n .connect-box {\r\n   flex: 1 1 200px;\r\n   /* border: 1px solid #ccc; */\r\n   border-radius: 12px;\r\n-  padding: 2px;\r\n+  padding: 20px;\r\n   font-size: 14px;\r\n   background-color: #FFFFFF;\r\n   box-shadow: 0 2px 5px rgba(0,0,0,0.05);\r\n   transition: all 0.3s ease;\r\n   height: auto;\r\n+  \r\n }\r\n \r\n .connect-box:hover {\r\n   box-shadow: 0 4px 10px rgba(0,0,0,0.1);\r\n"
+                },
+                {
+                    "date": 1753255495646,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -44,9 +44,9 @@\n   background-color: #FFFFFF;\r\n   box-shadow: 0 2px 5px rgba(0,0,0,0.05);\r\n   transition: all 0.3s ease;\r\n   height: auto;\r\n-  \r\n+  cursor: p;\r\n }\r\n \r\n .connect-box:hover {\r\n   box-shadow: 0 4px 10px rgba(0,0,0,0.1);\r\n"
+                },
+                {
+                    "date": 1753255513181,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -44,9 +44,9 @@\n   background-color: #FFFFFF;\r\n   box-shadow: 0 2px 5px rgba(0,0,0,0.05);\r\n   transition: all 0.3s ease;\r\n   height: auto;\r\n-  c\r\n+  \r\n }\r\n \r\n .connect-box:hover {\r\n   box-shadow: 0 4px 10px rgba(0,0,0,0.1);\r\n"
+                },
+                {
+                    "date": 1753256336315,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -103,9 +103,9 @@\n }\r\n \r\n .connect-btn h4{\r\n     font-size: 18px;\r\n-    m\r\n+    ma\r\n }\r\n \r\n .similar-btn {\r\n   background-color: #F6F0E8;\r\n"
+                }
+            ],
+            "date": 1753252630819,
+            "name": "Commit-0",
+            "content": ".connect-section {\r\n  width: 100%;\r\n  padding: 60px 20px;\r\n  background-color: #ffffff;\r\n  box-sizing: border-box;\r\n}\r\n\r\n.connect-top {\r\n  max-width: 1200px;\r\n  margin: 0 auto 60px auto;\r\n  text-align: center;\r\n}\r\n\r\n.connect-top h2 {\r\n  font-size: 28px;\r\n  margin-bottom: 16px;\r\n  color: #333;\r\n}\r\n\r\n.connect-top p {\r\n  font-size: 15px;\r\n  color: #666;\r\n  max-width: 600px;\r\n  margin: 0 auto;\r\n}\r\n\r\n.connect-boxes {\r\n  display: flex;\r\n  flex-wrap: wrap;\r\n  justify-content: center;\r\n  gap: 16px;\r\n  margin-top: 40px;\r\n}\r\n\r\n.connect-box {\r\n  flex: 1 1 200px;\r\n  border: 1px solid #ccc;\r\n  border-radius: 12px;\r\n  padding: 16px;\r\n  font-size: 14px;\r\n  background-color: #fff;\r\n  box-shadow: 0 2px 5px rgba(0,0,0,0.05);\r\n  transition: all 0.3s ease;\r\n}\r\n\r\n.connect-box:hover {\r\n  box-shadow: 0 4px 10px rgba(0,0,0,0.1);\r\n}\r\n\r\n/* Bottom Section */\r\n.connect-bottom {\r\n  background-color: #f9f9f9;\r\n  padding: 60px 20px;\r\n  border-radius: 20px;\r\n  max-width: 1100px;\r\n  margin: 0 auto;\r\n  text-align: center;\r\n  box-shadow: inset 0 0 8px rgba(0,0,0,0.05);\r\n}\r\n\r\n.connect-bottom h2 {\r\n  font-size: 28px;\r\n  color: #333;\r\n  margin-bottom: 16px;\r\n}\r\n\r\n.connect-bottom p {\r\n  font-size: 15px;\r\n  color: #666;\r\n  max-width: 600px;\r\n  margin: 0 auto 32px auto;\r\n}\r\n\r\n.connect-buttons {\r\n  display: flex;\r\n  flex-wrap: wrap;\r\n  justify-content: center;\r\n  gap: 20px;\r\n}\r\n\r\n.connect-btn {\r\n  border: 1px solid #ccc;\r\n  padding: 14px 24px;\r\n  border-radius: 12px;\r\n  background-color: #fff;\r\n  font-size: 14px;\r\n  color: #444;\r\n  cursor: pointer;\r\n  transition: box-shadow 0.3s ease;\r\n}\r\n\r\n.connect-btn:hover {\r\n  box-shadow: 0 4px 10px rgba(0,0,0,0.1);\r\n}\r\n\r\n/* Responsive */\r\n@media (max-width: 768px) {\r\n  .connect-top h2,\r\n  .connect-bottom h2 {\r\n    font-size: 22px;\r\n  }\r\n\r\n  .connect-boxes,\r\n  .connect-buttons {\r\n    flex-direction: column;\r\n    gap: 12px;\r\n  }\r\n\r\n  .connect-btn {\r\n    width: 100%;\r\n  }\r\n}"
+        }
+    ]
+}

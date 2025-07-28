@@ -3,7 +3,7 @@
     "activeCommit": 0,
     "commits": [
         {
-            "activePatchIndex": 6,
+            "activePatchIndex": 15,
             "patches": [
                 {
                     "date": 1753105860625,
@@ -32,6 +32,42 @@
                 {
                     "date": 1753118895338,
                     "content": "Index: \n===================================================================\n--- \n+++ \n@@ -0,0 +1,18 @@\n+import { useState } from 'react'\n+import reactLogo from './assets/react.svg'\n+import viteLogo from '/vite.svg'\n+import './App.css'\n+import Navbar from './components/Navbar'\n+import HeroSection from './components/HeroSection'\n+\n+function App() {\n+\n+  return (\n+    <>\n+      <Navbar />\n+      <HeroSection />\n+    </>\n+  )\n+}\n+\n+export default App\n"
+                },
+                {
+                    "date": 1753252649666,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -10,24 +10,8 @@\n   return (\n     <>\n       <Navbar />\n       <HeroSection />\n-    </>\n-  )\n-}\n-\n-export default App\n-import { useState } from 'react'\n-import reactLogo from './assets/react.svg'\n-import viteLogo from '/vite.svg'\n-import './App.css'\n-import Navbar from './components/Navbar'\n-\n-function App() {\n-\n-  return (\n-    <>\n-      <Navbar />\n       \n     </>\n   )\n }\n"
+                },
+                {
+                    "date": 1753252654940,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -10,9 +10,9 @@\n   return (\n     <>\n       <Navbar />\n       <HeroSection />\n-      \n+      <Coo\n     </>\n   )\n }\n \n"
+                },
+                {
+                    "date": 1753252660289,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -0,0 +1,19 @@\n+import { useState } from 'react'\n+import reactLogo from './assets/react.svg'\n+import viteLogo from '/vite.svg'\n+import './App.css'\n+import Navbar from './components/Navbar'\n+import HeroSection from './components/HeroSection'\n+\n+function App() {\n+\n+  return (\n+    <>\n+      <Navbar />\n+      <HeroSection />\n+      <Coone\n+    </>\n+  )\n+}\n+\n+export default App\n"
+                },
+                {
+                    "date": 1753252665768,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -0,0 +1,20 @@\n+import { useState } from 'react'\n+import reactLogo from './assets/react.svg'\n+import viteLogo from '/vite.svg'\n+import './App.css'\n+import Navbar from './components/Navbar'\n+import HeroSection from './components/HeroSection'\n+import ConnectSection from './components/ConnectSection'\n+\n+function App() {\n+\n+  return (\n+    <>\n+      <Navbar />\n+      <HeroSection />\n+      <ConnectSection \n+    </>\n+  )\n+}\n+\n+export default App\n"
+                },
+                {
+                    "date": 1753422936341,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -10,49 +10,10 @@\n \n   return (\n     <>\n       <Navbar />\n-      <HeroSection />\n-      <ConnectSection \n+      \n     </>\n   )\n }\n \n export default App\n-import { useState } from 'react'\n-import reactLogo from './assets/react.svg'\n-import viteLogo from '/vite.svg'\n-import './App.css'\n-import Navbar from './components/Navbar'\n-import HeroSection from './components/HeroSection'\n-\n-function App() {\n-\n-  return (\n-    <>\n-      <Navbar />\n-      <HeroSection />\n-      <Coone\n-    </>\n-  )\n-}\n-\n-export default App\n-import { useState } from 'react'\n-import reactLogo from './assets/react.svg'\n-import viteLogo from '/vite.svg'\n-import './App.css'\n-import Navbar from './components/Navbar'\n-import HeroSection from './components/HeroSection'\n-\n-function App() {\n-\n-  return (\n-    <>\n-      <Navbar />\n-      <HeroSection />\n-      <Coo\n-    </>\n-  )\n-}\n-\n-export default App\n"
+                },
+                {
+                    "date": 1753422942216,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -10,9 +10,9 @@\n \n   return (\n     <>\n       <Navbar />\n-      \n+      >Rou\n     </>\n   )\n }\n \n"
+                },
+                {
+                    "date": 1753422947928,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -10,9 +10,9 @@\n \n   return (\n     <>\n       <Navbar />\n-      >Rou\n+      <R\n     </>\n   )\n }\n \n"
+                },
+                {
+                    "date": 1753422955244,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -11,9 +11,9 @@\n \n   return (\n     <>\n       <Navbar />\n-      <Routes\n+      <Routes>\n     </>\n   )\n }\n \n"
+                },
+                {
+                    "date": 1753423000278,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -12,9 +12,9 @@\n   return (\n     <>\n       <Navbar />\n       <Routes>\n-        <Route path='/' element+= />\n+        <Route path='/' element+== />\n       </Routes>\n     </>\n   )\n }\n"
                 }
             ],
             "date": 1753105860625,

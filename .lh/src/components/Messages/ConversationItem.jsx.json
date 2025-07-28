@@ -1,0 +1,30 @@
+{
+    "sourceFile": "src/components/Messages/ConversationItem.jsx",
+    "activeCommit": 0,
+    "commits": [
+        {
+            "activePatchIndex": 3,
+            "patches": [
+                {
+                    "date": 1753423921904,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n"
+                },
+                {
+                    "date": 1753523138300,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,8 +1,8 @@\n import React from 'react';\r\n import './ConversationItem.css';\r\n \r\n-const ConversationItem = ({ name, lastMessage }) => {\r\n+const ConversationItem = ({ name, lastMessage, }) => {\r\n   return (\r\n     <div className=\"conversation-item\">\r\n       <div className=\"avatar\">👤</div>\r\n       <div className=\"conversation-text\">\r\n"
+                },
+                {
+                    "date": 1753523143655,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,8 +1,8 @@\n import React from 'react';\r\n import './ConversationItem.css';\r\n \r\n-const ConversationItem = ({ name, lastMessage, isActive }) => {\r\n+const ConversationItem = ({ name, lastMessage, isActive, }) => {\r\n   return (\r\n     <div className=\"conversation-item\">\r\n       <div className=\"avatar\">👤</div>\r\n       <div className=\"conversation-text\">\r\n"
+                },
+                {
+                    "date": 1753523157587,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -2,9 +2,9 @@\n import './ConversationItem.css';\r\n \r\n const ConversationItem = ({ name, lastMessage, isActive, image }) => {\r\n   return (\r\n-    <div className=\"conversation-item\">\r\n+    <div className=\"conversation-item\" >\r\n       <div className=\"avatar\">👤</div>\r\n       <div className=\"conversation-text\">\r\n         <h4>{name}</h4>\r\n         <p>{lastMessage}</p>\r\n"
+                }
+            ],
+            "date": 1753423921904,
+            "name": "Commit-0",
+            "content": "import React from 'react';\r\nimport './ConversationItem.css';\r\n\r\nconst ConversationItem = ({ name, lastMessage }) => {\r\n  return (\r\n    <div className=\"conversation-item\">\r\n      <div className=\"avatar\">👤</div>\r\n      <div className=\"conversation-text\">\r\n        <h4>{name}</h4>\r\n        <p>{lastMessage}</p>\r\n      </div>\r\n    </div>\r\n  );\r\n};\r\n\r\nexport default ConversationItem;"
+        }
+    ]
+}

@@ -1,0 +1,50 @@
+{
+    "sourceFile": "src/components/ConnectBoxes.jsx",
+    "activeCommit": 0,
+    "commits": [
+        {
+            "activePatchIndex": 8,
+            "patches": [
+                {
+                    "date": 1753254153275,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n"
+                },
+                {
+                    "date": 1753254387790,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,47 +1,14 @@\n import React from \"react\";\r\n-import \"./ConnectBoxes.css\";\r\n+import \"./ConnectSection.css\"; // Same CSS\r\n \r\n-const connectData = [\r\n-  {\r\n-    icon: \"☕\", // Placeholder icon\r\n-    title: \"Interest-Based Matching\",\r\n-    description:\r\n-      \"Connect with entrepreneurs who share your industry focus, business interests, and goals.\",\r\n-  },\r\n-  {\r\n-    icon: \"💡\",\r\n-    title: \"Vision Alignment\",\r\n-    description:\r\n-      \"Find entrepreneurs whose business vision and values align with your own for stronger partnerships.\",\r\n-  },\r\n-  {\r\n-    icon: \"🤝\",\r\n-    title: \"Smart Connections\",\r\n-    description:\r\n-      \"Our algorithm matches entrepreneurs based on complementary skills and shared business interests.\",\r\n-  },\r\n-  {\r\n-    icon: \"🚀\",\r\n-    title: \"Partnership Success\",\r\n-    description:\r\n-      \"Build meaningful business relationships that lead to successful ventures and collaborations.\",\r\n-  },\r\n-];\r\n-\r\n-const ConnectBoxes = () => {\r\n+const ConnectBox = ({ icon, title, description }) => {\r\n   return (\r\n-    <section className=\"connect-section\">\r\n-      <div className=\"connect-boxes\">\r\n-        {connectData.map((box, index) => (\r\n-          <div className=\"connect-box\" key={index}>\r\n-            <div className=\"connect-icon\">{box.icon}</div>\r\n-            <h3>{box.title}</h3>\r\n-            <p>{box.description}</p>\r\n-          </div>\r\n-        ))}\r\n-      </div>\r\n-    </section>\r\n+    <div className=\"connect-box\">\r\n+      <div className=\"connect-icon\">{icon}</div>\r\n\\ No newline at end of file\n+      <h3>{title}</h3>\r\n+      <p>{description}</p>\r\n+    </div>\r\n   );\r\n };\r\n \r\n-export default ConnectBoxes;\n+export default ConnectBox;\n\\ No newline at end of file\n"
+                },
+                {
+                    "date": 1753255427150,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -4,9 +4,9 @@\n const ConnectBox = ({ icon, title, description }) => {\r\n   return (\r\n     <div className=\"connect-box\">\r\n       <div className=\"connect-icon\">{icon}</div>\r\n-      <h3>{title}</h3>\r\n+      <h3 >{title}</h3>\r\n       <p>{description}</p>\r\n     </div>\r\n   );\r\n };\r\n"
+                },
+                {
+                    "date": 1753255432372,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -4,9 +4,9 @@\n const ConnectBox = ({ icon, title, description }) => {\r\n   return (\r\n     <div className=\"connect-box\">\r\n       <div className=\"connect-icon\">{icon}</div>\r\n-      <h3 >{title}</h3>\r\n+      <h3 className=\"co\">{title}</h3>\r\n       <p>{description}</p>\r\n     </div>\r\n   );\r\n };\r\n"
+                },
+                {
+                    "date": 1753255438138,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -4,9 +4,9 @@\n const ConnectBox = ({ icon, title, description }) => {\r\n   return (\r\n     <div className=\"connect-box\">\r\n       <div className=\"connect-icon\">{icon}</div>\r\n-      <h3 className=\"co\">{title}</h3>\r\n+      <h3 className=\"connect-t\">{title}</h3>\r\n       <p>{description}</p>\r\n     </div>\r\n   );\r\n };\r\n"
+                },
+                {
+                    "date": 1753255443539,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -4,10 +4,10 @@\n const ConnectBox = ({ icon, title, description }) => {\r\n   return (\r\n     <div className=\"connect-box\">\r\n       <div className=\"connect-icon\">{icon}</div>\r\n-      <h3 className=\"connect-t\">{title}</h3>\r\n-      <p>{description}</p>\r\n+      <h3 className=\"connect-title\">{title}</h3>\r\n+      <p c>{description}</p>\r\n     </div>\r\n   );\r\n };\r\n \r\n"
+                },
+                {
+                    "date": 1753255449598,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -5,9 +5,9 @@\n   return (\r\n     <div className=\"connect-box\">\r\n       <div className=\"connect-icon\">{icon}</div>\r\n       <h3 className=\"connect-title\">{title}</h3>\r\n-      <p c>{description}</p>\r\n+      <p className=\"connect-\">{description}</p>\r\n     </div>\r\n   );\r\n };\r\n \r\n"
+                },
+                {
+                    "date": 1753342917705,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -3,11 +3,11 @@\n \r\n const ConnectBox = ({ icon, title, description }) => {\r\n   return (\r\n     <div className=\"connect-box\">\r\n-      <div className=\"connect-icon\">{icon}</div>\r\n+      <div className=\"connect-icon \">{icon}</div>\r\n       <h3 className=\"connect-title\">{title}</h3>\r\n-      <p className=\"connect-\">{description}</p>\r\n+      <p className=\"connect-description\">{description}</p>\r\n     </div>\r\n   );\r\n };\r\n \r\n"
+                },
+                {
+                    "date": 1753342922870,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -3,9 +3,9 @@\n \r\n const ConnectBox = ({ icon, title, description }) => {\r\n   return (\r\n     <div className=\"connect-box\">\r\n-      <div className=\"connect-icon \">{icon}</div>\r\n+      <div className=\"connect-icon icon-circl\">{icon}</div>\r\n       <h3 className=\"connect-title\">{title}</h3>\r\n       <p className=\"connect-description\">{description}</p>\r\n     </div>\r\n   );\r\n"
+                }
+            ],
+            "date": 1753254153275,
+            "name": "Commit-0",
+            "content": "import React from \"react\";\r\nimport \"./ConnectBoxes.css\";\r\n\r\nconst connectData = [\r\n  {\r\n    icon: \"☕\", // Placeholder icon\r\n    title: \"Interest-Based Matching\",\r\n    description:\r\n      \"Connect with entrepreneurs who share your industry focus, business interests, and goals.\",\r\n  },\r\n  {\r\n    icon: \"💡\",\r\n    title: \"Vision Alignment\",\r\n    description:\r\n      \"Find entrepreneurs whose business vision and values align with your own for stronger partnerships.\",\r\n  },\r\n  {\r\n    icon: \"🤝\",\r\n    title: \"Smart Connections\",\r\n    description:\r\n      \"Our algorithm matches entrepreneurs based on complementary skills and shared business interests.\",\r\n  },\r\n  {\r\n    icon: \"🚀\",\r\n    title: \"Partnership Success\",\r\n    description:\r\n      \"Build meaningful business relationships that lead to successful ventures and collaborations.\",\r\n  },\r\n];\r\n\r\nconst ConnectBoxes = () => {\r\n  return (\r\n    <section className=\"connect-section\">\r\n      <div className=\"connect-boxes\">\r\n        {connectData.map((box, index) => (\r\n          <div className=\"connect-box\" key={index}>\r\n            <div className=\"connect-icon\">{box.icon}</div>\r\n            <h3>{box.title}</h3>\r\n            <p>{box.description}</p>\r\n          </div>\r\n        ))}\r\n      </div>\r\n    </section>\r\n  );\r\n};\r\n\r\nexport default ConnectBoxes;"
+        }
+    ]
+}

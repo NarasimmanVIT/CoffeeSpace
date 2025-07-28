@@ -1,0 +1,122 @@
+{
+    "sourceFile": "src/components/Messages/messages.css",
+    "activeCommit": 0,
+    "commits": [
+        {
+            "activePatchIndex": 26,
+            "patches": [
+                {
+                    "date": 1753425597667,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n"
+                },
+                {
+                    "date": 1753427547051,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,9 +1,9 @@\n /* messages.css */\r\n \r\n .messages-page {\r\n   display: flex;\r\n-  height: calc(100vh - 60px); /* if navbar height is 60px */\r\n+  height: calc(100vh - 60px); \r\n }\r\n \r\n .sidebar {\r\n   width: 250px;\r\n"
+                },
+                {
+                    "date": 1753427584432,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,5 +1,4 @@\n-/* messages.css */\r\n \r\n .messages-page {\r\n   display: flex;\r\n   height: calc(100vh - 60px); \r\n"
+                },
+                {
+                    "date": 1753427607867,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,5 +1,4 @@\n-\r\n .messages-page {\r\n   display: flex;\r\n   height: calc(100vh - 60px); \r\n }\r\n@@ -62,9 +61,9 @@\n   align-self: flex-start;\r\n }\r\n \r\n .message-item.right {\r\n-  background-color: #cce4ff;\r\n+  background-color: #93501F;\r\n   align-self: flex-end;\r\n }\r\n \r\n .navbar {\r\n"
+                },
+                {
+                    "date": 1753427625951,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -56,9 +56,9 @@\n   word-wrap: break-word;\r\n }\r\n \r\n .message-item.left {\r\n-  background-color: #eee;\r\n+  background-color: #F0EBE6;\r\n   align-self: flex-start;\r\n }\r\n \r\n .message-item.right {\r\n"
+                },
+                {
+                    "date": 1753427659474,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -56,9 +56,9 @@\n   word-wrap: break-word;\r\n }\r\n \r\n .message-item.left {\r\n-  background-color: #F0EBE6;\r\n+  background-color: #c4c1bd;\r\n   align-self: flex-start;\r\n }\r\n \r\n .message-item.right {\r\n"
+                },
+                {
+                    "date": 1753427675780,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -56,9 +56,9 @@\n   word-wrap: break-word;\r\n }\r\n \r\n .message-item.left {\r\n-  background-color: #c4c1bd;\r\n+  background-color: #e6c395;\r\n   align-self: flex-start;\r\n }\r\n \r\n .message-item.right {\r\n"
+                },
+                {
+                    "date": 1753428542476,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -56,9 +56,9 @@\n   word-wrap: break-word;\r\n }\r\n \r\n .message-item.left {\r\n-  background-color: #e6c395;\r\n+  background-color: b;\r\n   align-self: flex-start;\r\n }\r\n \r\n .message-item.right {\r\n"
+                },
+                {
+                    "date": 1753428548415,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -56,9 +56,9 @@\n   word-wrap: break-word;\r\n }\r\n \r\n .message-item.left {\r\n-  background-color: b;\r\n+  background-color: bl;\r\n   align-self: flex-start;\r\n }\r\n \r\n .message-item.right {\r\n"
+                },
+                {
+                    "date": 1753519479857,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -0,0 +1,77 @@\n+.messages-page {\r\n+  display: flex;\r\n+  height: 1; \r\n+}\r\n+\r\n+.sidebar {\r\n+  width: 250px;\r\n+  background-color: #f5f5f5;\r\n+  border-right: 1px solid #ddd;\r\n+  padding: 10px;\r\n+  overflow-y: auto;\r\n+}\r\n+\r\n+.sidebar h2 {\r\n+  font-size: 18px;\r\n+  margin-bottom: 15px;\r\n+  font-weight: bold;\r\n+}\r\n+\r\n+.conversation-item {\r\n+  display: flex;\r\n+  align-items: center;\r\n+  padding: 8px;\r\n+  border-radius: 8px;\r\n+  cursor: pointer;\r\n+  margin-bottom: 6px;\r\n+}\r\n+\r\n+.conversation-item:hover,\r\n+.conversation-item.active {\r\n+  background-color: #e0e0e0;\r\n+}\r\n+\r\n+.conversation-item img {\r\n+  width: 30px;\r\n+  height: 30px;\r\n+  margin-right: 10px;\r\n+}\r\n+\r\n+.chat-box {\r\n+  flex: 1;\r\n+  padding: 15px;\r\n+  display: flex;\r\n+  flex-direction: column;\r\n+  background-color: #fff;\r\n+  overflow-y: auto;\r\n+}\r\n+\r\n+.message-item {\r\n+  max-width: 60%;\r\n+  margin-bottom: 10px;\r\n+  padding: 10px 15px;\r\n+  border-radius: 15px;\r\n+  font-size: 14px;\r\n+  line-height: 1.4;\r\n+  word-wrap: break-word;\r\n+}\r\n+\r\n+.message-item.left {\r\n+  background-color: #e6c395;\r\n+  align-self: flex-start;\r\n+}\r\n+\r\n+.message-item.right {\r\n+  background-color: #93501F;\r\n+  align-self: flex-end;\r\n+}\r\n+\r\n+.navbar {\r\n+  display: flex;\r\n+  justify-content: space-between;\r\n+  align-items: center;\r\n+  height: 60px;\r\n+  padding: 0 20px;\r\n+  background-color: #fff;\r\n+  border-bottom: 1px solid #ddd;\r\n+}\n\\ No newline at end of file\n"
+                },
+                {
+                    "date": 1753519754400,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,7 +1,8 @@\n .messages-page {\r\n   display: flex;\r\n-  height: 1; \r\n+  height: 100vh; \r\n+  \r\n }\r\n \r\n .sidebar {\r\n   width: 250px;\r\n@@ -73,82 +74,5 @@\n   height: 60px;\r\n   padding: 0 20px;\r\n   background-color: #fff;\r\n   border-bottom: 1px solid #ddd;\r\n-}\n-.messages-page {\r\n-  display: flex;\r\n-  height: calc(100vh - 60px); \r\n-}\r\n-\r\n-.sidebar {\r\n-  width: 250px;\r\n-  background-color: #f5f5f5;\r\n-  border-right: 1px solid #ddd;\r\n-  padding: 10px;\r\n-  overflow-y: auto;\r\n-}\r\n-\r\n-.sidebar h2 {\r\n-  font-size: 18px;\r\n-  margin-bottom: 15px;\r\n-  font-weight: bold;\r\n-}\r\n-\r\n-.conversation-item {\r\n-  display: flex;\r\n-  align-items: center;\r\n-  padding: 8px;\r\n-  border-radius: 8px;\r\n-  cursor: pointer;\r\n-  margin-bottom: 6px;\r\n-}\r\n-\r\n-.conversation-item:hover,\r\n-.conversation-item.active {\r\n-  background-color: #e0e0e0;\r\n-}\r\n-\r\n-.conversation-item img {\r\n-  width: 30px;\r\n-  height: 30px;\r\n-  margin-right: 10px;\r\n-}\r\n-\r\n-.chat-box {\r\n-  flex: 1;\r\n-  padding: 15px;\r\n-  display: flex;\r\n-  flex-direction: column;\r\n-  background-color: #fff;\r\n-  overflow-y: auto;\r\n-}\r\n-\r\n-.message-item {\r\n-  max-width: 60%;\r\n-  margin-bottom: 10px;\r\n-  padding: 10px 15px;\r\n-  border-radius: 15px;\r\n-  font-size: 14px;\r\n-  line-height: 1.4;\r\n-  word-wrap: break-word;\r\n-}\r\n-\r\n-.message-item.left {\r\n-  background-color: bl;\r\n-  align-self: flex-start;\r\n-}\r\n-\r\n-.message-item.right {\r\n-  background-color: #93501F;\r\n-  align-self: flex-end;\r\n-}\r\n-\r\n-.navbar {\r\n-  display: flex;\r\n-  justify-content: space-between;\r\n-  align-items: center;\r\n-  height: 60px;\r\n-  padding: 0 20px;\r\n-  background-color: #fff;\r\n-  border-bottom: 1px solid #ddd;\r\n }\n\\ No newline at end of file\n"
+                },
+                {
+                    "date": 1753519761781,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,8 +1,9 @@\n .messages-page {\r\n   display: flex;\r\n   height: 100vh; \r\n-  \r\n+  width: 100%;\r\n+  b\r\n }\r\n \r\n .sidebar {\r\n   width: 250px;\r\n"
+                },
+                {
+                    "date": 1753519761900,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,9 +1,9 @@\n .messages-page {\r\n   display: flex;\r\n   height: 100vh; \r\n   width: 100%;\r\n-  b\r\n+  ba\r\n }\r\n \r\n .sidebar {\r\n   width: 250px;\r\n"
+                },
+                {
+                    "date": 1753519768225,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,9 +1,9 @@\n .messages-page {\r\n   display: flex;\r\n   height: 100vh; \r\n   width: 100%;\r\n-  ba\r\n+  background-color: #F;\r\n }\r\n \r\n .sidebar {\r\n   width: 250px;\r\n"
+                },
+                {
+                    "date": 1753519773899,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,9 +1,9 @@\n .messages-page {\r\n   display: flex;\r\n   height: 100vh; \r\n   width: 100%;\r\n-  background-color: #F;\r\n+  background-color: #F9F7F;\r\n }\r\n \r\n .sidebar {\r\n   width: 250px;\r\n"
+                },
+                {
+                    "date": 1753519779772,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,9 +1,10 @@\n .messages-page {\r\n   display: flex;\r\n   height: 100vh; \r\n   width: 100%;\r\n-  background-color: #F9F7F;\r\n+  background-color: #F9F7F4;\r\n+  f\r\n }\r\n \r\n .sidebar {\r\n   width: 250px;\r\n"
+                },
+                {
+                    "date": 1753519795589,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -2,9 +2,9 @@\n   display: flex;\r\n   height: 100vh; \r\n   width: 100%;\r\n   background-color: #F9F7F4;\r\n-  f\r\n+  font-family: A;\r\n }\r\n \r\n .sidebar {\r\n   width: 250px;\r\n"
+                },
+                {
+                    "date": 1753519800814,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -2,9 +2,9 @@\n   display: flex;\r\n   height: 100vh; \r\n   width: 100%;\r\n   background-color: #F9F7F4;\r\n-  font-family: A;\r\n+  font-family: Arial, sa;\r\n }\r\n \r\n .sidebar {\r\n   width: 250px;\r\n"
+                },
+                {
+                    "date": 1753519806805,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -2,9 +2,9 @@\n   display: flex;\r\n   height: 100vh; \r\n   width: 100%;\r\n   background-color: #F9F7F4;\r\n-  font-family: Arial, sa;\r\n+  font-family: Arial, sans-se;\r\n }\r\n \r\n .sidebar {\r\n   width: 250px;\r\n"
+                },
+                {
+                    "date": 1753519812771,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -2,9 +2,10 @@\n   display: flex;\r\n   height: 100vh; \r\n   width: 100%;\r\n   background-color: #F9F7F4;\r\n-  font-family: Arial, sans-se;\r\n+  font-family: Arial, sans-serif;\r\n+  padding: ;\r\n }\r\n \r\n .sidebar {\r\n   width: 250px;\r\n"
+                },
+                {
+                    "date": 1753519818470,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -3,9 +3,10 @@\n   height: 100vh; \r\n   width: 100%;\r\n   background-color: #F9F7F4;\r\n   font-family: Arial, sans-serif;\r\n-  padding: ;\r\n+  padding: 30px;\r\n+  b\r\n }\r\n \r\n .sidebar {\r\n   width: 250px;\r\n"
+                },
+                {
+                    "date": 1753519824013,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -4,9 +4,10 @@\n   width: 100%;\r\n   background-color: #F9F7F4;\r\n   font-family: Arial, sans-serif;\r\n   padding: 30px;\r\n-  b\r\n+  box-sizing: border-box;\r\n+  \r\n }\r\n \r\n .sidebar {\r\n   width: 250px;\r\n"
+                },
+                {
+                    "date": 1753519829181,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -5,9 +5,9 @@\n   background-color: #F9F7F4;\r\n   font-family: Arial, sans-serif;\r\n   padding: 30px;\r\n   box-sizing: border-box;\r\n-  \r\n+  gap: 30p;\r\n }\r\n \r\n .sidebar {\r\n   width: 250px;\r\n"
+                },
+                {
+                    "date": 1753519860223,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -5,12 +5,12 @@\n   background-color: #F9F7F4;\r\n   font-family: Arial, sans-serif;\r\n   padding: 30px;\r\n   box-sizing: border-box;\r\n-  gap: 30p;\r\n+  gap: 30px;\r\n }\r\n \r\n-.sidebar {\r\n+/* .sidebar {\r\n   width: 250px;\r\n   background-color: #f5f5f5;\r\n   border-right: 1px solid #ddd;\r\n   padding: 10px;\r\n@@ -79,5 +79,5 @@\n   height: 60px;\r\n   padding: 0 20px;\r\n   background-color: #fff;\r\n   border-bottom: 1px solid #ddd;\r\n-}\n\\ No newline at end of file\n+} */\n\\ No newline at end of file\n"
+                },
+                {
+                    "date": 1753519905669,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,9 +1,9 @@\n .messages-page {\r\n   display: flex;\r\n   height: 100vh; \r\n   width: 100%;\r\n-  background-color: #F9F7F4;\r\n+  background-color: #F9F7F4b;\r\n   font-family: Arial, sans-serif;\r\n   padding: 30px;\r\n   box-sizing: border-box;\r\n   gap: 30px;\r\n"
+                },
+                {
+                    "date": 1753519910752,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,9 +1,9 @@\n .messages-page {\r\n   display: flex;\r\n   height: 100vh; \r\n   width: 100%;\r\n-  background-color: #F9F7F4b;\r\n+  background-color: black;\r\n   font-family: Arial, sans-serif;\r\n   padding: 30px;\r\n   box-sizing: border-box;\r\n   gap: 30px;\r\n"
+                },
+                {
+                    "date": 1753519916976,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,9 +1,9 @@\n .messages-page {\r\n   display: flex;\r\n   height: 100vh; \r\n   width: 100%;\r\n-  background-color: black;\r\n+  background-color: bl;\r\n   font-family: Arial, sans-serif;\r\n   padding: 30px;\r\n   box-sizing: border-box;\r\n   gap: 30px;\r\n"
+                }
+            ],
+            "date": 1753425597667,
+            "name": "Commit-0",
+            "content": "/* messages.css */\r\n\r\n.messages-page {\r\n  display: flex;\r\n  height: calc(100vh - 60px); /* if navbar height is 60px */\r\n}\r\n\r\n.sidebar {\r\n  width: 250px;\r\n  background-color: #f5f5f5;\r\n  border-right: 1px solid #ddd;\r\n  padding: 10px;\r\n  overflow-y: auto;\r\n}\r\n\r\n.sidebar h2 {\r\n  font-size: 18px;\r\n  margin-bottom: 15px;\r\n  font-weight: bold;\r\n}\r\n\r\n.conversation-item {\r\n  display: flex;\r\n  align-items: center;\r\n  padding: 8px;\r\n  border-radius: 8px;\r\n  cursor: pointer;\r\n  margin-bottom: 6px;\r\n}\r\n\r\n.conversation-item:hover,\r\n.conversation-item.active {\r\n  background-color: #e0e0e0;\r\n}\r\n\r\n.conversation-item img {\r\n  width: 30px;\r\n  height: 30px;\r\n  margin-right: 10px;\r\n}\r\n\r\n.chat-box {\r\n  flex: 1;\r\n  padding: 15px;\r\n  display: flex;\r\n  flex-direction: column;\r\n  background-color: #fff;\r\n  overflow-y: auto;\r\n}\r\n\r\n.message-item {\r\n  max-width: 60%;\r\n  margin-bottom: 10px;\r\n  padding: 10px 15px;\r\n  border-radius: 15px;\r\n  font-size: 14px;\r\n  line-height: 1.4;\r\n  word-wrap: break-word;\r\n}\r\n\r\n.message-item.left {\r\n  background-color: #eee;\r\n  align-self: flex-start;\r\n}\r\n\r\n.message-item.right {\r\n  background-color: #cce4ff;\r\n  align-self: flex-end;\r\n}\r\n\r\n.navbar {\r\n  display: flex;\r\n  justify-content: space-between;\r\n  align-items: center;\r\n  height: 60px;\r\n  padding: 0 20px;\r\n  background-color: #fff;\r\n  border-bottom: 1px solid #ddd;\r\n}"
+        }
+    ]
+}

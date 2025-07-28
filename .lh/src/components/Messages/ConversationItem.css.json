@@ -1,0 +1,114 @@
+{
+    "sourceFile": "src/components/Messages/ConversationItem.css",
+    "activeCommit": 0,
+    "commits": [
+        {
+            "activePatchIndex": 24,
+            "patches": [
+                {
+                    "date": 1753424051632,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n"
+                },
+                {
+                    "date": 1753424154244,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,1 +1,29 @@\n-C\n\\ No newline at end of file\n+.conversation-item {\r\n+  display: flex;\r\n+  align-items: center;\r\n+  padding: 10px;\r\n+  border-radius: 8px;\r\n+  cursor: pointer;\r\n+  transition: background-color 0.2s ease;\r\n+}\r\n+\r\n+.conversation-item:hover {\r\n+  background-color: #e0e0e0;\r\n+}\r\n+\r\n+.avatar {\r\n+  font-size: 24px;\r\n+  margin-right: 12px;\r\n+}\r\n+\r\n+.conversation-text h4 {\r\n+  margin: 0;\r\n+  font-size: 16px;\r\n+  font-weight: 600;\r\n+}\r\n+\r\n+.conversation-text p {\r\n+  margin: 4px 0 0;\r\n+  font-size: 14px;\r\n+  color: #555;\r\n+}\n\\ No newline at end of file\n"
+                },
+                {
+                    "date": 1753424983562,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -19,8 +19,9 @@\n .conversation-text h4 {\r\n   margin: 0;\r\n   font-size: 16px;\r\n   font-weight: 600;\r\n+  \r\n }\r\n \r\n .conversation-text p {\r\n   margin: 4px 0 0;\r\n"
+                },
+                {
+                    "date": 1753424988669,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -19,9 +19,9 @@\n .conversation-text h4 {\r\n   margin: 0;\r\n   font-size: 16px;\r\n   font-weight: 600;\r\n-  \r\n+  color: #1;\r\n }\r\n \r\n .conversation-text p {\r\n   margin: 4px 0 0;\r\n"
+                },
+                {
+                    "date": 1753425032121,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -19,12 +19,12 @@\n .conversation-text h4 {\r\n   margin: 0;\r\n   font-size: 16px;\r\n   font-weight: 600;\r\n-  color: #1;\r\n+  color: #111;\r\n }\r\n \r\n .conversation-text p {\r\n   margin: 4px 0 0;\r\n   font-size: 14px;\r\n-  color: #555;\r\n+  color: #6;\r\n }\n\\ No newline at end of file\n"
+                },
+                {
+                    "date": 1753523259971,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,8 +1,9 @@\n .conversation-item {\r\n   display: flex;\r\n   align-items: center;\r\n   padding: 10px;\r\n+  \r\n   border-radius: 8px;\r\n   cursor: pointer;\r\n   transition: background-color 0.2s ease;\r\n }\r\n"
+                },
+                {
+                    "date": 1753523265186,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,9 +1,9 @@\n .conversation-item {\r\n   display: flex;\r\n   align-items: center;\r\n   padding: 10px;\r\n-  \r\n+  background-color: #ff;\r\n   border-radius: 8px;\r\n   cursor: pointer;\r\n   transition: background-color 0.2s ease;\r\n }\r\n@@ -26,6 +26,6 @@\n \r\n .conversation-text p {\r\n   margin: 4px 0 0;\r\n   font-size: 14px;\r\n-  color: #6;\r\n+  color: #666;\r\n }\n\\ No newline at end of file\n"
+                },
+                {
+                    "date": 1753523271240,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,9 +1,10 @@\n .conversation-item {\r\n   display: flex;\r\n   align-items: center;\r\n   padding: 10px;\r\n-  background-color: #ff;\r\n+  background-color: #fff;\r\n+\r\n   border-radius: 8px;\r\n   cursor: pointer;\r\n   transition: background-color 0.2s ease;\r\n }\r\n"
+                },
+                {
+                    "date": 1753523280849,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -2,11 +2,11 @@\n   display: flex;\r\n   align-items: center;\r\n   padding: 10px;\r\n   background-color: #fff;\r\n-\r\n-  border-radius: 8px;\r\n+  border-radius: 6px;\r\n   cursor: pointer;\r\n+  \r\n   transition: background-color 0.2s ease;\r\n }\r\n \r\n .conversation-item:hover {\r\n"
+                },
+                {
+                    "date": 1753523286006,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -4,9 +4,9 @@\n   padding: 10px;\r\n   background-color: #fff;\r\n   border-radius: 6px;\r\n   cursor: pointer;\r\n-  \r\n+  margin-bottom: 1;\r\n   transition: background-color 0.2s ease;\r\n }\r\n \r\n .conversation-item:hover {\r\n"
+                },
+                {
+                    "date": 1753523294838,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -4,10 +4,10 @@\n   padding: 10px;\r\n   background-color: #fff;\r\n   border-radius: 6px;\r\n   cursor: pointer;\r\n-  margin-bottom: 1;\r\n-  transition: background-color 0.2s ease;\r\n+  margin-bottom: 10px;\r\n+  transition: background-color 0.s ease;\r\n }\r\n \r\n .conversation-item:hover {\r\n   background-color: #e0e0e0;\r\n"
+                },
+                {
+                    "date": 1753523314567,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -5,13 +5,13 @@\n   background-color: #fff;\r\n   border-radius: 6px;\r\n   cursor: pointer;\r\n   margin-bottom: 10px;\r\n-  transition: background-color 0.s ease;\r\n+  transition: background-color 0.3s ease;\r\n }\r\n \r\n .conversation-item:hover {\r\n-  background-color: #e0e0e0;\r\n+  background-color: #F6C6AE;\r\n }\r\n \r\n .avatar {\r\n   font-size: 24px;\r\n"
+                },
+                {
+                    "date": 1753523344990,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -12,8 +12,9 @@\n .conversation-item:hover {\r\n   background-color: #F6C6AE;\r\n }\r\n \r\n+\r\n .avatar {\r\n   font-size: 24px;\r\n   margin-right: 12px;\r\n }\r\n"
+                },
+                {
+                    "date": 1753523350187,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -12,8 +12,9 @@\n .conversation-item:hover {\r\n   background-color: #F6C6AE;\r\n }\r\n \r\n+.conversation-item\r\n \r\n .avatar {\r\n   font-size: 24px;\r\n   margin-right: 12px;\r\n"
+                },
+                {
+                    "date": 1753523356206,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -12,9 +12,9 @@\n .conversation-item:hover {\r\n   background-color: #F6C6AE;\r\n }\r\n \r\n-.conversation-item\r\n+.conversation-item.acti\r\n \r\n .avatar {\r\n   font-size: 24px;\r\n   margin-right: 12px;\r\n"
+                },
+                {
+                    "date": 1753523363215,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -12,9 +12,11 @@\n .conversation-item:hover {\r\n   background-color: #F6C6AE;\r\n }\r\n \r\n-.conversation-item.acti\r\n+.conversation-item.active {\r\n+    b\r\n+}\r\n \r\n .avatar {\r\n   font-size: 24px;\r\n   margin-right: 12px;\r\n"
+                },
+                {
+                    "date": 1753523390325,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -13,9 +13,9 @@\n   background-color: #F6C6AE;\r\n }\r\n \r\n .conversation-item.active {\r\n-    b\r\n+    background-color: #;\r\n }\r\n \r\n .avatar {\r\n   font-size: 24px;\r\n"
+                },
+                {
+                    "date": 1753523395702,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -13,9 +13,9 @@\n   background-color: #F6C6AE;\r\n }\r\n \r\n .conversation-item.active {\r\n-    background-color: #;\r\n+    background-color: #ffa5002;\r\n }\r\n \r\n .avatar {\r\n   font-size: 24px;\r\n"
+                },
+                {
+                    "date": 1753523405117,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -13,9 +13,9 @@\n   background-color: #F6C6AE;\r\n }\r\n \r\n .conversation-item.active {\r\n-    background-color: #ffa5002;\r\n+    background-color: o;\r\n }\r\n \r\n .avatar {\r\n   font-size: 24px;\r\n"
+                },
+                {
+                    "date": 1753523420188,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -13,11 +13,12 @@\n   background-color: #F6C6AE;\r\n }\r\n \r\n .conversation-item.active {\r\n-    background-color: o;\r\n+    background-color: orange;\r\n }\r\n \r\n+\r\n .avatar {\r\n   font-size: 24px;\r\n   margin-right: 12px;\r\n }\r\n"
+                },
+                {
+                    "date": 1753523425554,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -16,8 +16,9 @@\n .conversation-item.active {\r\n     background-color: orange;\r\n }\r\n \r\n+.prof\r\n \r\n .avatar {\r\n   font-size: 24px;\r\n   margin-right: 12px;\r\n"
+                },
+                {
+                    "date": 1753523430693,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -16,9 +16,9 @@\n .conversation-item.active {\r\n     background-color: orange;\r\n }\r\n \r\n-.prof\r\n+.profile-pic{}\r\n \r\n .avatar {\r\n   font-size: 24px;\r\n   margin-right: 12px;\r\n"
+                },
+                {
+                    "date": 1753523435890,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -16,9 +16,11 @@\n .conversation-item.active {\r\n     background-color: orange;\r\n }\r\n \r\n-.profile-pic{}\r\n+.profile-pic{\r\n+    width: 40p;\r\n+}\r\n \r\n .avatar {\r\n   font-size: 24px;\r\n   margin-right: 12px;\r\n"
+                },
+                {
+                    "date": 1753523441122,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -18,9 +18,9 @@\n }\r\n \r\n .profile-pic{\r\n     width: 40px;\r\n-    height: 4;\r\n+    height: 40;\r\n }\r\n \r\n .avatar {\r\n   font-size: 24px;\r\n"
+                },
+                {
+                    "date": 1753523449375,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -19,9 +19,9 @@\n \r\n .profile-pic{\r\n     width: 40px;\r\n     height: 40px;\r\n-    border-radius: 5;\r\n+    border-radius: 50;\r\n }\r\n \r\n .avatar {\r\n   font-size: 24px;\r\n"
+                }
+            ],
+            "date": 1753424051632,
+            "name": "Commit-0",
+            "content": "C"
+        }
+    ]
+}

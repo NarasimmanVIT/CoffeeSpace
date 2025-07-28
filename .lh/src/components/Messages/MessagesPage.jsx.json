@@ -1,0 +1,82 @@
+{
+    "sourceFile": "src/components/Messages/MessagesPage.jsx",
+    "activeCommit": 0,
+    "commits": [
+        {
+            "activePatchIndex": 16,
+            "patches": [
+                {
+                    "date": 1753423509709,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n"
+                },
+                {
+                    "date": 1753423961412,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -8,6 +8,20 @@\n       <ChatBox />\r\n     </div>\r\n   );\r\n };\r\n+import React from 'react';\r\n+import Sidebar from './Sidebar';\r\n+import ChatBox from './ChatBox';\r\n+import './MessagesPage.css';\r\n \r\n+const MessagesPage = () => {\r\n+  return (\r\n+    <div className=\"messages-page\">\r\n+      <Sidebar />\r\n+      <ChatBox />\r\n+    </div>\r\n+  );\r\n+};\r\n+\r\n+export default MessagesPage;\r\n export default MessagesPage;\n\\ No newline at end of file\n"
+                },
+                {
+                    "date": 1753423969438,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,10 +1,12 @@\n+import React from 'react';\r\n import Sidebar from './Sidebar';\r\n import ChatBox from './ChatBox';\r\n+import './MessagesPage.css';\r\n \r\n const MessagesPage = () => {\r\n   return (\r\n-    <div className=\"messages-container\">\r\n+    <div className=\"messages-page\">\r\n       <Sidebar />\r\n       <ChatBox />\r\n     </div>\r\n   );\r\n"
+                },
+                {
+                    "date": 1753425615334,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -2,20 +2,8 @@\n import Sidebar from './Sidebar';\r\n import ChatBox from './ChatBox';\r\n import './MessagesPage.css';\r\n \r\n-const MessagesPage = () => {\r\n-  return (\r\n-    <div className=\"messages-page\">\r\n-      <Sidebar />\r\n-      <ChatBox />\r\n-    </div>\r\n-  );\r\n-};\r\n-import React from 'react';\r\n-import Sidebar from './Sidebar';\r\n-import ChatBox from './ChatBox';\r\n-import './MessagesPage.css';\r\n \r\n const MessagesPage = () => {\r\n   return (\r\n     <div className=\"messages-page\">\r\n@@ -24,6 +12,5 @@\n     </div>\r\n   );\r\n };\r\n \r\n-export default MessagesPage;\r\n export default MessagesPage;\n\\ No newline at end of file\n"
+                },
+                {
+                    "date": 1753425620448,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,10 +1,10 @@\n import React from 'react';\r\n import Sidebar from './Sidebar';\r\n import ChatBox from './ChatBox';\r\n import './MessagesPage.css';\r\n+import \"\"\r\n \r\n-\r\n const MessagesPage = () => {\r\n   return (\r\n     <div className=\"messages-page\">\r\n       <Sidebar />\r\n"
+                },
+                {
+                    "date": 1753425626033,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,9 +1,9 @@\n import React from 'react';\r\n import Sidebar from './Sidebar';\r\n import ChatBox from './ChatBox';\r\n import './MessagesPage.css';\r\n-import \"\"\r\n+import \"./me\"\r\n \r\n const MessagesPage = () => {\r\n   return (\r\n     <div className=\"messages-page\">\r\n"
+                },
+                {
+                    "date": 1753425634003,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,9 +1,9 @@\n import React from 'react';\r\n import Sidebar from './Sidebar';\r\n import ChatBox from './ChatBox';\r\n import './MessagesPage.css';\r\n-import \"./me\"\r\n+import \"./messages\"\r\n \r\n const MessagesPage = () => {\r\n   return (\r\n     <div className=\"messages-page\">\r\n"
+                },
+                {
+                    "date": 1753425760770,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,14 +1,14 @@\n import React from 'react';\r\n import Sidebar from './Sidebar';\r\n import ChatBox from './ChatBox';\r\n import './MessagesPage.css';\r\n-import \"./messages\"\r\n+import \"./messages.css\"\r\n \r\n const MessagesPage = () => {\r\n   return (\r\n     <div className=\"messages-page\">\r\n-      <Sidebar />\r\n+      <Sidebar  />\r\n       <ChatBox />\r\n     </div>\r\n   );\r\n };\r\n"
+                },
+                {
+                    "date": 1753425766001,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -6,9 +6,9 @@\n \r\n const MessagesPage = () => {\r\n   return (\r\n     <div className=\"messages-page\">\r\n-      <Sidebar  />\r\n+      <Sidebar .. />\r\n       <ChatBox />\r\n     </div>\r\n   );\r\n };\r\n"
+                },
+                {
+                    "date": 1753425771254,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -6,10 +6,10 @@\n \r\n const MessagesPage = () => {\r\n   return (\r\n     <div className=\"messages-page\">\r\n-      <Sidebar .. />\r\n-      <ChatBox />\r\n+      <Sidebar ... />\r\n+      <ChatBox .app />\r\n     </div>\r\n   );\r\n };\r\n \r\n"
+                },
+                {
+                    "date": 1753425782503,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -7,9 +7,9 @@\n const MessagesPage = () => {\r\n   return (\r\n     <div className=\"messages-page\">\r\n       <Sidebar ... />\r\n-      <ChatBox .app />\r\n+      <ChatBox .. />\r\n     </div>\r\n   );\r\n };\r\n \r\n"
+                },
+                {
+                    "date": 1753426428272,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -6,10 +6,10 @@\n \r\n const MessagesPage = () => {\r\n   return (\r\n     <div className=\"messages-page\">\r\n-      <Sidebar ... />\r\n-      <ChatBox .. />\r\n+      \r\n+      <ChatBox />\r\n     </div>\r\n   );\r\n };\r\n \r\n"
+                },
+                {
+                    "date": 1753426436528,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -6,9 +6,11 @@\n \r\n const MessagesPage = () => {\r\n   return (\r\n     <div className=\"messages-page\">\r\n-      \r\n+      <div>\r\n+        \r\n+      </div>\r\n       <ChatBox />\r\n     </div>\r\n   );\r\n };\r\n"
+                },
+                {
+                    "date": 1753426442546,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -6,10 +6,10 @@\n \r\n const MessagesPage = () => {\r\n   return (\r\n     <div className=\"messages-page\">\r\n-      <div>\r\n-        \r\n+      <div c>\r\n+        <Sidebar />\r\n       </div>\r\n       <ChatBox />\r\n     </div>\r\n   );\r\n"
+                },
+                {
+                    "date": 1753426447734,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -6,9 +6,9 @@\n \r\n const MessagesPage = () => {\r\n   return (\r\n     <div className=\"messages-page\">\r\n-      <div c>\r\n+      <div className='sideba'>\r\n         <Sidebar />\r\n       </div>\r\n       <ChatBox />\r\n     </div>\r\n"
+                },
+                {
+                    "date": 1753426456902,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -9,9 +9,9 @@\n     <div className=\"messages-page\">\r\n       <div className='sidebar-box'>\r\n         <Sidebar />\r\n       </div>\r\n-      <ChatBox />\r\n+      \r\n     </div>\r\n   );\r\n };\r\n \r\n"
+                },
+                {
+                    "date": 1753426463994,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -10,9 +10,9 @@\n       <div className='sidebar-box'>\r\n         <Sidebar />\r\n       </div>\r\n       <div>\r\n-        \r\n+        <ChatBox />\r\n       </div>\r\n     </div>\r\n   );\r\n };\r\n"
+                }
+            ],
+            "date": 1753423509709,
+            "name": "Commit-0",
+            "content": "import Sidebar from './Sidebar';\r\nimport ChatBox from './ChatBox';\r\n\r\nconst MessagesPage = () => {\r\n  return (\r\n    <div className=\"messages-container\">\r\n      <Sidebar />\r\n      <ChatBox />\r\n    </div>\r\n  );\r\n};\r\n\r\nexport default MessagesPage;"
+        }
+    ]
+}

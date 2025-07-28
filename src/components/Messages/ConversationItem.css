@@ -1,0 +1,70 @@
+.conversation-item {
+  display: flex;
+  align-items: center;
+  padding: 10px;
+  background-color: #fff;
+  border-radius: 6px;
+  cursor: pointer;
+  margin-bottom: 10px;
+  transition: background-color 0.3s ease;
+}
+
+.conversation-item:hover {
+  background-color: #F6C6AE;
+}
+
+.conversation-item.active {
+    background-color: rgb(235, 138, 102);
+}
+
+.profile-pic{
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    margin-right: 12px;
+    object-fit: cover;
+}
+
+.conversation-text {
+    display: flex;
+    flex-direction: column;
+}
+
+.conversation-name {
+    font-size: 16px;
+    font-weight: bold;
+    color: #333;
+    margin: 0;
+}
+
+.conversation-message {
+    font-size: 14ox;
+    color: #666;
+    margin: 4px 0 0;
+}
+
+.conversation-image {
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    object-fit: cover;
+    margin-right: 10px;
+}
+
+.avatar {
+  font-size: 24px;
+  margin-right: 12px;
+}
+
+.conversation-text h4 {
+  margin: 0;
+  font-size: 16px;
+  font-weight: 600;
+  color: #111;
+}
+
+.conversation-text p {
+  margin: 4px 0 0;
+  font-size: 14px;
+  color: #666;
+}

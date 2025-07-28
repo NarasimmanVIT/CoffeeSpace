@@ -3,7 +3,7 @@
     "activeCommit": 0,
     "commits": [
         {
-            "activePatchIndex": 7,
+            "activePatchIndex": 11,
             "patches": [
                 {
                     "date": 1753105896434,
@@ -36,6 +36,22 @@
                 {
                     "date": 1753106323059,
                     "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,10 +1,10 @@\n import { StrictMode } from 'react'\n import { createRoot } from 'react-dom/client'\n import './index.css'\n import App from './App.jsx'\n+import Re\n \n-\n createRoot(document.getElementById('root')).render(\n   <React.StrictMode>\n      <App />\n   </React.StrictMode>,\n"
+                },
+                {
+                    "date": 1753424407344,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,11 +1,11 @@\n import { StrictMode } from 'react'\n import { createRoot } from 'react-dom/client'\n import './index.css'\n import App from './App.jsx'\n-import Re\n+import React from 'react'\n \n createRoot(document.getElementById('root')).render(\n   <React.StrictMode>\n-     <App />\n+     \n   </React.StrictMode>,\n )\n"
+                },
+                {
+                    "date": 1753424412714,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -5,7 +5,7 @@\n import React from 'react'\n \n createRoot(document.getElementById('root')).render(\n   <React.StrictMode>\n-     \n+     <Bro\n   </React.StrictMode>,\n )\n"
+                },
+                {
+                    "date": 1753424418014,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -2,10 +2,11 @@\n import { createRoot } from 'react-dom/client'\n import './index.css'\n import App from './App.jsx'\n import React from 'react'\n+import { BrowserRouter } from 'react-router-dom'\n \n createRoot(document.getElementById('root')).render(\n   <React.StrictMode>\n-     <Bro\n+     <BrowserRouter>\n   </React.StrictMode>,\n )\n"
+                },
+                {
+                    "date": 1753424425856,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -7,6 +7,8 @@\n \n createRoot(document.getElementById('root')).render(\n   <React.StrictMode>\n      <BrowserRouter>\n+     <App />\n+     </BrowserRouter>\n   </React.StrictMode>,\n )\n"
                 }
             ],
             "date": 1753105896434,

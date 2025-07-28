@@ -1,0 +1,74 @@
+{
+    "sourceFile": "src/components/Messages/MessageItem.css",
+    "activeCommit": 0,
+    "commits": [
+        {
+            "activePatchIndex": 14,
+            "patches": [
+                {
+                    "date": 1753424108391,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n"
+                },
+                {
+                    "date": 1753425381830,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,9 +1,9 @@\n .message-item {\r\n   max-width: 60%;\r\n   margin-bottom: 10px;\r\n   padding: 10px 14px;\r\n-  border-radius: 12px;\r\n+  border-radius: 1px;\r\n   font-size: 14px;\r\n   line-height: 1.4;\r\n   word-wrap: break-word;\r\n }\r\n"
+                },
+                {
+                    "date": 1753425404535,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,9 +1,9 @@\n .message-item {\r\n   max-width: 60%;\r\n   margin-bottom: 10px;\r\n   padding: 10px 14px;\r\n-  border-radius: 1px;\r\n+  border-radius: 18px;\r\n   font-size: 14px;\r\n   line-height: 1.4;\r\n   word-wrap: break-word;\r\n }\r\n@@ -11,8 +11,9 @@\n .message-item.sent {\r\n   background-color: #d1f0ff;\r\n   align-self: flex-end;\r\n   margin-left: auto;\r\n+  \r\n }\r\n \r\n .message-item.received {\r\n   background-color: #e6e6e6;\r\n"
+                },
+                {
+                    "date": 1753425416943,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -11,9 +11,9 @@\n .message-item.sent {\r\n   background-color: #d1f0ff;\r\n   align-self: flex-end;\r\n   margin-left: auto;\r\n-  \r\n+  color: #33;\r\n }\r\n \r\n .message-item.received {\r\n   background-color: #e6e6e6;\r\n"
+                },
+                {
+                    "date": 1753427073495,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -0,0 +1,22 @@\n+.message-item {\r\n+  max-width: 60%;\r\n+  margin-bottom: 10px;\r\n+  padding: 10px 14px;\r\n+  border-radius: 18px;\r\n+  font-size: 14px;\r\n+  line-height: 1.4;\r\n+  word-wrap: break-word;\r\n+}\r\n+\r\n+.message-item.sent {\r\n+  background-color: #F0EBE6;\r\n+  align-self: flex-end;\r\n+  margin-left: auto;\r\n+  color: #000;\r\n+}\r\n+\r\n+.message-item.received {\r\n+  background-color: #e6e6e6;\r\n+  align-self: flex-start;\r\n+  margin-right: auto;\r\n+}\n\\ No newline at end of file\n"
+                },
+                {
+                    "date": 1753427101809,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -8,9 +8,9 @@\n   word-wrap: break-word;\r\n }\r\n \r\n .message-item.sent {\r\n-  background-color: #F0EBE6;\r\n+  background-color: #d1f0ff;\r\n   align-self: flex-end;\r\n   margin-left: auto;\r\n   color: #000;\r\n }\r\n@@ -18,27 +18,5 @@\n .message-item.received {\r\n   background-color: #e6e6e6;\r\n   align-self: flex-start;\r\n   margin-right: auto;\r\n-}\n-.message-item {\r\n-  max-width: 60%;\r\n-  margin-bottom: 10px;\r\n-  padding: 10px 14px;\r\n-  border-radius: 18px;\r\n-  font-size: 14px;\r\n-  line-height: 1.4;\r\n-  word-wrap: break-word;\r\n-}\r\n-\r\n-.message-item.sent {\r\n-  background-color: #d1f0ff;\r\n-  align-self: flex-end;\r\n-  margin-left: auto;\r\n-  color: #33;\r\n-}\r\n-\r\n-.message-item.received {\r\n-  background-color: #e6e6e6;\r\n-  align-self: flex-start;\r\n-  margin-right: auto;\r\n }\n\\ No newline at end of file\n"
+                },
+                {
+                    "date": 1753445184673,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -8,9 +8,9 @@\n   word-wrap: break-word;\r\n }\r\n \r\n .message-item.sent {\r\n-  background-color: #d1f0ff;\r\n+  background-color: b;\r\n   align-self: flex-end;\r\n   margin-left: auto;\r\n   color: #000;\r\n }\r\n"
+                },
+                {
+                    "date": 1753445203916,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -8,9 +8,9 @@\n   word-wrap: break-word;\r\n }\r\n \r\n .message-item.sent {\r\n-  background-color: b;\r\n+  background-color: #93501F;\r\n   align-self: flex-end;\r\n   margin-left: auto;\r\n   color: #000;\r\n }\r\n"
+                },
+                {
+                    "date": 1753445224815,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -0,0 +1,22 @@\n+.message-item {\r\n+  max-width: 60%;\r\n+  margin-bottom: 10px;\r\n+  padding: 10px 14px;\r\n+  border-radius: 18px;\r\n+  font-size: 14px;\r\n+  line-height: 1.4;\r\n+  word-wrap: break-word;\r\n+}\r\n+\r\n+.message-item.sent {\r\n+  background-color: #a75a24;\r\n+  align-self: flex-end;\r\n+  margin-left: auto;\r\n+  color: #000;\r\n+}\r\n+\r\n+.message-item.received {\r\n+  background-color: #e6e6e6;\r\n+  align-self: flex-start;\r\n+  margin-right: auto;\r\n+}\n\\ No newline at end of file\n"
+                },
+                {
+                    "date": 1753445233804,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -8,9 +8,9 @@\n   word-wrap: break-word;\r\n }\r\n \r\n .message-item.sent {\r\n-  background-color: #a75a24;\r\n+  background-color: #bb682d;\r\n   align-self: flex-end;\r\n   margin-left: auto;\r\n   color: #000;\r\n }\r\n@@ -18,27 +18,5 @@\n .message-item.received {\r\n   background-color: #e6e6e6;\r\n   align-self: flex-start;\r\n   margin-right: auto;\r\n-}\n-.message-item {\r\n-  max-width: 60%;\r\n-  margin-bottom: 10px;\r\n-  padding: 10px 14px;\r\n-  border-radius: 18px;\r\n-  font-size: 14px;\r\n-  line-height: 1.4;\r\n-  word-wrap: break-word;\r\n-}\r\n-\r\n-.message-item.sent {\r\n-  background-color: #93501F;\r\n-  align-self: flex-end;\r\n-  margin-left: auto;\r\n-  color: #000;\r\n-}\r\n-\r\n-.message-item.received {\r\n-  background-color: #e6e6e6;\r\n-  align-self: flex-start;\r\n-  margin-right: auto;\r\n }\n\\ No newline at end of file\n"
+                },
+                {
+                    "date": 1753445251999,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -15,8 +15,8 @@\n   color: #000;\r\n }\r\n \r\n .message-item.received {\r\n-  background-color: #e6e6e6;\r\n+  background-color: #E6E6E6;\r\n   align-self: flex-start;\r\n   margin-right: auto;\r\n }\n\\ No newline at end of file\n"
+                },
+                {
+                    "date": 1753445266338,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -15,8 +15,8 @@\n   color: #000;\r\n }\r\n \r\n .message-item.received {\r\n-  background-color: #E6E6E6;\r\n+  background-color: y;\r\n   align-self: flex-start;\r\n   margin-right: auto;\r\n }\n\\ No newline at end of file\n"
+                },
+                {
+                    "date": 1753445286736,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -15,8 +15,8 @@\n   color: #000;\r\n }\r\n \r\n .message-item.received {\r\n-  background-color: y;\r\n+  background-color: #F0EBE6;\r\n   align-self: flex-start;\r\n   margin-right: auto;\r\n }\n\\ No newline at end of file\n"
+                },
+                {
+                    "date": 1753445299220,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,9 +1,9 @@\n .message-item {\r\n   max-width: 60%;\r\n   margin-bottom: 10px;\r\n   padding: 10px 14px;\r\n-  border-radius: 18px;\r\n+  border-radius: 1px;\r\n   font-size: 14px;\r\n   line-height: 1.4;\r\n   word-wrap: break-word;\r\n }\r\n"
+                },
+                {
+                    "date": 1753445320405,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,9 +1,9 @@\n .message-item {\r\n   max-width: 60%;\r\n   margin-bottom: 10px;\r\n   padding: 10px 14px;\r\n-  border-radius: 1px;\r\n+  border-radius: px;\r\n   font-size: 14px;\r\n   line-height: 1.4;\r\n   word-wrap: break-word;\r\n }\r\n"
+                }
+            ],
+            "date": 1753424108391,
+            "name": "Commit-0",
+            "content": ".message-item {\r\n  max-width: 60%;\r\n  margin-bottom: 10px;\r\n  padding: 10px 14px;\r\n  border-radius: 12px;\r\n  font-size: 14px;\r\n  line-height: 1.4;\r\n  word-wrap: break-word;\r\n}\r\n\r\n.message-item.sent {\r\n  background-color: #d1f0ff;\r\n  align-self: flex-end;\r\n  margin-left: auto;\r\n}\r\n\r\n.message-item.received {\r\n  background-color: #e6e6e6;\r\n  align-self: flex-start;\r\n  margin-right: auto;\r\n}"
+        }
+    ]
+}

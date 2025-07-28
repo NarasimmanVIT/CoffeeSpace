@@ -1,8 +1,12 @@
 import React, { useEffect, useState } from "react";
 import "./Navbar.css";
+import { Link } from "react-router-dom";
+import { Users, ChatCircle, PaperPlaneTilt, SignIn } from "phosphor-react";
 
 const Navbar = () => {
   const [isScrolled, setIsScrolled] = useState(false);
+
+  const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
 
   useEffect(() => {
     const handleScroll = () => {
@@ -13,10 +17,26 @@ const Navbar = () => {
     return () => window.removeEventListener("scroll", handleScroll);
   }, []);
 
+  const toggleMenu = () => {
+   setIsMobileMenuOpen(!isMobileMenuOpen);
+  };
+
   return (
+    <>
     <nav className={`navbar ${isScrolled ? "scrolled" : ""}`}>
       <div className="navbar-left">
         <div className="navbar-logo">CoffeeSpace</div>
+
+     {/* Mobile Icon */}
+
+       {/* <div className="mobile-menu-icon" onClick={() => setIsMenuOpen(!isMenuOpen)}>
+          <svg width="28" height="28" fill="none" stroke="#2f2121" strokeWidth="2" viewBox="0 0 24 24">
+            <path d="M4 6h16M4 12h16M4 18h16" />
+          </svg>
+        </div>  */}
+
+        {/* desktop */}
+
         <div className="navbar-links">
           <a href="#">
             <span className="icon">
@@ -26,14 +46,14 @@ const Navbar = () => {
             </span>
             Discover
           </a>
-          <a href="#">
+          <Link to="/messages">
             <span className="icon">
               <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" fill="none" stroke="#8a6969" strokeWidth="2" viewBox="0 0 24 24">
                 <path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z"/>
               </svg>
             </span>
             Messages
-          </a>
+          </Link>
           <a href="#">
             <span className="icon">
               <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" fill="none" stroke="#8a6969" strokeWidth="2" viewBox="0 0 24 24">
@@ -52,8 +72,42 @@ const Navbar = () => {
           </span>
           Account
         </div>
+
+          <div className="mobile-menu-icon" onClick={toggleMenu}>
+            <svg width="28" height="28" fill="none" stroke="#2f2121" strokeWidth="2" viewBox="0 0 24 24">
+              <path d="M4 6h16M4 12h16M4 18h16" />
+            </svg>
+          </div>
       </div>
     </nav>
+
+    
+      {/* mobile menu */}
+
+      <div className={`mobile-menu ${isMobileMenuOpen ? "open" : ""}`}>
+        <div className="close-icon" onClick={toggleMenu}>X</div>
+        <a href="#">
+            <Users size={22} color="#8a6969" style={{ marginRight: "8px" }} />
+          Discover
+          </a>
+        <a href="#">
+             <ChatCircle size={22} color="#8a6969" style={{ marginRight: "8px" }} />
+          Messages
+          </a>
+        <a href="#">
+                 <PaperPlaneTilt size={22} color="#8a6969" style={{ marginRight: "8px" }} />
+          Invites
+          </a>
+        <a href="#">
+          <SignIn size={22} color="#8a6969" style={{ marginRight: "8px" }} />
+          Login
+          </a>
+        <a href="#">Sign Up</a>
+      </div>
+
+       {isMobileMenuOpen && <div className="menu-overlay" onClick={toggleMenu}></div>}
+
+    </>
   );
 };
 

@@ -5,8 +5,14 @@ import heroImg from "../assets/hero-image.webp";
 const HeroSection = () => {
   return (
     <section className="hero-image-only">
-      <div className="overlay"></div>
-      <img src={heroImg} alt="Hero" />
+      <div className="hero-image-wrapper">
+        <img src={heroImg} alt="Hero" className="hero-img" />
+        <div className="overlay">
+          
+        </div>
+      </div>
+    
+      
       <div className="hero-content">
         <h1>
           Connect with <br />

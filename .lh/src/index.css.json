@@ -3,7 +3,7 @@
     "activeCommit": 0,
     "commits": [
         {
-            "activePatchIndex": 18,
+            "activePatchIndex": 35,
             "patches": [
                 {
                     "date": 1753105877924,
@@ -80,6 +80,74 @@
                 {
                     "date": 1753119757626,
                     "content": "Index: \n===================================================================\n--- \n+++ \n@@ -16,9 +16,9 @@\n   font-weight: 400;\n \n   color-scheme: light dark;\n   color: rgba(255, 255, 255, 0.87);\n-  background-color: rgb(226, 22, 22);\n+  background-color: w;\n \n   font-synthesis: none;\n   text-rendering: optimizeLegibility;\n   -webkit-font-smoothing: antialiased;\n@@ -39,9 +39,9 @@\n   display: flex;\n   /* place-items: center; */\n   min-width: 320px;\n   min-height: 100vh;\n-  \n+  padding: 0;\n }\n \n h1 {\n   font-size: 3.2em;\n"
+                },
+                {
+                    "date": 1753199802995,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,81 +1,58 @@\n-*{\n-  margin: 0;\n-  padding: 0;\n-  box-sizing: border-box;\n+/* 🔻 Hamburger styles */\n+.menu-toggle {\n+  display: none;\n+  flex-direction: column;\n+  cursor: pointer;\n+  margin-left: auto;\n+  margin-right: 20px;\n+  z-index: 1100;\n }\n-html,body, #root{\n-  width: 100%;\n-  height: 100%;\n-  font-family: Arial, Helvetica, sans-serif;\n-  margin: 0;\n-  padding: 0;\n-}\n-:root {\n-  font-family: system-ui, Avenir, Helvetica, Arial, sans-serif;\n-  line-height: 1.5;\n-  font-weight: 400;\n \n-  color-scheme: light dark;\n-  color: rgba(255, 255, 255, 0.87);\n-  background-color: w;\n-\n-  font-synthesis: none;\n-  text-rendering: optimizeLegibility;\n-  -webkit-font-smoothing: antialiased;\n-  -moz-osx-font-smoothing: grayscale;\n+.menu-toggle .bar {\n+  width: 22px;\n+  height: 3px;\n+  background-color: #2f2121;\n+  margin: 3px 0;\n+  transition: 0.4s;\n }\n \n-a {\n-  font-weight: 500;\n-  color: #646cff;\n-  text-decoration: inherit;\n+/* 🍔 Open animation */\n+.menu-toggle .bar.open:nth-child(1) {\n+  transform: rotate(-45deg) translate(-5px, 5px);\n }\n-a:hover {\n-  color: #535bf2;\n+.menu-toggle .bar.open:nth-child(2) {\n+  opacity: 0;\n }\n-\n-body {\n-  margin: 0;\n-  display: flex;\n-  /* place-items: center; */\n-  min-width: 320px;\n-  min-height: 100vh;\n-  padding: 0;\n+.menu-toggle .bar.open:nth-child(3) {\n+  transform: rotate(45deg) translate(-5px, -5px);\n }\n \n-h1 {\n-  font-size: 3.2em;\n-  line-height: 1.1;\n-}\n+/* 🔻 Mobile */\n+@media screen and (max-width: 768px) {\n+  .navbar-left {\n+    flex-wrap: wrap;\n+    justify-content: space-between;\n+  }\n \n-button {\n-  border-radius: 8px;\n-  border: 1px solid transparent;\n-  padding: 0.6em 1.2em;\n-  font-size: 1em;\n-  font-weight: 500;\n-  font-family: inherit;\n-  background-color: #1a1a1a;\n-  cursor: pointer;\n-  transition: border-color 0.25s;\n-}\n-button:hover {\n-  border-color: #646cff;\n-}\n-button:focus,\n-button:focus-visible {\n-  outline: 4px auto -webkit-focus-ring-color;\n-}\n+  .navbar-links {\n+    flex-direction: column;\n+    align-items: flex-start;\n+    width: 100%;\n+    display: none;\n+    background-color: #fff;\n+    padding: 10px 20px;\n+    border-top: 1px solid #eee;\n+  }\n \n-@media (prefers-color-scheme: light) {\n-  :root {\n-    color: #213547;\n-    background-color: #ffffff;\n+  .navbar-links.active {\n+    display: flex;\n   }\n-  a:hover {\n-    color: #747bff;\n+\n+  .navbar-account {\n+    margin: 10px 20px;\n   }\n-  button {\n-    background-color: #f9f9f9;\n+\n+  .menu-toggle {\n+    display: flex;\n   }\n-}\n+}\n\\ No newline at end of file\n"
+                },
+                {
+                    "date": 1753199808713,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,58 +1,81 @@\n-/* 🔻 Hamburger styles */\n-.menu-toggle {\n-  display: none;\n-  flex-direction: column;\n-  cursor: pointer;\n-  margin-left: auto;\n-  margin-right: 20px;\n-  z-index: 1100;\n+*{\n+  margin: 0;\n+  padding: 0;\n+  box-sizing: border-box;\n }\n+html,body, #root{\n+  width: 100%;\n+  height: 100%;\n+  font-family: Arial, Helvetica, sans-serif;\n+  margin: 0;\n+  padding: 0;\n+}\n+:root {\n+  font-family: system-ui, Avenir, Helvetica, Arial, sans-serif;\n+  line-height: 1.5;\n+  font-weight: 400;\n \n-.menu-toggle .bar {\n-  width: 22px;\n-  height: 3px;\n-  background-color: #2f2121;\n-  margin: 3px 0;\n-  transition: 0.4s;\n+  color-scheme: light dark;\n+  color: rgba(255, 255, 255, 0.87);\n+  background-color: white;\n+\n+  font-synthesis: none;\n+  text-rendering: optimizeLegibility;\n+  -webkit-font-smoothing: antialiased;\n+  -moz-osx-font-smoothing: grayscale;\n }\n \n-/* 🍔 Open animation */\n-.menu-toggle .bar.open:nth-child(1) {\n-  transform: rotate(-45deg) translate(-5px, 5px);\n+a {\n+  font-weight: 500;\n+  color: #646cff;\n+  text-decoration: inherit;\n }\n-.menu-toggle .bar.open:nth-child(2) {\n-  opacity: 0;\n+a:hover {\n+  color: #535bf2;\n }\n-.menu-toggle .bar.open:nth-child(3) {\n-  transform: rotate(45deg) translate(-5px, -5px);\n+\n+body {\n\\ No newline at end of file\n+  margin: 0;\n+  display: flex;\n+  /* place-items: center; */\n+  min-width: 320px;\n+  min-height: 100vh;\n+  padding: 0;\n }\n \n-/* 🔻 Mobile */\n-@media screen and (max-width: 768px) {\n-  .navbar-left {\n-    flex-wrap: wrap;\n-    justify-content: space-between;\n-  }\n+h1 {\n+  font-size: 3.2em;\n+  line-height: 1.1;\n+}\n \n-  .navbar-links {\n-    flex-direction: column;\n-    align-items: flex-start;\n-    width: 100%;\n-    display: none;\n-    background-color: #fff;\n-    padding: 10px 20px;\n-    border-top: 1px solid #eee;\n-  }\n+button {\n+  border-radius: 8px;\n+  border: 1px solid transparent;\n+  padding: 0.6em 1.2em;\n+  font-size: 1em;\n+  font-weight: 500;\n+  font-family: inherit;\n+  background-color: #1a1a1a;\n+  cursor: pointer;\n+  transition: border-color 0.25s;\n+}\n+button:hover {\n+  border-color: #646cff;\n+}\n+button:focus,\n+button:focus-visible {\n+  outline: 4px auto -webkit-focus-ring-color;\n+}\n \n-  .navbar-links.active {\n-    display: flex;\n+@media (prefers-color-scheme: light) {\n+  :root {\n+    color: #213547;\n+    background-color: #ffffff;\n   }\n-\n-  .navbar-account {\n-    margin: 10px 20px;\n+  a:hover {\n+    color: #747bff;\n   }\n-\n-  .menu-toggle {\n-    display: flex;\n+  button {\n+    background-color: #f9f9f9;\n   }\n-}\n+}\n"
+                },
+                {
+                    "date": 1753275354506,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -8,8 +8,9 @@\n   height: 100%;\n   font-family: Arial, Helvetica, sans-serif;\n   margin: 0;\n   padding: 0;\n+  \n }\n :root {\n   font-family: system-ui, Avenir, Helvetica, Arial, sans-serif;\n   line-height: 1.5;\n@@ -77,5 +78,5 @@\n   }\n   button {\n     background-color: #f9f9f9;\n   }\n-}\n\\ No newline at end of file\n+}\n"
+                },
+                {
+                    "date": 1753275363002,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -8,8 +8,9 @@\n   height: 100%;\n   font-family: Arial, Helvetica, sans-serif;\n   margin: 0;\n   padding: 0;\n+  overflow: hidden;\n   \n }\n :root {\n   font-family: system-ui, Avenir, Helvetica, Arial, sans-serif;\n"
+                },
+                {
+                    "date": 1753275368156,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -9,9 +9,9 @@\n   font-family: Arial, Helvetica, sans-serif;\n   margin: 0;\n   padding: 0;\n   overflow: hidden;\n-  \n+  padding-top: 60;\n }\n :root {\n   font-family: system-ui, Avenir, Helvetica, Arial, sans-serif;\n   line-height: 1.5;\n"
+                },
+                {
+                    "date": 1753287827185,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -0,0 +1,83 @@\n+*{\n+  margin: 0;\n+  padding: 0;\n+  box-sizing: border-box;\n+}\n+html,body, #root{\n+  width: 100%;\n+  height: 100%;\n+  font-family: Arial, Helvetica, sans-serif;\n+  margin: 0;\n+  padding: 0;\n+  /* overflow: hidden; */\n+  padding-top: 60px;\n+}\n+:root {\n+  font-family: system-ui, Avenir, Helvetica, Arial, sans-serif;\n+  line-height: 1.5;\n+  font-weight: 400;\n+\n+  color-scheme: light dark;\n+  color: rgba(255, 255, 255, 0.87);\n+  background-color: white;\n+\n+  font-synthesis: none;\n+  text-rendering: optimizeLegibility;\n+  -webkit-font-smoothing: antialiased;\n+  -moz-osx-font-smoothing: grayscale;\n+}\n+\n+a {\n+  font-weight: 500;\n+  color: #646cff;\n+  text-decoration: inherit;\n+}\n+a:hover {\n+  color: #535bf2;\n+}\n+\n+body {\n+  margin: 0;\n+  display: flex;\n+  /* place-items: center; */\n+  min-width: 320px;\n+  min-height: 100vh;\n+  padding: 0;\n+}\n+\n+h1 {\n+  font-size: 3.2em;\n+  line-height: 1.1;\n+}\n+\n+button {\n+  border-radius: 8px;\n+  border: 1px solid transparent;\n+  padding: 0.6em 1.2em;\n+  font-size: 1em;\n+  font-weight: 500;\n+  font-family: inherit;\n+  background-color: #1a1a1a;\n+  cursor: pointer;\n+  transition: border-color 0.25s;\n+}\n+button:hover {\n+  border-color: #646cff;\n+}\n+button:focus,\n+button:focus-visible {\n+  outline: 4px auto -webkit-focus-ring-color;\n+}\n+\n+@media (prefers-color-scheme: light) {\n+  :root {\n+    color: #213547;\n+    background-color: #ffffff;\n+  }\n+  a:hover {\n+    color: #747bff;\n+  }\n+  button {\n+    background-color: #f9f9f9;\n+  }\n+}\n"
+                },
+                {
+                    "date": 1753529106641,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -9,9 +9,9 @@\n   font-family: Arial, Helvetica, sans-serif;\n   margin: 0;\n   padding: 0;\n   /* overflow: hidden; */\n-  padding-top: 60px;\n+  /* padding-top: 60px; */\n }\n :root {\n   font-family: system-ui, Avenir, Helvetica, Arial, sans-serif;\n   line-height: 1.5;\n@@ -80,87 +80,4 @@\n   button {\n     background-color: #f9f9f9;\n   }\n }\n-*{\n-  margin: 0;\n-  padding: 0;\n-  box-sizing: border-box;\n-}\n-html,body, #root{\n-  width: 100%;\n-  height: 100%;\n-  font-family: Arial, Helvetica, sans-serif;\n-  margin: 0;\n-  padding: 0;\n-  overflow: hidden;\n-  padding-top: 60;\n-}\n-:root {\n-  font-family: system-ui, Avenir, Helvetica, Arial, sans-serif;\n-  line-height: 1.5;\n-  font-weight: 400;\n-\n-  color-scheme: light dark;\n-  color: rgba(255, 255, 255, 0.87);\n-  background-color: white;\n-\n-  font-synthesis: none;\n-  text-rendering: optimizeLegibility;\n-  -webkit-font-smoothing: antialiased;\n-  -moz-osx-font-smoothing: grayscale;\n-}\n-\n-a {\n-  font-weight: 500;\n-  color: #646cff;\n-  text-decoration: inherit;\n-}\n-a:hover {\n-  color: #535bf2;\n-}\n-\n-body {\n-  margin: 0;\n-  display: flex;\n-  /* place-items: center; */\n-  min-width: 320px;\n-  min-height: 100vh;\n-  padding: 0;\n-}\n-\n-h1 {\n-  font-size: 3.2em;\n-  line-height: 1.1;\n-}\n-\n-button {\n-  border-radius: 8px;\n-  border: 1px solid transparent;\n-  padding: 0.6em 1.2em;\n-  font-size: 1em;\n-  font-weight: 500;\n-  font-family: inherit;\n-  background-color: #1a1a1a;\n-  cursor: pointer;\n-  transition: border-color 0.25s;\n-}\n-button:hover {\n-  border-color: #646cff;\n-}\n-button:focus,\n-button:focus-visible {\n-  outline: 4px auto -webkit-focus-ring-color;\n-}\n-\n-@media (prefers-color-scheme: light) {\n-  :root {\n-    color: #213547;\n-    background-color: #ffffff;\n-  }\n-  a:hover {\n-    color: #747bff;\n-  }\n-  button {\n-    background-color: #f9f9f9;\n-  }\n-}\n"
+                },
+                {
+                    "date": 1753529126365,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -9,9 +9,9 @@\n   font-family: Arial, Helvetica, sans-serif;\n   margin: 0;\n   padding: 0;\n   /* overflow: hidden; */\n-  /* padding-top: 60px; */\n+  padding-top: 60px;\n }\n :root {\n   font-family: system-ui, Avenir, Helvetica, Arial, sans-serif;\n   line-height: 1.5;\n"
+                },
+                {
+                    "date": 1753529147555,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -40,9 +40,9 @@\n   margin: 0;\n   display: flex;\n   /* place-items: center; */\n   min-width: 320px;\n-  min-height: 100vh;\n+  /* min-height: 100vh; */\n   padding: 0;\n }\n \n h1 {\n"
+                },
+                {
+                    "date": 1753529152890,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -41,8 +41,9 @@\n   display: flex;\n   /* place-items: center; */\n   min-width: 320px;\n   /* min-height: 100vh; */\n+  height: ;\n   padding: 0;\n }\n \n h1 {\n"
+                },
+                {
+                    "date": 1753529173019,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -41,9 +41,9 @@\n   display: flex;\n   /* place-items: center; */\n   min-width: 320px;\n   /* min-height: 100vh; */\n-  height: ;\n+ \n   padding: 0;\n }\n \n h1 {\n"
+                },
+                {
+                    "date": 1753529178601,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -40,10 +40,9 @@\n   margin: 0;\n   display: flex;\n   /* place-items: center; */\n   min-width: 320px;\n-  /* min-height: 100vh; */\n- \n+  min-height: 100vh;\n   padding: 0;\n }\n \n h1 {\n"
+                },
+                {
+                    "date": 1753529185815,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -35,16 +35,16 @@\n a:hover {\n   color: #535bf2;\n }\n \n-body {\n+/* body {\n   margin: 0;\n   display: flex;\n   /* place-items: center; */\n   min-width: 320px;\n   min-height: 100vh;\n   padding: 0;\n-}\n+} */\n \n h1 {\n   font-size: 3.2em;\n   line-height: 1.1;\n"
+                },
+                {
+                    "date": 1753529196704,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -42,9 +42,9 @@\n   /* place-items: center; */\n   min-width: 320px;\n   min-height: 100vh;\n   padding: 0;\n-} */\n+} *\n \n h1 {\n   font-size: 3.2em;\n   line-height: 1.1;\n"
+                },
+                {
+                    "date": 1753529203869,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -38,13 +38,13 @@\n \n /* body {\n   margin: 0;\n   display: flex;\n-  /* place-items: center; */\n+  /* place-items: center; *\n   min-width: 320px;\n   min-height: 100vh;\n   padding: 0;\n-} *\n+} */\n \n h1 {\n   font-size: 3.2em;\n   line-height: 1.1;\n"
+                },
+                {
+                    "date": 1753529212486,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -35,16 +35,16 @@\n a:hover {\n   color: #535bf2;\n }\n \n-/* body {\n+body {\n   margin: 0;\n   display: flex;\n-  /* place-items: center; *\n+  /* place-items: center; \n   min-width: 320px;\n   min-height: 100vh;\n   padding: 0;\n-} */\n+}\n \n h1 {\n   font-size: 3.2em;\n   line-height: 1.1;\n"
+                },
+                {
+                    "date": 1753529223445,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -38,9 +38,9 @@\n \n body {\n   margin: 0;\n   display: flex;\n-  /* place-items: center; \n+  /* place-items: center;  *\n   min-width: 320px;\n   min-height: 100vh;\n   padding: 0;\n }\n"
                 }
             ],
             "date": 1753105877924,

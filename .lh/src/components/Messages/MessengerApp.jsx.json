@@ -1,0 +1,18 @@
+{
+    "sourceFile": "src/components/Messages/MessengerApp.jsx",
+    "activeCommit": 0,
+    "commits": [
+        {
+            "activePatchIndex": 0,
+            "patches": [
+                {
+                    "date": 1753545492186,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n"
+                }
+            ],
+            "date": 1753545492186,
+            "name": "Commit-0",
+            "content": "import React, { useState } from 'react';\r\nimport Sidebar from './Sidebar';\r\nimport ChatBox from './ChatBox';\r\nimport './MessengerApp.css'; // optional\r\n\r\nconst MessengerApp = () => {\r\n  const [selectedUser, setSelectedUser] = useState({\r\n    name: 'Marcus Rodriguez',\r\n    image: 'https://via.placeholder.com/40',\r\n    lastMessage: \"I'd love to discuss the project further\"\r\n  });\r\n\r\n  return (\r\n    <div className=\"messenger-container\">\r\n      <Sidebar\r\n        selectedUser={selectedUser}\r\n        setSelectedUser={setSelectedUser}\r\n      />\r\n      <ChatBox selectedUser={selectedUser} />\r\n    </div>\r\n  );\r\n};\r\n\r\nexport default MessengerApp;"
+        }
+    ]
+}

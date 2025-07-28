@@ -1,0 +1,126 @@
+{
+    "sourceFile": "src/components/Messages/Sidebar.jsx",
+    "activeCommit": 0,
+    "commits": [
+        {
+            "activePatchIndex": 27,
+            "patches": [
+                {
+                    "date": 1753423937672,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n"
+                },
+                {
+                    "date": 1753428311627,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -5,9 +5,9 @@\n const Sidebar = () => {\r\n   return (\r\n     <div className=\"sidebar\">\r\n       <h3 className=\"sidebar-title\">Messages</h3>\r\n-      <ConversationItem name=\"John Doe\" lastMessage=\"Hey there!\" />\r\n+      <ConversationItem name=\"Sarah Chen\" lastMessage=\"Hey there!\" />\r\n       <ConversationItem name=\"Jane Smith\" lastMessage=\"See you soon!\" />\r\n     </div>\r\n   );\r\n };\r\n"
+                },
+                {
+                    "date": 1753428326346,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -0,0 +1,15 @@\n+import React from 'react';\r\n+import ConversationItem from './ConversationItem';\r\n+import './Sidebar.css';\r\n+\r\n+const Sidebar = () => {\r\n+  return (\r\n+    <div className=\"sidebar\">\r\n+      <h3 className=\"sidebar-title\">Messages</h3>\r\n+      <ConversationItem name=\"Sarah Chen\" lastMessage=\"Hey there!\" />\r\n+      <ConversationItem name=\"Marcus Rodriguez\" lastMessage=\"See you soon!\" />\r\n+    </div>\r\n+  );\r\n+};\r\n+\r\n+export default Sidebar;\n\\ No newline at end of file\n"
+                },
+                {
+                    "date": 1753428582433,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -0,0 +1,15 @@\n+import React from 'react';\r\n+import ConversationItem from './ConversationItem';\r\n+import './Sidebar.css';\r\n+\r\n+const Sidebar = () => {\r\n+  return (\r\n+    <div className=\"sidebar\">\r\n+      <h3 className=\"sidebar-title\">Messages</h3>\r\n+      <ConversationItem name=\"Sarah Chen\" lastMessage=\"That sounds like a great idea! When can we meet?\" />\r\n+      <ConversationItem name=\"Marcus Rodriguez\" lastMessage=\"See you soon!\" />\r\n+    </div>\r\n+  );\r\n+};\r\n+\r\n+export default Sidebar;\n\\ No newline at end of file\n"
+                },
+                {
+                    "date": 1753428608750,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -6,40 +6,10 @@\n   return (\r\n     <div className=\"sidebar\">\r\n       <h3 className=\"sidebar-title\">Messages</h3>\r\n       <ConversationItem name=\"Sarah Chen\" lastMessage=\"That sounds like a great idea! When can we meet?\" />\r\n-      <ConversationItem name=\"Marcus Rodriguez\" lastMessage=\"See you soon!\" />\r\n+      <ConversationItem name=\"Marcus Rodriguez\" lastMessage=\"I'd love to discuss the project further\" />\r\n     </div>\r\n   );\r\n };\r\n \r\n-export default Sidebar;\n-import React from 'react';\r\n-import ConversationItem from './ConversationItem';\r\n-import './Sidebar.css';\r\n-\r\n-const Sidebar = () => {\r\n-  return (\r\n-    <div className=\"sidebar\">\r\n-      <h3 className=\"sidebar-title\">Messages</h3>\r\n-      <ConversationItem name=\"Sarah Chen\" lastMessage=\"Hey there!\" />\r\n-      <ConversationItem name=\"Marcus Rodriguez\" lastMessage=\"See you soon!\" />\r\n-    </div>\r\n-  );\r\n-};\r\n-\r\n-export default Sidebar;\n-import React from 'react';\r\n-import ConversationItem from './ConversationItem';\r\n-import './Sidebar.css';\r\n-\r\n-const Sidebar = () => {\r\n-  return (\r\n-    <div className=\"sidebar\">\r\n-      <h3 className=\"sidebar-title\">Messages</h3>\r\n-      <ConversationItem name=\"Sarah Chen\" lastMessage=\"Hey there!\" />\r\n-      <ConversationItem name=\"Jane Smith\" lastMessage=\"See you soon!\" />\r\n-    </div>\r\n-  );\r\n-};\r\n-\r\n export default Sidebar;\n\\ No newline at end of file\n"
+                },
+                {
+                    "date": 1753521596471,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -4,8 +4,9 @@\n \r\n const Sidebar = () => {\r\n   return (\r\n     <div className=\"sidebar\">\r\n+      \r\n       <h3 className=\"sidebar-title\">Messages</h3>\r\n       <ConversationItem name=\"Sarah Chen\" lastMessage=\"That sounds like a great idea! When can we meet?\" />\r\n       <ConversationItem name=\"Marcus Rodriguez\" lastMessage=\"I'd love to discuss the project further\" />\r\n     </div>\r\n"
+                },
+                {
+                    "date": 1753521606497,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -4,9 +4,9 @@\n \r\n const Sidebar = () => {\r\n   return (\r\n     <div className=\"sidebar\">\r\n-      \r\n+      <input type=\"text\" np />\r\n       <h3 className=\"sidebar-title\">Messages</h3>\r\n       <ConversationItem name=\"Sarah Chen\" lastMessage=\"That sounds like a great idea! When can we meet?\" />\r\n       <ConversationItem name=\"Marcus Rodriguez\" lastMessage=\"I'd love to discuss the project further\" />\r\n     </div>\r\n"
+                },
+                {
+                    "date": 1753521613015,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -4,9 +4,9 @@\n \r\n const Sidebar = () => {\r\n   return (\r\n     <div className=\"sidebar\">\r\n-      <input type=\"text\" np />\r\n+      <input type=\"text\" placeholder='S' />\r\n       <h3 className=\"sidebar-title\">Messages</h3>\r\n       <ConversationItem name=\"Sarah Chen\" lastMessage=\"That sounds like a great idea! When can we meet?\" />\r\n       <ConversationItem name=\"Marcus Rodriguez\" lastMessage=\"I'd love to discuss the project further\" />\r\n     </div>\r\n"
+                },
+                {
+                    "date": 1753521619285,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -4,9 +4,9 @@\n \r\n const Sidebar = () => {\r\n   return (\r\n     <div className=\"sidebar\">\r\n-      <input type=\"text\" placeholder='S' />\r\n+      <input type=\"text\" placeholder='Search...'  />\r\n       <h3 className=\"sidebar-title\">Messages</h3>\r\n       <ConversationItem name=\"Sarah Chen\" lastMessage=\"That sounds like a great idea! When can we meet?\" />\r\n       <ConversationItem name=\"Marcus Rodriguez\" lastMessage=\"I'd love to discuss the project further\" />\r\n     </div>\r\n"
+                },
+                {
+                    "date": 1753521624445,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -0,0 +1,16 @@\n+import React from 'react';\r\n+import ConversationItem from './ConversationItem';\r\n+import './Sidebar.css';\r\n+\r\n+const Sidebar = () => {\r\n+  return (\r\n+    <div className=\"sidebar\">\r\n+      <input type=\"text\" placeholder='Search...' className='sideba' />\r\n+      <h3 className=\"sidebar-title\">Messages</h3>\r\n+      <ConversationItem name=\"Sarah Chen\" lastMessage=\"That sounds like a great idea! When can we meet?\" />\r\n+      <ConversationItem name=\"Marcus Rodriguez\" lastMessage=\"I'd love to discuss the project further\" />\r\n+    </div>\r\n+  );\r\n+};\r\n+\r\n+export default Sidebar;\n\\ No newline at end of file\n"
+                },
+                {
+                    "date": 1753521629546,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -4,29 +4,13 @@\n \r\n const Sidebar = () => {\r\n   return (\r\n     <div className=\"sidebar\">\r\n-      <input type=\"text\" placeholder='Search...' className='sideba' />\r\n+      <input type=\"text\" placeholder='Search...' className='sidebar-searc' />\r\n       <h3 className=\"sidebar-title\">Messages</h3>\r\n       <ConversationItem name=\"Sarah Chen\" lastMessage=\"That sounds like a great idea! When can we meet?\" />\r\n       <ConversationItem name=\"Marcus Rodriguez\" lastMessage=\"I'd love to discuss the project further\" />\r\n     </div>\r\n   );\r\n };\r\n \r\n-export default Sidebar;\n-import React from 'react';\r\n-import ConversationItem from './ConversationItem';\r\n-import './Sidebar.css';\r\n-\r\n-const Sidebar = () => {\r\n-  return (\r\n-    <div className=\"sidebar\">\r\n-      <input type=\"text\" placeholder='Search...'  />\r\n-      <h3 className=\"sidebar-title\">Messages</h3>\r\n-      <ConversationItem name=\"Sarah Chen\" lastMessage=\"That sounds like a great idea! When can we meet?\" />\r\n-      <ConversationItem name=\"Marcus Rodriguez\" lastMessage=\"I'd love to discuss the project further\" />\r\n-    </div>\r\n-  );\r\n-};\r\n-\r\n export default Sidebar;\n\\ No newline at end of file\n"
+                },
+                {
+                    "date": 1753521708698,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -4,9 +4,9 @@\n \r\n const Sidebar = () => {\r\n   return (\r\n     <div className=\"sidebar\">\r\n-      <input type=\"text\" placeholder='Search...' className='sidebar-searc' />\r\n+      <input type=\"text\" placeholder='Search ' className='sidebar-search' />\r\n       <h3 className=\"sidebar-title\">Messages</h3>\r\n       <ConversationItem name=\"Sarah Chen\" lastMessage=\"That sounds like a great idea! When can we meet?\" />\r\n       <ConversationItem name=\"Marcus Rodriguez\" lastMessage=\"I'd love to discuss the project further\" />\r\n     </div>\r\n"
+                },
+                {
+                    "date": 1753521714011,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -4,9 +4,9 @@\n \r\n const Sidebar = () => {\r\n   return (\r\n     <div className=\"sidebar\">\r\n-      <input type=\"text\" placeholder='Search ' className='sidebar-search' />\r\n+      <input type=\"text\" placeholder='Search convers' className='sidebar-search' />\r\n       <h3 className=\"sidebar-title\">Messages</h3>\r\n       <ConversationItem name=\"Sarah Chen\" lastMessage=\"That sounds like a great idea! When can we meet?\" />\r\n       <ConversationItem name=\"Marcus Rodriguez\" lastMessage=\"I'd love to discuss the project further\" />\r\n     </div>\r\n"
+                },
+                {
+                    "date": 1753521751900,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -4,10 +4,10 @@\n \r\n const Sidebar = () => {\r\n   return (\r\n     <div className=\"sidebar\">\r\n-      <input type=\"text\" placeholder='Search convers' className='sidebar-search' />\r\n-      <h3 className=\"sidebar-title\">Messages</h3>\r\n+      <input type=\"text\" placeholder='Search conversations...' className='sidebar-search' />\r\n+      {/* <h3 className=\"sidebar-title\">Messages</h3> */}\r\n       <ConversationItem name=\"Sarah Chen\" lastMessage=\"That sounds like a great idea! When can we meet?\" />\r\n       <ConversationItem name=\"Marcus Rodriguez\" lastMessage=\"I'd love to discuss the project further\" />\r\n     </div>\r\n   );\r\n"
+                },
+                {
+                    "date": 1753523679313,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -6,9 +6,9 @@\n   return (\r\n     <div className=\"sidebar\">\r\n       <input type=\"text\" placeholder='Search conversations...' className='sidebar-search' />\r\n       {/* <h3 className=\"sidebar-title\">Messages</h3> */}\r\n-      <ConversationItem name=\"Sarah Chen\" lastMessage=\"That sounds like a great idea! When can we meet?\" />\r\n+      <ConversationItem name=\"Sarah Chen\" lastMessage=\"That sounds like a great idea! When can we meet?\"  />\r\n       <ConversationItem name=\"Marcus Rodriguez\" lastMessage=\"I'd love to discuss the project further\" />\r\n     </div>\r\n   );\r\n };\r\n"
+                },
+                {
+                    "date": 1753523692464,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -0,0 +1,17 @@\n+import React from 'react';\r\n+import ConversationItem from './ConversationItem';\r\n+import './Sidebar.css';\r\n+\r\n+const Sidebar = () => {\r\n+  return (\r\n+    <div className=\"sidebar\">\r\n+      <input type=\"text\" placeholder='Search conversations...' className='sidebar-search' />\r\n+      {/* <h3 className=\"sidebar-title\">Messages</h3> */}\r\n+      <ConversationItem name=\"Sarah Chen\" lastMessage=\"That sounds like a great idea! When can we meet?\" isActive={true}\r\n+  image=\"https://via.placeholder.com/40\" />\r\n+      <ConversationItem name=\"Marcus Rodriguez\" lastMessage=\"I'd love to discuss the project further\"  />\r\n+    </div>\r\n+  );\r\n+};\r\n+\r\n+export default Sidebar;\n\\ No newline at end of file\n"
+                },
+                {
+                    "date": 1753523879502,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -8,26 +8,11 @@\n       <input type=\"text\" placeholder='Search conversations...' className='sidebar-search' />\r\n       {/* <h3 className=\"sidebar-title\">Messages</h3> */}\r\n       <ConversationItem name=\"Sarah Chen\" lastMessage=\"That sounds like a great idea! When can we meet?\" isActive={true}\r\n   image=\"https://via.placeholder.com/40\" />\r\n-      <ConversationItem name=\"Marcus Rodriguez\" lastMessage=\"I'd love to discuss the project further\"  />\r\n+      <ConversationItem name=\"Marcus Rodriguez\" lastMessage=\"I'd love to discuss the project further\"  isActive={false}\r\n+  image=\"https://via.placeholder.com/40\" />\r\n     </div>\r\n   );\r\n };\r\n \r\n-export default Sidebar;\n-import React from 'react';\r\n-import ConversationItem from './ConversationItem';\r\n-import './Sidebar.css';\r\n-\r\n-const Sidebar = () => {\r\n-  return (\r\n-    <div className=\"sidebar\">\r\n-      <input type=\"text\" placeholder='Search conversations...' className='sidebar-search' />\r\n-      {/* <h3 className=\"sidebar-title\">Messages</h3> */}\r\n-      <ConversationItem name=\"Sarah Chen\" lastMessage=\"That sounds like a great idea! When can we meet?\"  />\r\n-      <ConversationItem name=\"Marcus Rodriguez\" lastMessage=\"I'd love to discuss the project further\" />\r\n-    </div>\r\n-  );\r\n-};\r\n-\r\n export default Sidebar;\n\\ No newline at end of file\n"
+                },
+                {
+                    "date": 1753544872163,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,8 +1,9 @@\n import React from 'react';\r\n import ConversationItem from './ConversationItem';\r\n import './Sidebar.css';\r\n \r\n+\r\n const Sidebar = () => {\r\n   return (\r\n     <div className=\"sidebar\">\r\n       <input type=\"text\" placeholder='Search conversations...' className='sidebar-search' />\r\n"
+                },
+                {
+                    "date": 1753544892094,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,10 +1,16 @@\n import React from 'react';\r\n import ConversationItem from './ConversationItem';\r\n import './Sidebar.css';\r\n \r\n+const users = [\r\n+  { id: 1, name: 'Aarav' },\r\n+  { id: 2, name: 'Meera' },\r\n+  { id: 3, name: 'Kavin' },\r\n+  { id: 4, name: 'Diya' },\r\n+];\r\n \r\n-const Sidebar = () => {\r\n+const Sidebar = ({}) => {\r\n   return (\r\n     <div className=\"sidebar\">\r\n       <input type=\"text\" placeholder='Search conversations...' className='sidebar-search' />\r\n       {/* <h3 className=\"sidebar-title\">Messages</h3> */}\r\n"
+                },
+                {
+                    "date": 1753544897440,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -8,9 +8,9 @@\n   { id: 3, name: 'Kavin' },\r\n   { id: 4, name: 'Diya' },\r\n ];\r\n \r\n-const Sidebar = ({}) => {\r\n+const Sidebar = ({ selec}) => {\r\n   return (\r\n     <div className=\"sidebar\">\r\n       <input type=\"text\" placeholder='Search conversations...' className='sidebar-search' />\r\n       {/* <h3 className=\"sidebar-title\">Messages</h3> */}\r\n"
+                },
+                {
+                    "date": 1753544902774,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -8,9 +8,9 @@\n   { id: 3, name: 'Kavin' },\r\n   { id: 4, name: 'Diya' },\r\n ];\r\n \r\n-const Sidebar = ({ selec}) => {\r\n+const Sidebar = ({ selectedUser}) => {\r\n   return (\r\n     <div className=\"sidebar\">\r\n       <input type=\"text\" placeholder='Search conversations...' className='sidebar-search' />\r\n       {/* <h3 className=\"sidebar-title\">Messages</h3> */}\r\n"
+                },
+                {
+                    "date": 1753544909228,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -8,9 +8,9 @@\n   { id: 3, name: 'Kavin' },\r\n   { id: 4, name: 'Diya' },\r\n ];\r\n \r\n-const Sidebar = ({ selectedUser}) => {\r\n+const Sidebar = ({ selectedUser, s}) => {\r\n   return (\r\n     <div className=\"sidebar\">\r\n       <input type=\"text\" placeholder='Search conversations...' className='sidebar-search' />\r\n       {/* <h3 className=\"sidebar-title\">Messages</h3> */}\r\n"
+                },
+                {
+                    "date": 1753544918712,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -8,9 +8,9 @@\n   { id: 3, name: 'Kavin' },\r\n   { id: 4, name: 'Diya' },\r\n ];\r\n \r\n-const Sidebar = ({ selectedUser, s}) => {\r\n+const Sidebar = ({ selectedUser, setS}) => {\r\n   return (\r\n     <div className=\"sidebar\">\r\n       <input type=\"text\" placeholder='Search conversations...' className='sidebar-search' />\r\n       {/* <h3 className=\"sidebar-title\">Messages</h3> */}\r\n"
+                },
+                {
+                    "date": 1753544924138,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -8,9 +8,9 @@\n   { id: 3, name: 'Kavin' },\r\n   { id: 4, name: 'Diya' },\r\n ];\r\n \r\n-const Sidebar = ({ selectedUser, setS}) => {\r\n+const Sidebar = ({ selectedUser, setSelectedU}) => {\r\n   return (\r\n     <div className=\"sidebar\">\r\n       <input type=\"text\" placeholder='Search conversations...' className='sidebar-search' />\r\n       {/* <h3 className=\"sidebar-title\">Messages</h3> */}\r\n"
+                },
+                {
+                    "date": 1753544938589,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -0,0 +1,26 @@\n+import React from 'react';\r\n+import ConversationItem from './ConversationItem';\r\n+import './Sidebar.css';\r\n+\r\n+const users = [\r\n+  { id: 1, name: 'Aarav' },\r\n+  { id: 2, name: 'Meera' },\r\n+  { id: 3, name: 'Kavin' },\r\n+  { id: 4, name: 'Diya' },\r\n+];\r\n+\r\n+const Sidebar = ({ selectedUser, setSelectedUser}) => {\r\n+  return (\r\n+    <div className=\"sidebar\">\r\n+      \r\n+      <input type=\"text\" placeholder='Search conversations...' className='sidebar-search' />\r\n+      {/* <h3 className=\"sidebar-title\">Messages</h3> */}\r\n+      <ConversationItem name=\"Sarah Chen\" lastMessage=\"That sounds like a great idea! When can we meet?\" isActive={true}\r\n+  image=\"https://via.placeholder.com/40\" />\r\n+      <ConversationItem name=\"Marcus Rodriguez\" lastMessage=\"I'd love to discuss the project further\"  isActive={false}\r\n+  image=\"https://via.placeholder.com/40\" />\r\n+    </div>\r\n+  );\r\n+};\r\n+\r\n+export default Sidebar;\n\\ No newline at end of file\n"
+                },
+                {
+                    "date": 1753544943902,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -11,9 +11,9 @@\n \r\n const Sidebar = ({ selectedUser, setSelectedUser}) => {\r\n   return (\r\n     <div className=\"sidebar\">\r\n-      \r\n+      {user}\r\n       <input type=\"text\" placeholder='Search conversations...' className='sidebar-search' />\r\n       {/* <h3 className=\"sidebar-title\">Messages</h3> */}\r\n       <ConversationItem name=\"Sarah Chen\" lastMessage=\"That sounds like a great idea! When can we meet?\" isActive={true}\r\n   image=\"https://via.placeholder.com/40\" />\r\n@@ -22,30 +22,5 @@\n     </div>\r\n   );\r\n };\r\n \r\n-export default Sidebar;\n-import React from 'react';\r\n-import ConversationItem from './ConversationItem';\r\n-import './Sidebar.css';\r\n-\r\n-const users = [\r\n-  { id: 1, name: 'Aarav' },\r\n-  { id: 2, name: 'Meera' },\r\n-  { id: 3, name: 'Kavin' },\r\n-  { id: 4, name: 'Diya' },\r\n-];\r\n-\r\n-const Sidebar = ({ selectedUser, setSelectedU}) => {\r\n-  return (\r\n-    <div className=\"sidebar\">\r\n-      <input type=\"text\" placeholder='Search conversations...' className='sidebar-search' />\r\n-      {/* <h3 className=\"sidebar-title\">Messages</h3> */}\r\n-      <ConversationItem name=\"Sarah Chen\" lastMessage=\"That sounds like a great idea! When can we meet?\" isActive={true}\r\n-  image=\"https://via.placeholder.com/40\" />\r\n-      <ConversationItem name=\"Marcus Rodriguez\" lastMessage=\"I'd love to discuss the project further\"  isActive={false}\r\n-  image=\"https://via.placeholder.com/40\" />\r\n-    </div>\r\n-  );\r\n-};\r\n-\r\n export default Sidebar;\n\\ No newline at end of file\n"
+                },
+                {
+                    "date": 1753544949182,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -11,9 +11,9 @@\n \r\n const Sidebar = ({ selectedUser, setSelectedUser}) => {\r\n   return (\r\n     <div className=\"sidebar\">\r\n-      {user}\r\n+      {users.map(())}\r\n       <input type=\"text\" placeholder='Search conversations...' className='sidebar-search' />\r\n       {/* <h3 className=\"sidebar-title\">Messages</h3> */}\r\n       <ConversationItem name=\"Sarah Chen\" lastMessage=\"That sounds like a great idea! When can we meet?\" isActive={true}\r\n   image=\"https://via.placeholder.com/40\" />\r\n"
+                },
+                {
+                    "date": 1753544958804,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -11,9 +11,9 @@\n \r\n const Sidebar = ({ selectedUser, setSelectedUser}) => {\r\n   return (\r\n     <div className=\"sidebar\">\r\n-      {users.map((user))}\r\n+      {users.map((user)) }\r\n       <input type=\"text\" placeholder='Search conversations...' className='sidebar-search' />\r\n       {/* <h3 className=\"sidebar-title\">Messages</h3> */}\r\n       <ConversationItem name=\"Sarah Chen\" lastMessage=\"That sounds like a great idea! When can we meet?\" isActive={true}\r\n   image=\"https://via.placeholder.com/40\" />\r\n"
+                }
+            ],
+            "date": 1753423937672,
+            "name": "Commit-0",
+            "content": "import React from 'react';\r\nimport ConversationItem from './ConversationItem';\r\nimport './Sidebar.css';\r\n\r\nconst Sidebar = () => {\r\n  return (\r\n    <div className=\"sidebar\">\r\n      <h3 className=\"sidebar-title\">Messages</h3>\r\n      <ConversationItem name=\"John Doe\" lastMessage=\"Hey there!\" />\r\n      <ConversationItem name=\"Jane Smith\" lastMessage=\"See you soon!\" />\r\n    </div>\r\n  );\r\n};\r\n\r\nexport default Sidebar;"
+        }
+    ]
+}

@@ -3,7 +3,7 @@
     "activeCommit": 0,
     "commits": [
         {
-            "activePatchIndex": 53,
+            "activePatchIndex": 68,
             "patches": [
                 {
                     "date": 1753118880607,
@@ -220,6 +220,66 @@
                 {
                     "date": 1753172005731,
                     "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,7 +1,7 @@\n import React from \"react\";\r\n import \"./HeroSection.css\";\r\n-import heroImg from \"../assets/hero-image.webp\"; // Make sure image path is correct\r\n+import heroImg from \"../assets/hero-image.webp\"; \r\n \r\n const HeroSection = () => {\r\n   return (\r\n     <section className=\"hero-image-only\">\r\n@@ -33,9 +33,9 @@\n           <div className=\"stat-item\">\r\n             <div className=\"stat-number\">25+</div>\r\n             <div className=\"stat-label\">Interest Categories</div>\r\n           </div>\r\n-          \r\n+          <div className=\"divider\"></div>\r\n           <div className=\"stat-item\">\r\n             <div className=\"stat-number\">200+</div>\r\n             <div className=\"stat-label\">Partnerships Formed</div>\r\n           </div>\r\n"
+                },
+                {
+                    "date": 1753343592313,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -4,9 +4,11 @@\n \r\n const HeroSection = () => {\r\n   return (\r\n     <section className=\"hero-image-only\">\r\n-      <div className=\"overlay\"></div>\r\n+      <div className=\"overlay\">\r\n+        \r\n+      </div>\r\n       <img src={heroImg} alt=\"Hero\" />\r\n       <div className=\"hero-content\">\r\n         <h1>\r\n           Connect with <br />\r\n"
+                },
+                {
+                    "date": 1753343655393,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -5,11 +5,11 @@\n const HeroSection = () => {\r\n   return (\r\n     <section className=\"hero-image-only\">\r\n       <div className=\"overlay\">\r\n-        \r\n+\r\n       </div>\r\n-      <img src={heroImg} alt=\"Hero\" />\r\n+      \r\n       <div className=\"hero-content\">\r\n         <h1>\r\n           Connect with <br />\r\n           <span className=\"highlight-text\">Entrepreneurs</span>\r\n"
+                },
+                {
+                    "date": 1753343711505,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -5,9 +5,9 @@\n const HeroSection = () => {\r\n   return (\r\n     <section className=\"hero-image-only\">\r\n       <div className=\"overlay\">\r\n-\r\n+        \r\n       </div>\r\n       \r\n       <div className=\"hero-content\">\r\n         <h1>\r\n"
+                },
+                {
+                    "date": 1753343769365,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -4,8 +4,9 @@\n \r\n const HeroSection = () => {\r\n   return (\r\n     <section className=\"hero-image-only\">\r\n+      \r\n       <div className=\"overlay\">\r\n         \r\n       </div>\r\n       \r\n"
+                },
+                {
+                    "date": 1753343776467,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -4,9 +4,9 @@\n \r\n const HeroSection = () => {\r\n   return (\r\n     <section className=\"hero-image-only\">\r\n-      \r\n+      <div ></div>\r\n       <div className=\"overlay\">\r\n         \r\n       </div>\r\n       \r\n"
+                },
+                {
+                    "date": 1753343784275,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -4,9 +4,9 @@\n \r\n const HeroSection = () => {\r\n   return (\r\n     <section className=\"hero-image-only\">\r\n-      <div ></div>\r\n+      <div className=\"h\"></div>\r\n       <div className=\"overlay\">\r\n         \r\n       </div>\r\n       \r\n"
+                },
+                {
+                    "date": 1753343789843,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -4,9 +4,9 @@\n \r\n const HeroSection = () => {\r\n   return (\r\n     <section className=\"hero-image-only\">\r\n-      <div className=\"h\"></div>\r\n+      <div className=\"hero-image-w\"></div>\r\n       <div className=\"overlay\">\r\n         \r\n       </div>\r\n       \r\n"
+                },
+                {
+                    "date": 1753343798159,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -4,9 +4,11 @@\n \r\n const HeroSection = () => {\r\n   return (\r\n     <section className=\"hero-image-only\">\r\n-      <div className=\"hero-image-w\"></div>\r\n+      <div className=\"hero-image-wrapper\">\r\n+        \r\n+      </div>\r\n       <div className=\"overlay\">\r\n         \r\n       </div>\r\n       \r\n"
+                },
+                {
+                    "date": 1753343808697,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -5,9 +5,9 @@\n const HeroSection = () => {\r\n   return (\r\n     <section className=\"hero-image-only\">\r\n       <div className=\"hero-image-wrapper\">\r\n-        \r\n+        <img src={heroImg} alt=\"Hero\"  />\r\n       </div>\r\n       <div className=\"overlay\">\r\n         \r\n       </div>\r\n"
+                },
+                {
+                    "date": 1753343815621,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -5,9 +5,9 @@\n const HeroSection = () => {\r\n   return (\r\n     <section className=\"hero-image-only\">\r\n       <div className=\"hero-image-wrapper\">\r\n-        <img src={heroImg} alt=\"Hero\"  />\r\n+        <img src={heroImg} alt=\"Hero\" className=\"\" />\r\n       </div>\r\n       <div className=\"overlay\">\r\n         \r\n       </div>\r\n"
+                },
+                {
+                    "date": 1753343823556,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -0,0 +1,55 @@\n+import React from \"react\";\r\n+import \"./HeroSection.css\";\r\n+import heroImg from \"../assets/hero-image.webp\"; \r\n+\r\n+const HeroSection = () => {\r\n+  return (\r\n+    <section className=\"hero-image-only\">\r\n+      <div className=\"hero-image-wrapper\">\r\n+        <img src={heroImg} alt=\"Hero\" className=\"hero-img\" />\r\n+      </div>\r\n+      <div className=\"overlay\">\r\n+        \r\n+      </div>\r\n+      \r\n+      <div className=\"hero-content\">\r\n+        <h1>\r\n+          Connect with <br />\r\n+          <span className=\"highlight-text\">Entrepreneurs</span>\r\n+        </h1>\r\n+        <p>who share your vision</p>\r\n+\r\n+        <div className=\"parah\">\r\n+            <p>Discover and connect with entrepreneurs who share your <br /> interests, industry focus, and business vision for meaningful <br /> partnerships.</p>\r\n+        </div>\r\n+\r\n+        <div className=\"hero-buttons\">\r\n+          <button className=\"btn btn-primary\">Join the Community </button>\r\n+          <button className=\"btn btn-secondary\">Learn More</button>\r\n+        </div>\r\n+\r\n+        \r\n+           <div className=\"stats-container\">\r\n+          <div className=\"stat-item\">\r\n+            <div className=\"stat-number\">5000+</div>\r\n+            <div className=\"stat-label\">Entrepreneurs</div>\r\n+          </div>\r\n+          <div className=\"divider\"></div>\r\n+          <div className=\"stat-item\">\r\n+            <div className=\"stat-number\">25+</div>\r\n+            <div className=\"stat-label\">Interest Categories</div>\r\n+          </div>\r\n+          <div className=\"divider\"></div>\r\n+          <div className=\"stat-item\">\r\n+            <div className=\"stat-number\">200+</div>\r\n+            <div className=\"stat-label\">Partnerships Formed</div>\r\n+          </div>\r\n+        </div>\r\n+\r\n+\r\n+      </div>\r\n+    </section>\r\n+  );\r\n+};\r\n+\r\n+export default HeroSection;\n\\ No newline at end of file\n"
+                },
+                {
+                    "date": 1753343859582,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -9,9 +9,9 @@\n         <img src={heroImg} alt=\"Hero\" className=\"hero-img\" />\r\n       </div>\r\n       <div className=\"overlay\">\r\n         \r\n-      </div>\r\n+    </div>\r\n       \r\n       <div className=\"hero-content\">\r\n         <h1>\r\n           Connect with <br />\r\n@@ -51,60 +51,5 @@\n     </section>\r\n   );\r\n };\r\n \r\n-export default HeroSection;\n-import React from \"react\";\r\n-import \"./HeroSection.css\";\r\n-import heroImg from \"../assets/hero-image.webp\"; \r\n-\r\n-const HeroSection = () => {\r\n-  return (\r\n-    <section className=\"hero-image-only\">\r\n-      <div className=\"hero-image-wrapper\">\r\n-        <img src={heroImg} alt=\"Hero\" className=\"\" />\r\n-      </div>\r\n-      <div className=\"overlay\">\r\n-        \r\n-      </div>\r\n-      \r\n-      <div className=\"hero-content\">\r\n-        <h1>\r\n-          Connect with <br />\r\n-          <span className=\"highlight-text\">Entrepreneurs</span>\r\n-        </h1>\r\n-        <p>who share your vision</p>\r\n-\r\n-        <div className=\"parah\">\r\n-            <p>Discover and connect with entrepreneurs who share your <br /> interests, industry focus, and business vision for meaningful <br /> partnerships.</p>\r\n-        </div>\r\n-\r\n-        <div className=\"hero-buttons\">\r\n-          <button className=\"btn btn-primary\">Join the Community </button>\r\n-          <button className=\"btn btn-secondary\">Learn More</button>\r\n-        </div>\r\n-\r\n-        \r\n-           <div className=\"stats-container\">\r\n-          <div className=\"stat-item\">\r\n-            <div className=\"stat-number\">5000+</div>\r\n-            <div className=\"stat-label\">Entrepreneurs</div>\r\n-          </div>\r\n-          <div className=\"divider\"></div>\r\n-          <div className=\"stat-item\">\r\n-            <div className=\"stat-number\">25+</div>\r\n-            <div className=\"stat-label\">Interest Categories</div>\r\n-          </div>\r\n-          <div className=\"divider\"></div>\r\n-          <div className=\"stat-item\">\r\n-            <div className=\"stat-number\">200+</div>\r\n-            <div className=\"stat-label\">Partnerships Formed</div>\r\n-          </div>\r\n-        </div>\r\n-\r\n-\r\n-      </div>\r\n-    </section>\r\n-  );\r\n-};\r\n-\r\n export default HeroSection;\n\\ No newline at end of file\n"
+                },
+                {
+                    "date": 1753343876067,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -7,12 +7,10 @@\n     <section className=\"hero-image-only\">\r\n       <div className=\"hero-image-wrapper\">\r\n         <img src={heroImg} alt=\"Hero\" className=\"hero-img\" />\r\n       </div>\r\n-      <div className=\"overlay\">\r\n-        \r\n-    </div>\r\n       \r\n+      \r\n       <div className=\"hero-content\">\r\n         <h1>\r\n           Connect with <br />\r\n           <span className=\"highlight-text\">Entrepreneurs</span>\r\n"
+                },
+                {
+                    "date": 1753343882200,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -6,11 +6,12 @@\n   return (\r\n     <section className=\"hero-image-only\">\r\n       <div className=\"hero-image-wrapper\">\r\n         <img src={heroImg} alt=\"Hero\" className=\"hero-img\" />\r\n+        \r\n       </div>\r\n+    \r\n       \r\n-      \r\n       <div className=\"hero-content\">\r\n         <h1>\r\n           Connect with <br />\r\n           <span className=\"highlight-text\">Entrepreneurs</span>\r\n"
+                },
+                {
+                    "date": 1753431535472,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -6,9 +6,11 @@\n   return (\r\n     <section className=\"hero-image-only\">\r\n       <div className=\"hero-image-wrapper\">\r\n         <img src={heroImg} alt=\"Hero\" className=\"hero-img\" />\r\n-        \r\n+        <div className=\"overlay\">\r\n+          \r\n+        </div>\r\n       </div>\r\n     \r\n       \r\n       <div className=\"hero-content\">\r\n"
                 }
             ],
             "date": 1753118880607,

@@ -1,0 +1,50 @@
+{
+    "sourceFile": "src/components/Messages/MessageItem.jsx",
+    "activeCommit": 0,
+    "commits": [
+        {
+            "activePatchIndex": 8,
+            "patches": [
+                {
+                    "date": 1753423771432,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n"
+                },
+                {
+                    "date": 1753423785518,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,5 +1,6 @@\n- import React from 'react'; import './MessageItem.css';\r\n+ import React from 'react'; \r\n+ import './MessageItem.css';\r\n \r\n-const MessageItem = ({ text, type }) => { return ( <div className={message-item ${type}}> <p>{text}</p> </div> ); };\r\n+const MessageItem = ({ text, type }) => { return ( <div className={`message-item ${type}}> <p>{text}</p> </div> ); };\r\n \r\n export default MessageItem;\n\\ No newline at end of file\n"
+                },
+                {
+                    "date": 1753423796029,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -0,0 +1,7 @@\n+ import React from 'react'; \r\n+ import './MessageItem.css';\r\n+\r\n+const MessageItem = ({ text, type }) => { return ( <div className={`message-item ${type}`}> \r\n+<p>{text}</p> </div> ); };\r\n+\r\n+export default MessageItem;\n\\ No newline at end of file\n"
+                },
+                {
+                    "date": 1753423801544,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,7 +1,8 @@\n  import React from 'react'; \r\n  import './MessageItem.css';\r\n \r\n const MessageItem = ({ text, type }) => { return ( <div className={`message-item ${type}`}> \r\n-<p>{text}</p> </div> ); };\r\n+<p>{text}</p> \r\n+</div> ); };\r\n \r\n export default MessageItem;\n\\ No newline at end of file\n"
+                },
+                {
+                    "date": 1753423806729,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -0,0 +1,10 @@\n+ import React from 'react'; \r\n+ import './MessageItem.css';\r\n+\r\n+const MessageItem = ({ text, type }) => { return ( <div className={`message-item ${type}`}> \r\n+<p>{text}</p> \r\n+</div> \r\n+); \r\n+};\r\n+\r\n+export default MessageItem;\n\\ No newline at end of file\n"
+                },
+                {
+                    "date": 1753423825283,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -0,0 +1,21 @@\n+ import React from 'react'; \r\n+ import './MessageItem.css';\r\n+\r\n+const MessageItem = ({ text, type }) => { return ( <div className={`message-item ${type}`}> \r\n+<p>{text}</p> \r\n+</div> \r\n+); \r\n+};\r\n+\r\n+export default MessageItem;import React from 'react';\r\n+import './MessageItem.css';\r\n+\r\n+const MessageItem = ({ text, type }) => {\r\n+  return (\r\n+    <div className={message-item ${type}}>\r\n+      <p>{text}</p>\r\n+    </div>\r\n+  );\r\n+};\r\n+\r\n+export default MessageItem;\n\\ No newline at end of file\n"
+                },
+                {
+                    "date": 1753423831757,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,13 +1,5 @@\n- import React from 'react'; \r\n- import './MessageItem.css';\r\n \r\n-const MessageItem = ({ text, type }) => { return ( <div className={`message-item ${type}`}> \r\n-<p>{text}</p> \r\n-</div> \r\n-); \r\n-};\r\n-\r\n export default MessageItem;import React from 'react';\r\n import './MessageItem.css';\r\n \r\n const MessageItem = ({ text, type }) => {\r\n"
+                },
+                {
+                    "date": 1753423840843,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,6 +1,6 @@\n \r\n-export default MessageItem;import React from 'react';\r\n+import React from 'react';\r\n import './MessageItem.css';\r\n \r\n const MessageItem = ({ text, type }) => {\r\n   return (\r\n@@ -9,29 +9,5 @@\n     </div>\r\n   );\r\n };\r\n \r\n-export default MessageItem;\n- import React from 'react'; \r\n- import './MessageItem.css';\r\n-\r\n-const MessageItem = ({ text, type }) => { return ( <div className={`message-item ${type}`}> \r\n-<p>{text}</p> \r\n-</div> \r\n-); \r\n-};\r\n-\r\n-export default MessageItem;\n- import React from 'react'; \r\n- import './MessageItem.css';\r\n-\r\n-const MessageItem = ({ text, type }) => { return ( <div className={`message-item ${type}`}> \r\n-<p>{text}</p> \r\n-</div> ); };\r\n-\r\n-export default MessageItem;\n- import React from 'react'; \r\n- import './MessageItem.css';\r\n-\r\n-const MessageItem = ({ text, type }) => { return ( <div className={`message-item ${type}}> <p>{text}</p> </div> ); };\r\n-\r\n export default MessageItem;\n\\ No newline at end of file\n"
+                },
+                {
+                    "date": 1753423846242,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -2,9 +2,9 @@\n import './MessageItem.css';\r\n \r\n const MessageItem = ({ text, type }) => {\r\n   return (\r\n-    <div className={message-item ${type}}>\r\n+    <div className={`message-item ${type}}>\r\n       <p>{text}</p>\r\n     </div>\r\n   );\r\n };\r\n"
+                }
+            ],
+            "date": 1753423771432,
+            "name": "Commit-0",
+            "content": " import React from 'react'; import './MessageItem.css';\r\n\r\nconst MessageItem = ({ text, type }) => { return ( <div className={message-item ${type}}> <p>{text}</p> </div> ); };\r\n\r\nexport default MessageItem;"
+        }
+    ]
+}

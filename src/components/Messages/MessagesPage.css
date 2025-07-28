@@ -1,0 +1,116 @@
+/* .messages-page {
+  display: flex;
+  height: 100%;
+  width: 100%;
+  font-family: Arial, sans-serif;
+  background-color: #F9F7F4;
+}
+.messages-container {
+  display: flex;
+  gap: 20px;
+  padding: 20px;
+  background-color: #f0f2f5;
+  height: 100vh;
+  box-sizing: border-box;
+} */
+
+.sidebar-box {
+  background-color: #fff;
+  border-radius: 12px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.05);
+  padding: 16px;
+  height: 100%;
+  box-sizing: border-box;
+  width: 30%;
+  display: flex;
+  flex-direction: column;
+  overflow-y: auto;
+  margin-left: 60px;
+  /* margin-top: 10px; */
+  margin-right: 20px;
+  overflow-y: auto;
+}
+
+/* .sidebar-box {
+  width: 30%;
+  background-color: white;
+  box-sizing: border-box;
+  padding: 10px;
+  /* display: flex;
+  flex-direction: column; 
+  height: 100%;
+} */
+
+.chatbox-box {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  background-color: white;
+  border-radius: 12px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.05);
+  padding: 16px;
+  overflow-y: auto;
+  box-sizing: border-box;
+  width: 70%;
+  height: 100%;
+  /* margin-top: 20px; */
+  /* height: 100vh; */
+}
+
+.messages-page {
+  display: flex;
+  height: 100vh; 
+  width: 100%;
+  background-color: #F9F7F4;
+  font-family: Arial, sans-serif;
+  padding: 30px;
+  box-sizing: border-box;
+  /* gap: 30px; */
+  flex-direction: column;
+  /* height: calc(100vh - 60px); */
+}
+
+.messages-header {
+  padding: 0 0 0 0;
+  font-size: 20px;
+  font-weight: bolder;
+  color: black;
+  margin-left: 60px;
+  height: 60px;
+}
+
+.message-content {
+  display: flex;
+  flex: 1;
+  gap: 20px;
+  flex-direction: row;
+  padding: 20px;
+  align-items: flex-start;
+  /* height: 100vh; */
+  height:  calc(100vh - 60px);
+  box-sizing: border-box;
+  /* margin-top: 60px; */
+}
+
+@media (max-width: 1024px) {
+  .message-content {
+    flex-direction: column;
+    flex: none; 
+    height: auto; 
+  }
+
+  .sidebar-box {
+    width: 100%;
+    height: auto;
+    max-height: 40vh; 
+    overflow-y: auto;
+    margin: 0;
+  }
+
+  .chatbox-box {
+    width: 100%;
+    height: auto;
+    overflow-y: auto;
+    max-height: 50vh;
+  }
+}
