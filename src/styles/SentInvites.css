@@ -1,0 +1,89 @@
+.invite-card {
+  background-color: #ffffff;
+  border-radius: 12px;
+  box-shadow: 0 2px 12px rgba(0, 0, 0, 0.08);
+  padding: 20px;
+  margin: 20px 0;
+}
+
+.invite-card h1 {
+  margin: 0 0 16px;
+  font-size: 24px;
+  font-weight: 500;
+  color: #333333;
+}
+
+.Profiles {
+  display: flex;
+  align-items: flex-start;
+  border: 1.5px solid #f8f4f1;
+  border-radius: 10px;
+  font-size: 16px;
+  padding-top: 5px;
+  position: relative;
+}
+
+.Profiles:hover{
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.08)
+}
+.profile-pic {
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  margin-right: 20px;
+  object-fit: cover;
+}
+
+.details {
+  flex: 1;
+}
+
+.details h3 {
+  margin: 0;
+  font-size: 16px;
+  color: #30251d;
+  font-weight: 600;
+  line-height: 1;
+}
+
+.details .role {
+  font-size: 14px;
+  color: #666666;
+  margin: 4px 0;
+  font-weight: 400;
+}
+
+.details .message {
+  font-size: 14px;
+  color: #444444;
+  margin-bottom: 12px;
+  line-height: 1;
+}
+
+.collaborate-btn {
+  background-color: #dff2e1;
+  color: #2f8f3f;
+  border: none;
+  border-radius: 10px;
+  padding: 2px 5px;
+  font-size: 14px;
+  cursor: pointer;
+  position: absolute;
+  right: 10px;
+  top: 5px;
+}
+
+.collaborate-btn:hover {
+  background-color: #cde8cd;
+}
+
+.timestamp {
+  display: block;
+  margin-top: 12px;
+  font-size: 12px;
+  color: #888888;
+  position: absolute;
+  right: 13px;
+  top: 15px;
+}
+

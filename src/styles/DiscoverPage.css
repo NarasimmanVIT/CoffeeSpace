@@ -1,18 +1,18 @@
 .discover-container {
   text-align: center;
-  padding: 2rem;
   font-family: ui-sans-serif, system-ui, sans-serif;
   background-color: #f7f2ec;
   color: black;
+
 }
 
 .discover-container h2 {
-  margin-top: 5rem;
-  font-size: 1.5rem;
-  line-height: 2rem;
+  margin-top: 2rem;
+  font-size: 1.25rem;
+  line-height: 1rem;
   font-weight: 700;
   color: #30251d;
-  margin-bottom: 2rem;
+  margin-bottom: 1rem;
 }
 
 .discover-profile-card h3 {
@@ -27,17 +27,23 @@
 
 .discover-profile-card {
   position: relative;
-  max-width: 460px;
+  max-width: 400px;
   margin: 1rem auto;
   background: #fff;
   border-radius: 12px;
+  height: 430px;
   box-shadow: 0 0 15px rgba(0, 0, 0, 0.08);
   color: #333;
+}
+.discover-information{
+  height: 160px;
+  overflow-y: auto;
+
 }
 
 .discover-profile-card img {
   width: 100%;
-  height: 25rem;
+  height: 16rem;
   border-radius: 10px;
   border-bottom-left-radius: 0px;
   border-bottom-right-radius: 0px;
@@ -126,7 +132,7 @@
 }
 
 .buttons {
-  margin: 1.5rem 0;
+  margin: 0.5rem 0;
 }
 
 .buttons button {
@@ -164,3 +170,12 @@
   color: #777;
 }
 
+@media (max-width: 500px){
+  .discover-profile-card {
+    width: 300px;
+    height: 500px
+  }
+  .discover-information{
+    height: 230px
+  }
+}

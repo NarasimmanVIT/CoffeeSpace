@@ -16,40 +16,42 @@ function DiscoverPage() {
 
   return (
     <div className="discover-container">
-      <h2>Discover People</h2>
+      <h2>Discover </h2>
       <div className="discover-profile-card">
         <img src={current.image} alt={current.name} />
         {current.verified && <span className="verified-badge">Verified</span>}
-        <h3>{current.name}</h3>
-        <p className="age">{current.age} years old</p>
-        <p className="rolee">
-          <Suitcase size={16} color="#30251D" weight="regular" />
-          <span style={{ marginLeft: "8px" }}>{current.role}</span>
-        </p>
-        <p className="locationn">
-          <MapPin size={16} color="#30251D" weight="regular" />
-          <span style={{ marginLeft: "8px" }}>{current.location}</span>
-        </p>
-        <p className="about">{current.about}</p>
-        <div className="discover-tags">
-          <p>
-            <strong>Skills</strong>
+        <div className="discover-information">
+          <h3>{current.name}</h3>
+          <p className="age">{current.age} years old</p>
+          <p className="rolee">
+            <Suitcase size={16} color="#30251D" weight="regular" />
+            <span style={{ marginLeft: "8px" }}>{current.role}</span>
           </p>
-          {current.skills.map((skill) => (
-            <span key={skill} className="discover-tag">
-              {skill}
-            </span>
-          ))}
-        </div>
-        <div className="discover-tags">
-          <p>
-            <strong>Interests</strong>
+          <p className="locationn">
+            <MapPin size={16} color="#30251D" weight="regular" />
+            <span style={{ marginLeft: "8px" }}>{current.location}</span>
           </p>
-          {current.interests.map((interest) => (
-            <span key={interest} className="tag interest">
-              {interest}
-            </span>
-          ))}
+          <p className="about">{current.about}</p>
+          <div className="discover-tags">
+            <p>
+              <strong>Skills</strong>
+            </p>
+            {current.skills.map((skill) => (
+              <span key={skill} className="discover-tag">
+                {skill}
+              </span>
+            ))}
+          </div>
+          <div className="discover-tags">
+            <p>
+              <strong>Interests</strong>
+            </p>
+            {current.interests.map((interest) => (
+              <span key={interest} className="tag interest">
+                {interest}
+              </span>
+            ))}
+          </div>
         </div>
       </div>
 
