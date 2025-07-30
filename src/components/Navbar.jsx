@@ -38,14 +38,14 @@ const Navbar = () => {
         {/* desktop */}
 
         <div className="navbar-links">
-          <a href="#">
+          <Link to="/discover">
             <span className="icon">
               <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" fill="none" stroke="#8a6969" strokeWidth="2" viewBox="0 0 24 24">
                 <path d="M13.5 13.5L17 7l-6.5 3.5L7 17l6.5-3.5z"/>
               </svg>
             </span>
             Discover
-          </a>
+          </Link>
           <Link to="/messages">
             <span className="icon">
               <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" fill="none" stroke="#8a6969" strokeWidth="2" viewBox="0 0 24 24">

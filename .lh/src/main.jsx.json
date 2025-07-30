@@ -3,7 +3,7 @@
     "activeCommit": 0,
     "commits": [
         {
-            "activePatchIndex": 11,
+            "activePatchIndex": 12,
             "patches": [
                 {
                     "date": 1753105896434,
@@ -52,6 +52,10 @@
                 {
                     "date": 1753424425856,
                     "content": "Index: \n===================================================================\n--- \n+++ \n@@ -7,6 +7,8 @@\n \n createRoot(document.getElementById('root')).render(\n   <React.StrictMode>\n      <BrowserRouter>\n+     <App />\n+     </BrowserRouter>\n   </React.StrictMode>,\n )\n"
+                },
+                {
+                    "date": 1753714358761,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,14 +1,14 @@\n-import { StrictMode } from 'react'\n-import { createRoot } from 'react-dom/client'\n-import './index.css'\n-import App from './App.jsx'\n-import React from 'react'\n-import { BrowserRouter } from 'react-router-dom'\n-\n-createRoot(document.getElementById('root')).render(\n-  <React.StrictMode>\n-     <BrowserRouter>\n-     <App />\n-     </BrowserRouter>\n-  </React.StrictMode>,\n-)\n+import { StrictMode } from 'react'\r\n+import { createRoot } from 'react-dom/client'\r\n+import './index.css'\r\n+import App from './App.jsx'\r\n+import React from 'react'\r\n+import { BrowserRouter } from 'react-router-dom'\r\n+\r\n+createRoot(document.getElementById('root')).render(\r\n+  <React.StrictMode>\r\n+     <BrowserRouter>\r\n+     <App />\r\n+     </BrowserRouter>\r\n+  </React.StrictMode>,\r\n+)\r\n"
                 }
             ],
             "date": 1753105896434,

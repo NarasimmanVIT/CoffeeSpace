@@ -67,6 +67,7 @@
   box-sizing: border-box;
   /* gap: 30px; */
   flex-direction: column;
+  margin-top: 60px;
   /* height: calc(100vh - 60px); */
 }
 

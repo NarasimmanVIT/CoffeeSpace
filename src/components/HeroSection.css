@@ -4,7 +4,7 @@ body{
 .hero-image-only {
   position: relative;
   width: 100%;
-  margin-top: 0;
+  margin-top: 60px;
   padding: 0;
   min-height: 100vh;
   align-items: center;
@@ -443,6 +443,7 @@ body{
     max-width: 550px;
     margin: 0 auto;
     height: auto;
+    margin-top: 60px;
   }
 
   .hero-content > p {
