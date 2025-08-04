@@ -56,14 +56,14 @@ const Navbar = () => {
             </span>
             Messages
           </Link>
-          <a href="#">
+          <Link to= "/invites">
             <span className="icon">
               <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" fill="none" stroke="#8a6969" strokeWidth="2" viewBox="0 0 24 24">
                 <path d="M22 16.92V19a2 2 0 0 1-2 2H4a2 2 0 0 1-2-2v-2.08M16 3.13a4 4 0 0 1 0 7.75M12 7a4 4 0 1 1-8 0 4 4 0 0 1 8 0Zm8 14a8 8 0 0 0-16 0"/>
               </svg>
             </span>
             Invites
-          </a>
+          </Link>
         </div>
 
         <div className="navbar-account" onClick={() => setIsAccountDropdownOpen(! isAccountDropdownOpen)}>
