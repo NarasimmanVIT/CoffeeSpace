@@ -2,7 +2,7 @@ import React from 'react';
 import MessageItem from './MessageItem';
 import './ChatBox.css';
 
-const ChatBox = ({ selectedUser }) => {
+const ChatBox = ({ selectedUser, onBack }) => {
    if (!selectedUser) {
     return (
       <div className="chat-box-empty-chat">
@@ -12,7 +12,11 @@ const ChatBox = ({ selectedUser }) => {
   }
   return (
     <div className="chat-box">
-      <div className="chat-header">{selectedUser.name}</div>
+      <div className="chat-header">
+          <button className="back-button" onClick={onBack}>
+                ← 
+              </button>
+        {selectedUser.name}</div>
       <div className="chat-messages">
         <MessageItem text="Hey! I saw your profile and loved your fintech project ideas." type="received" />
         <MessageItem text="Thanks! I'd love to hear more about your development experience." type="sent" />

@@ -8,7 +8,6 @@ const HeroSection = () => {
       <div className="hero-image-wrapper">
         <img src={heroImg} alt="Hero" className="hero-img" />
         <div className="overlay">
-          
         </div>
       </div>
     

@@ -16,7 +16,7 @@
   margin-bottom: 22px;
   color: #333;
   font-weight: bold;
-  margin-top: 10px;
+  margin-top: 4px;
   word-spacing: 2px;
 }
 
@@ -162,7 +162,7 @@
 }
 
 .icon-circle {
-  background-color: #d35400; /* Orange */
+  background-color: #d35400;
   width: 60px;
   height: 60px;
   border-radius: 50%;
@@ -173,7 +173,7 @@
   margin: 0 auto 12px;
 }
 
-/* Responsive */
+
 @media (max-width: 768px) {
   .connect-top h2,
   .connect-bottom h2 {

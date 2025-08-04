@@ -21,6 +21,8 @@ const Navbar = () => {
    setIsMobileMenuOpen(!isMobileMenuOpen);
   };
 
+  const [isAccountDropdownOpen, setIsAccountDropdownOpen] = useState(false);
+
   return (
     <>
     <nav className={`navbar ${isScrolled ? "scrolled" : ""}`}>
@@ -64,13 +66,26 @@ const Navbar = () => {
           </a>
         </div>
 
-        <div className="navbar-account">
+        <div className="navbar-account" onClick={() => setIsAccountDropdownOpen(! isAccountDropdownOpen)}>
           <span className="icon">
             <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" fill="none" stroke="#2f2121" strokeWidth="2" viewBox="0 0 24 24">
               <path d="M12 12a5 5 0 1 0 0-10 5 5 0 0 0 0 10Zm0 2c-4.418 0-8 2.015-8 4.5V21h16v-2.5c0-2.485-3.582-4.5-8-4.5Z"/>
             </svg>
           </span>
           Account
+
+           {isAccountDropdownOpen && (
+    <div className="account-dropdown">
+      <Link to="/login">
+        <SignIn size={18} style={{ marginRight: "8px" }} color="#8a6969" />
+        Login
+      </Link>
+      <Link to="/signup">
+        Sign Up
+      </Link>
+    </div>
+  )}
+
         </div>
 
           <div className="mobile-menu-icon" onClick={toggleMenu}>

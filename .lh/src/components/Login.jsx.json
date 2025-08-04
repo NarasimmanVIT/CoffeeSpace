@@ -1,0 +1,122 @@
+{
+    "sourceFile": "src/components/Login.jsx",
+    "activeCommit": 0,
+    "commits": [
+        {
+            "activePatchIndex": 26,
+            "patches": [
+                {
+                    "date": 1754030024029,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n"
+                },
+                {
+                    "date": 1754030081951,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,32 +0,0 @@\n-import React from 'react';\r\n-import './Signup.css';\r\n-\r\n-const Signup = () => {\r\n-  return (\r\n-    <div className=\"signup-container\">\r\n-      <div className=\"signup-box\">\r\n-        <h2 className=\"signup-title\">Join the Network</h2>\r\n-        <p className=\"signup-subtitle\">Enter your phone number to get started</p>\r\n-\r\n-        <label htmlFor=\"phone\" className=\"signup-label\">Phone Number</label>\r\n-        <div className=\"input-group\">\r\n-          <span className=\"phone-icon\">📞</span>\r\n-          <input\r\n-            type=\"text\"\r\n-            id=\"phone\"\r\n-            placeholder=\"+1 (555) 000-0000\"\r\n-            className=\"signup-input\"\r\n-          />\r\n-        </div>\r\n-\r\n-        <button className=\"signup-button\">Send Verification Code</button>\r\n-\r\n-        <p className=\"signup-login\">\r\n-          Already have an account? <span className=\"signin-link\">Sign in</span>\r\n-        </p>\r\n-      </div>\r\n-    </div>\r\n-  );\r\n-};\r\n-\r\n-export default Signup;\n\\ No newline at end of file\n"
+                },
+                {
+                    "date": 1754030285920,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -0,0 +1,32 @@\n+import React from 'react';\r\n+import './Login.css';\r\n+\r\n+const Login = () => {\r\n+  return (\r\n+    <div className=\"login-container\">\r\n+      <div className=\"login-box\">\r\n+        <h2 className=\"login-title\">Welcome Back</h2>\r\n+        <p className=\"login-subtitle\">Enter your phone number to continue</p>\r\n+\r\n+        <label htmlFor=\"phone\" className=\"login-label\">Phone Number</label>\r\n+        <div className=\"input-group\">\r\n+          <span className=\"phone-icon\">📞</span>\r\n+          <input\r\n+            type=\"text\"\r\n+            id=\"phone\"\r\n+            placeholder=\"+1 (555) 000-0000\"\r\n+            className=\"login-input\"\r\n+          />\r\n+        </div>\r\n+\r\n+        <button className=\"login-button\">Send Verification Code</button>\r\n+\r\n+        <p className=\"login-signup\">\r\n+          New to the platform? <span className=\"signup-link\">Create an account</span>\r\n+        </p>\r\n+      </div>\r\n+    </div>\r\n+  );\r\n+};\r\n+\r\n+export default Login;\n\\ No newline at end of file\n"
+                },
+                {
+                    "date": 1754030422503,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -21,9 +21,9 @@\n \r\n         <button className=\"login-button\">Send Verification Code</button>\r\n \r\n         <p className=\"login-signup\">\r\n-          New to the platform? <span className=\"signup-link\">Create an account</span>\r\n+          Don't have an account? <span className=\"signup-link\">Create an account</span>\r\n         </p>\r\n       </div>\r\n     </div>\r\n   );\r\n"
+                },
+                {
+                    "date": 1754030432631,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -21,9 +21,9 @@\n \r\n         <button className=\"login-button\">Send Verification Code</button>\r\n \r\n         <p className=\"login-signup\">\r\n-          Don't have an account? <span className=\"signup-link\">Create an account</span>\r\n+          Don't have an account? <span className=\"signup-link\">Sign up</span>\r\n         </p>\r\n       </div>\r\n     </div>\r\n   );\r\n"
+                },
+                {
+                    "date": 1754033736209,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,8 +1,9 @@\n import React from 'react';\r\n import './Login.css';\r\n \r\n const Login = () => {\r\n+    \r\n   return (\r\n     <div className=\"login-container\">\r\n       <div className=\"login-box\">\r\n         <h2 className=\"login-title\">Welcome Back</h2>\r\n"
+                },
+                {
+                    "date": 1754033769633,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,9 +1,9 @@\n import React from 'react';\r\n import './Login.css';\r\n \r\n const Login = () => {\r\n-    \r\n+    const Navigate = useNavigate();\r\n   return (\r\n     <div className=\"login-container\">\r\n       <div className=\"login-box\">\r\n         <h2 className=\"login-title\">Welcome Back</h2>\r\n"
+                },
+                {
+                    "date": 1754033789155,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -22,9 +22,9 @@\n \r\n         <button className=\"login-button\">Send Verification Code</button>\r\n \r\n         <p className=\"login-signup\">\r\n-          Don't have an account? <span className=\"signup-link\">Sign up</span>\r\n+          Don't have an account? <span className=\"signup-link\" >Sign up</span>\r\n         </p>\r\n       </div>\r\n     </div>\r\n   );\r\n"
+                },
+                {
+                    "date": 1754033818217,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -22,9 +22,9 @@\n \r\n         <button className=\"login-button\">Send Verification Code</button>\r\n \r\n         <p className=\"login-signup\">\r\n-          Don't have an account? <span className=\"signup-link\" >Sign up</span>\r\n+          Don't have an account? <span className=\"signup-link\" onClick={() => Navigate('/login')}>Sign up</span>\r\n         </p>\r\n       </div>\r\n     </div>\r\n   );\r\n"
+                },
+                {
+                    "date": 1754033823331,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -22,9 +22,9 @@\n \r\n         <button className=\"login-button\">Send Verification Code</button>\r\n \r\n         <p className=\"login-signup\">\r\n-          Don't have an account? <span className=\"signup-link\" onClick={() => Navigate('/login')}>Sign up</span>\r\n+          Don't have an account? <span className=\"signup-link\" onClick={() => Navigate('/sig')}>Sign up</span>\r\n         </p>\r\n       </div>\r\n     </div>\r\n   );\r\n"
+                },
+                {
+                    "date": 1754033842565,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -22,9 +22,9 @@\n \r\n         <button className=\"login-button\">Send Verification Code</button>\r\n \r\n         <p className=\"login-signup\">\r\n-          Don't have an account? <span className=\"signup-link\" onClick={() => Navigate('/sig')}>Sign up</span>\r\n+          Don't have an account? <span className=\"signup-link\" >Sign up</span>\r\n         </p>\r\n       </div>\r\n     </div>\r\n   );\r\n"
+                },
+                {
+                    "date": 1754033849874,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,9 +1,9 @@\n import React from 'react';\r\n import './Login.css';\r\n \r\n const Login = () => {\r\n-    const Navigate = useNavigate();\r\n+    \r\n   return (\r\n     <div className=\"login-container\">\r\n       <div className=\"login-box\">\r\n         <h2 className=\"login-title\">Welcome Back</h2>\r\n@@ -22,9 +22,9 @@\n \r\n         <button className=\"login-button\">Send Verification Code</button>\r\n \r\n         <p className=\"login-signup\">\r\n-          Don't have an account? <span className=\"signup-link\" >Sign up</span>\r\n+          Don't have an account? <span className=\"signup-link\">Sign up</span>\r\n         </p>\r\n       </div>\r\n     </div>\r\n   );\r\n"
+                },
+                {
+                    "date": 1754034389037,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,7 +1,8 @@\n import React from 'react';\r\n import './Login.css';\r\n \r\n+\r\n const Login = () => {\r\n     \r\n   return (\r\n     <div className=\"login-container\">\r\n"
+                },
+                {
+                    "date": 1754034394483,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,8 +1,8 @@\n import React from 'react';\r\n import './Login.css';\r\n+import {}\r\n \r\n-\r\n const Login = () => {\r\n     \r\n   return (\r\n     <div className=\"login-container\">\r\n"
+                },
+                {
+                    "date": 1754034399665,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,7 +1,7 @@\n import React from 'react';\r\n import './Login.css';\r\n-import {}\r\n+import {n}\r\n \r\n const Login = () => {\r\n     \r\n   return (\r\n"
+                },
+                {
+                    "date": 1754034410792,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,10 +1,11 @@\n import React from 'react';\r\n import './Login.css';\r\n-import {n}\r\n+import { Navigate } from 'react-router-dom';\r\n \r\n const Login = () => {\r\n     \r\n+    \r\n   return (\r\n     <div className=\"login-container\">\r\n       <div className=\"login-box\">\r\n         <h2 className=\"login-title\">Welcome Back</h2>\r\n"
+                },
+                {
+                    "date": 1754034415970,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -2,10 +2,10 @@\n import './Login.css';\r\n import { Navigate } from 'react-router-dom';\r\n \r\n const Login = () => {\r\n+    const N\r\n     \r\n-    \r\n   return (\r\n     <div className=\"login-container\">\r\n       <div className=\"login-box\">\r\n         <h2 className=\"login-title\">Welcome Back</h2>\r\n"
+                },
+                {
+                    "date": 1754034428462,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -2,9 +2,9 @@\n import './Login.css';\r\n import { Navigate } from 'react-router-dom';\r\n \r\n const Login = () => {\r\n-    const N\r\n+    const Navigate = \r\n     \r\n   return (\r\n     <div className=\"login-container\">\r\n       <div className=\"login-box\">\r\n"
+                },
+                {
+                    "date": 1754034434225,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -0,0 +1,35 @@\n+import React from 'react';\r\n+import './Login.css';\r\n+import { Navigate, useNavigate } from 'react-router-dom';\r\n+\r\n+const Login = () => {\r\n+    const Navigate = useNavigate \r\n+    \r\n+  return (\r\n+    <div className=\"login-container\">\r\n+      <div className=\"login-box\">\r\n+        <h2 className=\"login-title\">Welcome Back</h2>\r\n+        <p className=\"login-subtitle\">Enter your phone number to continue</p>\r\n+\r\n+        <label htmlFor=\"phone\" className=\"login-label\">Phone Number</label>\r\n+        <div className=\"input-group\">\r\n+          <span className=\"phone-icon\">📞</span>\r\n+          <input\r\n+            type=\"text\"\r\n+            id=\"phone\"\r\n+            placeholder=\"+1 (555) 000-0000\"\r\n+            className=\"login-input\"\r\n+          />\r\n+        </div>\r\n+\r\n+        <button className=\"login-button\">Send Verification Code</button>\r\n+\r\n+        <p className=\"login-signup\">\r\n+          Don't have an account? <span className=\"signup-link\">Sign up</span>\r\n+        </p>\r\n+      </div>\r\n+    </div>\r\n+  );\r\n+};\r\n+\r\n+export default Login;\n\\ No newline at end of file\n"
+                },
+                {
+                    "date": 1754034446391,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -2,9 +2,9 @@\n import './Login.css';\r\n import { Navigate, useNavigate } from 'react-router-dom';\r\n \r\n const Login = () => {\r\n-    const Navigate = useNavigate \r\n+    const Navigate = useNavigate ();\r\n     \r\n   return (\r\n     <div className=\"login-container\">\r\n       <div className=\"login-box\">\r\n@@ -24,47 +24,12 @@\n \r\n         <button className=\"login-button\">Send Verification Code</button>\r\n \r\n         <p className=\"login-signup\">\r\n-          Don't have an account? <span className=\"signup-link\">Sign up</span>\r\n+          Don't have an account? <span className=\"signup-link\" >Sign up</span>\r\n         </p>\r\n       </div>\r\n     </div>\r\n   );\r\n };\r\n \r\n-export default Login;\n-import React from 'react';\r\n-import './Login.css';\r\n-import { Navigate } from 'react-router-dom';\r\n-\r\n-const Login = () => {\r\n-    const Navigate = \r\n-    \r\n-  return (\r\n-    <div className=\"login-container\">\r\n-      <div className=\"login-box\">\r\n-        <h2 className=\"login-title\">Welcome Back</h2>\r\n-        <p className=\"login-subtitle\">Enter your phone number to continue</p>\r\n-\r\n-        <label htmlFor=\"phone\" className=\"login-label\">Phone Number</label>\r\n-        <div className=\"input-group\">\r\n-          <span className=\"phone-icon\">📞</span>\r\n-          <input\r\n-            type=\"text\"\r\n-            id=\"phone\"\r\n-            placeholder=\"+1 (555) 000-0000\"\r\n-            className=\"login-input\"\r\n-          />\r\n-        </div>\r\n-\r\n-        <button className=\"login-button\">Send Verification Code</button>\r\n-\r\n-        <p className=\"login-signup\">\r\n-          Don't have an account? <span className=\"signup-link\">Sign up</span>\r\n-        </p>\r\n-      </div>\r\n-    </div>\r\n-  );\r\n-};\r\n-\r\n export default Login;\n\\ No newline at end of file\n"
+                },
+                {
+                    "date": 1754034455655,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -24,9 +24,9 @@\n \r\n         <button className=\"login-button\">Send Verification Code</button>\r\n \r\n         <p className=\"login-signup\">\r\n-          Don't have an account? <span className=\"signup-link\" >Sign up</span>\r\n+          Don't have an account? <span className=\"signup-link\" onClick={ }>Sign up</span>\r\n         </p>\r\n       </div>\r\n     </div>\r\n   );\r\n"
+                },
+                {
+                    "date": 1754034460970,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -24,9 +24,9 @@\n \r\n         <button className=\"login-button\">Send Verification Code</button>\r\n \r\n         <p className=\"login-signup\">\r\n-          Don't have an account? <span className=\"signup-link\" onClick={ }>Sign up</span>\r\n+          Don't have an account? <span className=\"signup-link\" onClick={() => N}>Sign up</span>\r\n         </p>\r\n       </div>\r\n     </div>\r\n   );\r\n"
+                },
+                {
+                    "date": 1754034466243,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -24,9 +24,9 @@\n \r\n         <button className=\"login-button\">Send Verification Code</button>\r\n \r\n         <p className=\"login-signup\">\r\n-          Don't have an account? <span className=\"signup-link\" onClick={() => N}>Sign up</span>\r\n+          Don't have an account? <span className=\"signup-link\" onClick={() => Navigate('/')}>Sign up</span>\r\n         </p>\r\n       </div>\r\n     </div>\r\n   );\r\n"
+                },
+                {
+                    "date": 1754034603848,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -2,9 +2,9 @@\n import './Login.css';\r\n import { Navigate, useNavigate } from 'react-router-dom';\r\n \r\n const Login = () => {\r\n-    const Navigate = useNavigate ();\r\n+    const avigate = useNavigate ();\r\n     \r\n   return (\r\n     <div className=\"login-container\">\r\n       <div className=\"login-box\">\r\n@@ -24,9 +24,9 @@\n \r\n         <button className=\"login-button\">Send Verification Code</button>\r\n \r\n         <p className=\"login-signup\">\r\n-          Don't have an account? <span className=\"signup-link\" onClick={() => Navigate('/')}>Sign up</span>\r\n+          Don't have an account? <span className=\"signup-link\" onClick={() => Navigate('/login')}>Sign up</span>\r\n         </p>\r\n       </div>\r\n     </div>\r\n   );\r\n"
+                },
+                {
+                    "date": 1754034609264,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -2,9 +2,9 @@\n import './Login.css';\r\n import { Navigate, useNavigate } from 'react-router-dom';\r\n \r\n const Login = () => {\r\n-    const avigate = useNavigate ();\r\n+    const navigate = useNavigate ();\r\n     \r\n   return (\r\n     <div className=\"login-container\">\r\n       <div className=\"login-box\">\r\n@@ -24,9 +24,9 @@\n \r\n         <button className=\"login-button\">Send Verification Code</button>\r\n \r\n         <p className=\"login-signup\">\r\n-          Don't have an account? <span className=\"signup-link\" onClick={() => Navigate('/login')}>Sign up</span>\r\n+          Don't have an account? <span className=\"signup-link\" onClick={() => avigate('/login')}>Sign up</span>\r\n         </p>\r\n       </div>\r\n     </div>\r\n   );\r\n"
+                },
+                {
+                    "date": 1754034630573,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -24,9 +24,9 @@\n \r\n         <button className=\"login-button\">Send Verification Code</button>\r\n \r\n         <p className=\"login-signup\">\r\n-          Don't have an account? <span className=\"signup-link\" onClick={() => avigate('/login')}>Sign up</span>\r\n+          Don't have an account? <span className=\"signup-link\" onClick={() => navigate('/ls')}>Sign up</span>\r\n         </p>\r\n       </div>\r\n     </div>\r\n   );\r\n"
+                },
+                {
+                    "date": 1754034636108,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -24,9 +24,9 @@\n \r\n         <button className=\"login-button\">Send Verification Code</button>\r\n \r\n         <p className=\"login-signup\">\r\n-          Don't have an account? <span className=\"signup-link\" onClick={() => navigate('/ls')}>Sign up</span>\r\n+          Don't have an account? <span className=\"signup-link\" onClick={() => navigate('/signup')}>Sign up</span>\r\n         </p>\r\n       </div>\r\n     </div>\r\n   );\r\n"
+                }
+            ],
+            "date": 1754030024029,
+            "name": "Commit-0",
+            "content": "import React from 'react';\r\nimport './Signup.css';\r\n\r\nconst Signup = () => {\r\n  return (\r\n    <div className=\"signup-container\">\r\n      <div className=\"signup-box\">\r\n        <h2 className=\"signup-title\">Join the Network</h2>\r\n        <p className=\"signup-subtitle\">Enter your phone number to get started</p>\r\n\r\n        <label htmlFor=\"phone\" className=\"signup-label\">Phone Number</label>\r\n        <div className=\"input-group\">\r\n          <span className=\"phone-icon\">📞</span>\r\n          <input\r\n            type=\"text\"\r\n            id=\"phone\"\r\n            placeholder=\"+1 (555) 000-0000\"\r\n            className=\"signup-input\"\r\n          />\r\n        </div>\r\n\r\n        <button className=\"signup-button\">Send Verification Code</button>\r\n\r\n        <p className=\"signup-login\">\r\n          Already have an account? <span className=\"signin-link\">Sign in</span>\r\n        </p>\r\n      </div>\r\n    </div>\r\n  );\r\n};\r\n\r\nexport default Signup;"
+        }
+    ]
+}

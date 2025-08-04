@@ -1,5 +1,5 @@
 import React from "react";
-import "./ConnectSection.css"; // Same CSS
+import "./ConnectSection.css"; 
 
 const ConnectBox = ({ icon, title, description }) => {
   return (

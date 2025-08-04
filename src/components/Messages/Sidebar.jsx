@@ -23,7 +23,7 @@ const Sidebar = ({ selectedUser, setSelectedUser }) => {
       <input
         type="text"
         placeholder="Search conversations..."
-        className="sidebar-search"
+        className="sidebar-search sidebar-search-desktop"
       />
 
       {users.map((user) => (
