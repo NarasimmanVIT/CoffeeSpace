@@ -215,3 +215,34 @@ body, html{
 .close-icon:hover {
   color: #ed8e5e;
 }
+
+.account-dropdown {
+  position: absolute;
+  top: 55px;
+  right: 0;
+  background-color: #fff;
+  border: 1px solid #ddd;
+  border-radius: 8px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+  display: flex;
+  flex-direction: column;
+  min-width: 210px;
+  z-index: 1200;
+}
+
+.account-dropdown a {
+  padding: 7px 12px;
+  text-decoration: none;
+  color: #2f2121;
+  display: flex;
+  align-items: center;
+  font-weight: 400;
+  transition: background-color 0.2s ease;
+  font-size: 14px;
+}
+
+.account-dropdown a:hover {
+  background-color: #ED8E5E;
+  border-radius: 5px;
+  /* color: #ed8e5e; */
+}

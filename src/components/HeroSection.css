@@ -76,6 +76,8 @@ body{
 .hero-content h1 {
   font-size: 4.5rem;
   font-weight: bold;
+  color: white;
+  margin-top: -4px;
   /* margin-bottom: 0.2rem; */
   /* line-height: 1.2; */
   line-height: 1.1; /* slightly tighter line height*/
@@ -91,7 +93,7 @@ body{
   font-size: 4.5rem;
   color: #ED8E5E;
   white-space: nowrap;
-  margin: 0.2rem 0 0 0; /*smaller to margin to reduce gap */
+  margin: 0.1rem 0 0 0; 
   font-weight: bold;
   line-height: 1.1;
 }
@@ -135,7 +137,7 @@ body{
   cursor: pointer;
   border-radius: 5px;
   margin-top: 10px;
-  margin-bottom: 10px;
+  margin-bottom: 8px;
 }
 
 .btn-primary {
@@ -153,7 +155,7 @@ body{
   display: flex;
   justify-content: center;
   gap: 3rem;
-  margin: 2rem 0;
+  margin: 1rem 0;
   align-items: center;
 }
 
@@ -183,8 +185,6 @@ body{
 }
 
 
-/* Below 640px: Responsive changes ONLY */
-/* 640px to 768px — Medium Tablets */
 @media (min-width: 640px) and (max-width: 768px) {
   .hero-content h1,
   .highlight-text {
@@ -223,40 +223,32 @@ body{
   }
 }
 
-
-/* 769px to 1024px — Large Tablets & Small Laptops */
 @media (min-width: 769px) and (max-width: 1024px) {
   .hero-content h1,
   .highlight-text {
     font-size: 4.2rem;
     margin-top: 35%;
-    /* transform: translateY(-10px); */
   }
 
   .hero-content > p {
     font-size: 1.6rem;
-    /* transform: translateY(-10px); */
   }
 
   .parah p {
     font-size: 1.3rem;
-    /* transform: translateY(-10px); */
   }
 
   .hero-buttons .btn {
     font-size: 1.2rem;
     padding: 0.5rem 1.3rem;
-    /* transform: translateY(-10px); */
   }
 
   .stat-number {
     font-size: 1.8rem;
-    /* transform: translateY(-10px); */
   }
 
   .stat-label {
     font-size: 1rem;
-    /* transform: translateY(-10px); */
   }
 
   /* .divider {
@@ -268,34 +260,28 @@ body{
   .highlight-text {
     font-size: 3.4rem;
     margin-top: 40%;
-    /* transform: translateY(-180px); */
   }
 
   .hero-content > p {
     font-size: 2.5rem;
-    /* transform: translateY(-150px); */
   }
 
   .parah p {
     font-size: 1rem;
     max-width: 90%;
-    /* transform: translateY(-100px); */
   }
 
   .hero-buttons .btn {
     font-size: 1rem;
     padding: 0.4rem 0.8rem;
-    /* transform: translateY(-60px); */
   }
 
   .stat-number {
     font-size: 1.4rem;
-    /* transform: translateY(-20px); */
   }
 
   .stat-label {
     font-size: 1rem;
-    /* transform: translateY(-15px); */
   }
 
   /* .divider {
@@ -313,7 +299,6 @@ body{
   .hero-content h1,
   .highlight-text {
     font-size: 4.5rem;
-    /* transform: translateY(-180px); */
     text-align: center;
     margin-top: 40%;
   }
@@ -328,7 +313,6 @@ body{
     font-size: 1.3rem;
     max-width: 90%;
     margin: 0 auto;
-    /* transform: translateY(-130px); */
     text-align: center;
   }
 
@@ -336,7 +320,6 @@ body{
     flex-direction: row;
     justify-content: center;
     gap: 1rem;
-    /* transform: translateY(-40px); */
   }
 
   .hero-buttons .btn {
@@ -346,18 +329,15 @@ body{
 
   .stat-number {
     font-size: 2.3rem;
-    /* transform: translateY(-40px); */
     text-align: center;
   }
 
   .stat-label {
     font-size: 1.3rem;
-    /* transform: translateY(-35px); */
     text-align: center;
   }
 
   .stats-container {
-    /* flex-direction: column; */
     align-items: center;
     margin-top: 1.5rem;
     gap: 1rem;
@@ -372,14 +352,12 @@ body{
   .hero-content h1,
   .highlight-text {
     font-size: 3.3rem;
-    /* transform: translateY(-200px); */
     text-align: center;
     margin-top: 55%;
   }
 
   .hero-content > p {
     font-size: 2.2rem;
-    /* transform: translateY(-155px); */
     text-align: center;
     padding: 0 1rem;
   }
@@ -387,7 +365,6 @@ body{
   .parah p {
     font-size: 0.85rem;
     max-width: 95%;
-    /* transform: translateY(-105px); */
     text-align: center;
     margin: 0 auto;
   }
@@ -396,7 +373,6 @@ body{
     flex-direction: column;
     align-items: center;
     gap: 0.7rem;
-    /* transform: translateY(-50px); */
   }
 
   .hero-buttons .btn {
@@ -408,13 +384,11 @@ body{
 
   .stat-number {
     font-size: 1rem;
-    /* transform: translateY(-10px); */
     text-align: center;
   }
 
   .stat-label {
     font-size: 0.75rem;
-    /* transform: translateY(-5px); */
     text-align: center;
   }
 
@@ -434,7 +408,6 @@ body{
   .hero-content h1,
   .highlight-text {
     font-size: 2.5rem;
-    /* transform: translateY(-140px); */
     text-align: center;
   }
 
@@ -449,7 +422,6 @@ body{
   .hero-content > p {
     font-size: 1.5rem;
     flex-direction: column;
-    /* transform: translateY(-85px); */
     text-align: center;
     padding: 0 1rem;
     line-height: 1.4;
@@ -457,7 +429,6 @@ body{
 
   .parah p {
     font-size: 0.6rem;
-    /* transform: translateY(-40px); */
     text-align: center;
     max-width: 90%;
     margin: 0 auto;
@@ -467,7 +438,6 @@ body{
     flex-direction: column;
     align-items: center;
     gap: 0.7rem;
-    /* transform: translateY(-15px); */
   }
 
   .hero-buttons .btn {
@@ -479,13 +449,11 @@ body{
 
   .stat-number {
     font-size: 1rem;
-    /* transform: translateY(-10px); */
     text-align: center;
   }
 
   .stat-label {
     font-size: 0.7rem;
-    /* transform: translateY(-5px); */
     text-align: center;
   }
 
@@ -503,8 +471,8 @@ body{
 
 /* @media (max-width: 400px) {
   .hero-image-only img {
-    width: 100%;        /* Slightly bigger
-    max-width: 100%;  /* Set a soft limit 
+    width: 100%;        
+    max-width: 100%;  
     height: auto;
     margin: 0 auto;
     display: block;

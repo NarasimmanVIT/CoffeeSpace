@@ -3,7 +3,7 @@
     "activeCommit": 0,
     "commits": [
         {
-            "activePatchIndex": 258,
+            "activePatchIndex": 302,
             "patches": [
                 {
                     "date": 1753106193542,
@@ -1040,6 +1040,182 @@
                 {
                     "date": 1753340528328,
                     "content": "Index: \n===================================================================\n--- \n+++ \n@@ -0,0 +1,217 @@\n+body, html{\r\n+    margin: 0;\r\n+    padding: 0;\r\n+    box-sizing: border-box;\r\n+}\r\n+.navbar {\r\n+  height: 60px;\r\n+  background-color: rgba(255, 255, 255, 0);\r\n+  display: flex;\r\n+  align-items: center;\r\n+  justify-content: space-between;\r\n+  padding: 0 30px;\r\n+  font-family: sans-serif;\r\n+  font-size: 16px;\r\n+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);\r\n+  width: 100%;\r\n+  margin: 0 auto;\r\n+  position: fixed;\r\n+  top: 0;\r\n+  z-index: 1000;\r\n+  font-family:  -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, sans-serif;\r\n+  transition: background-color 0.3s ease ;\r\n+  backdrop-filter: none;\r\n+  backdrop-filter: blur(4px);\r\n+  -webkit-backdrop-filter: blur(4px);\r\n+  transition: all 0.3s ease;\r\n+}\r\n+\r\n+.navbar-left{\r\n+    display: flex;\r\n+    align-items: center;\r\n+    gap: 30px;\r\n+    width: 100%;\r\n+}\r\n+.navbar-logo {\r\n+  font-weight: bold;\r\n+  font-size: 20px;\r\n+  color: #2f2121;\r\n+  margin-left: 40px;\r\n+  /* white-space: nowrap;\r\n+  overflow: hidden;\r\n+  text-overflow: ellipsis;\r\n+  max-width: 150px; */\r\n+}\r\n+\r\n+.navbar-links {\r\n+  display: flex;\r\n+  gap: 30px;\r\n+}\r\n+\r\n+.navbar-links a:hover{\r\n+    border: 1px solid#ED8E5E;\r\n+    background-color: #ED8E5E;\r\n+    color: #2f2121;\r\n+}\r\n+\r\n+.navbar-links a {\r\n+  text-decoration: none;\r\n+  color: #8a6969;\r\n+  font-weight: 400;\r\n+  margin-right: 30px;\r\n+  align-items: center;\r\n+  margin-right: 14px;\r\n+  text-decoration: none;\r\n+  /* color: #2f2121; */\r\n+  font-size: 18px;\r\n+  padding: 6px 10px;\r\n+  border-radius: 6px;\r\n+  transition: all 0.3s ease;\r\n+}\r\n+\r\n+.navbar-account {\r\n+  color: hsl(0, 18%, 97%);\r\n+  margin-left: auto;\r\n+  margin-right: 30px;\r\n+  padding: 6px 16px;\r\n+  border: 1px solid #d1cccc;\r\n+  border-radius: 1dvb;\r\n+  background-color: rgb(251, 240, 240);\r\n+  color: #2f2121;\r\n+  font-weight: 500;\r\n+  cursor: pointer;\r\n+  transition: background-color 0.2ease;\r\n+  display: flex;\r\n+}\r\n+.navbar-account:hover{\r\n+    background-color: #f0f0f0\r\n+}\r\n+.navbar-links a{\r\n+    display: flex;\r\n+    align-items: center;\r\n+    gap: 6px;\r\n+}\r\n+.icon{\r\n+    display: flex;\r\n+    align-items: center;\r\n+    margin-right: 6px;\r\n+}\r\n+.mobile-menu {\r\n+  display: none;\r\n+}\r\n+.mobile-menu-icon {\r\n+  display: none;\r\n+  cursor: pointer;\r\n+}\r\n+\r\n+@media screen and (max-width: 768px) {\r\n+  .navbar-links,\r\n+  .navbar-account {\r\n+    display: none;\r\n+  }\r\n+\r\n+  .navbar-left {\r\n+    width: 100%;\r\n+    display: flex;\r\n+    justify-content: space-between;\r\n+    align-items: center;\r\n+    padding: 10px 20px;\r\n+  }\r\n+\r\n+  .mobile-menu-icon {\r\n+    display: block;\r\n+    margin-left: auto;\r\n+    cursor: pointer;\r\n+  }\r\n+\r\n+  .mobile-menu {\r\n+    position: fixed;\r\n+    top: 0;\r\n+    left: -250px;\r\n+    height: 100vh;\r\n+    width: 250px;\r\n+    background-color: #fff;\r\n+    box-shadow: 2px 0 6px rgba(0, 0, 0, 0.2);\r\n+    padding: 60px 20px;\r\n+    display: flex;\r\n+    flex-direction: column;\r\n+    gap: 20px;\r\n+    transition: left 0.3s ease;\r\n+    z-index: 1001;\r\n+  }\r\n+\r\n+  .mobile-menu.open {\r\n+    left: 0;\r\n+  }\r\n+\r\n+  .menu-overlay {\r\n+    position: fixed;\r\n+    top: 0;\r\n+    left: 0;\r\n+    height: 100vh;\r\n+    width: 100vw;\r\n+    background-color: rgba(0, 0, 0, 0.4);\r\n+    z-index: 1000;\r\n+  }\r\n+}\r\n+\r\n+.mobile-menu {\r\n+  position: fixed;\r\n+  top: 0;\r\n+  left: -260px;\r\n+  height: 100vh;\r\n+  width: 260px;\r\n+  background-color: #fff;\r\n+  box-shadow: 4px 0 12px rgba(0, 0, 0, 0.1);\r\n+  padding: 80px 24px 24px 24px;\r\n+  display: flex;\r\n+  flex-direction: column;\r\n+  gap: 20px;\r\n+  transition: left 0.3s ease;\r\n+  z-index: 1100;\r\n+  font-size: 18px;\r\n+}\r\n+\r\n+.mobile-menu.open {\r\n+  left: 0;\r\n+}\r\n+\r\n+.mobile-menu a {\r\n+  text-decoration: none;\r\n+  color: #8a6969;\r\n+  font-weight: 500;\r\n+  padding: 10px;\r\n+  border-radius: 6px;\r\n+  transition: background-color 0.3s ease;\r\n+}\r\n+\r\n+.mobile-menu a:hover {\r\n+  background-color: #f6f0e8;\r\n+  color: #ed8e5e;\r\n+}\r\n+\r\n+.menu-overlay {\r\n+  position: fixed;\r\n+  top: 0;\r\n+  left: 0;\r\n+  height: 100vh;\r\n+  width: 100vw;\r\n+  background-color: rgba(0, 0, 0, 0.4);\r\n+  z-index: 1099;\r\n+}\r\n+\r\n+.close-icon {\r\n+  position: absolute;\r\n+  top: 20px;\r\n+  right: 20px;\r\n+  font-size: 17px;\r\n+  cursor: pointer;\r\n+  color: #2f2121;\r\n+  font-weight: 600;\r\n+  transition: color 0.3s ease;\r\n+  z-index: 10;\r\n+}\r\n+\r\n+.close-icon:hover {\r\n+  color: #ed8e5e;\r\n+}\n\\ No newline at end of file\n"
+                },
+                {
+                    "date": 1754026207103,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -213,222 +213,5 @@\n }\r\n \r\n .close-icon:hover {\r\n   color: #ed8e5e;\r\n-}\n-body, html{\r\n-    margin: 0;\r\n-    padding: 0;\r\n-    box-sizing: border-box;\r\n }\r\n-.navbar {\r\n-  height: 60px;\r\n-  background-color: rgba(255, 255, 255, 0);\r\n-  display: flex;\r\n-  align-items: center;\r\n-  justify-content: space-between;\r\n-  padding: 0 30px;\r\n-  font-family: sans-serif;\r\n-  font-size: 16px;\r\n-  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);\r\n-  width: 100%;\r\n-  margin: 0 auto;\r\n-  position: fixed;\r\n-  top: 0;\r\n-  z-index: 1000;\r\n-  font-family:  -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, sans-serif;\r\n-  transition: background-color 0.3s ease ;\r\n-  backdrop-filter: none;\r\n-  backdrop-filter: blur(4px);\r\n-  -webkit-backdrop-filter: blur(4px);\r\n-  transition: all 0.3s ease;\r\n-}\r\n-\r\n-.navbar-left{\r\n-    display: flex;\r\n-    align-items: center;\r\n-    gap: 30px;\r\n-    width: 100%;\r\n-}\r\n-.navbar-logo {\r\n-  font-weight: bold;\r\n-  font-size: 20px;\r\n-  color: #2f2121;\r\n-  margin-left: 40px;\r\n-  /* white-space: nowrap;\r\n-  overflow: hidden;\r\n-  text-overflow: ellipsis;\r\n-  max-width: 150px; */\r\n-}\r\n-\r\n-.navbar-links {\r\n-  display: flex;\r\n-  gap: 30px;\r\n-}\r\n-\r\n-.navbar-links a:hover{\r\n-    border: 1px solid#ED8E5E;\r\n-    background-color: #ED8E5E;\r\n-    color: #2f2121;\r\n-}\r\n-\r\n-.navbar-links a {\r\n-  text-decoration: none;\r\n-  color: #8a6969;\r\n-  font-weight: 400;\r\n-  margin-right: 30px;\r\n-  align-items: center;\r\n-  margin-right: 14px;\r\n-  text-decoration: none;\r\n-  /* color: #2f2121; */\r\n-  font-size: 18px;\r\n-  padding: 6px 10px;\r\n-  border-radius: 6px;\r\n-  transition: all 0.3s ease;\r\n-}\r\n-\r\n-.navbar-account {\r\n-  color: hsl(0, 18%, 97%);\r\n-  margin-left: auto;\r\n-  margin-right: 30px;\r\n-  padding: 6px 16px;\r\n-  border: 1px solid #d1cccc;\r\n-  border-radius: 1dvb;\r\n-  background-color: rgb(251, 240, 240);\r\n-  color: #2f2121;\r\n-  font-weight: 500;\r\n-  cursor: pointer;\r\n-  transition: background-color 0.2ease;\r\n-  display: flex;\r\n-}\r\n-.navbar-account:hover{\r\n-    background-color: #f0f0f0\r\n-}\r\n-.navbar-links a{\r\n-    display: flex;\r\n-    align-items: center;\r\n-    gap: 6px;\r\n-}\r\n-.icon{\r\n-    display: flex;\r\n-    align-items: center;\r\n-    margin-right: 6px;\r\n-}\r\n-.mobile-menu {\r\n-  display: none;\r\n-}\r\n-.mobile-menu-icon {\r\n-  display: none;\r\n-  cursor: pointer;\r\n-}\r\n-\r\n-@media screen and (max-width: 768px) {\r\n-  .navbar-links,\r\n-  .navbar-account {\r\n-    display: none;\r\n-  }\r\n-\r\n-  .navbar-left {\r\n-    width: 100%;\r\n-    display: flex;\r\n-    justify-content: space-between;\r\n-    align-items: center;\r\n-    padding: 10px 20px;\r\n-  }\r\n-\r\n-  .mobile-menu-icon {\r\n-    display: block;\r\n-    margin-left: auto;\r\n-    cursor: pointer;\r\n-  }\r\n-\r\n-  .mobile-menu {\r\n-    position: fixed;\r\n-    top: 0;\r\n-    left: -250px;\r\n-    height: 100vh;\r\n-    width: 250px;\r\n-    background-color: #fff;\r\n-    box-shadow: 2px 0 6px rgba(0, 0, 0, 0.2);\r\n-    padding: 60px 20px;\r\n-    display: flex;\r\n-    flex-direction: column;\r\n-    gap: 20px;\r\n-    transition: left 0.3s ease;\r\n-    z-index: 1001;\r\n-  }\r\n-\r\n-  .mobile-menu.open {\r\n-    left: 0;\r\n-  }\r\n-\r\n-  .menu-overlay {\r\n-    position: fixed;\r\n-    top: 0;\r\n-    left: 0;\r\n-    height: 100vh;\r\n-    width: 100vw;\r\n-    background-color: rgba(0, 0, 0, 0.4);\r\n-    z-index: 1000;\r\n-  }\r\n-}\r\n-\r\n-.mobile-menu {\r\n-  position: fixed;\r\n-  top: 0;\r\n-  left: -260px;\r\n-  height: 100vh;\r\n-  width: 260px;\r\n-  background-color: #fff;\r\n-  box-shadow: 4px 0 12px rgba(0, 0, 0, 0.1);\r\n-  padding: 80px 24px 24px 24px;\r\n-  display: flex;\r\n-  flex-direction: column;\r\n-  gap: 20px;\r\n-  transition: left 0.3s ease;\r\n-  z-index: 1100;\r\n-  font-size: 18px;\r\n-}\r\n-\r\n-.mobile-menu.open {\r\n-  left: 0;\r\n-}\r\n-\r\n-.mobile-menu a {\r\n-  text-decoration: none;\r\n-  color: #2f2121;\r\n-  font-weight: 500;\r\n-  padding: 10px;\r\n-  border-radius: 6px;\r\n-  transition: background-color 0.3s ease;\r\n-}\r\n-\r\n-.mobile-menu a:hover {\r\n-  background-color: #f6f0e8;\r\n-  color: #ed8e5e;\r\n-}\r\n-\r\n-.menu-overlay {\r\n-  position: fixed;\r\n-  top: 0;\r\n-  left: 0;\r\n-  height: 100vh;\r\n-  width: 100vw;\r\n-  background-color: rgba(0, 0, 0, 0.4);\r\n-  z-index: 1099;\r\n-}\r\n-\r\n-.close-icon {\r\n-  position: absolute;\r\n-  top: 20px;\r\n-  right: 20px;\r\n-  font-size: 17px;\r\n-  cursor: pointer;\r\n-  color: #2f2121;\r\n-  font-weight: 00;\r\n-  transition: color 0.3s ease;\r\n-  z-index: 10;\r\n-}\r\n-\r\n-.close-icon:hover {\r\n-  color: #ed8e5e;\r\n-}\n\\ No newline at end of file\n"
+                },
+                {
+                    "date": 1754027111786,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -214,4 +214,33 @@\n \r\n .close-icon:hover {\r\n   color: #ed8e5e;\r\n }\r\n+\r\n+.account-dropdown {\r\n+  position: absolute;\r\n+  top: 60px;\r\n+  right: 0px;\r\n+  background-color: #fff;\r\n+  border: 1px solid #ddd;\r\n+  border-radius: 8px;\r\n+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);\r\n+  display: flex;\r\n+  flex-direction: column;\r\n+  min-width: 140px;\r\n+  z-index: 1200;\r\n+}\r\n+\r\n+.account-dropdown a {\r\n+  padding: 10px 12px;\r\n+  text-decoration: none;\r\n+  color: #2f2121;\r\n+  display: flex;\r\n+  align-items: center;\r\n+  font-weight: 500;\r\n+  transition: background-color 0.2s ease;\r\n+}\r\n+\r\n+.account-dropdown a:hover {\r\n+  background-color: #f6f0e8;\r\n+  color: #ed8e5e;\r\n+}\n\\ No newline at end of file\n"
+                },
+                {
+                    "date": 1754027126263,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -218,9 +218,9 @@\n \r\n .account-dropdown {\r\n   position: absolute;\r\n   top: 60px;\r\n-  right: 0px;\r\n+  right: 0;\r\n   background-color: #fff;\r\n   border: 1px solid #ddd;\r\n   border-radius: 8px;\r\n   box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);\r\n"
+                },
+                {
+                    "date": 1754027132074,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -225,9 +225,9 @@\n   border-radius: 8px;\r\n   box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);\r\n   display: flex;\r\n   flex-direction: column;\r\n-  min-width: 140px;\r\n+  min-width: 160px;\r\n   z-index: 1200;\r\n }\r\n \r\n .account-dropdown a {\r\n"
+                },
+                {
+                    "date": 1754027158767,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -225,10 +225,11 @@\n   border-radius: 8px;\r\n   box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);\r\n   display: flex;\r\n   flex-direction: column;\r\n-  min-width: 160px;\r\n+  min-width: 180px;\r\n   z-index: 1200;\r\n+  \r\n }\r\n \r\n .account-dropdown a {\r\n   padding: 10px 12px;\r\n"
+                },
+                {
+                    "date": 1754027168165,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -227,9 +227,9 @@\n   display: flex;\r\n   flex-direction: column;\r\n   min-width: 180px;\r\n   z-index: 1200;\r\n-  \r\n+  height: 2;\r\n }\r\n \r\n .account-dropdown a {\r\n   padding: 10px 12px;\r\n"
+                },
+                {
+                    "date": 1754027182329,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -227,9 +227,9 @@\n   display: flex;\r\n   flex-direction: column;\r\n   min-width: 180px;\r\n   z-index: 1200;\r\n-  height: 2;\r\n+  height: 0%;\r\n }\r\n \r\n .account-dropdown a {\r\n   padding: 10px 12px;\r\n"
+                },
+                {
+                    "date": 1754027187681,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -227,9 +227,9 @@\n   display: flex;\r\n   flex-direction: column;\r\n   min-width: 180px;\r\n   z-index: 1200;\r\n-  height: 0%;\r\n+  \r\n }\r\n \r\n .account-dropdown a {\r\n   padding: 10px 12px;\r\n"
+                },
+                {
+                    "date": 1754027202464,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -227,13 +227,12 @@\n   display: flex;\r\n   flex-direction: column;\r\n   min-width: 180px;\r\n   z-index: 1200;\r\n-  \r\n }\r\n \r\n .account-dropdown a {\r\n-  padding: 10px 12px;\r\n+  padding: 10px 1px;\r\n   text-decoration: none;\r\n   color: #2f2121;\r\n   display: flex;\r\n   align-items: center;\r\n"
+                },
+                {
+                    "date": 1754027212371,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -230,14 +230,14 @@\n   z-index: 1200;\r\n }\r\n \r\n .account-dropdown a {\r\n-  padding: 10px 1px;\r\n+  padding: 10px 12px;\r\n   text-decoration: none;\r\n   color: #2f2121;\r\n   display: flex;\r\n   align-items: center;\r\n-  font-weight: 500;\r\n+  font-weight: 00;\r\n   transition: background-color 0.2s ease;\r\n }\r\n \r\n .account-dropdown a:hover {\r\n"
+                },
+                {
+                    "date": 1754027231764,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -235,10 +235,11 @@\n   text-decoration: none;\r\n   color: #2f2121;\r\n   display: flex;\r\n   align-items: center;\r\n-  font-weight: 00;\r\n+  font-weight: 400;\r\n   transition: background-color 0.2s ease;\r\n+  \r\n }\r\n \r\n .account-dropdown a:hover {\r\n   background-color: #f6f0e8;\r\n"
+                },
+                {
+                    "date": 1754027243463,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -237,9 +237,9 @@\n   display: flex;\r\n   align-items: center;\r\n   font-weight: 400;\r\n   transition: background-color 0.2s ease;\r\n-  \r\n+  l\r\n }\r\n \r\n .account-dropdown a:hover {\r\n   background-color: #f6f0e8;\r\n"
+                },
+                {
+                    "date": 1754027248725,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -237,9 +237,9 @@\n   display: flex;\r\n   align-items: center;\r\n   font-weight: 400;\r\n   transition: background-color 0.2s ease;\r\n-  l\r\n+  line\r\n }\r\n \r\n .account-dropdown a:hover {\r\n   background-color: #f6f0e8;\r\n"
+                },
+                {
+                    "date": 1754027254178,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -237,9 +237,9 @@\n   display: flex;\r\n   align-items: center;\r\n   font-weight: 400;\r\n   transition: background-color 0.2s ease;\r\n-  line\r\n+  line-height: ;\r\n }\r\n \r\n .account-dropdown a:hover {\r\n   background-color: #f6f0e8;\r\n"
+                },
+                {
+                    "date": 1754027267413,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -237,9 +237,9 @@\n   display: flex;\r\n   align-items: center;\r\n   font-weight: 400;\r\n   transition: background-color 0.2s ease;\r\n-  line-height: ;\r\n+  line-height: \r\n }\r\n \r\n .account-dropdown a:hover {\r\n   background-color: #f6f0e8;\r\n"
+                },
+                {
+                    "date": 1754027274301,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -230,16 +230,15 @@\n   z-index: 1200;\r\n }\r\n \r\n .account-dropdown a {\r\n-  padding: 10px 12px;\r\n+  padding: 1px 12px;\r\n   text-decoration: none;\r\n   color: #2f2121;\r\n   display: flex;\r\n   align-items: center;\r\n   font-weight: 400;\r\n   transition: background-color 0.2s ease;\r\n-  line-height: \r\n }\r\n \r\n .account-dropdown a:hover {\r\n   background-color: #f6f0e8;\r\n"
+                },
+                {
+                    "date": 1754027305566,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -230,14 +230,14 @@\n   z-index: 1200;\r\n }\r\n \r\n .account-dropdown a {\r\n-  padding: 1px 12px;\r\n+  padding: 5px 12px;\r\n   text-decoration: none;\r\n   color: #2f2121;\r\n   display: flex;\r\n   align-items: center;\r\n-  font-weight: 400;\r\n+  font-weight: 00;\r\n   transition: background-color 0.2s ease;\r\n }\r\n \r\n .account-dropdown a:hover {\r\n"
+                },
+                {
+                    "date": 1754027320869,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -235,10 +235,11 @@\n   text-decoration: none;\r\n   color: #2f2121;\r\n   display: flex;\r\n   align-items: center;\r\n-  font-weight: 00;\r\n+  font-weight: 400;\r\n   transition: background-color 0.2s ease;\r\n+  font-size: ;\r\n }\r\n \r\n .account-dropdown a:hover {\r\n   background-color: #f6f0e8;\r\n"
+                },
+                {
+                    "date": 1754027332435,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -237,9 +237,9 @@\n   display: flex;\r\n   align-items: center;\r\n   font-weight: 400;\r\n   transition: background-color 0.2s ease;\r\n-  font-size: ;\r\n+  font-size: 1px;\r\n }\r\n \r\n .account-dropdown a:hover {\r\n   background-color: #f6f0e8;\r\n"
+                },
+                {
+                    "date": 1754027368634,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -230,16 +230,16 @@\n   z-index: 1200;\r\n }\r\n \r\n .account-dropdown a {\r\n-  padding: 5px 12px;\r\n+  padding: px 12px;\r\n   text-decoration: none;\r\n   color: #2f2121;\r\n   display: flex;\r\n   align-items: center;\r\n   font-weight: 400;\r\n   transition: background-color 0.2s ease;\r\n-  font-size: 1px;\r\n+  font-size: 14px;\r\n }\r\n \r\n .account-dropdown a:hover {\r\n   background-color: #f6f0e8;\r\n"
+                },
+                {
+                    "date": 1754027373931,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -230,9 +230,9 @@\n   z-index: 1200;\r\n }\r\n \r\n .account-dropdown a {\r\n-  padding: px 12px;\r\n+  padding: 5px 12px;\r\n   text-decoration: none;\r\n   color: #2f2121;\r\n   display: flex;\r\n   align-items: center;\r\n"
+                },
+                {
+                    "date": 1754027387569,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -230,9 +230,9 @@\n   z-index: 1200;\r\n }\r\n \r\n .account-dropdown a {\r\n-  padding: 5px 12px;\r\n+  padding: 7px 1px;\r\n   text-decoration: none;\r\n   color: #2f2121;\r\n   display: flex;\r\n   align-items: center;\r\n"
+                },
+                {
+                    "date": 1754027392851,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -230,16 +230,17 @@\n   z-index: 1200;\r\n }\r\n \r\n .account-dropdown a {\r\n-  padding: 7px 1px;\r\n+  padding: 7px 12px;\r\n   text-decoration: none;\r\n   color: #2f2121;\r\n   display: flex;\r\n   align-items: center;\r\n   font-weight: 400;\r\n   transition: background-color 0.2s ease;\r\n   font-size: 14px;\r\n+  pa\r\n }\r\n \r\n .account-dropdown a:hover {\r\n   background-color: #f6f0e8;\r\n"
+                },
+                {
+                    "date": 1754027398114,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -238,9 +238,9 @@\n   align-items: center;\r\n   font-weight: 400;\r\n   transition: background-color 0.2s ease;\r\n   font-size: 14px;\r\n-  pa\r\n+  padding-right: 12;\r\n }\r\n \r\n .account-dropdown a:hover {\r\n   background-color: #f6f0e8;\r\n"
+                },
+                {
+                    "date": 1754027420874,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -238,9 +238,9 @@\n   align-items: center;\r\n   font-weight: 400;\r\n   transition: background-color 0.2s ease;\r\n   font-size: 14px;\r\n-  padding-right: 12;\r\n+  \r\n }\r\n \r\n .account-dropdown a:hover {\r\n   background-color: #f6f0e8;\r\n"
+                },
+                {
+                    "date": 1754027428359,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -238,9 +238,9 @@\n   align-items: center;\r\n   font-weight: 400;\r\n   transition: background-color 0.2s ease;\r\n   font-size: 14px;\r\n-  \r\n+  padding-right: ;\r\n }\r\n \r\n .account-dropdown a:hover {\r\n   background-color: #f6f0e8;\r\n"
+                },
+                {
+                    "date": 1754027434552,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -238,9 +238,9 @@\n   align-items: center;\r\n   font-weight: 400;\r\n   transition: background-color 0.2s ease;\r\n   font-size: 14px;\r\n-  padding-right: ;\r\n+  padding-right: 12p;\r\n }\r\n \r\n .account-dropdown a:hover {\r\n   background-color: #f6f0e8;\r\n"
+                },
+                {
+                    "date": 1754027439717,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -238,9 +238,9 @@\n   align-items: center;\r\n   font-weight: 400;\r\n   transition: background-color 0.2s ease;\r\n   font-size: 14px;\r\n-  padding-right: 12p;\r\n+  padding-\r\n }\r\n \r\n .account-dropdown a:hover {\r\n   background-color: #f6f0e8;\r\n"
+                },
+                {
+                    "date": 1754027449668,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -238,9 +238,20 @@\n   align-items: center;\r\n   font-weight: 400;\r\n   transition: background-color 0.2s ease;\r\n   font-size: 14px;\r\n-  padding-\r\n+ {isAccountDropdownOpen && (\r\n+    <div className=\"account-dropdown\">\r\n+      <Link to=\"/login\">\r\n+        <SignIn size={18} style={{ marginRight: \"8px\" }} color=\"#8a6969\" />\r\n+        Login\r\n+      </Link>\r\n+      <Link to=\"/signup\">\r\n+        <SignIn size={18} style={{ marginRight: \"8px\" }} color=\"#8a6969\" />\r\n+        Sign Up\r\n+      </Link>\r\n+    </div>\r\n+  )}\r\n }\r\n \r\n .account-dropdown a:hover {\r\n   background-color: #f6f0e8;\r\n"
+                },
+                {
+                    "date": 1754027454829,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -237,21 +237,9 @@\n   display: flex;\r\n   align-items: center;\r\n   font-weight: 400;\r\n   transition: background-color 0.2s ease;\r\n-  font-size: 14px;\r\n- {isAccountDropdownOpen && (\r\n-    <div className=\"account-dropdown\">\r\n-      <Link to=\"/login\">\r\n-        <SignIn size={18} style={{ marginRight: \"8px\" }} color=\"#8a6969\" />\r\n-        Login\r\n-      </Link>\r\n-      <Link to=\"/signup\">\r\n-        <SignIn size={18} style={{ marginRight: \"8px\" }} color=\"#8a6969\" />\r\n-        Sign Up\r\n-      </Link>\r\n-    </div>\r\n-  )}\r\n+  font-size: 14px\r\n }\r\n \r\n .account-dropdown a:hover {\r\n   background-color: #f6f0e8;\r\n"
+                },
+                {
+                    "date": 1754027460087,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -237,9 +237,10 @@\n   display: flex;\r\n   align-items: center;\r\n   font-weight: 400;\r\n   transition: background-color 0.2s ease;\r\n-  font-size: 14px\r\n+  font-size: 14px;\r\n+  padding-right: ;\r\n }\r\n \r\n .account-dropdown a:hover {\r\n   background-color: #f6f0e8;\r\n"
+                },
+                {
+                    "date": 1754027466750,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -238,9 +238,9 @@\n   align-items: center;\r\n   font-weight: 400;\r\n   transition: background-color 0.2s ease;\r\n   font-size: 14px;\r\n-  padding-right: ;\r\n+  \r\n }\r\n \r\n .account-dropdown a:hover {\r\n   background-color: #f6f0e8;\r\n"
+                },
+                {
+                    "date": 1754027473698,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -225,9 +225,9 @@\n   border-radius: 8px;\r\n   box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);\r\n   display: flex;\r\n   flex-direction: column;\r\n-  min-width: 180px;\r\n+  min-width: 10px;\r\n   z-index: 1200;\r\n }\r\n \r\n .account-dropdown a {\r\n@@ -238,9 +238,8 @@\n   align-items: center;\r\n   font-weight: 400;\r\n   transition: background-color 0.2s ease;\r\n   font-size: 14px;\r\n-  \r\n }\r\n \r\n .account-dropdown a:hover {\r\n   background-color: #f6f0e8;\r\n"
+                },
+                {
+                    "date": 1754027479817,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -225,9 +225,9 @@\n   border-radius: 8px;\r\n   box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);\r\n   display: flex;\r\n   flex-direction: column;\r\n-  min-width: 10px;\r\n+  min-width: 20px;\r\n   z-index: 1200;\r\n }\r\n \r\n .account-dropdown a {\r\n"
+                },
+                {
+                    "date": 1754027487723,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -217,17 +217,17 @@\n }\r\n \r\n .account-dropdown {\r\n   position: absolute;\r\n-  top: 60px;\r\n+  top: 0px;\r\n   right: 0;\r\n   background-color: #fff;\r\n   border: 1px solid #ddd;\r\n   border-radius: 8px;\r\n   box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);\r\n   display: flex;\r\n   flex-direction: column;\r\n-  min-width: 20px;\r\n+  min-width: 210px;\r\n   z-index: 1200;\r\n }\r\n \r\n .account-dropdown a {\r\n"
+                },
+                {
+                    "date": 1754027523044,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -217,9 +217,9 @@\n }\r\n \r\n .account-dropdown {\r\n   position: absolute;\r\n-  top: 0px;\r\n+  top: 55px;\r\n   right: 0;\r\n   background-color: #fff;\r\n   border: 1px solid #ddd;\r\n   border-radius: 8px;\r\n@@ -242,6 +242,6 @@\n }\r\n \r\n .account-dropdown a:hover {\r\n   background-color: #f6f0e8;\r\n-  color: #ed8e5e;\r\n+  /* color: #ed8e5e; */\r\n }\n\\ No newline at end of file\n"
+                },
+                {
+                    "date": 1754027548283,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -241,7 +241,7 @@\n   font-size: 14px;\r\n }\r\n \r\n .account-dropdown a:hover {\r\n-  background-color: #f6f0e8;\r\n+  background-color: #ED8E5E;\r\n   /* color: #ed8e5e; */\r\n }\n\\ No newline at end of file\n"
+                },
+                {
+                    "date": 1754027568836,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -242,6 +242,7 @@\n }\r\n \r\n .account-dropdown a:hover {\r\n   background-color: #ED8E5E;\r\n+  \r\n   /* color: #ed8e5e; */\r\n }\n\\ No newline at end of file\n"
+                },
+                {
+                    "date": 1754027580097,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -242,7 +242,8 @@\n }\r\n \r\n .account-dropdown a:hover {\r\n   background-color: #ED8E5E;\r\n+  border-radius: 5px;\r\n   \r\n   /* color: #ed8e5e; */\r\n }\n\\ No newline at end of file\n"
+                },
+                {
+                    "date": 1754027586981,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -243,7 +243,7 @@\n \r\n .account-dropdown a:hover {\r\n   background-color: #ED8E5E;\r\n   border-radius: 5px;\r\n-  \r\n+  padding: ;\r\n   /* color: #ed8e5e; */\r\n }\n\\ No newline at end of file\n"
+                },
+                {
+                    "date": 1754027592113,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -243,7 +243,7 @@\n \r\n .account-dropdown a:hover {\r\n   background-color: #ED8E5E;\r\n   border-radius: 5px;\r\n-  padding: ;\r\n+  padding: 0 2px;\r\n   /* color: #ed8e5e; */\r\n }\n\\ No newline at end of file\n"
+                },
+                {
+                    "date": 1754027598477,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -243,7 +243,7 @@\n \r\n .account-dropdown a:hover {\r\n   background-color: #ED8E5E;\r\n   border-radius: 5px;\r\n-  padding: 0 2px;\r\n+  padding: 0 2p;\r\n   /* color: #ed8e5e; */\r\n }\n\\ No newline at end of file\n"
+                },
+                {
+                    "date": 1754027611920,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -243,7 +243,7 @@\n \r\n .account-dropdown a:hover {\r\n   background-color: #ED8E5E;\r\n   border-radius: 5px;\r\n-  padding: 0 2p;\r\n+  padding: 2px ;\r\n   /* color: #ed8e5e; */\r\n }\n\\ No newline at end of file\n"
+                },
+                {
+                    "date": 1754027621437,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -243,7 +243,7 @@\n \r\n .account-dropdown a:hover {\r\n   background-color: #ED8E5E;\r\n   border-radius: 5px;\r\n-  padding: 2px ;\r\n+  \r\n   /* color: #ed8e5e; */\r\n }\n\\ No newline at end of file\n"
                 }
             ],
             "date": 1753106193542,

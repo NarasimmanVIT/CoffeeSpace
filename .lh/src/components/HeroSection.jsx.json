@@ -3,7 +3,7 @@
     "activeCommit": 0,
     "commits": [
         {
-            "activePatchIndex": 68,
+            "activePatchIndex": 69,
             "patches": [
                 {
                     "date": 1753118880607,
@@ -280,6 +280,10 @@
                 {
                     "date": 1753431535472,
                     "content": "Index: \n===================================================================\n--- \n+++ \n@@ -6,9 +6,11 @@\n   return (\r\n     <section className=\"hero-image-only\">\r\n       <div className=\"hero-image-wrapper\">\r\n         <img src={heroImg} alt=\"Hero\" className=\"hero-img\" />\r\n-        \r\n+        <div className=\"overlay\">\r\n+          \r\n+        </div>\r\n       </div>\r\n     \r\n       \r\n       <div className=\"hero-content\">\r\n"
+                },
+                {
+                    "date": 1753932773214,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -7,9 +7,9 @@\n     <section className=\"hero-image-only\">\r\n       <div className=\"hero-image-wrapper\">\r\n         <img src={heroImg} alt=\"Hero\" className=\"hero-img\" />\r\n         <div className=\"overlay\">\r\n-          \r\n+        \r\n         </div>\r\n       </div>\r\n     \r\n       \r\n"
                 }
             ],
             "date": 1753118880607,

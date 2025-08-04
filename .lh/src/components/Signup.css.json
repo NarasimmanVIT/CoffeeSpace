@@ -1,0 +1,286 @@
+{
+    "sourceFile": "src/components/Signup.css",
+    "activeCommit": 0,
+    "commits": [
+        {
+            "activePatchIndex": 67,
+            "patches": [
+                {
+                    "date": 1754027904681,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n"
+                },
+                {
+                    "date": 1754028254752,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -0,0 +1,88 @@\n+.signup-container {\r\n+  display: flex;\r\n+  justify-content: center;\r\n+  align-items: center;\r\n+  height: 100vh;\r\n+  background-color: #F9F7F4;\r\n+}\r\n+\r\n+.signup-box {\r\n+  background-color: white;\r\n+  padding: 2.5rem 2rem;\r\n+  border-radius: 12px;\r\n+  box-shadow: 0 0 12px rgba(0, 0, 0, 0.08);\r\n+  width: 100%;\r\n+  max-width: 400px;\r\n+  text-align: center;\r\n+}\r\n+\r\n+.signup-title {\r\n+  font-size: 24px;\r\n+  font-weight: 600;\r\n+  color: #a24310;\r\n+  margin-bottom: 8px;\r\n+}\r\n+\r\n+.signup-subtitle {\r\n+  color: #555;\r\n+  font-size: 15px;\r\n+  margin-bottom: 24px;\r\n+}\r\n+\r\n+.signup-label {\r\n+  font-weight: 500;\r\n+  display: block;\r\n+  text-align: left;\r\n+  margin-bottom: 6px;\r\n+  color: #222;\r\n+}\r\n+\r\n+.input-group {\r\n+  display: flex;\r\n+  align-items: center;\r\n+  background-color: #f2f2f2;\r\n+  border-radius: 6px;\r\n+  padding: 0.5rem 0.75rem;\r\n+  margin-bottom: 20px;\r\n+}\r\n+\r\n+.phone-icon {\r\n+  margin-right: 10px;\r\n+  font-size: 18px;\r\n+}\r\n+\r\n+.signup-input {\r\n+  border: none;\r\n+  outline: none;\r\n+  background: transparent;\r\n+  flex: 1;\r\n+  font-size: 15px;\r\n+}\r\n+\r\n+.signup-button {\r\n+  background-color: #c1440e;\r\n+  color: white;\r\n+  padding: 0.7rem;\r\n+  width: 100%;\r\n+  border: none;\r\n+  border-radius: 6px;\r\n+  font-size: 15px;\r\n+  cursor: pointer;\r\n+  transition: 0.3s ease;\r\n+}\r\n+\r\n+.signup-button:hover {\r\n+  background-color: #a2380c;\r\n+}\r\n+\r\n+.signup-login {\r\n+  margin-top: 16px;\r\n+  font-size: 14px;\r\n+  color: #555;\r\n+}\r\n+\r\n+.signin-link {\r\n+  color: #a24310;\r\n+  cursor: pointer;\r\n+  font-weight: 500;\r\n+}\n\\ No newline at end of file\n"
+                },
+                {
+                    "date": 1754028274388,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -13,8 +13,9 @@\n   box-shadow: 0 0 12px rgba(0, 0, 0, 0.08);\r\n   width: 100%;\r\n   max-width: 400px;\r\n   text-align: center;\r\n+  \r\n }\r\n \r\n .signup-title {\r\n   font-size: 24px;\r\n@@ -84,93 +85,5 @@\n .signin-link {\r\n   color: #a24310;\r\n   cursor: pointer;\r\n   font-weight: 500;\r\n-}\n-.signup-container {\r\n-  display: flex;\r\n-  justify-content: center;\r\n-  align-items: center;\r\n-  height: 100vh;\r\n-  background-color: #f8f8f8;\r\n-}\r\n-\r\n-.signup-box {\r\n-  background-color: white;\r\n-  padding: 2.5rem 2rem;\r\n-  border-radius: 12px;\r\n-  box-shadow: 0 0 12px rgba(0, 0, 0, 0.08);\r\n-  width: 100%;\r\n-  max-width: 400px;\r\n-  text-align: center;\r\n-}\r\n-\r\n-.signup-title {\r\n-  font-size: 24px;\r\n-  font-weight: 600;\r\n-  color: #a24310;\r\n-  margin-bottom: 8px;\r\n-}\r\n-\r\n-.signup-subtitle {\r\n-  color: #555;\r\n-  font-size: 15px;\r\n-  margin-bottom: 24px;\r\n-}\r\n-\r\n-.signup-label {\r\n-  font-weight: 500;\r\n-  display: block;\r\n-  text-align: left;\r\n-  margin-bottom: 6px;\r\n-  color: #222;\r\n-}\r\n-\r\n-.input-group {\r\n-  display: flex;\r\n-  align-items: center;\r\n-  background-color: #f2f2f2;\r\n-  border-radius: 6px;\r\n-  padding: 0.5rem 0.75rem;\r\n-  margin-bottom: 20px;\r\n-}\r\n-\r\n-.phone-icon {\r\n-  margin-right: 10px;\r\n-  font-size: 18px;\r\n-}\r\n-\r\n-.signup-input {\r\n-  border: none;\r\n-  outline: none;\r\n-  background: transparent;\r\n-  flex: 1;\r\n-  font-size: 15px;\r\n-}\r\n-\r\n-.signup-button {\r\n-  background-color: #c1440e;\r\n-  color: white;\r\n-  padding: 0.7rem;\r\n-  width: 100%;\r\n-  border: none;\r\n-  border-radius: 6px;\r\n-  font-size: 15px;\r\n-  cursor: pointer;\r\n-  transition: 0.3s ease;\r\n-}\r\n-\r\n-.signup-button:hover {\r\n-  background-color: #a2380c;\r\n-}\r\n-\r\n-.signup-login {\r\n-  margin-top: 16px;\r\n-  font-size: 14px;\r\n-  color: #555;\r\n-}\r\n-\r\n-.signin-link {\r\n-  color: #a24310;\r\n-  cursor: pointer;\r\n-  font-weight: 500;\r\n }\n\\ No newline at end of file\n"
+                },
+                {
+                    "date": 1754028279459,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -13,9 +13,9 @@\n   box-shadow: 0 0 12px rgba(0, 0, 0, 0.08);\r\n   width: 100%;\r\n   max-width: 400px;\r\n   text-align: center;\r\n-  \r\n+  margin-top: 20p;\r\n }\r\n \r\n .signup-title {\r\n   font-size: 24px;\r\n"
+                },
+                {
+                    "date": 1754028291217,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -13,9 +13,9 @@\n   box-shadow: 0 0 12px rgba(0, 0, 0, 0.08);\r\n   width: 100%;\r\n   max-width: 400px;\r\n   text-align: center;\r\n-  margin-top: 20p;\r\n+  margin-top: 0px;\r\n }\r\n \r\n .signup-title {\r\n   font-size: 24px;\r\n"
+                },
+                {
+                    "date": 1754028301758,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -13,9 +13,9 @@\n   box-shadow: 0 0 12px rgba(0, 0, 0, 0.08);\r\n   width: 100%;\r\n   max-width: 400px;\r\n   text-align: center;\r\n-  margin-top: 0px;\r\n+ \r\n }\r\n \r\n .signup-title {\r\n   font-size: 24px;\r\n"
+                },
+                {
+                    "date": 1754028420428,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -13,9 +13,9 @@\n   box-shadow: 0 0 12px rgba(0, 0, 0, 0.08);\r\n   width: 100%;\r\n   max-width: 400px;\r\n   text-align: center;\r\n- \r\n+  \r\n }\r\n \r\n .signup-title {\r\n   font-size: 24px;\r\n"
+                },
+                {
+                    "date": 1754028427987,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -13,9 +13,9 @@\n   box-shadow: 0 0 12px rgba(0, 0, 0, 0.08);\r\n   width: 100%;\r\n   max-width: 400px;\r\n   text-align: center;\r\n-  \r\n+  top: ;\r\n }\r\n \r\n .signup-title {\r\n   font-size: 24px;\r\n"
+                },
+                {
+                    "date": 1754028439790,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -13,9 +13,9 @@\n   box-shadow: 0 0 12px rgba(0, 0, 0, 0.08);\r\n   width: 100%;\r\n   max-width: 400px;\r\n   text-align: center;\r\n-  top: ;\r\n+  \r\n }\r\n \r\n .signup-title {\r\n   font-size: 24px;\r\n"
+                },
+                {
+                    "date": 1754028487196,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -13,9 +13,8 @@\n   box-shadow: 0 0 12px rgba(0, 0, 0, 0.08);\r\n   width: 100%;\r\n   max-width: 400px;\r\n   text-align: center;\r\n-  \r\n }\r\n \r\n .signup-title {\r\n   font-size: 24px;\r\n@@ -25,9 +24,9 @@\n }\r\n \r\n .signup-subtitle {\r\n   color: #555;\r\n-  font-size: 15px;\r\n+  font-size: 1px;\r\n   margin-bottom: 24px;\r\n }\r\n \r\n .signup-label {\r\n"
+                },
+                {
+                    "date": 1754028528832,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -24,9 +24,10 @@\n }\r\n \r\n .signup-subtitle {\r\n   color: #555;\r\n-  font-size: 1px;\r\n+  font-size: 14px;\r\n+  word-spacing: ;\r\n   margin-bottom: 24px;\r\n }\r\n \r\n .signup-label {\r\n"
+                },
+                {
+                    "date": 1754028623679,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -23,11 +23,11 @@\n   margin-bottom: 8px;\r\n }\r\n \r\n .signup-subtitle {\r\n-  color: #555;\r\n+  color: #A8A094;\r\n   font-size: 14px;\r\n-  word-spacing: ;\r\n+  word-spacing: 1px;\r\n   margin-bottom: 24px;\r\n }\r\n \r\n .signup-label {\r\n"
+                },
+                {
+                    "date": 1754028634336,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -23,9 +23,9 @@\n   margin-bottom: 8px;\r\n }\r\n \r\n .signup-subtitle {\r\n-  color: #A8A094;\r\n+  color: #958d81;\r\n   font-size: 14px;\r\n   word-spacing: 1px;\r\n   margin-bottom: 24px;\r\n }\r\n"
+                },
+                {
+                    "date": 1754028643530,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -23,9 +23,9 @@\n   margin-bottom: 8px;\r\n }\r\n \r\n .signup-subtitle {\r\n-  color: #958d81;\r\n+  color: #78736b;\r\n   font-size: 14px;\r\n   word-spacing: 1px;\r\n   margin-bottom: 24px;\r\n }\r\n"
+                },
+                {
+                    "date": 1754028692381,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -30,9 +30,9 @@\n   margin-bottom: 24px;\r\n }\r\n \r\n .signup-label {\r\n-  font-weight: 500;\r\n+  font-weight: 00;\r\n   display: block;\r\n   text-align: left;\r\n   margin-bottom: 6px;\r\n   color: #222;\r\n"
+                },
+                {
+                    "date": 1754028700893,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -30,13 +30,14 @@\n   margin-bottom: 24px;\r\n }\r\n \r\n .signup-label {\r\n-  font-weight: 00;\r\n+  font-weight: 600;\r\n   display: block;\r\n   text-align: left;\r\n   margin-bottom: 6px;\r\n   color: #222;\r\n+  font-size: ;\r\n }\r\n \r\n .input-group {\r\n   display: flex;\r\n"
+                },
+                {
+                    "date": 1754028712835,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -35,9 +35,9 @@\n   display: block;\r\n   text-align: left;\r\n   margin-bottom: 6px;\r\n   color: #222;\r\n-  font-size: ;\r\n+  font-size: 1px;\r\n }\r\n \r\n .input-group {\r\n   display: flex;\r\n"
+                },
+                {
+                    "date": 1754028728168,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -30,14 +30,14 @@\n   margin-bottom: 24px;\r\n }\r\n \r\n .signup-label {\r\n-  font-weight: 600;\r\n+  font-weight: 00;\r\n   display: block;\r\n   text-align: left;\r\n   margin-bottom: 6px;\r\n   color: #222;\r\n-  font-size: 1px;\r\n+  font-size: 14px;\r\n }\r\n \r\n .input-group {\r\n   display: flex;\r\n"
+                },
+                {
+                    "date": 1754028739973,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -30,14 +30,15 @@\n   margin-bottom: 24px;\r\n }\r\n \r\n .signup-label {\r\n-  font-weight: 00;\r\n+  font-weight: 500;\r\n   display: block;\r\n   text-align: left;\r\n   margin-bottom: 6px;\r\n   color: #222;\r\n   font-size: 14px;\r\n+  \r\n }\r\n \r\n .input-group {\r\n   display: flex;\r\n"
+                },
+                {
+                    "date": 1754028745809,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -36,9 +36,9 @@\n   text-align: left;\r\n   margin-bottom: 6px;\r\n   color: #222;\r\n   font-size: 14px;\r\n-  \r\n+  f\r\n }\r\n \r\n .input-group {\r\n   display: flex;\r\n"
+                },
+                {
+                    "date": 1754028752747,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -36,9 +36,9 @@\n   text-align: left;\r\n   margin-bottom: 6px;\r\n   color: #222;\r\n   font-size: 14px;\r\n-  f\r\n+  font-weight: b;\r\n }\r\n \r\n .input-group {\r\n   display: flex;\r\n"
+                },
+                {
+                    "date": 1754028827264,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -36,9 +36,9 @@\n   text-align: left;\r\n   margin-bottom: 6px;\r\n   color: #222;\r\n   font-size: 14px;\r\n-  font-weight: b;\r\n+  font-weight: bolder;\r\n }\r\n \r\n .input-group {\r\n   display: flex;\r\n@@ -80,9 +80,9 @@\n \r\n .signup-login {\r\n   margin-top: 16px;\r\n   font-size: 14px;\r\n-  color: #555;\r\n+  color: #78736b;\r\n }\r\n \r\n .signin-link {\r\n   color: #a24310;\r\n"
+                },
+                {
+                    "date": 1754028946853,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -84,8 +84,8 @@\n   color: #78736b;\r\n }\r\n \r\n .signin-link {\r\n-  color: #a24310;\r\n+  color: #ed712e;\r\n   cursor: pointer;\r\n   font-weight: 500;\r\n }\n\\ No newline at end of file\n"
+                },
+                {
+                    "date": 1754028971826,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -2,9 +2,9 @@\n   display: flex;\r\n   justify-content: center;\r\n   align-items: center;\r\n   height: 100vh;\r\n-  background-color: #F9F7F4;\r\n+  background-color: #f3ede4;\r\n }\r\n \r\n .signup-box {\r\n   background-color: white;\r\n@@ -84,8 +84,8 @@\n   color: #78736b;\r\n }\r\n \r\n .signin-link {\r\n-  color: #ed712e;\r\n+  color: #ed8b56;\r\n   cursor: pointer;\r\n   font-weight: 500;\r\n }\n\\ No newline at end of file\n"
+                },
+                {
+                    "date": 1754028982143,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -2,9 +2,9 @@\n   display: flex;\r\n   justify-content: center;\r\n   align-items: center;\r\n   height: 100vh;\r\n-  background-color: #f3ede4;\r\n+  background-color: #ebeae8;\r\n }\r\n \r\n .signup-box {\r\n   background-color: white;\r\n"
+                },
+                {
+                    "date": 1754028997108,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -2,9 +2,9 @@\n   display: flex;\r\n   justify-content: center;\r\n   align-items: center;\r\n   height: 100vh;\r\n-  background-color: #ebeae8;\r\n+  background-color: #F6F1E9;\r\n }\r\n \r\n .signup-box {\r\n   background-color: white;\r\n"
+                },
+                {
+                    "date": 1754029135524,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -7,9 +7,9 @@\n }\r\n \r\n .signup-box {\r\n   background-color: white;\r\n-  padding: 2.5rem 2rem;\r\n+  padding: 2.rem 2rem;\r\n   border-radius: 12px;\r\n   box-shadow: 0 0 12px rgba(0, 0, 0, 0.08);\r\n   width: 100%;\r\n   max-width: 400px;\r\n"
+                },
+                {
+                    "date": 1754029144818,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -7,9 +7,9 @@\n }\r\n \r\n .signup-box {\r\n   background-color: white;\r\n-  padding: 2.rem 2rem;\r\n+  padding: 2rem rem;\r\n   border-radius: 12px;\r\n   box-shadow: 0 0 12px rgba(0, 0, 0, 0.08);\r\n   width: 100%;\r\n   max-width: 400px;\r\n"
+                },
+                {
+                    "date": 1754029179691,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -7,13 +7,13 @@\n }\r\n \r\n .signup-box {\r\n   background-color: white;\r\n-  padding: 2rem rem;\r\n+  padding: 2rem 2rem;\r\n   border-radius: 12px;\r\n   box-shadow: 0 0 12px rgba(0, 0, 0, 0.08);\r\n   width: 100%;\r\n-  max-width: 400px;\r\n+  max-width: 00px;\r\n   text-align: center;\r\n }\r\n \r\n .signup-title {\r\n"
+                },
+                {
+                    "date": 1754029193153,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -11,9 +11,9 @@\n   padding: 2rem 2rem;\r\n   border-radius: 12px;\r\n   box-shadow: 0 0 12px rgba(0, 0, 0, 0.08);\r\n   width: 100%;\r\n-  max-width: 00px;\r\n+  max-width: 50px;\r\n   text-align: center;\r\n }\r\n \r\n .signup-title {\r\n"
+                },
+                {
+                    "date": 1754029204866,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -11,9 +11,9 @@\n   padding: 2rem 2rem;\r\n   border-radius: 12px;\r\n   box-shadow: 0 0 12px rgba(0, 0, 0, 0.08);\r\n   width: 100%;\r\n-  max-width: 50px;\r\n+  max-width: 40px;\r\n   text-align: center;\r\n }\r\n \r\n .signup-title {\r\n"
+                },
+                {
+                    "date": 1754029237049,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -11,10 +11,11 @@\n   padding: 2rem 2rem;\r\n   border-radius: 12px;\r\n   box-shadow: 0 0 12px rgba(0, 0, 0, 0.08);\r\n   width: 100%;\r\n-  max-width: 40px;\r\n+  max-width: 470px;\r\n   text-align: center;\r\n+  \r\n }\r\n \r\n .signup-title {\r\n   font-size: 24px;\r\n"
+                },
+                {
+                    "date": 1754029243023,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -13,9 +13,9 @@\n   box-shadow: 0 0 12px rgba(0, 0, 0, 0.08);\r\n   width: 100%;\r\n   max-width: 470px;\r\n   text-align: center;\r\n-  \r\n+  margin-top: ;\r\n }\r\n \r\n .signup-title {\r\n   font-size: 24px;\r\n"
+                },
+                {
+                    "date": 1754029253689,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -13,9 +13,9 @@\n   box-shadow: 0 0 12px rgba(0, 0, 0, 0.08);\r\n   width: 100%;\r\n   max-width: 470px;\r\n   text-align: center;\r\n-  margin-top: ;\r\n+  margin-top: 0%;\r\n }\r\n \r\n .signup-title {\r\n   font-size: 24px;\r\n"
+                },
+                {
+                    "date": 1754029284455,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -2,9 +2,9 @@\n   display: flex;\r\n   justify-content: center;\r\n   align-items: center;\r\n   height: 100vh;\r\n-  background-color: #F6F1E9;\r\n+  background-color: #F9F7F4;\r\n }\r\n \r\n .signup-box {\r\n   background-color: white;\r\n@@ -13,9 +13,9 @@\n   box-shadow: 0 0 12px rgba(0, 0, 0, 0.08);\r\n   width: 100%;\r\n   max-width: 470px;\r\n   text-align: center;\r\n-  margin-top: 0%;\r\n+  margin-top: 10%;\r\n }\r\n \r\n .signup-title {\r\n   font-size: 24px;\r\n"
+                },
+                {
+                    "date": 1754029306449,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -14,8 +14,9 @@\n   width: 100%;\r\n   max-width: 470px;\r\n   text-align: center;\r\n   margin-top: 10%;\r\n+  \r\n }\r\n \r\n .signup-title {\r\n   font-size: 24px;\r\n"
+                },
+                {
+                    "date": 1754029324133,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -14,9 +14,9 @@\n   width: 100%;\r\n   max-width: 470px;\r\n   text-align: center;\r\n   margin-top: 10%;\r\n-  \r\n+  box-shadow: ;\r\n }\r\n \r\n .signup-title {\r\n   font-size: 24px;\r\n"
+                },
+                {
+                    "date": 1754029329994,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -14,9 +14,9 @@\n   width: 100%;\r\n   max-width: 470px;\r\n   text-align: center;\r\n   margin-top: 10%;\r\n-  box-shadow: ;\r\n+  box-shadow: b;\r\n }\r\n \r\n .signup-title {\r\n   font-size: 24px;\r\n"
+                },
+                {
+                    "date": 1754029341105,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -14,9 +14,9 @@\n   width: 100%;\r\n   max-width: 470px;\r\n   text-align: center;\r\n   margin-top: 10%;\r\n-  box-shadow: b;\r\n+  b\r\n }\r\n \r\n .signup-title {\r\n   font-size: 24px;\r\n"
+                },
+                {
+                    "date": 1754029348903,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -14,9 +14,9 @@\n   width: 100%;\r\n   max-width: 470px;\r\n   text-align: center;\r\n   margin-top: 10%;\r\n-  b\r\n+  border: ;\r\n }\r\n \r\n .signup-title {\r\n   font-size: 24px;\r\n"
+                },
+                {
+                    "date": 1754029354832,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -14,9 +14,9 @@\n   width: 100%;\r\n   max-width: 470px;\r\n   text-align: center;\r\n   margin-top: 10%;\r\n-  border: ;\r\n+  border: box-;\r\n }\r\n \r\n .signup-title {\r\n   font-size: 24px;\r\n"
+                },
+                {
+                    "date": 1754029359918,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -14,9 +14,8 @@\n   width: 100%;\r\n   max-width: 470px;\r\n   text-align: center;\r\n   margin-top: 10%;\r\n-  border: box-;\r\n }\r\n \r\n .signup-title {\r\n   font-size: 24px;\r\n"
+                },
+                {
+                    "date": 1754029390768,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -17,9 +17,9 @@\n   margin-top: 10%;\r\n }\r\n \r\n .signup-title {\r\n-  font-size: 24px;\r\n+  font-size: 2px;\r\n   font-weight: 600;\r\n   color: #a24310;\r\n   margin-bottom: 8px;\r\n }\r\n"
+                },
+                {
+                    "date": 1754029400350,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -17,10 +17,10 @@\n   margin-top: 10%;\r\n }\r\n \r\n .signup-title {\r\n-  font-size: 2px;\r\n-  font-weight: 600;\r\n+  font-size: 28px;\r\n+  font-weight: 00;\r\n   color: #a24310;\r\n   margin-bottom: 8px;\r\n }\r\n \r\n"
+                },
+                {
+                    "date": 1754029564186,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -17,10 +17,10 @@\n   margin-top: 10%;\r\n }\r\n \r\n .signup-title {\r\n-  font-size: 28px;\r\n-  font-weight: 00;\r\n+  font-size: 30px;\r\n+  font-weight: 700;\r\n   color: #a24310;\r\n   margin-bottom: 8px;\r\n }\r\n \r\n@@ -63,9 +63,9 @@\n   font-size: 15px;\r\n }\r\n \r\n .signup-button {\r\n-  background-color: #c1440e;\r\n+  background-color: l;\r\n   color: white;\r\n   padding: 0.7rem;\r\n   width: 100%;\r\n   border: none;\r\n"
+                },
+                {
+                    "date": 1754029570844,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -63,9 +63,9 @@\n   font-size: 15px;\r\n }\r\n \r\n .signup-button {\r\n-  background-color: l;\r\n+  background-color: linear-;\r\n   color: white;\r\n   padding: 0.7rem;\r\n   width: 100%;\r\n   border: none;\r\n"
+                },
+                {
+                    "date": 1754029576040,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -63,9 +63,9 @@\n   font-size: 15px;\r\n }\r\n \r\n .signup-button {\r\n-  background-color: linear-;\r\n+  background-color: linear-gardient ;\r\n   color: white;\r\n   padding: 0.7rem;\r\n   width: 100%;\r\n   border: none;\r\n"
+                },
+                {
+                    "date": 1754029583177,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -63,9 +63,9 @@\n   font-size: 15px;\r\n }\r\n \r\n .signup-button {\r\n-  background-color: linear-gardient ;\r\n+  background-color: linear-gardient (to r);\r\n   color: white;\r\n   padding: 0.7rem;\r\n   width: 100%;\r\n   border: none;\r\n"
+                },
+                {
+                    "date": 1754029589443,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -63,9 +63,9 @@\n   font-size: 15px;\r\n }\r\n \r\n .signup-button {\r\n-  background-color: linear-gardient (to r);\r\n+  background-color: linear-gardient (to right, );\r\n   color: white;\r\n   padding: 0.7rem;\r\n   width: 100%;\r\n   border: none;\r\n"
+                },
+                {
+                    "date": 1754029609369,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -63,9 +63,9 @@\n   font-size: 15px;\r\n }\r\n \r\n .signup-button {\r\n-  background-color: linear-gardient (to right, );\r\n+  background-color: linear-gardient (to right, #AD5924);\r\n   color: white;\r\n   padding: 0.7rem;\r\n   width: 100%;\r\n   border: none;\r\n"
+                },
+                {
+                    "date": 1754029621627,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -63,9 +63,9 @@\n   font-size: 15px;\r\n }\r\n \r\n .signup-button {\r\n-  background-color: linear-gardient (to right, #AD5924);\r\n+  background-color: linear-gardient (to right, #AD5924, #E56C30);\r\n   color: white;\r\n   padding: 0.7rem;\r\n   width: 100%;\r\n   border: none;\r\n"
+                },
+                {
+                    "date": 1754029633384,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -63,9 +63,9 @@\n   font-size: 15px;\r\n }\r\n \r\n .signup-button {\r\n-  background-color: linear-gardient (to right, #AD5924, #E56C30);\r\n+  background-color: linear-gardient (to right, #AD5924, #E56C30, #C97E25);\r\n   color: white;\r\n   padding: 0.7rem;\r\n   width: 100%;\r\n   border: none;\r\n"
+                },
+                {
+                    "date": 1754029671072,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -63,9 +63,9 @@\n   font-size: 15px;\r\n }\r\n \r\n .signup-button {\r\n-  background-color: linear-gardient (to right, #AD5924, #E56C30, #C97E25);\r\n+  background-i: linear-gardient (to right, #AD5924, #E56C30, #C97E25);\r\n   color: white;\r\n   padding: 0.7rem;\r\n   width: 100%;\r\n   border: none;\r\n"
+                },
+                {
+                    "date": 1754029688945,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -63,9 +63,9 @@\n   font-size: 15px;\r\n }\r\n \r\n .signup-button {\r\n-  background-i: linear-gardient (to right, #AD5924, #E56C30, #C97E25);\r\n+  background-im: linear-gardient (to right, #AD5924, #E56C30, #C97E25);\r\n   color: white;\r\n   padding: 0.7rem;\r\n   width: 100%;\r\n   border: none;\r\n"
+                },
+                {
+                    "date": 1754029701506,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -63,9 +63,9 @@\n   font-size: 15px;\r\n }\r\n \r\n .signup-button {\r\n-  background-im: linear-gardient (to right, #AD5924, #E56C30, #C97E25);\r\n+  background-color: linear-gadient (to right, #AD5924, #E56C30, #C97E25);\r\n   color: white;\r\n   padding: 0.7rem;\r\n   width: 100%;\r\n   border: none;\r\n"
+                },
+                {
+                    "date": 1754029728974,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -63,9 +63,9 @@\n   font-size: 15px;\r\n }\r\n \r\n .signup-button {\r\n-  background-color: linear-gadient (to right, #AD5924, #E56C30, #C97E25);\r\n+  background-i: linear-gradient (to right, #AD5924, #E56C30, #C97E25);\r\n   color: white;\r\n   padding: 0.7rem;\r\n   width: 100%;\r\n   border: none;\r\n"
+                },
+                {
+                    "date": 1754029729008,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -63,9 +63,9 @@\n   font-size: 15px;\r\n }\r\n \r\n .signup-button {\r\n-  background-i: linear-gradient (to right, #AD5924, #E56C30, #C97E25);\r\n+  background-im: linear-gradient (to right, #AD5924, #E56C30, #C97E25);\r\n   color: white;\r\n   padding: 0.7rem;\r\n   width: 100%;\r\n   border: none;\r\n"
+                },
+                {
+                    "date": 1754029739389,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -63,9 +63,9 @@\n   font-size: 15px;\r\n }\r\n \r\n .signup-button {\r\n-  background-im: linear-gradient (to right, #AD5924, #E56C30, #C97E25);\r\n+  background-color: linear-gradient (to right, #AD5924, #E56C30, #C97E25);\r\n   color: white;\r\n   padding: 0.7rem;\r\n   width: 100%;\r\n   border: none;\r\n"
+                },
+                {
+                    "date": 1754029760388,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -63,9 +63,9 @@\n   font-size: 15px;\r\n }\r\n \r\n .signup-button {\r\n-  background-color: linear-gradient (to right, #AD5924, #E56C30, #C97E25);\r\n+  background-color:  #AD5924, #E56C30, #C97E25);\r\n   color: white;\r\n   padding: 0.7rem;\r\n   width: 100%;\r\n   border: none;\r\n"
+                },
+                {
+                    "date": 1754029770773,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -63,9 +63,9 @@\n   font-size: 15px;\r\n }\r\n \r\n .signup-button {\r\n-  background-color:  #AD5924, #E56C30, #C97E25);\r\n+  background-color:  \r\n   color: white;\r\n   padding: 0.7rem;\r\n   width: 100%;\r\n   border: none;\r\n"
+                },
+                {
+                    "date": 1754029776769,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -63,9 +63,9 @@\n   font-size: 15px;\r\n }\r\n \r\n .signup-button {\r\n-  background-color:  \r\n+  background-color: red;\r\n   color: white;\r\n   padding: 0.7rem;\r\n   width: 100%;\r\n   border: none;\r\n"
+                },
+                {
+                    "date": 1754029807836,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -63,9 +63,9 @@\n   font-size: 15px;\r\n }\r\n \r\n .signup-button {\r\n-  background-color: red;\r\n+  background-color: red#DA752B;\r\n   color: white;\r\n   padding: 0.7rem;\r\n   width: 100%;\r\n   border: none;\r\n"
+                },
+                {
+                    "date": 1754029839512,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -63,15 +63,15 @@\n   font-size: 15px;\r\n }\r\n \r\n .signup-button {\r\n-  background-color: red#DA752B;\r\n+  background-color: #DA752B;\r\n   color: white;\r\n   padding: 0.7rem;\r\n   width: 100%;\r\n   border: none;\r\n   border-radius: 6px;\r\n-  font-size: 15px;\r\n+  font-size: 1px;\r\n   cursor: pointer;\r\n   transition: 0.3s ease;\r\n }\r\n \r\n"
+                },
+                {
+                    "date": 1754029846061,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -69,9 +69,10 @@\n   padding: 0.7rem;\r\n   width: 100%;\r\n   border: none;\r\n   border-radius: 6px;\r\n-  font-size: 1px;\r\n+  font-size: 12px;\r\n+  font-weight: ;\r\n   cursor: pointer;\r\n   transition: 0.3s ease;\r\n }\r\n \r\n"
+                },
+                {
+                    "date": 1754029857300,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -69,10 +69,10 @@\n   padding: 0.7rem;\r\n   width: 100%;\r\n   border: none;\r\n   border-radius: 6px;\r\n-  font-size: 12px;\r\n-  font-weight: ;\r\n+  font-size: 1px;\r\n+  font-weight: 400;\r\n   cursor: pointer;\r\n   transition: 0.3s ease;\r\n }\r\n \r\n"
+                },
+                {
+                    "date": 1754029865336,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -69,10 +69,10 @@\n   padding: 0.7rem;\r\n   width: 100%;\r\n   border: none;\r\n   border-radius: 6px;\r\n-  font-size: 1px;\r\n-  font-weight: 400;\r\n+  font-size: 15px;\r\n+  font-weight: b;\r\n   cursor: pointer;\r\n   transition: 0.3s ease;\r\n }\r\n \r\n"
+                },
+                {
+                    "date": 1754029878443,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -69,10 +69,10 @@\n   padding: 0.7rem;\r\n   width: 100%;\r\n   border: none;\r\n   border-radius: 6px;\r\n-  font-size: 15px;\r\n-  font-weight: b;\r\n+  font-size: 1px;\r\n+  font-weight: bold;\r\n   cursor: pointer;\r\n   transition: 0.3s ease;\r\n }\r\n \r\n"
+                },
+                {
+                    "date": 1754029910444,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -19,9 +19,9 @@\n \r\n .signup-title {\r\n   font-size: 30px;\r\n   font-weight: 700;\r\n-  color: #a24310;\r\n+  color: #E0722D;\r\n   margin-bottom: 8px;\r\n }\r\n \r\n .signup-subtitle {\r\n@@ -69,9 +69,9 @@\n   padding: 0.7rem;\r\n   width: 100%;\r\n   border: none;\r\n   border-radius: 6px;\r\n-  font-size: 1px;\r\n+  font-size: 14px;\r\n   font-weight: bold;\r\n   cursor: pointer;\r\n   transition: 0.3s ease;\r\n }\r\n"
+                }
+            ],
+            "date": 1754027904681,
+            "name": "Commit-0",
+            "content": ".signup-container {\r\n  display: flex;\r\n  justify-content: center;\r\n  align-items: center;\r\n  height: 100vh;\r\n  background-color: #f8f8f8;\r\n}\r\n\r\n.signup-box {\r\n  background-color: white;\r\n  padding: 2.5rem 2rem;\r\n  border-radius: 12px;\r\n  box-shadow: 0 0 12px rgba(0, 0, 0, 0.08);\r\n  width: 100%;\r\n  max-width: 400px;\r\n  text-align: center;\r\n}\r\n\r\n.signup-title {\r\n  font-size: 24px;\r\n  font-weight: 600;\r\n  color: #a24310;\r\n  margin-bottom: 8px;\r\n}\r\n\r\n.signup-subtitle {\r\n  color: #555;\r\n  font-size: 15px;\r\n  margin-bottom: 24px;\r\n}\r\n\r\n.signup-label {\r\n  font-weight: 500;\r\n  display: block;\r\n  text-align: left;\r\n  margin-bottom: 6px;\r\n  color: #222;\r\n}\r\n\r\n.input-group {\r\n  display: flex;\r\n  align-items: center;\r\n  background-color: #f2f2f2;\r\n  border-radius: 6px;\r\n  padding: 0.5rem 0.75rem;\r\n  margin-bottom: 20px;\r\n}\r\n\r\n.phone-icon {\r\n  margin-right: 10px;\r\n  font-size: 18px;\r\n}\r\n\r\n.signup-input {\r\n  border: none;\r\n  outline: none;\r\n  background: transparent;\r\n  flex: 1;\r\n  font-size: 15px;\r\n}\r\n\r\n.signup-button {\r\n  background-color: #c1440e;\r\n  color: white;\r\n  padding: 0.7rem;\r\n  width: 100%;\r\n  border: none;\r\n  border-radius: 6px;\r\n  font-size: 15px;\r\n  cursor: pointer;\r\n  transition: 0.3s ease;\r\n}\r\n\r\n.signup-button:hover {\r\n  background-color: #a2380c;\r\n}\r\n\r\n.signup-login {\r\n  margin-top: 16px;\r\n  font-size: 14px;\r\n  color: #555;\r\n}\r\n\r\n.signin-link {\r\n  color: #a24310;\r\n  cursor: pointer;\r\n  font-weight: 500;\r\n}"
+        }
+    ]
+}

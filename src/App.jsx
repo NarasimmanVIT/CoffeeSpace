@@ -10,6 +10,8 @@ import MessagesPage from './components/Messages/MessagesPage'
 import PartnershipSection from "./Components/PartnershipSection";
 import DiscoverPage from "./Components/DiscoverPage";
 import MeetPartners from "./Components/MeetPartners";
+import Signup from './components/Signup'
+import Login from './components/Login'
 
 function App() {
 
@@ -29,6 +31,8 @@ function App() {
       {/* <Route path="/" element={<HomePage />} /> */}
       <Route path="/discover" element={<DiscoverPage />} />
       {/* <Route path='/received' element={<ReceivedInvites/>} /> */}
+      <Route path='/signup' element={<Signup/>} />
+      <Route path='/login' element={<Login/>} />
       </Routes>
     </>
   )

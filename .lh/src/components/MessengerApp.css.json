@@ -1,0 +1,18 @@
+{
+    "sourceFile": "src/components/MessengerApp.css",
+    "activeCommit": 0,
+    "commits": [
+        {
+            "activePatchIndex": 0,
+            "patches": [
+                {
+                    "date": 1754060241732,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n"
+                }
+            ],
+            "date": 1754060241732,
+            "name": "Commit-0",
+            "content": ".messenger-container {\r\n  display: flex;\r\n  height: 100vh;\r\n  overflow: hidden;\r\n}\r\n\r\n/* Default Desktop: sidebar + chatbox side by side */\r\n.sidebar {\r\n  width: 300px;\r\n  flex-shrink: 0;\r\n  border-right: 1px solid #ccc;\r\n}\r\n\r\n.chatbox {\r\n  flex: 1;\r\n  width: 100%;\r\n  overflow-y: auto;\r\n}\r\n\r\n/* 🔻 RESPONSIVE BELOW 1024px */\r\n@media (max-width: 1024px) {\r\n  .messenger-container {\r\n    flex-direction: column;\r\n  }\r\n\r\n  .sidebar {\r\n    width: 100%;\r\n    border-right: none;\r\n    border-bottom: 1px solid #ccc;\r\n  }\r\n\r\n  .chatbox {\r\n    width: 100%;\r\n    height: 100%;\r\n  }\r\n}"
+        }
+    ]
+}
