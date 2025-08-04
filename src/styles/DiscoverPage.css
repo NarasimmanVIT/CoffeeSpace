@@ -1,12 +1,21 @@
 .discover-container {
+<<<<<<< HEAD
   text-align: center;
   padding: 2rem;
   font-family: ui-sans-serif, system-ui, sans-serif;
   background-color: #f7f2ec;
+=======
+  width: 100%;
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 24px;
+  box-sizing: border-box;
+>>>>>>> origin/profiles
   color: black;
 }
 
 .discover-container h2 {
+<<<<<<< HEAD
   margin-top: 5rem;
   font-size: 1.5rem;
   line-height: 2rem;
@@ -41,10 +50,45 @@
   border-radius: 10px;
   border-bottom-left-radius: 0px;
   border-bottom-right-radius: 0px;
+=======
+  text-align: center;
+  margin-bottom: 24px;
+  font-size: 2rem;
+  color: #30251d;
+}
+
+.discover-profile-card {
+  display: flex;
+  flex-direction: row;
+  gap: 24px;
+  align-items: flex-start;
+  width: 100%;
+  aspect-ratio: 16 / 9;
+  background-color: #f9f9f9;
+  border-radius: 12px;
+  padding: 24px;
+  min-height: 600px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+  overflow: hidden;
+  line-height: 1;
+}
+
+.image-wrapper {
+  position: relative;
+  width: 40%;
+}
+
+.image-wrapper img {
+  width: 100%;
+  height: auto;
+  object-fit: cover;
+  border-radius: 12px;
+>>>>>>> origin/profiles
 }
 
 .verified-badge {
   position: absolute;
+<<<<<<< HEAD
   top: 10px;
   right: 10px;
   background: #a4501d;
@@ -74,10 +118,47 @@
   line-height: 1.3;
   color: #30251D;
   font-family: ui-sans-serif, system-ui, sans-serif;
+=======
+  top: 16px;
+  right: 16px;
+  background-color: #93501f;
+  color: #f9f8f5;
+  padding: 6px 10px;
+  border-radius: 30px;
+  font-size: 16px;
+}
+
+.discover-information {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  overflow: hidden;
+  margin-left: 20px;
+}
+
+.discover-information h3 {
+  font-size: 1.5rem;
+  margin-bottom: 8px;
+  color: #30251d;
+  font-size: 2.25rem;
+}
+
+.rolee,
+.locationn {
+  color: #847062;
+  font-size: 1.25rem;
+  line-height: 0;
+}
+
+.locationn{
+  margin-top: 0px;
+>>>>>>> origin/profiles
 
 }
 
 .about {
+<<<<<<< HEAD
   margin-left: 20px;
   text-align: left;
   color: #30251D;
@@ -164,3 +245,141 @@
   color: #777;
 }
 
+=======
+  color: #847062;
+  margin-bottom: 8px;
+  font-size: 16px;
+  font-size: 1rem;
+  line-height: 1.5;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+.about {
+  white-space: normal;
+  display: -webkit-box;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+}
+.tag-heading {
+  font-size: 1.125rem;
+  font-weight: 600;
+  color: #30251d;
+}
+
+.discover-tags {
+  margin-top: 0px;
+}
+
+.discover-tag {
+  background-color: #eee3d3;
+}
+
+.tag.interest {
+  background-color: #ffffff;
+  border: 1px solid #eee3d3;
+}
+
+.discover-tag,
+.tag.interest {
+  display: inline-block;
+  color: #30251d;
+  padding: 6px 12px;
+  margin: 4px;
+  border-radius: 20px;
+  font-size: 0.875rem;
+}
+
+.discover-buttons {
+  display: flex;
+  justify-content: center;
+  gap: 30px;
+  margin-top: 24px;
+}
+
+.discover-buttons button {
+  width: 60px;
+  height: 60px;
+  border-radius: 50%;
+  border: 2px solid #e2dacf;
+  background-color: rgb(226, 218, 207, 0.3);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  transition: background-color 0.2s ease;
+  padding: 0;
+}
+
+.x:hover {
+  border: 2px solid #ef4444;
+  background-color: rgb(239, 68, 68, 0.2);
+}
+
+.like:hover {
+  border: 2px solid #93501f;
+  background-color: rgb(147, 80, 31, 0.2);
+}
+
+.chat:hover {
+  border: 2px solid #93501f;
+  background-color: rgb(147, 80, 31, 0.2);
+}
+
+.remaining {
+  text-align: center;
+  margin-top: 16px;
+  font-size: 0.875rem;
+  color: #847062;
+}
+@media (max-width: 700px) {
+  .discover-profile-card {
+    flex-direction: column;
+    aspect-ratio: auto;
+  }
+
+  .image-wrapper {
+    width: 100%;
+  }
+
+  .image-wrapper img {
+    height: 300px;
+    width: auto;
+    margin-bottom: 0px;
+  }
+
+  .discover-information {
+    width: 100%;
+    margin-top: 0px;
+  }
+  .discover-information h3{
+    margin-top: 0px;
+  }
+  .locationn{
+    margin-top: 0px;
+  }
+
+  .discover-buttons {
+    position: fixed;
+    bottom: 10px;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    margin: 10px;
+  }
+
+  .discover-buttons button {
+    width: 50px;
+    height: 50px;
+    margin: 4px;
+    padding: 12px;
+
+  }
+
+  .verified-badge {
+    top: 12px;
+    right: 12px;
+  }
+}
+>>>>>>> origin/profiles

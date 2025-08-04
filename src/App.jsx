@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 import { useState } from 'react'
 import reactLogo from './assets/react.svg'
 import viteLogo from '/vite.svg'
@@ -35,3 +36,34 @@ function App() {
 }
 
 export default App
+=======
+
+import React from "react";
+import { Routes, Route } from "react-router-dom";
+import PartnershipSection from "./Components/PartnershipSection";
+import DiscoverPage from "./Components/DiscoverPage";
+import MeetPartners from "./Components/MeetPartners";
+import InvitesPage from "./Components/InvitesPage";
+
+
+function HomePage() {
+  return (
+    <>
+      <MeetPartners />
+      <PartnershipSection />
+    </>
+  );
+}
+
+function App() {
+  return (
+    <Routes>
+      <Route path="/" element={<HomePage />} />
+      <Route path="/discover" element={<DiscoverPage />} />
+      <Route path="/invites" element={<InvitesPage />} />
+    </Routes>
+  );
+}
+
+export default App;
+>>>>>>> origin/profiles

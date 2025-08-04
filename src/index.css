@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 *{
   margin: 0;
   padding: 0;
@@ -16,18 +17,30 @@ html,body, #root{
 :root {
   font-family: system-ui, Avenir, Helvetica, Arial, sans-serif;
   line-height: 1.5;
+=======
+ :root{
+  font-family: system-ui, Avenir, Helvetica, Arial, sans-serif;
+  /* line-height: 1.5; */
+>>>>>>> origin/profiles
   font-weight: 400;
 
   color-scheme: light dark;
   color: rgba(255, 255, 255, 0.87);
+<<<<<<< HEAD
   background-color: white;
 
   font-synthesis: none;
+=======
+   font-synthesis: none;
+>>>>>>> origin/profiles
   text-rendering: optimizeLegibility;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
 }
+<<<<<<< HEAD
 
+=======
+>>>>>>> origin/profiles
 a {
   font-weight: 500;
   color: #646cff;
@@ -39,6 +52,7 @@ a:hover {
 
 body {
   margin: 0;
+<<<<<<< HEAD
   display: flex;
   /* place-items: center;  */
   min-width: 320px;
@@ -49,6 +63,12 @@ body {
 h1 {
   font-size: 3.2em;
   line-height: 1.1;
+=======
+}
+h1 {
+  font-size: 3.2em;
+  /* line-height: 1.1; */
+>>>>>>> origin/profiles
 }
 
 button {
@@ -61,6 +81,7 @@ button {
   background-color: #1a1a1a;
   cursor: pointer;
   transition: border-color 0.25s;
+<<<<<<< HEAD
 }
 button:hover {
   border-color: #646cff;
@@ -82,3 +103,6 @@ button:focus-visible {
     background-color: #f9f9f9;
   }
 }
+=======
+}
+>>>>>>> origin/profiles
