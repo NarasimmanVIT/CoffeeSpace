@@ -1,4 +1,4 @@
-body{
+body {
   background-color: #f8f4f1;
 }
 
@@ -6,29 +6,32 @@ body{
   font-family: Arial, sans-serif;
   padding: 24px;
   height: 100vh;
-  color: #555;
+  color: #30251d;
   margin-left: 10rem;
   margin-right: 10rem;
+  font: ui-sans-serif, system-ui, sans-serif;
+  font-weight: 700;
 }
 
-.invites-page h2{
+.invites-page h2 {
   margin-top: 5rem;
+  font-size: 1.5rem;
 }
 
 .sub-navbar {
-  border-radius: 10px;
+  border-radius: 8px;
   background: #f0ebe6;
   display: flex;
   justify-content: space-around;
   border-bottom: 1px solid #ddd;
-  padding: 5px 0;
+  padding: 5px 5px;
 }
 
 .sub-navbar button {
   background: none;
   border: none;
   font-size: 16px;
-  color: #555;
+  color: #847062;
   cursor: pointer;
   padding: 6px 12px;
   width: 100%;
@@ -37,7 +40,6 @@ body{
 .sub-navbar .active {
   background-color: #f9f8f5;
 }
-
 
 .placeholder {
   display: flex;
@@ -55,12 +57,11 @@ body{
 }
 
 @media (max-width: 1100px) {
-  .invites-page{
+  .invites-page {
     width: 100%;
     margin-left: 5px;
     margin-right: 5px;
   }
-
 }
 
 /* Mobile View (≤480px) */

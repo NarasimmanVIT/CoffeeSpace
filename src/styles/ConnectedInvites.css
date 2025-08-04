@@ -10,7 +10,7 @@
   margin: 0 0 16px;
   font-size: 24px;
   font-weight: 500;
-  color: #333333;
+  color: #30251d
 }
 
 .Profiles {
@@ -23,8 +23,8 @@
   position: relative;
 }
 
-.Profiles:hover{
-    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.08)
+.Profiles:hover {
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.08);
 }
 .profile-pic {
   width: 40px;
@@ -39,11 +39,10 @@
 }
 
 .details h3 {
-  margin: 0;
+  margin: 2px 0;
   font-size: 16px;
   color: #30251d;
   font-weight: 600;
-  line-height: 1;
 }
 
 .details .role {
@@ -53,38 +52,23 @@
   font-weight: 400;
 }
 
-.details .message {
+.details .connect-message {
   font-size: 14px;
-  color: #30251d;
+  color: #847062;
   margin-bottom: 12px;
   line-height: 1;
   font-weight: 300;
 }
 
-.collaborate-btn {
-  background-color: #dff2e1;
-  color: #2f8f3f;
-  border: none;
-  border-radius: 10px;
-  padding: 2px 5px;
-  font-size: 14px;
-  cursor: pointer;
+.message-btn {
   position: absolute;
-  right: 10px;
-  top: 5px;
+  right: 20px;
+  top: 40px;
+  background-color: #f9f8f5;
+  color: #30251d;
+  border: 1px solid #ede2d1;
 }
 
-.collaborate-btn:hover {
-  background-color: #cde8cd;
+.message-btn:hover {
+  background-color: #e57d32c5;
 }
-
-.timestamp {
-  display: block;
-  margin-top: 12px;
-  font-size: 12px;
-  color: #888888;
-  position: absolute;
-  right: 13px;
-  top: 15px;
-}
-

@@ -1,30 +1,37 @@
 .invite-card {
   background-color: #ffffff;
-  border-radius: 12px;
+  border-radius: 8px;
   box-shadow: 0 2px 12px rgba(0, 0, 0, 0.08);
-  padding: 20px;
+  padding: 25px;
   margin: 20px 0;
+  border: 1px solid #e2dacf;
+  line-height: 1.5;
+  font: ui-sans-serif, system-ui, sans-serif;
 }
 
 .invite-card h1 {
   margin: 0 0 16px;
   font-size: 24px;
   font-weight: 500;
-  color: #333333;
+  color: #30251d;
+  font: ui-sans-serif, system-ui, sans-serif;
 }
 
 .Profiles {
   display: flex;
   align-items: flex-start;
-  border: 1.5px solid #f8f4f1;
-  border-radius: 10px;
+  border: 1px solid #e2dacf;
+  border-radius: 8px;
   font-size: 16px;
-  padding-top: 5px;
   position: relative;
+  padding: 10px;
+  padding-top: 10px;
+  margin-bottom: 20px;
+  font: ui-sans-serif, system-ui, sans-serif;
 }
 
-.Profiles:hover{
-    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.08)
+.Profiles:hover {
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.08);
 }
 .profile-pic {
   width: 40px;
@@ -32,6 +39,7 @@
   border-radius: 50%;
   margin-right: 20px;
   object-fit: cover;
+  margin-top: 10px;
 }
 
 .details {
@@ -39,11 +47,11 @@
 }
 
 .details h3 {
-  margin: 0;
+  padding: 10px 0;
   font-size: 16px;
   color: #30251d;
   font-weight: 600;
-  line-height: 1;
+  font: ui-sans-serif, system-ui, sans-serif;
 }
 
 .details .role {
@@ -57,7 +65,7 @@
   font-size: 14px;
   color: #30251d;
   margin-bottom: 12px;
-  line-height: 1;
+  line-height: 1.3;
   font-weight: 300;
 }
 
@@ -70,8 +78,8 @@
   font-size: 14px;
   cursor: pointer;
   position: absolute;
-  right: 10px;
-  top: 5px;
+  right: 15px;
+  top: 20px;
 }
 
 .collaborate-btn:hover {
@@ -84,7 +92,38 @@
   font-size: 12px;
   color: #888888;
   position: absolute;
-  right: 13px;
-  top: 15px;
+  right: 15px;
+  top: 35px;
 }
 
+.actions button {
+  margin: 10px;
+}
+
+.accept-btn {
+  background-color: #93501f;
+  color: #f9f7ea;
+  margin-left: 10px;
+}
+
+.accept-btn:hover {
+  background-color: #b66328;
+}
+
+.decline-btn {
+  background-color: #f9f8f5;
+  color: #30251d;
+  border: 1px solid #ede2d1;
+}
+
+.decline-btn:hover {
+  background-color: #e57d32c5;
+}
+
+@media (max-width: 650px) {
+  .actions button {
+    width: 100%;
+    margin-top: 5px;
+    margin-bottom: 0px;
+  }
+}
