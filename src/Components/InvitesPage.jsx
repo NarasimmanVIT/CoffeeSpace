@@ -6,7 +6,7 @@ import { Tray, PaperPlaneTilt, Users } from "phosphor-react";
 import "../styles/Invitespage.css";
 
 const InvitesPage = () => {
-  const [activeTab, setActiveTab] = useState("sent");
+  const [activeTab, setActiveTab] = useState("recived");
   const [receivedInvites, setReceivedInvites] = useState(invitesData);
   const [connected, setConnected] = useState([]);
 

@@ -1,11 +1,12 @@
 body {
+  width: 100%;
+  height: auto;
   background-color: #f8f4f1;
 }
 
 .invites-page {
   font-family: Arial, sans-serif;
   padding: 24px;
-  height: 100vh;
   color: #30251d;
   margin-left: 10rem;
   margin-right: 10rem;
