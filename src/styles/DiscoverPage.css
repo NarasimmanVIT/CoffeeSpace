@@ -1,10 +1,17 @@
+body {
+  width: 100%;
+  height: auto;
+  background-color: #f9f7f5;
+}
+
 .discover-container {
   width: 100%;
-  max-width: 1200px;
   margin: 0 auto;
+  margin-top: 60px;
   padding: 24px;
   box-sizing: border-box;
   color: black;
+  height: 100%;
 }
 
 .discover-container h2 {
@@ -27,7 +34,7 @@
   min-height: 600px;
   box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
   overflow: hidden;
-  line-height: 1;
+  line-height: 1.5;
 }
 
 .image-wrapper {
@@ -48,7 +55,7 @@
   right: 16px;
   background-color: #93501f;
   color: #f9f8f5;
-  padding: 6px 10px;
+  padding: 2px 10px;
   border-radius: 30px;
   font-size: 16px;
 }
@@ -63,7 +70,6 @@
 }
 
 .discover-information h3 {
-  font-size: 1.5rem;
   margin-bottom: 8px;
   color: #30251d;
   font-size: 2.25rem;
@@ -73,16 +79,16 @@
 .locationn {
   color: #847062;
   font-size: 1.25rem;
-  line-height: 0;
+  line-height: 2;
 }
 
-.locationn{
+.locationn {
   margin-top: 0px;
-
 }
 
 .about {
   color: #847062;
+  margin-top: 20px;
   margin-bottom: 8px;
   font-size: 16px;
   font-size: 1rem;
@@ -102,6 +108,8 @@
   font-size: 1.125rem;
   font-weight: 600;
   color: #30251d;
+  margin-top: 20px;
+  line-height: 1.5;
 }
 
 .discover-tags {
@@ -130,8 +138,8 @@
 .discover-buttons {
   display: flex;
   justify-content: center;
-  gap: 30px;
-  margin-top: 24px;
+  gap: 60px;
+  margin-top: 40px;
 }
 
 .discover-buttons button {
@@ -168,11 +176,16 @@
   margin-top: 16px;
   font-size: 0.875rem;
   color: #847062;
+  margin-bottom: 10px;
 }
 @media (max-width: 700px) {
   .discover-profile-card {
     flex-direction: column;
     aspect-ratio: auto;
+  }
+
+  .discover-container h2{
+    font-size: 24px;
   }
 
   .image-wrapper {
@@ -189,16 +202,17 @@
     width: 100%;
     margin-top: 0px;
   }
-  .discover-information h3{
+  .discover-information h3 {
     margin-top: 0px;
   }
-  .locationn{
+  .locationn {
     margin-top: 0px;
   }
 
   .discover-buttons {
     position: fixed;
     bottom: 10px;
+    gap: 30px;
     flex-wrap: wrap;
     justify-content: center;
     align-items: center;
@@ -210,11 +224,18 @@
     height: 50px;
     margin: 4px;
     padding: 12px;
-
+    background-color: rgb(226, 218, 207);
+    box-shadow: 0 0 8px rgba(0, 0, 0, 0.5);
   }
 
   .verified-badge {
     top: 12px;
     right: 12px;
+  }
+}
+
+@media (min-width: 1024px) {
+  .discover-profile-card {
+    height: 600px;
   }
 }
