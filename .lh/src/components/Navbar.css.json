@@ -3,7 +3,7 @@
     "activeCommit": 0,
     "commits": [
         {
-            "activePatchIndex": 302,
+            "activePatchIndex": 339,
             "patches": [
                 {
                     "date": 1753106193542,
@@ -1216,6 +1216,154 @@
                 {
                     "date": 1754027621437,
                     "content": "Index: \n===================================================================\n--- \n+++ \n@@ -243,7 +243,7 @@\n \r\n .account-dropdown a:hover {\r\n   background-color: #ED8E5E;\r\n   border-radius: 5px;\r\n-  padding: 2px ;\r\n+  \r\n   /* color: #ed8e5e; */\r\n }\n\\ No newline at end of file\n"
+                },
+                {
+                    "date": 1754544739062,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -108,8 +108,9 @@\n   .navbar-links,\r\n   .navbar-account {\r\n     display: none;\r\n   }\r\n+  \r\n \r\n   .navbar-left {\r\n     width: 100%;\r\n     display: flex;\r\n@@ -243,7 +244,6 @@\n \r\n .account-dropdown a:hover {\r\n   background-color: #ED8E5E;\r\n   border-radius: 5px;\r\n-  \r\n   /* color: #ed8e5e; */\r\n }\n\\ No newline at end of file\n"
+                },
+                {
+                    "date": 1754544745414,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -108,10 +108,11 @@\n   .navbar-links,\r\n   .navbar-account {\r\n     display: none;\r\n   }\r\n-  \r\n \r\n+  .navbar-logo{}\r\n+\r\n   .navbar-left {\r\n     width: 100%;\r\n     display: flex;\r\n     justify-content: space-between;\r\n"
+                },
+                {
+                    "date": 1754544753609,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -109,9 +109,11 @@\n   .navbar-account {\r\n     display: none;\r\n   }\r\n \r\n-  .navbar-logo{}\r\n+  .navbar-logo{\r\n+    mar\r\n+  }\r\n \r\n   .navbar-left {\r\n     width: 100%;\r\n     display: flex;\r\n"
+                },
+                {
+                    "date": 1754544761734,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -110,9 +110,9 @@\n     display: none;\r\n   }\r\n \r\n   .navbar-logo{\r\n-    mar\r\n+    margin: a;\r\n   }\r\n \r\n   .navbar-left {\r\n     width: 100%;\r\n"
+                },
+                {
+                    "date": 1754544780791,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -110,9 +110,9 @@\n     display: none;\r\n   }\r\n \r\n   .navbar-logo{\r\n-    margin: a;\r\n+    \r\n   }\r\n \r\n   .navbar-left {\r\n     width: 100%;\r\n"
+                },
+                {
+                    "date": 1754544788360,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -110,9 +110,9 @@\n     display: none;\r\n   }\r\n \r\n   .navbar-logo{\r\n-    \r\n+    padding: auto;\r\n   }\r\n \r\n   .navbar-left {\r\n     width: 100%;\r\n"
+                },
+                {
+                    "date": 1754544975617,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -109,11 +109,8 @@\n   .navbar-account {\r\n     display: none;\r\n   }\r\n \r\n-  .navbar-logo{\r\n-    padding: auto;\r\n-  }\r\n \r\n   .navbar-left {\r\n     width: 100%;\r\n     display: flex;\r\n"
+                },
+                {
+                    "date": 1754545158357,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -35,9 +35,9 @@\n .navbar-logo {\r\n   font-weight: bold;\r\n   font-size: 20px;\r\n   color: #2f2121;\r\n-  margin-left: 40px;\r\n+  /* margin-left: 40px; */\r\n   /* white-space: nowrap;\r\n   overflow: hidden;\r\n   text-overflow: ellipsis;\r\n   max-width: 150px; */\r\n@@ -109,9 +109,8 @@\n   .navbar-account {\r\n     display: none;\r\n   }\r\n \r\n-\r\n   .navbar-left {\r\n     width: 100%;\r\n     display: flex;\r\n     justify-content: space-between;\r\n"
+                },
+                {
+                    "date": 1754545481272,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -4,9 +4,9 @@\n     box-sizing: border-box;\r\n }\r\n .navbar {\r\n   height: 60px;\r\n-  background-color: rgba(255, 255, 255, 0);\r\n+  background-color: rgba(255, 255, 255, 0.);\r\n   display: flex;\r\n   align-items: center;\r\n   justify-content: space-between;\r\n   padding: 0 30px;\r\n"
+                },
+                {
+                    "date": 1754545524361,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -4,9 +4,9 @@\n     box-sizing: border-box;\r\n }\r\n .navbar {\r\n   height: 60px;\r\n-  background-color: rgba(255, 255, 255, 0.);\r\n+  background-color: rgba(255, 255, 255, 0.8);\r\n   display: flex;\r\n   align-items: center;\r\n   justify-content: space-between;\r\n   padding: 0 30px;\r\n@@ -20,9 +20,9 @@\n   z-index: 1000;\r\n   font-family:  -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, sans-serif;\r\n   transition: background-color 0.3s ease ;\r\n   backdrop-filter: none;\r\n-  backdrop-filter: blur(4px);\r\n+  backdrop-filter: blur(px);\r\n   -webkit-backdrop-filter: blur(4px);\r\n   transition: all 0.3s ease;\r\n }\r\n \r\n"
+                },
+                {
+                    "date": 1754545536200,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -20,9 +20,9 @@\n   z-index: 1000;\r\n   font-family:  -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, sans-serif;\r\n   transition: background-color 0.3s ease ;\r\n   backdrop-filter: none;\r\n-  backdrop-filter: blur(px);\r\n+  backdrop-filter: blur(1px);\r\n   -webkit-backdrop-filter: blur(4px);\r\n   transition: all 0.3s ease;\r\n }\r\n \r\n"
+                },
+                {
+                    "date": 1754545550564,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -20,9 +20,9 @@\n   z-index: 1000;\r\n   font-family:  -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, sans-serif;\r\n   transition: background-color 0.3s ease ;\r\n   backdrop-filter: none;\r\n-  backdrop-filter: blur(1px);\r\n+  backdrop-filter: blur(px);\r\n   -webkit-backdrop-filter: blur(4px);\r\n   transition: all 0.3s ease;\r\n }\r\n \r\n"
+                },
+                {
+                    "date": 1754545568973,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -20,10 +20,10 @@\n   z-index: 1000;\r\n   font-family:  -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, sans-serif;\r\n   transition: background-color 0.3s ease ;\r\n   backdrop-filter: none;\r\n-  backdrop-filter: blur(px);\r\n-  -webkit-backdrop-filter: blur(4px);\r\n+  backdrop-filter: blur(5px);\r\n+  -webkit-backdrop-filter: blur(px);\r\n   transition: all 0.3s ease;\r\n }\r\n \r\n .navbar-left{\r\n"
+                },
+                {
+                    "date": 1754545598247,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -11,9 +11,9 @@\n   justify-content: space-between;\r\n   padding: 0 30px;\r\n   font-family: sans-serif;\r\n   font-size: 16px;\r\n-  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);\r\n+  box-shadow: 0 1px px rgba(0, 0, 0, 0.1);\r\n   width: 100%;\r\n   margin: 0 auto;\r\n   position: fixed;\r\n   top: 0;\r\n@@ -21,9 +21,9 @@\n   font-family:  -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, sans-serif;\r\n   transition: background-color 0.3s ease ;\r\n   backdrop-filter: none;\r\n   backdrop-filter: blur(5px);\r\n-  -webkit-backdrop-filter: blur(px);\r\n+  -webkit-backdrop-filter: blur(5px);\r\n   transition: all 0.3s ease;\r\n }\r\n \r\n .navbar-left{\r\n"
+                },
+                {
+                    "date": 1754545626485,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -11,17 +11,17 @@\n   justify-content: space-between;\r\n   padding: 0 30px;\r\n   font-family: sans-serif;\r\n   font-size: 16px;\r\n-  box-shadow: 0 1px px rgba(0, 0, 0, 0.1);\r\n+  box-shadow: 0 1px 6px rgba(0, 0, 0, 0.1);\r\n   width: 100%;\r\n   margin: 0 auto;\r\n   position: fixed;\r\n   top: 0;\r\n   z-index: 1000;\r\n   font-family:  -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, sans-serif;\r\n   transition: background-color 0.3s ease ;\r\n-  backdrop-filter: none;\r\n+  /* backdrop-filter: none; */\r\n   backdrop-filter: blur(5px);\r\n   -webkit-backdrop-filter: blur(5px);\r\n   transition: all 0.3s ease;\r\n }\r\n"
+                },
+                {
+                    "date": 1754545646760,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -19,9 +19,9 @@\n   top: 0;\r\n   z-index: 1000;\r\n   font-family:  -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, sans-serif;\r\n   transition: background-color 0.3s ease ;\r\n-  /* backdrop-filter: none; */\r\n+  backdrop-filter: none;\r\n   backdrop-filter: blur(5px);\r\n   -webkit-backdrop-filter: blur(5px);\r\n   transition: all 0.3s ease;\r\n }\r\n"
+                },
+                {
+                    "date": 1754549114841,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -75,9 +75,9 @@\n   margin-right: 30px;\r\n   padding: 6px 16px;\r\n   border: 1px solid #d1cccc;\r\n   border-radius: 1dvb;\r\n-  background-color: rgb(251, 240, 240);\r\n+  background-color: background-color: #FBE8DF;;\r\n   color: #2f2121;\r\n   font-weight: 500;\r\n   cursor: pointer;\r\n   transition: background-color 0.2ease;\r\n"
+                },
+                {
+                    "date": 1754549121340,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -75,9 +75,9 @@\n   margin-right: 30px;\r\n   padding: 6px 16px;\r\n   border: 1px solid #d1cccc;\r\n   border-radius: 1dvb;\r\n-  background-color: background-color: #FBE8DF;;\r\n+  background-color:  #FBE8DF;;\r\n   color: #2f2121;\r\n   font-weight: 500;\r\n   cursor: pointer;\r\n   transition: background-color 0.2ease;\r\n"
+                },
+                {
+                    "date": 1754549151045,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -75,9 +75,9 @@\n   margin-right: 30px;\r\n   padding: 6px 16px;\r\n   border: 1px solid #d1cccc;\r\n   border-radius: 1dvb;\r\n-  background-color:  #FBE8DF;;\r\n+  background-color:  background-color: #FBE8DF;;\r\n   color: #2f2121;\r\n   font-weight: 500;\r\n   cursor: pointer;\r\n   transition: background-color 0.2ease;\r\n"
+                },
+                {
+                    "date": 1754549162582,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -75,9 +75,9 @@\n   margin-right: 30px;\r\n   padding: 6px 16px;\r\n   border: 1px solid #d1cccc;\r\n   border-radius: 1dvb;\r\n-  background-color:  background-color: #FBE8DF;;\r\n+  background-color: #FBE8DF;\r\n   color: #2f2121;\r\n   font-weight: 500;\r\n   cursor: pointer;\r\n   transition: background-color 0.2ease;\r\n"
+                },
+                {
+                    "date": 1754549184488,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -75,9 +75,9 @@\n   margin-right: 30px;\r\n   padding: 6px 16px;\r\n   border: 1px solid #d1cccc;\r\n   border-radius: 1dvb;\r\n-  background-color: #FBE8DF;\r\n+  background-color: #f1e8e4;\r\n   color: #2f2121;\r\n   font-weight: 500;\r\n   cursor: pointer;\r\n   transition: background-color 0.2ease;\r\n"
+                },
+                {
+                    "date": 1754549197147,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -75,9 +75,9 @@\n   margin-right: 30px;\r\n   padding: 6px 16px;\r\n   border: 1px solid #d1cccc;\r\n   border-radius: 1dvb;\r\n-  background-color: #f1e8e4;\r\n+  background-color: hsl(18, 32%, 92%);\r\n   color: #2f2121;\r\n   font-weight: 500;\r\n   cursor: pointer;\r\n   transition: background-color 0.2ease;\r\n"
+                },
+                {
+                    "date": 1754549228177,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -75,9 +75,9 @@\n   margin-right: 30px;\r\n   padding: 6px 16px;\r\n   border: 1px solid #d1cccc;\r\n   border-radius: 1dvb;\r\n-  background-color: hsl(18, 32%, 92%);\r\n+  #FAF8F5\r\n   color: #2f2121;\r\n   font-weight: 500;\r\n   cursor: pointer;\r\n   transition: background-color 0.2ease;\r\n"
+                },
+                {
+                    "date": 1754549236780,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -75,9 +75,9 @@\n   margin-right: 30px;\r\n   padding: 6px 16px;\r\n   border: 1px solid #d1cccc;\r\n   border-radius: 1dvb;\r\n-  #FAF8F5\r\n+  background-color: #FAF8F5\r\n   color: #2f2121;\r\n   font-weight: 500;\r\n   cursor: pointer;\r\n   transition: background-color 0.2ease;\r\n"
+                },
+                {
+                    "date": 1754549254383,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -75,9 +75,9 @@\n   margin-right: 30px;\r\n   padding: 6px 16px;\r\n   border: 1px solid #d1cccc;\r\n   border-radius: 1dvb;\r\n-  background-color: #FAF8F5\r\n+  background-color: #faf8f5;\r\n   color: #2f2121;\r\n   font-weight: 500;\r\n   cursor: pointer;\r\n   transition: background-color 0.2ease;\r\n"
+                },
+                {
+                    "date": 1754549295216,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -82,11 +82,11 @@\n   cursor: pointer;\r\n   transition: background-color 0.2ease;\r\n   display: flex;\r\n }\r\n-.navbar-account:hover{\r\n+/* .navbar-account:hover{\r\n     background-color: #f0f0f0\r\n-}\r\n+} */\r\n .navbar-links a{\r\n     display: flex;\r\n     align-items: center;\r\n     gap: 6px;\r\n"
+                },
+                {
+                    "date": 1754549886729,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -90,8 +90,9 @@\n     display: flex;\r\n     align-items: center;\r\n     gap: 6px;\r\n }\r\n+\r\n .icon{\r\n     display: flex;\r\n     align-items: center;\r\n     margin-right: 6px;\r\n"
+                },
+                {
+                    "date": 1754549892909,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -91,8 +91,9 @@\n     align-items: center;\r\n     gap: 6px;\r\n }\r\n \r\n+.act\r\n .icon{\r\n     display: flex;\r\n     align-items: center;\r\n     margin-right: 6px;\r\n"
+                },
+                {
+                    "date": 1754549898408,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -91,9 +91,9 @@\n     align-items: center;\r\n     gap: 6px;\r\n }\r\n \r\n-.act\r\n+.active-nav-link \r\n .icon{\r\n     display: flex;\r\n     align-items: center;\r\n     margin-right: 6px;\r\n"
+                },
+                {
+                    "date": 1754549906192,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -91,9 +91,11 @@\n     align-items: center;\r\n     gap: 6px;\r\n }\r\n \r\n-.active-nav-link \r\n+.active-nav-link {\r\n+  background-color: aqua;\r\n+}\r\n .icon{\r\n     display: flex;\r\n     align-items: center;\r\n     margin-right: 6px;\r\n"
+                },
+                {
+                    "date": 1754549929548,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -92,9 +92,9 @@\n     gap: 6px;\r\n }\r\n \r\n .active-nav-link {\r\n-  background-color: aqua;\r\n+  background-color: #93501F;\r\n }\r\n .icon{\r\n     display: flex;\r\n     align-items: center;\r\n"
+                },
+                {
+                    "date": 1754549948581,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -93,8 +93,9 @@\n }\r\n \r\n .active-nav-link {\r\n   background-color: #93501F;\r\n+  \r\n }\r\n .icon{\r\n     display: flex;\r\n     align-items: center;\r\n"
+                },
+                {
+                    "date": 1754549969832,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -93,9 +93,9 @@\n }\r\n \r\n .active-nav-link {\r\n   background-color: #93501F;\r\n-  \r\n+  color: white ;\r\n }\r\n .icon{\r\n     display: flex;\r\n     align-items: center;\r\n"
+                },
+                {
+                    "date": 1754550258515,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -93,10 +93,11 @@\n }\r\n \r\n .active-nav-link {\r\n   background-color: #93501F;\r\n-  color: white ;\r\n+  color: white !important;\r\n }\r\n+\r\n .icon{\r\n     display: flex;\r\n     align-items: center;\r\n     margin-right: 6px;\r\n"
+                },
+                {
+                    "date": 1754550264968,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -95,9 +95,9 @@\n .active-nav-link {\r\n   background-color: #93501F;\r\n   color: white !important;\r\n }\r\n-\r\n+..active-nav-link:\r\n .icon{\r\n     display: flex;\r\n     align-items: center;\r\n     margin-right: 6px;\r\n"
+                },
+                {
+                    "date": 1754550270729,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -96,9 +96,9 @@\n   background-color: #93501F;\r\n   color: white !important;\r\n }\r\n ..active-nav-link:hover {\r\n-  b\r\n+  ba\r\n }\r\n .icon{\r\n     display: flex;\r\n     align-items: center;\r\n"
+                },
+                {
+                    "date": 1754551597011,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -190,9 +190,9 @@\n   font-weight: 500;\r\n   padding: 10px;\r\n   border-radius: 6px;\r\n   transition: background-color 0.3s ease;\r\n-  b\r\n+  \r\n }\r\n \r\n .mobile-menu a:hover {\r\n   background-color: #f6f0e8;\r\n"
                 }
             ],
             "date": 1753106193542,

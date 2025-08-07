@@ -101,11 +101,13 @@
   padding: 16px;
   border-radius: 12px;
   text-align: center;
+  /* background-color: #F6F0E8; */
 }
 
 .connect-btn h4{
     font-size: 18px;
     margin-bottom: 8px;
+    color: black;
 }
 .connect-btn p{
     font-size: 14px;
@@ -113,19 +115,49 @@
     line-height: 1.4;
 }
 
-.similar-btn,
-.interest-btn {
-  background-color: #F6F0E8;
-  color: black;
-  /* border: 1px solid #bde0fe; */
-  max-width: 350px;
-  /* margin-left: 40px; */
-  margin: 0 auto;
+.connect-btn.similar-btn:hover {
+   background-color: #F6F1E9;
 }
 
-.similar-btn h4 {
+.connect-btn.interest-btn:hover{
+  background-color: #FBE8DF;
+}
+
+.connect-btn.similar-btn {
+  background-color: #F6F1E9;
+  max-width: 350px;
+  margin: 0 auto;
+ 
+}
+
+.connect-btn.interest-btn {
+  background-color: #FBE8DF;
+  max-width: 350px;
+  margin: 0 auto;
+ 
+}
+/* .similar-btn,
+.interest-btn {
+  background-color: #F6F0E8;
+  /* border: 1px solid #bde0fe; 
+  max-width: 350px;
+  /* margin-left: 40px;  
+  margin: 0 auto;
+} */
+/* .similar-btn {
+  background-color: #d02525;
+  color: black;
+  max-width: 350px;
+  margin: 0 auto;
+} */
+
+/* .similar-btn h4 {
      color: black;;
 }
+
+.interest-btn h4 {
+  color: black;
+} */
 
 /* .interest-btn {
   background-color: #FBE8DF;
@@ -133,7 +165,7 @@
   /* border: 1px solid #f4acae;
   max-width: 350px;
   margin-right: 40px;
-} */
+}  */
 
 .connect-btn:hover {
   box-shadow: 0 4px 10px rgba(0,0,0,0.1);
