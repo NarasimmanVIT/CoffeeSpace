@@ -7,7 +7,7 @@ import "../styles/Invitespage.css";
 import { useState } from "react";
 
 const InvitesPage = () => {
-  const [activeTab, setActiveTab] = useState("sent");
+  const [activeTab, setActiveTab] = useState("received");
   const [receivedInvites, setReceivedInvites] = useState(invitesData);
   const [connected, setConnected] = useState([]);
 
