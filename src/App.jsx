@@ -12,6 +12,7 @@ import DiscoverPage from "./Components/DiscoverPage";
 import MeetPartners from "./Components/MeetPartners";
 import Signup from './components/Signup'
 import Login from './components/Login'
+import InvitesPage from "./components/InvitesPage";
 
 function App() {
 
@@ -30,6 +31,7 @@ function App() {
       <Route path='/messages' element={<MessagesPage />} />
       {/* <Route path="/" element={<HomePage />} /> */}
       <Route path="/discover" element={<DiscoverPage />} />
+      <Route path="/invites" element={<InvitesPage />} />
       {/* <Route path='/received' element={<ReceivedInvites/>} /> */}
       <Route path='/signup' element={<Signup/>} />
       <Route path='/login' element={<Login/>} />

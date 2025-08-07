@@ -1,0 +1,74 @@
+.invite-card {
+  background-color: #ffffff;
+  border-radius: 12px;
+  box-shadow: 0 2px 12px rgba(0, 0, 0, 0.08);
+  padding: 20px;
+  margin: 20px 0;
+}
+
+.invite-card h1 {
+  margin: 0 0 16px;
+  font-size: 24px;
+  font-weight: 500;
+  color: #30251d
+}
+
+.Profiles {
+  display: flex;
+  align-items: flex-start;
+  border: 1.5px solid #f8f4f1;
+  border-radius: 10px;
+  font-size: 16px;
+  padding-top: 5px;
+  position: relative;
+}
+
+.Profiles:hover {
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.08);
+}
+.profile-pic {
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  margin-right: 20px;
+  object-fit: cover;
+}
+
+.details {
+  flex: 1;
+}
+
+.details h3 {
+  margin: 2px 0;
+  font-size: 16px;
+  color: #30251d;
+  font-weight: 600;
+}
+
+.details .role {
+  font-size: 14px;
+  color: #847062;
+  margin: 2px 0;
+  font-weight: 400;
+}
+
+.details .connect-message {
+  font-size: 14px;
+  color: #847062;
+  margin-bottom: 12px;
+  line-height: 1;
+  font-weight: 300;
+}
+
+.message-btn {
+  position: absolute;
+  right: 20px;
+  top: 40px;
+  background-color: #f9f8f5;
+  color: #30251d;
+  border: 1px solid #ede2d1;
+}
+
+.message-btn:hover {
+  background-color: #e57d32c5;
+}

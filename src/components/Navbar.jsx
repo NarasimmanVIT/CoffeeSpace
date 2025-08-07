@@ -68,6 +68,7 @@ const Navbar = () => {
             </span>
             Invites
           </Link>
+        
         </div>
 
         <div className="navbar-account" onClick={() => setIsAccountDropdownOpen(! isAccountDropdownOpen)}>
