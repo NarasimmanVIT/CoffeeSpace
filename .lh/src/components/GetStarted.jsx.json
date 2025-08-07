@@ -1,0 +1,110 @@
+{
+    "sourceFile": "src/components/GetStarted.jsx",
+    "activeCommit": 0,
+    "commits": [
+        {
+            "activePatchIndex": 23,
+            "patches": [
+                {
+                    "date": 1754570171874,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n"
+                },
+                {
+                    "date": 1754571011267,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -12,9 +12,9 @@\n         <p className=\"getstarted-subtitle\">Enter your phone number to begin</p>\r\n \r\n         <label htmlFor=\"phone\" className=\"getstarted-label\">Phone Number</label>\r\n         <div className=\"input-group\">\r\n-          <span className=\"phone-icon\">📞</span>\r\n+          <span className=\"phone-icon\">📞\\</span>\r\n           <input\r\n             type=\"text\"\r\n             id=\"phone\"\r\n             placeholder=\"+1 (555) 000-0000\"\r\n"
+                },
+                {
+                    "date": 1754571022644,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,8 +1,9 @@\n import React from 'react';\r\n import './GetStarted.css';\r\n import { useNavigate } from 'react-router-dom';\r\n \r\n+\r\n const GetStarted = () => {\r\n   const navigate = useNavigate();\r\n \r\n   return (\r\n@@ -12,9 +13,9 @@\n         <p className=\"getstarted-subtitle\">Enter your phone number to begin</p>\r\n \r\n         <label htmlFor=\"phone\" className=\"getstarted-label\">Phone Number</label>\r\n         <div className=\"input-group\">\r\n-          <span className=\"phone-icon\">📞\\</span>\r\n+          <span className=\"phone-icon\"><Phone size={32} /></span>\r\n           <input\r\n             type=\"text\"\r\n             id=\"phone\"\r\n             placeholder=\"+1 (555) 000-0000\"\r\n"
+                },
+                {
+                    "date": 1754571032995,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,9 +1,9 @@\n import React from 'react';\r\n import './GetStarted.css';\r\n import { useNavigate } from 'react-router-dom';\r\n+import { }\r\n \r\n-\r\n const GetStarted = () => {\r\n   const navigate = useNavigate();\r\n \r\n   return (\r\n"
+                },
+                {
+                    "date": 1754571061783,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,8 +1,8 @@\n import React from 'react';\r\n import './GetStarted.css';\r\n import { useNavigate } from 'react-router-dom';\r\n-import { }\r\n+import { Phone } from 'phosphor-react';\r\n \r\n const GetStarted = () => {\r\n   const navigate = useNavigate();\r\n \r\n@@ -13,9 +13,9 @@\n         <p className=\"getstarted-subtitle\">Enter your phone number to begin</p>\r\n \r\n         <label htmlFor=\"phone\" className=\"getstarted-label\">Phone Number</label>\r\n         <div className=\"input-group\">\r\n-          <span className=\"phone-icon\"><Phone size={32} /></span>\r\n+          <span className=\"phone-icon\"></span>\r\n           <input\r\n             type=\"text\"\r\n             id=\"phone\"\r\n             placeholder=\"+1 (555) 000-0000\"\r\n"
+                },
+                {
+                    "date": 1754571076765,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -13,9 +13,9 @@\n         <p className=\"getstarted-subtitle\">Enter your phone number to begin</p>\r\n \r\n         <label htmlFor=\"phone\" className=\"getstarted-label\">Phone Number</label>\r\n         <div className=\"input-group\">\r\n-          <span className=\"phone-icon\"></span>\r\n+          <Phone  size={32} />\r\n           <input\r\n             type=\"text\"\r\n             id=\"phone\"\r\n             placeholder=\"+1 (555) 000-0000\"\r\n"
+                },
+                {
+                    "date": 1754571084043,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -13,9 +13,9 @@\n         <p className=\"getstarted-subtitle\">Enter your phone number to begin</p>\r\n \r\n         <label htmlFor=\"phone\" className=\"getstarted-label\">Phone Number</label>\r\n         <div className=\"input-group\">\r\n-          <Phone  size={32} />\r\n+          <Phone className='p' size={32} />\r\n           <input\r\n             type=\"text\"\r\n             id=\"phone\"\r\n             placeholder=\"+1 (555) 000-0000\"\r\n"
+                },
+                {
+                    "date": 1754571241212,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -13,9 +13,9 @@\n         <p className=\"getstarted-subtitle\">Enter your phone number to begin</p>\r\n \r\n         <label htmlFor=\"phone\" className=\"getstarted-label\">Phone Number</label>\r\n         <div className=\"input-group\">\r\n-          <Phone className='p' size={32} />\r\n+          <Phone size={32} color=\"#8a6969\" />\r\n           <input\r\n             type=\"text\"\r\n             id=\"phone\"\r\n             placeholder=\"+1 (555) 000-0000\"\r\n"
+                },
+                {
+                    "date": 1754571247057,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -13,9 +13,9 @@\n         <p className=\"getstarted-subtitle\">Enter your phone number to begin</p>\r\n \r\n         <label htmlFor=\"phone\" className=\"getstarted-label\">Phone Number</label>\r\n         <div className=\"input-group\">\r\n-          <Phone size={32} color=\"#8a6969\" />\r\n+          <Phone className='p' size={32} color=\"#8a6969\" />\r\n           <input\r\n             type=\"text\"\r\n             id=\"phone\"\r\n             placeholder=\"+1 (555) 000-0000\"\r\n"
+                },
+                {
+                    "date": 1754571289409,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -13,9 +13,9 @@\n         <p className=\"getstarted-subtitle\">Enter your phone number to begin</p>\r\n \r\n         <label htmlFor=\"phone\" className=\"getstarted-label\">Phone Number</label>\r\n         <div className=\"input-group\">\r\n-          <Phone className='p' size={32} color=\"#8a6969\" />\r\n+          <Phone className='phone-icon' size={3} color=\"#8a6969\" />\r\n           <input\r\n             type=\"text\"\r\n             id=\"phone\"\r\n             placeholder=\"+1 (555) 000-0000\"\r\n"
+                },
+                {
+                    "date": 1754571303104,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -13,9 +13,9 @@\n         <p className=\"getstarted-subtitle\">Enter your phone number to begin</p>\r\n \r\n         <label htmlFor=\"phone\" className=\"getstarted-label\">Phone Number</label>\r\n         <div className=\"input-group\">\r\n-          <Phone className='phone-icon' size={3} color=\"#8a6969\" />\r\n+          <Phone className='phone-icon' size={2} color=\"#8a6969\" />\r\n           <input\r\n             type=\"text\"\r\n             id=\"phone\"\r\n             placeholder=\"+1 (555) 000-0000\"\r\n"
+                },
+                {
+                    "date": 1754571428561,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -13,9 +13,9 @@\n         <p className=\"getstarted-subtitle\">Enter your phone number to begin</p>\r\n \r\n         <label htmlFor=\"phone\" className=\"getstarted-label\">Phone Number</label>\r\n         <div className=\"input-group\">\r\n-          <Phone className='phone-icon' size={2} color=\"#8a6969\" />\r\n+          <Phone className='phone-icon' size={26} color=\"#8a6969\" />\r\n           <input\r\n             type=\"text\"\r\n             id=\"phone\"\r\n             placeholder=\"+1 (555) 000-0000\"\r\n@@ -24,9 +24,9 @@\n         </div>\r\n \r\n         <label htmlFor=\"verification\" className=\"getstarted-label\">Verification Code</label>\r\n         <div className=\"input-group\">\r\n-          <span className=\"phone-icon\">🔒</span>\r\n+          <Lock size={32} color=\"#8a6969\" />\r\n           <input\r\n             type=\"text\"\r\n             id=\"verification\"\r\n             placeholder=\"Enter code\"\r\n"
+                },
+                {
+                    "date": 1754571433735,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -24,9 +24,9 @@\n         </div>\r\n \r\n         <label htmlFor=\"verification\" className=\"getstarted-label\">Verification Code</label>\r\n         <div className=\"input-group\">\r\n-          <Lock size={32} color=\"#8a6969\" />\r\n+          <Lock cl size={32} color=\"#8a6969\" />\r\n           <input\r\n             type=\"text\"\r\n             id=\"verification\"\r\n             placeholder=\"Enter code\"\r\n"
+                },
+                {
+                    "date": 1754571438780,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -24,9 +24,9 @@\n         </div>\r\n \r\n         <label htmlFor=\"verification\" className=\"getstarted-label\">Verification Code</label>\r\n         <div className=\"input-group\">\r\n-          <Lock cl size={32} color=\"#8a6969\" />\r\n+          <Lock classNamephone-i size={32} color=\"#8a6969\" />\r\n           <input\r\n             type=\"text\"\r\n             id=\"verification\"\r\n             placeholder=\"Enter code\"\r\n"
+                },
+                {
+                    "date": 1754571444571,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -24,9 +24,9 @@\n         </div>\r\n \r\n         <label htmlFor=\"verification\" className=\"getstarted-label\">Verification Code</label>\r\n         <div className=\"input-group\">\r\n-          <Lock classNamephone-i size={32} color=\"#8a6969\" />\r\n+          <Lock classNa size={32} color=\"#8a6969\" />\r\n           <input\r\n             type=\"text\"\r\n             id=\"verification\"\r\n             placeholder=\"Enter code\"\r\n"
+                },
+                {
+                    "date": 1754571450864,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -24,9 +24,9 @@\n         </div>\r\n \r\n         <label htmlFor=\"verification\" className=\"getstarted-label\">Verification Code</label>\r\n         <div className=\"input-group\">\r\n-          <Lock classNa size={32} color=\"#8a6969\" />\r\n+          <Lock className= size={32} color=\"#8a6969\" />\r\n           <input\r\n             type=\"text\"\r\n             id=\"verification\"\r\n             placeholder=\"Enter code\"\r\n"
+                },
+                {
+                    "date": 1754571458136,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -24,9 +24,9 @@\n         </div>\r\n \r\n         <label htmlFor=\"verification\" className=\"getstarted-label\">Verification Code</label>\r\n         <div className=\"input-group\">\r\n-          <Lock className= size={32} color=\"#8a6969\" />\r\n+          <Lock className=\"phone-\" size={32} color=\"#8a6969\" />\r\n           <input\r\n             type=\"text\"\r\n             id=\"verification\"\r\n             placeholder=\"Enter code\"\r\n"
+                },
+                {
+                    "date": 1754571463228,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -24,9 +24,9 @@\n         </div>\r\n \r\n         <label htmlFor=\"verification\" className=\"getstarted-label\">Verification Code</label>\r\n         <div className=\"input-group\">\r\n-          <Lock className=\"phone-\" size={32} color=\"#8a6969\" />\r\n+          <Lock className=\"phone-icon\" size={} color=\"#8a6969\" />\r\n           <input\r\n             type=\"text\"\r\n             id=\"verification\"\r\n             placeholder=\"Enter code\"\r\n"
+                },
+                {
+                    "date": 1754571478994,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,8 +1,8 @@\n import React from 'react';\r\n import './GetStarted.css';\r\n import { useNavigate } from 'react-router-dom';\r\n-import { Phone } from 'phosphor-react';\r\n+import { Phone, } from 'phosphor-react';\r\n \r\n const GetStarted = () => {\r\n   const navigate = useNavigate();\r\n \r\n@@ -24,9 +24,9 @@\n         </div>\r\n \r\n         <label htmlFor=\"verification\" className=\"getstarted-label\">Verification Code</label>\r\n         <div className=\"input-group\">\r\n-          <Lock className=\"phone-icon\" size={} color=\"#8a6969\" />\r\n+          <Lock className=\"phone-icon\" size={26} color=\"#8a6969\" />\r\n           <input\r\n             type=\"text\"\r\n             id=\"verification\"\r\n             placeholder=\"Enter code\"\r\n"
+                },
+                {
+                    "date": 1754571485936,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,8 +1,8 @@\n import React from 'react';\r\n import './GetStarted.css';\r\n import { useNavigate } from 'react-router-dom';\r\n-import { Phone, } from 'phosphor-react';\r\n+import { Phone,Loc } from 'phosphor-react';\r\n \r\n const GetStarted = () => {\r\n   const navigate = useNavigate();\r\n \r\n"
+                },
+                {
+                    "date": 1754571497582,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,8 +1,8 @@\n import React from 'react';\r\n import './GetStarted.css';\r\n import { useNavigate } from 'react-router-dom';\r\n-import { Phone,Loc } from 'phosphor-react';\r\n+import { Phone,Lock } from 'phosphor-react';\r\n \r\n const GetStarted = () => {\r\n   const navigate = useNavigate();\r\n \r\n@@ -13,9 +13,9 @@\n         <p className=\"getstarted-subtitle\">Enter your phone number to begin</p>\r\n \r\n         <label htmlFor=\"phone\" className=\"getstarted-label\">Phone Number</label>\r\n         <div className=\"input-group\">\r\n-          <Phone className='phone-icon' size={26} color=\"#8a6969\" />\r\n+          <Phone className='phone-icon' size={2} color=\"#8a6969\" />\r\n           <input\r\n             type=\"text\"\r\n             id=\"phone\"\r\n             placeholder=\"+1 (555) 000-0000\"\r\n"
+                },
+                {
+                    "date": 1754571512656,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -13,9 +13,9 @@\n         <p className=\"getstarted-subtitle\">Enter your phone number to begin</p>\r\n \r\n         <label htmlFor=\"phone\" className=\"getstarted-label\">Phone Number</label>\r\n         <div className=\"input-group\">\r\n-          <Phone className='phone-icon' size={2} color=\"#8a6969\" />\r\n+          <Phone className='phone-icon' size={26} color=\"#8a6969\" />\r\n           <input\r\n             type=\"text\"\r\n             id=\"phone\"\r\n             placeholder=\"+1 (555) 000-0000\"\r\n"
+                },
+                {
+                    "date": 1754572502773,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -24,9 +24,9 @@\n         </div>\r\n \r\n         <label htmlFor=\"verification\" className=\"getstarted-label\">Verification Code</label>\r\n         <div className=\"input-group\">\r\n-          <Lock className=\"phone-icon\" size={26} color=\"#8a6969\" />\r\n+          <Lock className=\"phone-icon\" size={2} color=\"#8a6969\" />\r\n           <input\r\n             type=\"text\"\r\n             id=\"verification\"\r\n             placeholder=\"Enter code\"\r\n"
+                },
+                {
+                    "date": 1754572511026,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -13,9 +13,9 @@\n         <p className=\"getstarted-subtitle\">Enter your phone number to begin</p>\r\n \r\n         <label htmlFor=\"phone\" className=\"getstarted-label\">Phone Number</label>\r\n         <div className=\"input-group\">\r\n-          <Phone className='phone-icon' size={26} color=\"#8a6969\" />\r\n+          <Phone className='phone-icon' size={2} color=\"#8a6969\" />\r\n           <input\r\n             type=\"text\"\r\n             id=\"phone\"\r\n             placeholder=\"+1 (555) 000-0000\"\r\n@@ -24,9 +24,9 @@\n         </div>\r\n \r\n         <label htmlFor=\"verification\" className=\"getstarted-label\">Verification Code</label>\r\n         <div className=\"input-group\">\r\n-          <Lock className=\"phone-icon\" size={2} color=\"#8a6969\" />\r\n+          <Lock className=\"phone-icon\" size={22} color=\"#8a6969\" />\r\n           <input\r\n             type=\"text\"\r\n             id=\"verification\"\r\n             placeholder=\"Enter code\"\r\n"
+                }
+            ],
+            "date": 1754570171874,
+            "name": "Commit-0",
+            "content": "import React from 'react';\r\nimport './GetStarted.css';\r\nimport { useNavigate } from 'react-router-dom';\r\n\r\nconst GetStarted = () => {\r\n  const navigate = useNavigate();\r\n\r\n  return (\r\n    <div className=\"getstarted-container\">\r\n      <div className=\"getstarted-box\">\r\n        <h2 className=\"getstarted-title\">Get Started</h2>\r\n        <p className=\"getstarted-subtitle\">Enter your phone number to begin</p>\r\n\r\n        <label htmlFor=\"phone\" className=\"getstarted-label\">Phone Number</label>\r\n        <div className=\"input-group\">\r\n          <span className=\"phone-icon\">📞</span>\r\n          <input\r\n            type=\"text\"\r\n            id=\"phone\"\r\n            placeholder=\"+1 (555) 000-0000\"\r\n            className=\"getstarted-input\"\r\n          />\r\n        </div>\r\n\r\n        <label htmlFor=\"verification\" className=\"getstarted-label\">Verification Code</label>\r\n        <div className=\"input-group\">\r\n          <span className=\"phone-icon\">🔒</span>\r\n          <input\r\n            type=\"text\"\r\n            id=\"verification\"\r\n            placeholder=\"Enter code\"\r\n            className=\"getstarted-input\"\r\n          />\r\n        </div>\r\n\r\n        <button className=\"getstarted-button\">Send Verification Code</button>\r\n      </div>\r\n    </div>\r\n  );\r\n};\r\n\r\nexport default GetStarted;"
+        }
+    ]
+}

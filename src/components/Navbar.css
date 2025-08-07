@@ -60,7 +60,7 @@ body, html{
   font-weight: 400;
   margin-right: 30px;
   align-items: center;
-  margin-right: 14px;
+  margin-right: 14px; 
   text-decoration: none;
   /* color: #2f2121; */
   font-size: 18px;
@@ -83,9 +83,10 @@ body, html{
   transition: background-color 0.2ease;
   display: flex;
 }
-/* .navbar-account:hover{
-    background-color: #f0f0f0
-} */
+.navbar-account:hover{
+    background-color: #f0f0f0;
+    color: black;
+}
 .navbar-links a{
     display: flex;
     align-items: center;

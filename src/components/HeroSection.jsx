@@ -17,7 +17,7 @@ const HeroSection = () => {
           Connect with <br />
           <span className="highlight-text">Entrepreneurs</span>
         </h1>
-        <p>who share your vision</p>
+        <p>Who share your vision</p>
 
         <div className="parah">
             <p>Discover and connect with entrepreneurs who share your <br /> interests, industry focus, and business vision for meaningful <br /> partnerships.</p>
