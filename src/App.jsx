@@ -13,6 +13,7 @@ import MeetPartners from "./Components/MeetPartners";
 import Signup from './components/Signup'
 import Login from './components/Login'
 import GetStarted from './components/GetStarted'
+import MetaDataCom from "./components/MetaDataCom"
 
 function App() {
 
@@ -35,6 +36,7 @@ function App() {
       <Route path='/signup' element={<Signup/>} />
       <Route path='/login' element={<Login/>} />
       <Route path='/get-started' element={<GetStarted/>} />
+      <Route path='/metadata' element={<MetaDataCom/>} />
       </Routes>
     </>
   )
