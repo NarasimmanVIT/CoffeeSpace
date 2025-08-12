@@ -1,4 +1,4 @@
-import axiosInstance from "../api/axiosInstance"; 
+import axiosInstance from "../api/axiosInstance";
 
 export const fetchMetadata = async () => {
   try {
@@ -6,6 +6,8 @@ export const fetchMetadata = async () => {
     return response.data;
   } catch (error) {
     console.error("Error fetching metadata:", error);
-    throw error;
+    throw error; 
   }
 };
+
+

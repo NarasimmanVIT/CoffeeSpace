@@ -136,7 +136,7 @@ const GetStarted = () => {
         </div>
 
         <ToastContainer
-          position="top-center"
+          position="top-right"
           autoClose={2500}
           hideProgressBar={false}
           newestOnTop
