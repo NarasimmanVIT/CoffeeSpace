@@ -1,11 +1,12 @@
 import React, { useState } from "react";
 import "./GetStarted.css";
 import { useNavigate } from "react-router-dom";
-import axios from "axios";
+import axiosInstance from "../api/axiosInstance";
+import useAuthStore from "../store/authStore";
 import { Phone, Lock, Loader2 } from "lucide-react";
 import { ToastContainer, toast } from "react-toastify";
 import "react-toastify/dist/ReactToastify.css";
-import MetaData from "./MetaDataCom"
+import MetaData from "../components/MetaDataCom";
 
 const GetStarted = () => {
   const navigate = useNavigate();
@@ -13,15 +14,20 @@ const GetStarted = () => {
   const [otp, setOtp] = useState("");
   const [step, setStep] = useState(1);
   const [loading, setLoading] = useState(false);
+  
+  const setToken = useAuthStore((state) => state.setToken);
 
   const handleSendOtp = async () => {
     if (!phoneNumber) return toast.warn("Please enter a phone number");
     setLoading(true);
+    
+    console.log(phoneNumber)
 
     try {
-      const response = await axios.post("/auth/sendOtp", {
-        phoneNumber: phoneNumber,
+      const response = await axiosInstance.post("/auth/sendOtp", {
+        phoneNumber : phoneNumber,
       });
+      
 
       if (response.data.success) {
         toast.success("OTP sent successfully");
@@ -41,7 +47,7 @@ const GetStarted = () => {
     setLoading(true);
 
     try {
-      const response = await axios.post("/auth/verifyOtp", {
+      const response = await axiosInstance.post("/auth/verifyOtp", {
         phoneNumber,
         otp,
       });
@@ -50,7 +56,7 @@ const GetStarted = () => {
         toast.success("OTP verified successfully");
         const { token, profileId } = response.data.data;
 
-        localStorage.setItem("authToken", token);
+        setToken(token);
 
         setTimeout(() => {
           if (profileId && profileId !== "null") {
@@ -71,7 +77,6 @@ const GetStarted = () => {
 
   return (
     <>
-      {/* Loader Overlay */}
       {loading && (
         <div className="loader-overlay">
           <Loader2 className="loader-icon" size={50} />

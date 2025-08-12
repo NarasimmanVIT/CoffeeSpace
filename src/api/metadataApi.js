@@ -1,11 +1,8 @@
-import axios from "axios";
-
-const API_BASE_URL = "https://bf4634a16911.ngrok-free.app/"; 
+import axiosInstance from "../api/axiosInstance"; 
 
 export const fetchMetadata = async () => {
   try {
-    const response = await axios.get(`/metadata`);
-    // console.log(response.data)
+    const response = await axiosInstance.get("/metadata");
     return response.data;
   } catch (error) {
     console.error("Error fetching metadata:", error);
