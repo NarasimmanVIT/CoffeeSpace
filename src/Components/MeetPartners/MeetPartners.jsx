@@ -1,8 +1,7 @@
 import React from "react";
-import ProfileCard from "./ProfileCard";
-import MeetProfiles from "../Data/MeetProfile"; 
-import "../styles/MeetPartners.css";
-
+import ProfileCard from "../ProfileCard/ProfileCard";
+import MeetProfiles from "./MeetProfile"; 
+import "./MeetPartner.css"
 const MeetPartners = () => {
   return (
     <div className="app-container">

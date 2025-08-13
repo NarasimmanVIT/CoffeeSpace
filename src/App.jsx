@@ -1,10 +1,10 @@
 
 import React from "react";
 import { Routes, Route } from "react-router-dom";
-import PartnershipSection from "./Components/PartnershipSection";
-import DiscoverPage from "./components/DiscoverPage";
-import MeetPartners from "./Components/MeetPartners";
-import InvitesPage from "./components/InvitesPage";
+import PartnershipSection from "./Components/PartnershipSection/PartnershipSection";
+import DiscoverPage from "./Components/DiscoverPage/DiscoverPage";
+import MeetPartners from "./Components/MeetPartners/MeetPartners";
+import InvitesPage from "./Components/InvitesPage/InvitesPage";
 
 
 function HomePage() {

@@ -1,6 +1,6 @@
 import React, { useState } from "react";
-import profiles from "../Data/Profiles";
-import "../styles/DiscoverPage.css";
+import profiles from "./Profiles";
+import "./DiscoverPage.css";
 import { Suitcase, MapPin, ChatCircle, X, HeartStraight } from "phosphor-react";
 
 function DiscoverPage() {

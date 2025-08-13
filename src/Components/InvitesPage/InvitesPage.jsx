@@ -1,9 +1,9 @@
-import SentInvites from "../Components/SentInvites";
-import ReceivedInvites from "../Components/ReceivedInvites";
-import ConnectedInvites from "../Components/ConnectedInvites";
-import invitesData from "../Data/invitesData";
+import SentInvites from "../SentInvites/SentInvites";
+import ReceivedInvites from "../ReceivedInvites/ReceivedInvites";
+import ConnectedInvites from "../ConnectedInvites/ConnectedInvites";
+import invitesData from "./invitesData";
 import { Tray, PaperPlaneTilt, Users } from "phosphor-react";
-import "../styles/Invitespage.css";
+import "./Invitespage.css";
 import { useState } from "react";
 
 const InvitesPage = () => {
