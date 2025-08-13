@@ -3,9 +3,13 @@ import axios from "axios";
 import useAuthStore from "../store/authStore";
 
 const axiosInstance = axios.create({
-  baseURL: "https://868a7d16a092.ngrok-free.app/",
+  baseURL: "https://0e5d97fa8c6c.ngrok-free.app/",
   timeout: 10000,
-  headers: { "Content-Type": "application/json" },
+  headers: { 
+    "Content-Type": "application/json",
+    'ngrok-skip-browser-warning': 'true',
+
+   },
 });
 
 // Request Interceptor
