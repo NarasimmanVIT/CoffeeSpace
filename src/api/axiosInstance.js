@@ -1,23 +1,22 @@
-
 import axios from "axios";
 import useAuthStore from "../store/authStore";
 
 const axiosInstance = axios.create({
-  baseURL: "https://0e5d97fa8c6c.ngrok-free.app/",
+  baseURL: import.meta.env.VITE_BASE_URL,
   timeout: 10000,
   headers: { 
     "Content-Type": "application/json",
-    'ngrok-skip-browser-warning': 'true',
-
-   },
+    "ngrok-skip-browser-warning": "true",
+  },
 });
+
 
 // Request Interceptor
 axiosInstance.interceptors.request.use(
   (config) => {
     const token = useAuthStore.getState().token;
 
-    const skipAuthEndpoints = ["/auth/sendOtp", "/auth/verifyOtp", "/ping"];
+    const skipAuthEndpoints = ["/auth/sendOtp", "/auth/verifyOtp", ];
     const shouldSkip = skipAuthEndpoints.some((endpoint) =>
       config.url.includes(endpoint)
     );
@@ -36,11 +35,10 @@ axiosInstance.interceptors.response.use(
   (response) => response,
   (error) => {
     if (error.response?.status === 401) {
-      // Token expired or invalid → clear it
+
       useAuthStore.getState().clearToken();
       console.warn("Token expired. Cleared from storage.");
-      // Optional: Redirect to login
-      // window.location.href = "/get-started";
+
     }
     return Promise.reject(error);
   }
