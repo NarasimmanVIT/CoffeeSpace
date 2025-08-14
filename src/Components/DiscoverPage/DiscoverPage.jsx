@@ -1,17 +1,12 @@
 import React, { useState } from "react";
-import profiles from "./Profiles";
+import profiles from "../../Data/Profiles";
 import "./DiscoverPage.css";
 import { Suitcase, MapPin, ChatCircle, X, HeartStraight } from "phosphor-react";
+import { handleNext } from "./HandleDiscover";
 
 function DiscoverPage() {
+  
   const [index, setIndex] = useState(0);
-
-  const handleNext = () => {
-    if (index < profiles.length - 1) {
-      setIndex(index + 1);
-    }
-  };
-
   const current = profiles[index];
 
   return (
@@ -52,10 +47,16 @@ function DiscoverPage() {
             ))}
           </div>
           <div className="discover-buttons">
-            <button className="x" onClick={handleNext}>
+            <button
+              className="x"
+              onClick={() => handleNext(index, setIndex, profiles.length)}
+            >
               <X size={16} color="#ef4444" weight="bold" />
             </button>
-            <button className="like" onClick={handleNext}>
+            <button
+              className="like"
+              onClick={() => handleNext(index, setIndex, profiles.length)}
+            >
               <HeartStraight size={16} color="#93501f" weight="bold" />
             </button>
             <button className="chat">

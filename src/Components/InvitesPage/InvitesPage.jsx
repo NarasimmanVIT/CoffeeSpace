@@ -1,25 +1,17 @@
 import SentInvites from "../SentInvites/SentInvites";
 import ReceivedInvites from "../ReceivedInvites/ReceivedInvites";
 import ConnectedInvites from "../ConnectedInvites/ConnectedInvites";
-import invitesData from "./invitesData";
+import invitesData from "../../Data/invitesData";
 import { Tray, PaperPlaneTilt, Users } from "phosphor-react";
 import "./Invitespage.css";
 import { useState } from "react";
+import { handleAccept, handleDecline } from "./InvitesHandlers";
 
 const InvitesPage = () => {
+  
   const [activeTab, setActiveTab] = useState("received");
   const [receivedInvites, setReceivedInvites] = useState(invitesData);
   const [connected, setConnected] = useState([]);
-
-  const handleAccept = (id) => {
-    const accepted = receivedInvites.find((invite) => invite.id === id);
-    setConnected([...connected, accepted]);
-    setReceivedInvites(receivedInvites.filter((invite) => invite.id !== id));
-  };
-
-  const handleDecline = (id) => {
-    setReceivedInvites(receivedInvites.filter((invite) => invite.id !== id));
-  };
 
   return (
     <div className="invites-page">
@@ -36,7 +28,7 @@ const InvitesPage = () => {
           className={activeTab === "sent" ? "active" : ""}
           onClick={() => setActiveTab("sent")}
         >
-          <PaperPlaneTilt  size={18} color=" #847062" weight="regular" style={{ marginRight: "8px" }} />
+          <PaperPlaneTilt size={18} color=" #847062" weight="regular" style={{ marginRight: "8px" }} />
           Sent
         </button>
         <button
@@ -53,13 +45,11 @@ const InvitesPage = () => {
         {activeTab === "received" && (
           <ReceivedInvites
             invites={receivedInvites}
-            onAccept={handleAccept}
-            onDecline={handleDecline}
+            onAccept={(id) => handleAccept(id, receivedInvites, setReceivedInvites, connected, setConnected)}
+            onDecline={(id) => handleDecline(id, receivedInvites, setReceivedInvites)}
           />
         )}
-        {activeTab === "connected" && (
-          <ConnectedInvites connections={connected} />
-        )}
+        {activeTab === "connected" && <ConnectedInvites connections={connected} />}
       </div>
     </div>
   );
