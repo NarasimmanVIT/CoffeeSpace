@@ -16,12 +16,13 @@ const GetStarted = () => {
   const [loading, setLoading] = useState(false);
   
   const setToken = useAuthStore((state) => state.setToken);
+  
 
   const handleSendOtp = async () => {
     if (!phoneNumber) return toast.warn("Please enter a phone number");
     setLoading(true);
     
-    console.log(phoneNumber)
+  
 
     try {
       const response = await axiosInstance.post("/auth/sendOtp", {
