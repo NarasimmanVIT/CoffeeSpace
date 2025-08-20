@@ -65,7 +65,6 @@ const Register = () => {
 
   const { metadata, loading, error } = useMetadata();
 
-
   // if (loading) {
   //   console.log("Loading metadata...");
   // }
@@ -79,7 +78,6 @@ const Register = () => {
   // Extract the data directly from metadata
   // const goalsGroup = metadata?.goals;
   // const experienceGroup = metadata?.experience;
-
 
   //   // Api's
 
@@ -95,6 +93,8 @@ const Register = () => {
 
   //  const [goal, setGoal] = useState(null);
   //  const [experience, setExperience] = useState("");
+
+
 
   return (
     <div className="register-page">
@@ -156,18 +156,31 @@ const Register = () => {
         <div className="form-row">
           <CustomDropdown
             label="What's your goal?"
-            options={metadata?.goals?.options?.map(opt => ({
-              id: opt.id,
-              name: opt.value,
-            }))
-             || []}
+            options={
+              metadata?.goals?.options?.map((opt) => ({
+                id: opt.id,
+                name: opt.value,
+              })) || [
+                { id: 1, name: "Build a startup" },
+                { id: 2, name: "Find co-founders" },
+              ]
+            }
             value={goal}
             onChange={setGoal}
           />
 
           <CustomDropdown
             label="Experience Level"
-            options={metadata?.experience?.options || []}
+            options={
+              metadata?.experience?.options?.map((opt) => ({
+                id: opt.id,
+                name: opt.value,
+              })) || [
+                { id: 1, name: "Beginner" },
+                { id: 2, name: "Intermediate" },
+                { id: 3, name: "Expert" },
+              ]
+            }
             value={experience}
             onChange={setExperience}
           />

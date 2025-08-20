@@ -1,14 +1,13 @@
 import React, { useState } from "react";
 import "./GetStarted.css";
 import { useNavigate } from "react-router-dom";
-// import axiosInstance from "../api/axiosInstance";
 import axiosInstance from "../../api/axiosInstance";
-// import useAuthStore from "../store/authStore";
 import useAuthStore from "../../store/authStore";
 import { Phone, Lock, Loader2 } from "lucide-react";
 import { ToastContainer, toast } from "react-toastify";
 import "react-toastify/dist/ReactToastify.css";
-// import MetaData from "../components/MetaDataCom";
+
+
 
 const GetStarted = () => {
   const navigate = useNavigate();
@@ -65,7 +64,7 @@ const GetStarted = () => {
           if (profileId && profileId !== "null") {
             navigate("/home");
           } else {
-            navigate("/metadata");
+            navigate("/register");
           }
         }, 1500);
       } else {

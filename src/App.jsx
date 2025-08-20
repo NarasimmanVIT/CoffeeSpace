@@ -13,6 +13,7 @@ import Login from './components/Login-Signup/Login'
 import GetStarted from './components/GetStarted/GetStarted'
 import Register from './components/Register/Register'
 
+
 function App() {
 
   return (
@@ -35,6 +36,7 @@ function App() {
       <Route path='/login' element={<Login/>} />
       <Route path='/get-started' element={<GetStarted/>} />
       <Route path='/register' element={<Register/>} />
+
       </Routes>
     </>
   )

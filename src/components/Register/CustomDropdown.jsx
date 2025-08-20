@@ -18,7 +18,7 @@ const CustomDropdown = ({ label, options = [], value, onChange }) => {
   };
 
   const handleSelect = (option) => {
-    onChange(option); 
+    onChange(option);
     setIsOpen(false);
   };
 
@@ -51,7 +51,7 @@ const CustomDropdown = ({ label, options = [], value, onChange }) => {
             <li
               key={opt.id || idx}
               onClick={() => handleSelect(opt)}
-              name className="dropdown-option"
+              className="dropdown-option"
             >
               {opt.name}
             </li>
