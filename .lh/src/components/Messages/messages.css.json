@@ -3,7 +3,7 @@
     "activeCommit": 0,
     "commits": [
         {
-            "activePatchIndex": 26,
+            "activePatchIndex": 27,
             "patches": [
                 {
                     "date": 1753425597667,
@@ -112,6 +112,10 @@
                 {
                     "date": 1753519916976,
                     "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,9 +1,9 @@\n .messages-page {\r\n   display: flex;\r\n   height: 100vh; \r\n   width: 100%;\r\n-  background-color: black;\r\n+  background-color: bl;\r\n   font-family: Arial, sans-serif;\r\n   padding: 30px;\r\n   box-sizing: border-box;\r\n   gap: 30px;\r\n"
+                },
+                {
+                    "date": 1755157179246,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,14 +1,14 @@\n-.messages-page {\r\n+/* .messages-page {\r\n   display: flex;\r\n   height: 100vh; \r\n   width: 100%;\r\n-  background-color: bl;\r\n+  background-color: #F9F7F4;\r\n   font-family: Arial, sans-serif;\r\n   padding: 30px;\r\n   box-sizing: border-box;\r\n   gap: 30px;\r\n-}\r\n+} */\r\n \r\n /* .sidebar {\r\n   width: 250px;\r\n   background-color: #f5f5f5;\r\n"
                 }
             ],
             "date": 1753425597667,

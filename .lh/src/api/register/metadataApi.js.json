@@ -1,0 +1,74 @@
+{
+    "sourceFile": "src/api/register/metadataApi.js",
+    "activeCommit": 0,
+    "commits": [
+        {
+            "activePatchIndex": 14,
+            "patches": [
+                {
+                    "date": 1755500549948,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n"
+                },
+                {
+                    "date": 1755500556198,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,6 +1,4 @@\n-// src/components/api/register/metadataApi.js\r\n-\r\n export const fetchMetadata = async () => {\r\n   try {\r\n     const res = await fetch(\"http://localhost:5000/metadata\", {\r\n       method: \"GET\",\r\n"
+                },
+                {
+                    "date": 1755500570915,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -12,9 +12,9 @@\n       throw new Error(\"Failed to fetch metadata\");\r\n     }\r\n \r\n     const data = await res.json();\r\n-    return data.data; // backend wraps enums inside data\r\n+    return data.data;\r\n   } catch (err) {\r\n     console.error(\"Metadata fetch error:\", err);\r\n     throw err;\r\n   }\r\n"
+                },
+                {
+                    "date": 1755500580887,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -3,9 +3,9 @@\n     const res = await fetch(\"http://localhost:5000/metadata\", {\r\n       method: \"GET\",\r\n       headers: {\r\n         \"Content-Type\": \"application/json\",\r\n-        Authorization: Bearer ${localStorage.getItem(\"token\")}, // keep if backend requires auth\r\n+        Authorization: `Bearer ${localStorage.getItem(\"token\")}, // keep if backend requires auth\r\n       },\r\n     });\r\n \r\n     if (!res.ok) {\r\n"
+                },
+                {
+                    "date": 1755500591314,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -0,0 +1,21 @@\n+export const fetchMetadata = async () => {\r\n+  try {\r\n+    const res = await fetch(\"http://localhost:5000/metadata\", {\r\n+      method: \"GET\",\r\n+      headers: {\r\n+        \"Content-Type\": \"application/json\",\r\n+        Authorization: `Bearer ${localStorage.getItem(\"token\")}`,\r\n+      },\r\n+    });\r\n+\r\n+    if (!res.ok) {\r\n+      throw new Error(\"Failed to fetch metadata\");\r\n+    }\r\n+\r\n+    const data = await res.json();\r\n+    return data.data;\r\n+  } catch (err) {\r\n+    console.error(\"Metadata fetch error:\", err);\r\n+    throw err;\r\n+  }\r\n+};\n\\ No newline at end of file\n"
+                },
+                {
+                    "date": 1755501953759,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,41 +1,15 @@\n-export const fetchMetadata = async () => {\r\n-  try {\r\n-    const res = await fetch(\"http://localhost:5000/metadata\", {\r\n-      method: \"GET\",\r\n-      headers: {\r\n-        \"Content-Type\": \"application/json\",\r\n-        Authorization: `Bearer ${localStorage.getItem(\"token\")}`,\r\n-      },\r\n-    });\r\n+// src/components/Register/api/metadataApi.js\r\n+import axiosInstance from \"../../api/axiosInstance\"; // adjust path if needed\r\n \r\n-    if (!res.ok) {\r\n-      throw new Error(\"Failed to fetch metadata\");\r\n-    }\r\n-\r\n-    const data = await res.json();\r\n-    return data.data;\r\n-  } catch (err) {\r\n-    console.error(\"Metadata fetch error:\", err);\r\n-    throw err;\r\n-  }\r\n-};\n export const fetchMetadata = async () => {\r\n   try {\r\n-    const res = await fetch(\"http://localhost:5000/metadata\", {\r\n-      method: \"GET\",\r\n+    const res = await axiosInstance.get(\"/metadata\", {\r\n       headers: {\r\n-        \"Content-Type\": \"application/json\",\r\n-        Authorization: `Bearer ${localStorage.getItem(\"token\")}, // keep if backend requires auth\r\n+        Authorization: Bearer ${localStorage.getItem(\"token\")}, // if required\r\n       },\r\n     });\r\n-\r\n-    if (!res.ok) {\r\n-      throw new Error(\"Failed to fetch metadata\");\r\n-    }\r\n-\r\n-    const data = await res.json();\r\n-    return data.data;\r\n+    return res.data.data; // backend wraps enums inside \"data\"\r\n   } catch (err) {\r\n     console.error(\"Metadata fetch error:\", err);\r\n     throw err;\r\n   }\r\n"
+                },
+                {
+                    "date": 1755501959481,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -4,9 +4,9 @@\n export const fetchMetadata = async () => {\r\n   try {\r\n     const res = await axiosInstance.get(\"/metadata\", {\r\n       headers: {\r\n-        Authorization: Bearer ${localStorage.getItem(\"token\")}, // if required\r\n+        Authorization: `Bearer ${localStorage.getItem(\"token\")}`, // if required\r\n       },\r\n     });\r\n     return res.data.data; // backend wraps enums inside \"data\"\r\n   } catch (err) {\r\n"
+                },
+                {
+                    "date": 1755501974574,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,12 +1,11 @@\n-// src/components/Register/api/metadataApi.js\r\n import axiosInstance from \"../../api/axiosInstance\"; // adjust path if needed\r\n \r\n export const fetchMetadata = async () => {\r\n   try {\r\n     const res = await axiosInstance.get(\"/metadata\", {\r\n       headers: {\r\n-        Authorization: `Bearer ${localStorage.getItem(\"token\")}`, // if required\r\n+        Authorization: `Bearer ${localStorage.getItem(\"token\")}`, \r\n       },\r\n     });\r\n     return res.data.data; // backend wraps enums inside \"data\"\r\n   } catch (err) {\r\n"
+                },
+                {
+                    "date": 1755501983899,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,14 +1,14 @@\n-import axiosInstance from \"../../api/axiosInstance\"; // adjust path if needed\r\n+import axiosInstance from \"../../api/axiosInstance\";\r\n \r\n export const fetchMetadata = async () => {\r\n   try {\r\n     const res = await axiosInstance.get(\"/metadata\", {\r\n       headers: {\r\n         Authorization: `Bearer ${localStorage.getItem(\"token\")}`, \r\n       },\r\n     });\r\n-    return res.data.data; // backend wraps enums inside \"data\"\r\n+    return res.data.data; \r\n   } catch (err) {\r\n     console.error(\"Metadata fetch error:\", err);\r\n     throw err;\r\n   }\r\n"
+                },
+                {
+                    "date": 1755623960131,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -5,9 +5,10 @@\n     const res = await axiosInstance.get(\"/metadata\", {\r\n       headers: {\r\n         Authorization: `Bearer ${localStorage.getItem(\"token\")}`, \r\n       },\r\n-    });\r\n+    }\r\n+  );\r\n     return res.data.data; \r\n   } catch (err) {\r\n     console.error(\"Metadata fetch error:\", err);\r\n     throw err;\r\n"
+                },
+                {
+                    "date": 1755623967596,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -2,12 +2,12 @@\n \r\n export const fetchMetadata = async () => {\r\n   try {\r\n     const res = await axiosInstance.get(\"/metadata\", {\r\n-      headers: {\r\n-        Authorization: `Bearer ${localStorage.getItem(\"token\")}`, \r\n-      },\r\n-    }\r\n+    //   headers: {\r\n+    //     Authorization: `Bearer ${localStorage.getItem(\"token\")}`, \r\n+    //   },\r\n+    // }\r\n   );\r\n     return res.data.data; \r\n   } catch (err) {\r\n     console.error(\"Metadata fetch error:\", err);\r\n"
+                },
+                {
+                    "date": 1755623974420,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,9 +1,10 @@\n import axiosInstance from \"../../api/axiosInstance\";\r\n \r\n export const fetchMetadata = async () => {\r\n   try {\r\n-    const res = await axiosInstance.get(\"/metadata\", {\r\n+    const res = await axiosInstance.get(\"/metadata\"\r\n+      , {\r\n     //   headers: {\r\n     //     Authorization: `Bearer ${localStorage.getItem(\"token\")}`, \r\n     //   },\r\n     // }\r\n"
+                },
+                {
+                    "date": 1755624301114,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,10 +1,10 @@\n import axiosInstance from \"../../api/axiosInstance\";\r\n \r\n export const fetchMetadata = async () => {\r\n   try {\r\n-    const res = await axiosInstance.get(\"/metadata\"\r\n-      , {\r\n+    const res = await axiosInstance.get(\"/metadata\",\r\n+    //  , {\r\n     //   headers: {\r\n     //     Authorization: `Bearer ${localStorage.getItem(\"token\")}`, \r\n     //   },\r\n     // }\r\n"
+                },
+                {
+                    "date": 1755624306429,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,9 +1,9 @@\n import axiosInstance from \"../../api/axiosInstance\";\r\n \r\n export const fetchMetadata = async () => {\r\n   try {\r\n-    const res = await axiosInstance.get(\"/metadata\",\r\n+    const res = await axiosInstance.get(\"/metadata\",playl\r\n     //  , {\r\n     //   headers: {\r\n     //     Authorization: `Bearer ${localStorage.getItem(\"token\")}`, \r\n     //   },\r\n"
+                },
+                {
+                    "date": 1755624329574,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,9 +1,9 @@\n import axiosInstance from \"../../api/axiosInstance\";\r\n \r\n export const fetchMetadata = async () => {\r\n   try {\r\n-    const res = await axiosInstance.get(\"/metadata\",playl\r\n+    const res = await axiosInstance.get(\"/metadata\"\r\n     //  , {\r\n     //   headers: {\r\n     //     Authorization: `Bearer ${localStorage.getItem(\"token\")}`, \r\n     //   },\r\n"
+                }
+            ],
+            "date": 1755500549948,
+            "name": "Commit-0",
+            "content": "// src/components/api/register/metadataApi.js\r\n\r\nexport const fetchMetadata = async () => {\r\n  try {\r\n    const res = await fetch(\"http://localhost:5000/metadata\", {\r\n      method: \"GET\",\r\n      headers: {\r\n        \"Content-Type\": \"application/json\",\r\n        Authorization: Bearer ${localStorage.getItem(\"token\")}, // keep if backend requires auth\r\n      },\r\n    });\r\n\r\n    if (!res.ok) {\r\n      throw new Error(\"Failed to fetch metadata\");\r\n    }\r\n\r\n    const data = await res.json();\r\n    return data.data; // backend wraps enums inside data\r\n  } catch (err) {\r\n    console.error(\"Metadata fetch error:\", err);\r\n    throw err;\r\n  }\r\n};"
+        }
+    ]
+}

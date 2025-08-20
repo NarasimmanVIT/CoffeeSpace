@@ -1,0 +1,18 @@
+{
+    "sourceFile": "src/components/Navbar/Navbar.js",
+    "activeCommit": 0,
+    "commits": [
+        {
+            "activePatchIndex": 0,
+            "patches": [
+                {
+                    "date": 1755154158035,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n"
+                }
+            ],
+            "date": 1755154158035,
+            "name": "Commit-0",
+            "content": "import { useState, useEffect } from \"react\";\r\nimport { useLocation } from \"react-router-dom\";\r\n\r\nexport const useNavbar = () => {\r\n  const [isScrolled, setIsScrolled] = useState(false);\r\n  const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);\r\n  const [isAccountDropdownOpen, setIsAccountDropdownOpen] = useState(false);\r\n\r\n  const location = useLocation();\r\n\r\n  useEffect(() => {\r\n    const handleScroll = () => {\r\n      setIsScrolled(window.scrollY > 10);\r\n    };\r\n    window.addEventListener(\"scroll\", handleScroll);\r\n    return () => window.removeEventListener(\"scroll\", handleScroll);\r\n  }, []);\r\n\r\n  const toggleMenu = () => {\r\n    setIsMobileMenuOpen((prev) => !prev);\r\n  };\r\n\r\n  const toggleAccountDropdown = () => {\r\n    setIsAccountDropdownOpen((prev) => !prev);\r\n  };\r\n\r\n  return {\r\n    isScrolled,\r\n    isMobileMenuOpen,\r\n    toggleMenu,\r\n    isAccountDropdownOpen,\r\n    toggleAccountDropdown,\r\n    location\r\n  };\r\n};"
+        }
+    ]
+}

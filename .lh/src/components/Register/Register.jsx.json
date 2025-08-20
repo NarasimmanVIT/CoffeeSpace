@@ -1,0 +1,26 @@
+{
+    "sourceFile": "src/components/Register/Register.jsx",
+    "activeCommit": 0,
+    "commits": [
+        {
+            "activePatchIndex": 2,
+            "patches": [
+                {
+                    "date": 1754833015943,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n"
+                },
+                {
+                    "date": 1754833021349,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -20,5 +20,5 @@\n     </div>\r\n   );\r\n };\r\n \r\n-export default Registe\n\\ No newline at end of file\n+export default Register;\n\\ No newline at end of file\n"
+                },
+                {
+                    "date": 1754833958656,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -0,0 +1,24 @@\n+import React from \"react\";\r\n+import \"./Register.css\"\r\n+\r\n+const Register = () => {\r\n+  return (\r\n+    <div className=\"register-container\">\r\n+      <h1 className=\"register-heading\">Complete Your Profile</h1>\r\n+      <p className=\"register-para\">\r\n+        Sign up to get started and enjoy our services.\r\n+      </p>\r\n+\r\n+      <div className=\"form-group\">\r\n+        <label htmlFor=\"name\">Full Name</label>\r\n+        <input\r\n+          type=\"text\"\r\n+          id=\"name\"\r\n+          placeholder=\"Enter your full name\"\r\n+        />\r\n+      </div>\r\n+    </div>\r\n+  );\r\n+};\r\n+\r\n+export default Register;\n\\ No newline at end of file\n"
+                }
+            ],
+            "date": 1754833015943,
+            "name": "Commit-0",
+            "content": "import React from \"react\";\r\nimport \"./Register.css\";\r\n\r\nconst Register = () => {\r\n  return (\r\n    <div className=\"register-container\">\r\n      <h1 className=\"register-heading\">Create Your Account</h1>\r\n      <p className=\"register-para\">\r\n        Sign up to get started and enjoy our services.\r\n      </p>\r\n\r\n      <div className=\"form-group\">\r\n        <label htmlFor=\"name\">Full Name</label>\r\n        <input\r\n          type=\"text\"\r\n          id=\"name\"\r\n          placeholder=\"Enter your full name\"\r\n        />\r\n      </div>\r\n    </div>\r\n  );\r\n};\r\n\r\nexport default Register;"
+        }
+    ]
+}

@@ -3,7 +3,7 @@
     "activeCommit": 0,
     "commits": [
         {
-            "activePatchIndex": 1,
+            "activePatchIndex": 8,
             "patches": [
                 {
                     "date": 1754378712654,
@@ -12,6 +12,34 @@
                 {
                     "date": 1754380845707,
                     "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,8 +1,8 @@\n import axios from 'axios';\r\n \r\n const axiosInstance = axios.create({\r\n-  baseURL: 'https://your-api-url.com', // replace with your actual backend URL\r\n+  baseURL: 'https://your-api-url.com', // replace with  actual backend URL\r\n   headers: {\r\n     'Content-Type': 'application/json',\r\n   },\r\n });\r\n"
+                },
+                {
+                    "date": 1755067479867,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,8 +1,8 @@\n import axios from 'axios';\r\n \r\n const axiosInstance = axios.create({\r\n-  baseURL: 'https://your-api-url.com', // replace with  actual backend URL\r\n+  baseURL: 'https://d5df517c94db.ngrok-free.app/api/register', // replace with actual backend URL\r\n   headers: {\r\n     'Content-Type': 'application/json',\r\n   },\r\n });\r\n"
+                },
+                {
+                    "date": 1755067489345,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -0,0 +1,9 @@\n+import axios from 'axios';\r\n+const axiosInstance = axios.create({\r\n+  baseURL: 'https://d5df517c94db.ngrok-free.app/api', // replace with actual backend URL\r\n+  headers: {\r\n+    'Content-Type': 'application/json',\r\n+  },\r\n+});\r\n+\r\n+export default axiosInstance;\n\\ No newline at end of file\n"
+                },
+                {
+                    "date": 1755067494552,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,5 +1,6 @@\n import axios from 'axios';\r\n+\r\n const axiosInstance = axios.create({\r\n   baseURL: 'https://d5df517c94db.ngrok-free.app/api', // replace with actual backend URL\r\n   headers: {\r\n     'Content-Type': 'application/json',\r\n"
+                },
+                {
+                    "date": 1755072305205,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,20 +1,10 @@\n-import axios from 'axios';\r\n+// import axios from 'axios';\r\n \r\n const axiosInstance = axios.create({\r\n   baseURL: 'https://d5df517c94db.ngrok-free.app/api', // replace with actual backend URL\r\n   headers: {\r\n     'Content-Type': 'application/json',\r\n   },\r\n });\r\n \r\n-export default axiosInstance;\n-import axios from 'axios';\r\n-\r\n-const axiosInstance = axios.create({\r\n-  baseURL: 'https://d5df517c94db.ngrok-free.app/api/register', // replace with actual backend URL\r\n-  headers: {\r\n-    'Content-Type': 'application/json',\r\n-  },\r\n-});\r\n-\r\n export default axiosInstance;\n\\ No newline at end of file\n"
+                },
+                {
+                    "date": 1755072310320,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -0,0 +1,10 @@\n+// import axios from 'axios';\r\n+import axi\r\n+const axiosInstance = axios.create({\r\n+  baseURL: 'https://d5df517c94db.ngrok-free.app/api', // replace with actual backend URL\r\n+  headers: {\r\n+    'Content-Type': 'application/json',\r\n+  },\r\n+});\r\n+\r\n+export default axiosInstance;\n\\ No newline at end of file\n"
+                },
+                {
+                    "date": 1755072316040,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,6 +1,6 @@\n // import axios from 'axios';\r\n-import axios \r\n+import axios f\r\n const axiosInstance = axios.create({\r\n   baseURL: 'https://d5df517c94db.ngrok-free.app/api', // replace with actual backend URL\r\n   headers: {\r\n     'Content-Type': 'application/json',\r\n"
+                },
+                {
+                    "date": 1755072322080,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,6 +1,6 @@\n // import axios from 'axios';\r\n-import axios from \"A\"\r\n+import axios from \"\"\r\n const axiosInstance = axios.create({\r\n   baseURL: 'https://d5df517c94db.ngrok-free.app/api', // replace with actual backend URL\r\n   headers: {\r\n     'Content-Type': 'application/json',\r\n"
                 }
             ],
             "date": 1754378712654,

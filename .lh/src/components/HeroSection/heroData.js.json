@@ -1,0 +1,82 @@
+{
+    "sourceFile": "src/components/HeroSection/heroData.js",
+    "activeCommit": 0,
+    "commits": [
+        {
+            "activePatchIndex": 16,
+            "patches": [
+                {
+                    "date": 1755154657726,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n"
+                },
+                {
+                    "date": 1755154902099,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -8,6 +8,7 @@\n   titleLine1: \"Connect with\",\r\n   highlight: \"Entrepreneurs\",\r\n   subtitle: \"Who share your vision\",\r\n   description:\r\n-    \"Discover and connect with entrepreneurs who share your interests, industry focus, and business vision for meaningful partnerships.\"\r\n+    \"Discover and connect with entrepreneurs who share your \r\n+    interests, industry focus, and business vision for meaningful partnerships.\"\r\n };\n\\ No newline at end of file\n"
+                },
+                {
+                    "date": 1755154915814,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -7,8 +7,7 @@\n export const heroTexts = {\r\n   titleLine1: \"Connect with\",\r\n   highlight: \"Entrepreneurs\",\r\n   subtitle: \"Who share your vision\",\r\n-  description:\r\n-    \"Discover and connect with entrepreneurs who share your \r\n-    interests, industry focus, and business vision for meaningful partnerships.\"\r\n+  description1:\r\n+    \"Discover and connect with entrepreneurs who share your interests, industry focus, and business vision for meaningful partnerships.\"\r\n };\n\\ No newline at end of file\n"
+                },
+                {
+                    "date": 1755154921427,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -8,6 +8,7 @@\n   titleLine1: \"Connect with\",\r\n   highlight: \"Entrepreneurs\",\r\n   subtitle: \"Who share your vision\",\r\n   description1:\r\n-    \"Discover and connect with entrepreneurs who share your interests, industry focus, and business vision for meaningful partnerships.\"\r\n+    \"Discover and connect with entrepreneurs who share your d\r\n+    interests, industry focus, and business vision for meaningful partnerships.\"\r\n };\n\\ No newline at end of file\n"
+                },
+                {
+                    "date": 1755154928715,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -8,7 +8,7 @@\n   titleLine1: \"Connect with\",\r\n   highlight: \"Entrepreneurs\",\r\n   subtitle: \"Who share your vision\",\r\n   description1:\r\n-    \"Discover and connect with entrepreneurs who share your d\r\n-    interests, industry focus, and business vision for meaningful partnerships.\"\r\n+    \"Discover and connect with entrepreneurs who share your\" \r\n+    \"interests, industry focus, and business vision for meaningful partnerships.\"\r\n };\n\\ No newline at end of file\n"
+                },
+                {
+                    "date": 1755154933989,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -9,6 +9,6 @@\n   highlight: \"Entrepreneurs\",\r\n   subtitle: \"Who share your vision\",\r\n   description1:\r\n     \"Discover and connect with entrepreneurs who share your\" \r\n-    \"interests, industry focus, and business vision for meaningful partnerships.\"\r\n+    d \"interests, industry focus, and business vision for meaningful partnerships.\"\r\n };\n\\ No newline at end of file\n"
+                },
+                {
+                    "date": 1755154942580,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -8,7 +8,7 @@\n   titleLine1: \"Connect with\",\r\n   highlight: \"Entrepreneurs\",\r\n   subtitle: \"Who share your vision\",\r\n   description1:\r\n-    \"Discover and connect with entrepreneurs who share your\" \r\n-    d \"interests, industry focus, and business vision for meaningful partnerships.\"\r\n+    \"Discover and connect with entrepreneurs who share your\" ,\r\n+    description2: \"interests, industry focus, and business vision for meaningful partnerships.\"\r\n };\n\\ No newline at end of file\n"
+                },
+                {
+                    "date": 1755154947693,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -9,6 +9,7 @@\n   highlight: \"Entrepreneurs\",\r\n   subtitle: \"Who share your vision\",\r\n   description1:\r\n     \"Discover and connect with entrepreneurs who share your\" ,\r\n-    description2: \"interests, industry focus, and business vision for meaningful partnerships.\"\r\n+    \r\n+description2: \"interests, industry focus, and business vision for meaningful partnerships.\"\r\n };\n\\ No newline at end of file\n"
+                },
+                {
+                    "date": 1755154952793,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -9,7 +9,6 @@\n   highlight: \"Entrepreneurs\",\r\n   subtitle: \"Who share your vision\",\r\n   description1:\r\n     \"Discover and connect with entrepreneurs who share your\" ,\r\n-    \r\n-description2: \"interests, industry focus, and business vision for meaningful partnerships.\"\r\n+  description2: \"interests, industry focus, and business vision for meaningful partnerships.\"\r\n };\n\\ No newline at end of file\n"
+                },
+                {
+                    "date": 1755155068725,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -9,6 +9,7 @@\n   highlight: \"Entrepreneurs\",\r\n   subtitle: \"Who share your vision\",\r\n   description1:\r\n     \"Discover and connect with entrepreneurs who share your\" ,\r\n-  description2: \"interests, industry focus, and business vision for meaningful partnerships.\"\r\n+  description2: \"interests, industry focus, and business vision for meaningful \r\n+  partnerships.\"\r\n };\n\\ No newline at end of file\n"
+                },
+                {
+                    "date": 1755155076636,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -9,7 +9,7 @@\n   highlight: \"Entrepreneurs\",\r\n   subtitle: \"Who share your vision\",\r\n   description1:\r\n     \"Discover and connect with entrepreneurs who share your\" ,\r\n-  description2: \"interests, industry focus, and business vision for meaningful \r\n-  partnerships.\"\r\n+  description2: \"interests, industry focus, and business vision for meaningful\" \r\n+  \"partnerships.\"\r\n };\n\\ No newline at end of file\n"
+                },
+                {
+                    "date": 1755155082763,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -9,7 +9,7 @@\n   highlight: \"Entrepreneurs\",\r\n   subtitle: \"Who share your vision\",\r\n   description1:\r\n     \"Discover and connect with entrepreneurs who share your\" ,\r\n-  description2: \"interests, industry focus, and business vision for meaningful\" \r\n-  \"partnerships.\"\r\n+  description2: \"interests, industry focus, and business vision for meaningful\", \r\n+   \"partnerships.\"\r\n };\n\\ No newline at end of file\n"
+                },
+                {
+                    "date": 1755155088051,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -10,6 +10,6 @@\n   subtitle: \"Who share your vision\",\r\n   description1:\r\n     \"Discover and connect with entrepreneurs who share your\" ,\r\n   description2: \"interests, industry focus, and business vision for meaningful\", \r\n-   \"partnerships.\"\r\n+  desc \"partnerships.\"\r\n };\n\\ No newline at end of file\n"
+                },
+                {
+                    "date": 1755155093831,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -10,6 +10,6 @@\n   subtitle: \"Who share your vision\",\r\n   description1:\r\n     \"Discover and connect with entrepreneurs who share your\" ,\r\n   description2: \"interests, industry focus, and business vision for meaningful\", \r\n-  desc \"partnerships.\"\r\n+  description3: \"partnerships.\"\r\n };\n\\ No newline at end of file\n"
+                },
+                {
+                    "date": 1755155108060,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -8,8 +8,8 @@\n   titleLine1: \"Connect with\",\r\n   highlight: \"Entrepreneurs\",\r\n   subtitle: \"Who share your vision\",\r\n   description1:\r\n-    \"Discover and connect with entrepreneurs who share your\" ,\r\n+    \" Discover and connect with entrepreneurs who share your\" ,\r\n   description2: \"interests, industry focus, and business vision for meaningful\", \r\n   description3: \"partnerships.\"\r\n };\n\\ No newline at end of file\n"
+                },
+                {
+                    "date": 1755155115008,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -8,8 +8,8 @@\n   titleLine1: \"Connect with\",\r\n   highlight: \"Entrepreneurs\",\r\n   subtitle: \"Who share your vision\",\r\n   description1:\r\n-    \" Discover and connect with entrepreneurs who share your\" ,\r\n+    \"Discover and connect with entrepreneurs who share your\" ,\r\n   description2: \"interests, industry focus, and business vision for meaningful\", \r\n   description3: \"partnerships.\"\r\n };\n\\ No newline at end of file\n"
+                },
+                {
+                    "date": 1755155328735,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -7,9 +7,8 @@\n export const heroTexts = {\r\n   titleLine1: \"Connect with\",\r\n   highlight: \"Entrepreneurs\",\r\n   subtitle: \"Who share your vision\",\r\n-  description1:\r\n-    \"Discover and connect with entrepreneurs who share your\" ,\r\n-  description2: \"interests, industry focus, and business vision for meaningful\", \r\n+  description1:\"Discover and connect with entrepreneurs who share your\" ,\r\n+  description2:\"interests, industry focus, and business vision for meaningful\", \r\n   description3: \"partnerships.\"\r\n };\n\\ No newline at end of file\n"
+                }
+            ],
+            "date": 1755154657726,
+            "name": "Commit-0",
+            "content": "export const heroStats = [\r\n  { number: \"5000+\", label: \"Entrepreneurs\" },\r\n  { number: \"25+\", label: \"Interest Categories\" },\r\n  { number: \"200+\", label: \"Partnerships Formed\" }\r\n];\r\n\r\nexport const heroTexts = {\r\n  titleLine1: \"Connect with\",\r\n  highlight: \"Entrepreneurs\",\r\n  subtitle: \"Who share your vision\",\r\n  description:\r\n    \"Discover and connect with entrepreneurs who share your interests, industry focus, and business vision for meaningful partnerships.\"\r\n};"
+        }
+    ]
+}

@@ -1,0 +1,18 @@
+{
+    "sourceFile": "src/components/Messages/constants/usersData.js",
+    "activeCommit": 0,
+    "commits": [
+        {
+            "activePatchIndex": 0,
+            "patches": [
+                {
+                    "date": 1755156919683,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n"
+                }
+            ],
+            "date": 1755156919683,
+            "name": "Commit-0",
+            "content": "export const users = [\r\n  {\r\n    id: 1,\r\n    name: 'Sarah Chen',\r\n    lastMessage: 'That sounds like a great idea! When can we meet?',\r\n    image: 'https://via.placeholder.com/40',\r\n  },\r\n  {\r\n    id: 2,\r\n    name: 'Marcus Rodriguez',\r\n    lastMessage: \"I'd love to discuss the project further\",\r\n    image: 'https://via.placeholder.com/40',\r\n  },\r\n];"
+        }
+    ]
+}

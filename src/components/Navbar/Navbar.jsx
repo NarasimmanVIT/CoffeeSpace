@@ -3,29 +3,36 @@ import "./Navbar.css";
 import { Link } from "react-router-dom";
 import { Users, ChatCircle, PaperPlaneTilt, SignIn, UserCircle } from "phosphor-react";
 import { useLocation } from "react-router-dom";
-import { NavLink } from "react-router-dom";
+import { useNavbar } from "./useNavbar";
 
 const Navbar = () => {
-  const [isScrolled, setIsScrolled] = useState(false);
 
-  const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
+  const {
+    isScrolled, isMobileMenuOpen, toggleMenu,location
+  } = useNavbar();
 
-  useEffect(() => {
-    const handleScroll = () => {
-      setIsScrolled(window.scrollY > 10);
-    };
+  // const [isScrolled, setIsScrolled] = useState(false);
 
-    window.addEventListener("scroll", handleScroll);
-    return () => window.removeEventListener("scroll", handleScroll);
-  }, []);
+  // const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
 
-  const toggleMenu = () => {
-   setIsMobileMenuOpen(!isMobileMenuOpen);
-  };
+  // useEffect(() => {
+  //   const handleScroll = () => {
+  //     setIsScrolled(window.scrollY > 10);
+  //   };
 
-  const [isAccountDropdownOpen, setIsAccountDropdownOpen] = useState(false);
+  //   window.addEventListener("scroll", handleScroll);
+  //   return () => window.removeEventListener("scroll", handleScroll);
+  // }, []);
 
-  const location =useLocation();
+  // const toggleMenu = () => {
+  //  setIsMobileMenuOpen(!isMobileMenuOpen);
+  // };
+
+  // const [isAccountDropdownOpen, setIsAccountDropdownOpen] = useState(false);
+
+  // const location =useLocation();
+
+
 
   return (
     <>

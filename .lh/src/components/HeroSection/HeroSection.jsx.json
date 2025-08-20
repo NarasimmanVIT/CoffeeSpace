@@ -1,0 +1,198 @@
+{
+    "sourceFile": "src/components/HeroSection/HeroSection.jsx",
+    "activeCommit": 0,
+    "commits": [
+        {
+            "activePatchIndex": 45,
+            "patches": [
+                {
+                    "date": 1755064682794,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n"
+                },
+                {
+                    "date": 1755064688654,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,7 +1,8 @@\n import React from \"react\";\r\n import \"./HeroSection.css\";\r\n // import heroImg from \"../assets/hero-image.webp\"; \r\n+import h\r\n \r\n const HeroSection = () => {\r\n   return (\r\n     <section className=\"hero-image-only\">\r\n"
+                },
+                {
+                    "date": 1755064693986,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,8 +1,8 @@\n import React from \"react\";\r\n import \"./HeroSection.css\";\r\n // import heroImg from \"../assets/hero-image.webp\"; \r\n-import h\r\n+import heroI\r\n \r\n const HeroSection = () => {\r\n   return (\r\n     <section className=\"hero-image-only\">\r\n"
+                },
+                {
+                    "date": 1755064700814,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,8 +1,8 @@\n import React from \"react\";\r\n import \"./HeroSection.css\";\r\n // import heroImg from \"../assets/hero-image.webp\"; \r\n-import heroI\r\n+import heroImg from \"\"\r\n \r\n const HeroSection = () => {\r\n   return (\r\n     <section className=\"hero-image-only\">\r\n"
+                },
+                {
+                    "date": 1755064707232,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,8 +1,8 @@\n import React from \"react\";\r\n import \"./HeroSection.css\";\r\n // import heroImg from \"../assets/hero-image.webp\"; \r\n-import heroImg from \"\"\r\n+import heroImg from \"../a\"\r\n \r\n const HeroSection = () => {\r\n   return (\r\n     <section className=\"hero-image-only\">\r\n"
+                },
+                {
+                    "date": 1755064712982,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,8 +1,8 @@\n import React from \"react\";\r\n import \"./HeroSection.css\";\r\n // import heroImg from \"../assets/hero-image.webp\"; \r\n-import heroImg from \"../a\"\r\n+import heroImg from \"./\"\r\n \r\n const HeroSection = () => {\r\n   return (\r\n     <section className=\"hero-image-only\">\r\n"
+                },
+                {
+                    "date": 1755064821629,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,8 +1,8 @@\n import React from \"react\";\r\n import \"./HeroSection.css\";\r\n // import heroImg from \"../assets/hero-image.webp\"; \r\n-import heroImg from \"./\"\r\n+import heroImg from \"..\"\r\n \r\n const HeroSection = () => {\r\n   return (\r\n     <section className=\"hero-image-only\">\r\n"
+                },
+                {
+                    "date": 1755064827114,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,8 +1,8 @@\n import React from \"react\";\r\n import \"./HeroSection.css\";\r\n // import heroImg from \"../assets/hero-image.webp\"; \r\n-import heroImg from \"..\"\r\n+import heroImg from \"./as\"\r\n \r\n const HeroSection = () => {\r\n   return (\r\n     <section className=\"hero-image-only\">\r\n"
+                },
+                {
+                    "date": 1755064832934,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,8 +1,8 @@\n import React from \"react\";\r\n import \"./HeroSection.css\";\r\n // import heroImg from \"../assets/hero-image.webp\"; \r\n-import heroImg from \"./as\"\r\n+import heroImg from \"./assets/he\"\r\n \r\n const HeroSection = () => {\r\n   return (\r\n     <section className=\"hero-image-only\">\r\n"
+                },
+                {
+                    "date": 1755064838020,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,8 +1,8 @@\n import React from \"react\";\r\n import \"./HeroSection.css\";\r\n // import heroImg from \"../assets/hero-image.webp\"; \r\n-import heroImg from \"./assets/he\"\r\n+import heroImg from \"./assets/hero-\"\r\n \r\n const HeroSection = () => {\r\n   return (\r\n     <section className=\"hero-image-only\">\r\n"
+                },
+                {
+                    "date": 1755064845371,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,8 +1,8 @@\n import React from \"react\";\r\n import \"./HeroSection.css\";\r\n // import heroImg from \"../assets/hero-image.webp\"; \r\n-import heroImg from \"./assets/hero-\"\r\n+import heroImg from \"./assets/hero-image.webp\"\r\n \r\n const HeroSection = () => {\r\n   return (\r\n     <section className=\"hero-image-only\">\r\n"
+                },
+                {
+                    "date": 1755064859988,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,8 +1,8 @@\n import React from \"react\";\r\n import \"./HeroSection.css\";\r\n // import heroImg from \"../assets/hero-image.webp\"; \r\n-import heroImg from \"./assets/hero-image.webp\"\r\n+import heroImg from \"../assets/hero-image.webp\"\r\n \r\n const HeroSection = () => {\r\n   return (\r\n     <section className=\"hero-image-only\">\r\n"
+                },
+                {
+                    "date": 1755064878038,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,8 +1,8 @@\n import React from \"react\";\r\n import \"./HeroSection.css\";\r\n // import heroImg from \"../assets/hero-image.webp\"; \r\n-import heroImg from \"../assets/hero-image.webp\"\r\n+import heroImg from \"./assets/hero-image.webp\"\r\n \r\n const HeroSection = () => {\r\n   return (\r\n     <section className=\"hero-image-only\">\r\n"
+                },
+                {
+                    "date": 1755064927004,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,8 +1,8 @@\n import React from \"react\";\r\n import \"./HeroSection.css\";\r\n // import heroImg from \"../assets/hero-image.webp\"; \r\n-import heroImg from \"./assets/hero-image.webp\"\r\n+import heroImg from \"../assets/hero-image.webp\"\r\n \r\n const HeroSection = () => {\r\n   return (\r\n     <section className=\"hero-image-only\">\r\n"
+                },
+                {
+                    "date": 1755064932502,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,8 +1,8 @@\n import React from \"react\";\r\n import \"./HeroSection.css\";\r\n // import heroImg from \"../assets/hero-image.webp\"; \r\n-import heroImg from \"../assets/hero-image.webp\"\r\n+import heroImg from \r\n \r\n const HeroSection = () => {\r\n   return (\r\n     <section className=\"hero-image-only\">\r\n"
+                },
+                {
+                    "date": 1755064937819,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,8 +1,8 @@\n import React from \"react\";\r\n import \"./HeroSection.css\";\r\n // import heroImg from \"../assets/hero-image.webp\"; \r\n-import heroImg from \r\n+import heroImg from \"../\"\r\n \r\n const HeroSection = () => {\r\n   return (\r\n     <section className=\"hero-image-only\">\r\n"
+                },
+                {
+                    "date": 1755064943399,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,8 +1,8 @@\n import React from \"react\";\r\n import \"./HeroSection.css\";\r\n // import heroImg from \"../assets/hero-image.webp\"; \r\n-import heroImg from \"../\"\r\n+import heroImg from \"../../assets/\"\r\n \r\n const HeroSection = () => {\r\n   return (\r\n     <section className=\"hero-image-only\">\r\n"
+                },
+                {
+                    "date": 1755064948826,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,8 +1,8 @@\n import React from \"react\";\r\n import \"./HeroSection.css\";\r\n // import heroImg from \"../assets/hero-image.webp\"; \r\n-import heroImg from \"../../assets/\"\r\n+import heroImg from \"../../assets/he\"\r\n \r\n const HeroSection = () => {\r\n   return (\r\n     <section className=\"hero-image-only\">\r\n"
+                },
+                {
+                    "date": 1755064957057,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,8 +1,8 @@\n import React from \"react\";\r\n import \"./HeroSection.css\";\r\n // import heroImg from \"../assets/hero-image.webp\"; \r\n-import heroImg from \"../../assets/he\"\r\n+import heroImg from \"../../assets/hero\"\r\n \r\n const HeroSection = () => {\r\n   return (\r\n     <section className=\"hero-image-only\">\r\n"
+                },
+                {
+                    "date": 1755064962999,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,8 +1,8 @@\n import React from \"react\";\r\n import \"./HeroSection.css\";\r\n // import heroImg from \"../assets/hero-image.webp\"; \r\n-import heroImg from \"../../assets/hero\"\r\n+import heroImg from \"../../assets/hero-image.\"\r\n \r\n const HeroSection = () => {\r\n   return (\r\n     <section className=\"hero-image-only\">\r\n"
+                },
+                {
+                    "date": 1755154566251,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,9 +1,9 @@\n import React from \"react\";\r\n import \"./HeroSection.css\";\r\n-// import heroImg from \"../assets/hero-image.webp\"; \r\n-import heroImg from \"../../assets/hero-image.\"\r\n \r\n+import heroImg from \"../../assets/hero-image.webp\"\r\n+\r\n const HeroSection = () => {\r\n   return (\r\n     <section className=\"hero-image-only\">\r\n       <div className=\"hero-image-wrapper\">\r\n"
+                },
+                {
+                    "date": 1755154681115,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,9 +1,9 @@\n import React from \"react\";\r\n import \"./HeroSection.css\";\r\n-\r\n import heroImg from \"../../assets/hero-image.webp\"\r\n \r\n+\r\n const HeroSection = () => {\r\n   return (\r\n     <section className=\"hero-image-only\">\r\n       <div className=\"hero-image-wrapper\">\r\n"
+                },
+                {
+                    "date": 1755154686888,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,9 +1,9 @@\n import React from \"react\";\r\n import \"./HeroSection.css\";\r\n import heroImg from \"../../assets/hero-image.webp\"\r\n+import { }\r\n \r\n-\r\n const HeroSection = () => {\r\n   return (\r\n     <section className=\"hero-image-only\">\r\n       <div className=\"hero-image-wrapper\">\r\n"
+                },
+                {
+                    "date": 1755154693224,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,8 +1,8 @@\n import React from \"react\";\r\n import \"./HeroSection.css\";\r\n import heroImg from \"../../assets/hero-image.webp\"\r\n-import { }\r\n+import { heroStats, } from \"./heroData\";\r\n \r\n const HeroSection = () => {\r\n   return (\r\n     <section className=\"hero-image-only\">\r\n"
+                },
+                {
+                    "date": 1755154699408,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,8 +1,8 @@\n import React from \"react\";\r\n import \"./HeroSection.css\";\r\n import heroImg from \"../../assets/hero-image.webp\"\r\n-import { heroStats, } from \"./heroData\";\r\n+import { heroStats, heroTexts } from \"./heroData\";\r\n \r\n const HeroSection = () => {\r\n   return (\r\n     <section className=\"hero-image-only\">\r\n"
+                },
+                {
+                    "date": 1755154741620,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -14,9 +14,9 @@\n     \r\n       \r\n       <div className=\"hero-content\">\r\n         <h1>\r\n-          Connect with <br />\r\n+          {Connect with }<br />\r\n           <span className=\"highlight-text\">Entrepreneurs</span>\r\n         </h1>\r\n         <p>Who share your vision</p>\r\n \r\n"
+                },
+                {
+                    "date": 1755154749145,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -14,9 +14,9 @@\n     \r\n       \r\n       <div className=\"hero-content\">\r\n         <h1>\r\n-          {Connect with }<br />\r\n+          {heroTexts}<br />\r\n           <span className=\"highlight-text\">Entrepreneurs</span>\r\n         </h1>\r\n         <p>Who share your vision</p>\r\n \r\n"
+                },
+                {
+                    "date": 1755154755021,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -14,9 +14,9 @@\n     \r\n       \r\n       <div className=\"hero-content\">\r\n         <h1>\r\n-          {heroTexts}<br />\r\n+          {heroTexts.t}<br />\r\n           <span className=\"highlight-text\">Entrepreneurs</span>\r\n         </h1>\r\n         <p>Who share your vision</p>\r\n \r\n"
+                },
+                {
+                    "date": 1755154770087,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -14,10 +14,10 @@\n     \r\n       \r\n       <div className=\"hero-content\">\r\n         <h1>\r\n-          {heroTexts.t}<br />\r\n-          <span className=\"highlight-text\">Entrepreneurs</span>\r\n+          {heroTexts.titleLine1}<br />\r\n+          <span className=\"highlight-text\">{Entrepreneurs}</span>\r\n         </h1>\r\n         <p>Who share your vision</p>\r\n \r\n         <div className=\"parah\">\r\n"
+                },
+                {
+                    "date": 1755154776824,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -15,9 +15,9 @@\n       \r\n       <div className=\"hero-content\">\r\n         <h1>\r\n           {heroTexts.titleLine1}<br />\r\n-          <span className=\"highlight-text\">{Entrepreneurs}</span>\r\n+          <span className=\"highlight-text\">{her}</span>\r\n         </h1>\r\n         <p>Who share your vision</p>\r\n \r\n         <div className=\"parah\">\r\n"
+                },
+                {
+                    "date": 1755154781946,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -15,9 +15,9 @@\n       \r\n       <div className=\"hero-content\">\r\n         <h1>\r\n           {heroTexts.titleLine1}<br />\r\n-          <span className=\"highlight-text\">{her}</span>\r\n+          <span className=\"highlight-text\">{heroTexts.}</span>\r\n         </h1>\r\n         <p>Who share your vision</p>\r\n \r\n         <div className=\"parah\">\r\n"
+                },
+                {
+                    "date": 1755154792448,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -15,11 +15,11 @@\n       \r\n       <div className=\"hero-content\">\r\n         <h1>\r\n           {heroTexts.titleLine1}<br />\r\n-          <span className=\"highlight-text\">{heroTexts.}</span>\r\n+          <span className=\"highlight-text\">{heroTexts.highlight}</span>\r\n         </h1>\r\n-        <p>Who share your vision</p>\r\n+        <p>{Who share your vision}</p>\r\n \r\n         <div className=\"parah\">\r\n             <p>Discover and connect with entrepreneurs who share your <br /> interests, industry focus, and business vision for meaningful <br /> partnerships.</p>\r\n         </div>\r\n"
+                },
+                {
+                    "date": 1755154798344,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -17,9 +17,9 @@\n         <h1>\r\n           {heroTexts.titleLine1}<br />\r\n           <span className=\"highlight-text\">{heroTexts.highlight}</span>\r\n         </h1>\r\n-        <p>{Who share your vision}</p>\r\n+        <p>{heroTexts}</p>\r\n \r\n         <div className=\"parah\">\r\n             <p>Discover and connect with entrepreneurs who share your <br /> interests, industry focus, and business vision for meaningful <br /> partnerships.</p>\r\n         </div>\r\n"
+                },
+                {
+                    "date": 1755154827220,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -17,12 +17,12 @@\n         <h1>\r\n           {heroTexts.titleLine1}<br />\r\n           <span className=\"highlight-text\">{heroTexts.highlight}</span>\r\n         </h1>\r\n-        <p>{heroTexts}</p>\r\n+        <p>{heroTexts.subtitle}</p>\r\n \r\n         <div className=\"parah\">\r\n-            <p>Discover and connect with entrepreneurs who share your <br /> interests, industry focus, and business vision for meaningful <br /> partnerships.</p>\r\n+            <p>{Discover and connect with entrepreneurs who share your }<br /> interests, industry focus, and business vision for meaningful <br /> partnerships.</p>\r\n         </div>\r\n \r\n         <div className=\"hero-buttons\">\r\n           <button className=\"btn btn-primary\">Join the Community </button>\r\n"
+                },
+                {
+                    "date": 1755154834130,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -20,9 +20,9 @@\n         </h1>\r\n         <p>{heroTexts.subtitle}</p>\r\n \r\n         <div className=\"parah\">\r\n-            <p>{Discover and connect with entrepreneurs who share your }<br /> interests, industry focus, and business vision for meaningful <br /> partnerships.</p>\r\n+            <p>{heroTexts.description}<br /> interests, industry focus, and business vision for meaningful <br /> partnerships.</p>\r\n         </div>\r\n \r\n         <div className=\"hero-buttons\">\r\n           <button className=\"btn btn-primary\">Join the Community </button>\r\n"
+                },
+                {
+                    "date": 1755154862894,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -20,9 +20,10 @@\n         </h1>\r\n         <p>{heroTexts.subtitle}</p>\r\n \r\n         <div className=\"parah\">\r\n-            <p>{heroTexts.description}<br /> interests, industry focus, and business vision for meaningful <br /> partnerships.</p>\r\n+            <p>{heroTexts.description}<br /> interests, industry focus, and business vision for meaningful <br /> partnerships.\r\n+            </p>\r\n         </div>\r\n \r\n         <div className=\"hero-buttons\">\r\n           <button className=\"btn btn-primary\">Join the Community </button>\r\n"
+                },
+                {
+                    "date": 1755154868678,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -20,9 +20,10 @@\n         </h1>\r\n         <p>{heroTexts.subtitle}</p>\r\n \r\n         <div className=\"parah\">\r\n-            <p>{heroTexts.description}<br /> interests, industry focus, and business vision for meaningful <br /> partnerships.\r\n+            <p>{heroTexts.description}\r\n+              {/* <br /> interests, industry focus, and business vision for meaningful <br /> partnerships. */}\r\n             </p>\r\n         </div>\r\n \r\n         <div className=\"hero-buttons\">\r\n"
+                },
+                {
+                    "date": 1755154963122,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -21,9 +21,9 @@\n         <p>{heroTexts.subtitle}</p>\r\n \r\n         <div className=\"parah\">\r\n             <p>{heroTexts.description}\r\n-              {/* <br /> interests, industry focus, and business vision for meaningful <br /> partnerships. */}\r\n+              <br /> interests, industry focus, and business vision for meaningful <br /> partnerships.\r\n             </p>\r\n         </div>\r\n \r\n         <div className=\"hero-buttons\">\r\n"
+                },
+                {
+                    "date": 1755154982613,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -21,9 +21,9 @@\n         <p>{heroTexts.subtitle}</p>\r\n \r\n         <div className=\"parah\">\r\n             <p>{heroTexts.description}\r\n-              <br /> interests, industry focus, and business vision for meaningful <br /> partnerships.\r\n+              <br />{ interests, industry focus, and business vision for meaningful }<br /> partnerships.\r\n             </p>\r\n         </div>\r\n \r\n         <div className=\"hero-buttons\">\r\n"
+                },
+                {
+                    "date": 1755154989154,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -21,9 +21,9 @@\n         <p>{heroTexts.subtitle}</p>\r\n \r\n         <div className=\"parah\">\r\n             <p>{heroTexts.description}\r\n-              <br />{ interests, industry focus, and business vision for meaningful }<br /> partnerships.\r\n+              <br />{}<br /> partnerships.\r\n             </p>\r\n         </div>\r\n \r\n         <div className=\"hero-buttons\">\r\n"
+                },
+                {
+                    "date": 1755154994367,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -21,9 +21,9 @@\n         <p>{heroTexts.subtitle}</p>\r\n \r\n         <div className=\"parah\">\r\n             <p>{heroTexts.description}\r\n-              <br />{}<br /> partnerships.\r\n+              <br />{heroTexts.description2}<br /> partnerships.\r\n             </p>\r\n         </div>\r\n \r\n         <div className=\"hero-buttons\">\r\n"
+                },
+                {
+                    "date": 1755155055412,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -20,10 +20,10 @@\n         </h1>\r\n         <p>{heroTexts.subtitle}</p>\r\n \r\n         <div className=\"parah\">\r\n-            <p>{heroTexts.description}\r\n-              <br />{heroTexts.description2}<br /> partnerships.\r\n+            <p>{heroTexts.description1}\r\n+              <br />{heroTexts.description2}<br />{ partnerships.}\r\n             </p>\r\n         </div>\r\n \r\n         <div className=\"hero-buttons\">\r\n"
+                },
+                {
+                    "date": 1755155060778,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -21,9 +21,9 @@\n         <p>{heroTexts.subtitle}</p>\r\n \r\n         <div className=\"parah\">\r\n             <p>{heroTexts.description1}\r\n-              <br />{heroTexts.description2}<br />{ partnerships.}\r\n+              <br />{heroTexts.description2}<br />{heroTexts.}\r\n             </p>\r\n         </div>\r\n \r\n         <div className=\"hero-buttons\">\r\n"
+                },
+                {
+                    "date": 1755155219684,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -21,9 +21,9 @@\n         <p>{heroTexts.subtitle}</p>\r\n \r\n         <div className=\"parah\">\r\n             <p>{heroTexts.description1}\r\n-              <br />{heroTexts.description2}<br />{heroTexts.}\r\n+              <br />{heroTexts.description2}<br />{heroTexts.description3}\r\n             </p>\r\n         </div>\r\n \r\n         <div className=\"hero-buttons\">\r\n@@ -31,24 +31,18 @@\n           <button className=\"btn btn-secondary\">Learn More</button>\r\n         </div>\r\n \r\n         \r\n-           <div className=\"stats-container\">\r\n-          <div className=\"stat-item\">\r\n-            <div className=\"stat-number\">5000+</div>\r\n-            <div className=\"stat-label\">Entrepreneurs</div>\r\n-          </div>\r\n-          <div className=\"divider\"></div>\r\n-          <div className=\"stat-item\">\r\n-            <div className=\"stat-number\">25+</div>\r\n-            <div className=\"stat-label\">Interest Categories</div>\r\n-          </div>\r\n-          <div className=\"divider\"></div>\r\n-          <div className=\"stat-item\">\r\n-            <div className=\"stat-number\">200+</div>\r\n-            <div className=\"stat-label\">Partnerships Formed</div>\r\n-          </div>\r\n-        </div>\r\n+          <div className=\"stats-container\">\r\n+          {heroStats.map((stat, idx) => (\r\n+            <React.Fragment key={idx}>\r\n+              <div className=\"stat-item\">\r\n+                <div className=\"stat-number\">{stat.number}</div>\r\n+                <div className=\"stat-label\">{stat.label}</div>\r\n+              </div>\r\n+              {idx < heroStats.length - 1 && <div className=\"divider\"></div>}\r\n+            </React.Fragment>\r\n+          ))}\r\n \r\n \r\n       </div>\r\n     </section>\r\n"
+                },
+                {
+                    "date": 1755155227729,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -31,9 +31,9 @@\n           <button className=\"btn btn-secondary\">Learn More</button>\r\n         </div>\r\n \r\n         \r\n-          <div className=\"stats-container\">\r\n+           <div className=\"stats-container\">\r\n           {heroStats.map((stat, idx) => (\r\n             <React.Fragment key={idx}>\r\n               <div className=\"stat-item\">\r\n                 <div className=\"stat-number\">{stat.number}</div>\r\n@@ -41,8 +41,9 @@\n               </div>\r\n               {idx < heroStats.length - 1 && <div className=\"divider\"></div>}\r\n             </React.Fragment>\r\n           ))}\r\n+        </div>\r\n \r\n \r\n       </div>\r\n     </section>\r\n"
+                },
+                {
+                    "date": 1755155312480,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -43,9 +43,8 @@\n             </React.Fragment>\r\n           ))}\r\n         </div>\r\n \r\n-\r\n       </div>\r\n     </section>\r\n   );\r\n };\r\n"
+                }
+            ],
+            "date": 1755064682794,
+            "name": "Commit-0",
+            "content": "import React from \"react\";\r\nimport \"./HeroSection.css\";\r\n// import heroImg from \"../assets/hero-image.webp\"; \r\n\r\nconst HeroSection = () => {\r\n  return (\r\n    <section className=\"hero-image-only\">\r\n      <div className=\"hero-image-wrapper\">\r\n        <img src={heroImg} alt=\"Hero\" className=\"hero-img\" />\r\n        <div className=\"overlay\">\r\n        </div>\r\n      </div>\r\n    \r\n      \r\n      <div className=\"hero-content\">\r\n        <h1>\r\n          Connect with <br />\r\n          <span className=\"highlight-text\">Entrepreneurs</span>\r\n        </h1>\r\n        <p>Who share your vision</p>\r\n\r\n        <div className=\"parah\">\r\n            <p>Discover and connect with entrepreneurs who share your <br /> interests, industry focus, and business vision for meaningful <br /> partnerships.</p>\r\n        </div>\r\n\r\n        <div className=\"hero-buttons\">\r\n          <button className=\"btn btn-primary\">Join the Community </button>\r\n          <button className=\"btn btn-secondary\">Learn More</button>\r\n        </div>\r\n\r\n        \r\n           <div className=\"stats-container\">\r\n          <div className=\"stat-item\">\r\n            <div className=\"stat-number\">5000+</div>\r\n            <div className=\"stat-label\">Entrepreneurs</div>\r\n          </div>\r\n          <div className=\"divider\"></div>\r\n          <div className=\"stat-item\">\r\n            <div className=\"stat-number\">25+</div>\r\n            <div className=\"stat-label\">Interest Categories</div>\r\n          </div>\r\n          <div className=\"divider\"></div>\r\n          <div className=\"stat-item\">\r\n            <div className=\"stat-number\">200+</div>\r\n            <div className=\"stat-label\">Partnerships Formed</div>\r\n          </div>\r\n        </div>\r\n\r\n\r\n      </div>\r\n    </section>\r\n  );\r\n};\r\n\r\nexport default HeroSection;"
+        }
+    ]
+}

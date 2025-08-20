@@ -1,0 +1,38 @@
+{
+    "sourceFile": "src/components/Register/constants/metadataFallback.js",
+    "activeCommit": 0,
+    "commits": [
+        {
+            "activePatchIndex": 5,
+            "patches": [
+                {
+                    "date": 1755503854513,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n"
+                },
+                {
+                    "date": 1755591890415,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,8 +1,9 @@\n export const fallbackGoals = [\r\n   { id: \"EXPLORING_NEW_IDEAS\", value: \"Exploring new ideas\" },\r\n   { id: \"HAVE_IDEAS_OPEN_TO_EXPLORING\", value: \"Have Some ideas but open to exploring\" },\r\n   { id: \"LOOKING_FOR_COFUNDER\", value: \"Looking for Co-founder to join existing idea\" },\r\n+  { id: \"LOOKING_FOR_COFUNDER\", value: \"Looking for Co-founder to join existing idea\" },\r\n ];\r\n \r\n export const fallbackExperience = [\r\n   { id: \"NO_EXPERIENCE\", value: \"No prior startup experience\" },\r\n"
+                },
+                {
+                    "date": 1755591911788,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,9 +1,9 @@\n export const fallbackGoals = [\r\n   { id: \"EXPLORING_NEW_IDEAS\", value: \"Exploring new ideas\" },\r\n   { id: \"HAVE_IDEAS_OPEN_TO_EXPLORING\", value: \"Have Some ideas but open to exploring\" },\r\n   { id: \"LOOKING_FOR_COFUNDER\", value: \"Looking for Co-founder to join existing idea\" },\r\n-  { id: \"LOOKING_FOR_COFUNDER\", value: \"Looking for Co-founder to join existing idea\" },\r\n+  { id: \"LOOKING_FOR_E\", value: \"Looking for Co-founder to join existing idea\" },\r\n ];\r\n \r\n export const fallbackExperience = [\r\n   { id: \"NO_EXPERIENCE\", value: \"No prior startup experience\" },\r\n"
+                },
+                {
+                    "date": 1755591926770,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,9 +1,9 @@\n export const fallbackGoals = [\r\n   { id: \"EXPLORING_NEW_IDEAS\", value: \"Exploring new ideas\" },\r\n   { id: \"HAVE_IDEAS_OPEN_TO_EXPLORING\", value: \"Have Some ideas but open to exploring\" },\r\n   { id: \"LOOKING_FOR_COFUNDER\", value: \"Looking for Co-founder to join existing idea\" },\r\n-  { id: \"LOOKING_FOR_E\", value: \"Looking for Co-founder to join existing idea\" },\r\n+  { id: \"LOOKING_FOR_EMPLOY\", value: \"Looking for E to join existing idea\" },\r\n ];\r\n \r\n export const fallbackExperience = [\r\n   { id: \"NO_EXPERIENCE\", value: \"No prior startup experience\" },\r\n"
+                },
+                {
+                    "date": 1755591958011,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,9 +1,9 @@\n export const fallbackGoals = [\r\n   { id: \"EXPLORING_NEW_IDEAS\", value: \"Exploring new ideas\" },\r\n   { id: \"HAVE_IDEAS_OPEN_TO_EXPLORING\", value: \"Have Some ideas but open to exploring\" },\r\n   { id: \"LOOKING_FOR_COFUNDER\", value: \"Looking for Co-founder to join existing idea\" },\r\n-  { id: \"LOOKING_FOR_EMPLOY\", value: \"Looking for E to join existing idea\" },\r\n+\r\n ];\r\n \r\n export const fallbackExperience = [\r\n   { id: \"NO_EXPERIENCE\", value: \"No prior startup experience\" },\r\n"
+                },
+                {
+                    "date": 1755603473090,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,12 +1,11 @@\n-export const fallbackGoals = [\r\n-  { id: \"EXPLORING_NEW_IDEAS\", value: \"Exploring new ideas\" },\r\n-  { id: \"HAVE_IDEAS_OPEN_TO_EXPLORING\", value: \"Have Some ideas but open to exploring\" },\r\n-  { id: \"LOOKING_FOR_COFUNDER\", value: \"Looking for Co-founder to join existing idea\" },\r\n+// export const fallbackGoals = [\r\n+//   { id: \"EXPLORING_NEW_IDEAS\", value: \"Exploring new ideas\" },\r\n+//   { id: \"HAVE_IDEAS_OPEN_TO_EXPLORING\", value: \"Have Some ideas but open to exploring\" },\r\n+//   { id: \"LOOKING_FOR_COFUNDER\", value: \"Looking for Co-founder to join existing idea\" },\r\n+// ];\r\n \r\n-];\r\n-\r\n\\ No newline at end of file\n-export const fallbackExperience = [\r\n-  { id: \"NO_EXPERIENCE\", value: \"No prior startup experience\" },\r\n-  { id: \"WORKED_IN_STARTUP\", value: \"Worked in a startup\" },\r\n-  { id: \"FOUNDED_OR_COF_OUNDED_COMPANY\", value: \"Founded/cofounded a company\" },\r\n-];\n+// export const fallbackExperience = [\r\n+//   { id: \"NO_EXPERIENCE\", value: \"No prior startup experience\" },\r\n+//   { id: \"WORKED_IN_STARTUP\", value: \"Worked in a startup\" },\r\n+//   { id: \"FOUNDED_OR_COF_OUNDED_COMPANY\", value: \"Founded/cofounded a company\" },\r\n+// ];\n\\ No newline at end of file\n"
+                }
+            ],
+            "date": 1755503854513,
+            "name": "Commit-0",
+            "content": "export const fallbackGoals = [\r\n  { id: \"EXPLORING_NEW_IDEAS\", value: \"Exploring new ideas\" },\r\n  { id: \"HAVE_IDEAS_OPEN_TO_EXPLORING\", value: \"Have Some ideas but open to exploring\" },\r\n  { id: \"LOOKING_FOR_COFUNDER\", value: \"Looking for Co-founder to join existing idea\" },\r\n];\r\n\r\nexport const fallbackExperience = [\r\n  { id: \"NO_EXPERIENCE\", value: \"No prior startup experience\" },\r\n  { id: \"WORKED_IN_STARTUP\", value: \"Worked in a startup\" },\r\n  { id: \"FOUNDED_OR_COF_OUNDED_COMPANY\", value: \"Founded/cofounded a company\" },\r\n];"
+        }
+    ]
+}

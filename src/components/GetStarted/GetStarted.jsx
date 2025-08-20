@@ -11,7 +11,6 @@ const GetStarted = () => {
       <div className="getstarted-box">
         <h2 className="getstarted-title">Get Started</h2>
         <p className="getstarted-subtitle">Enter your phone number to begin</p>
-
         <label htmlFor="phone" className="getstarted-label">Phone Number</label>
         <div className="input-group">
           <Phone className='phone-icon' size={24} color="#8a6969" />
