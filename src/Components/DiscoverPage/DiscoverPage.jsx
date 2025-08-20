@@ -1,13 +1,10 @@
-import React, { useState } from "react";
-import profiles from "../../Data/Profiles";
+import React from "react";
 import "./DiscoverPage.css";
 import { Suitcase, MapPin, ChatCircle, X, HeartStraight } from "phosphor-react";
-import { handleNext } from "./HandleDiscover";
+import useDiscoverProfiles from "./useDiscoverProfiles"
 
 function DiscoverPage() {
-  
-  const [index, setIndex] = useState(0);
-  const current = profiles[index];
+  const { current, remaining, handleNext } = useDiscoverProfiles();
 
   return (
     <div className="discover-container">
@@ -22,14 +19,15 @@ function DiscoverPage() {
             {current.name}, {current.age}
           </h3>
           <p className="rolee">
-            <Suitcase size={20} color="#847062" weight="regular" />
+            <Suitcase size={20} color="#847062" />
             <span style={{ marginLeft: "8px" }}>{current.role}</span>
           </p>
           <p className="locationn">
-            <MapPin size={20} color="#847062" weight="regular" />
+            <MapPin size={20} color="#847062" />
             <span style={{ marginLeft: "8px" }}>{current.location}</span>
           </p>
           <p className="about">{current.about}</p>
+
           <div className="discover-tags">
             <p className="tag-heading">Skills</p>
             {current.skills.map((skill) => (
@@ -38,6 +36,7 @@ function DiscoverPage() {
               </span>
             ))}
           </div>
+
           <div className="discover-tags">
             <p className="tag-heading">Interests</p>
             {current.interests.map((interest) => (
@@ -46,17 +45,12 @@ function DiscoverPage() {
               </span>
             ))}
           </div>
+
           <div className="discover-buttons">
-            <button
-              className="x"
-              onClick={() => handleNext(index, setIndex, profiles.length)}
-            >
+            <button className="x" onClick={handleNext}>
               <X size={16} color="#ef4444" weight="bold" />
             </button>
-            <button
-              className="like"
-              onClick={() => handleNext(index, setIndex, profiles.length)}
-            >
+            <button className="like" onClick={handleNext}>
               <HeartStraight size={16} color="#93501f" weight="bold" />
             </button>
             <button className="chat">
@@ -65,9 +59,7 @@ function DiscoverPage() {
           </div>
         </div>
       </div>
-      <p className="remaining">
-        {profiles.length - index - 1} more profiles to discover
-      </p>
+      <p className="remaining">{remaining} more profiles to discover</p>
     </div>
   );
 }

@@ -1,17 +1,15 @@
 import SentInvites from "../SentInvites/SentInvites";
 import ReceivedInvites from "../ReceivedInvites/ReceivedInvites";
 import ConnectedInvites from "../ConnectedInvites/ConnectedInvites";
-import invitesData from "../../Data/invitesData";
 import { Tray, PaperPlaneTilt, Users } from "phosphor-react";
 import "./Invitespage.css";
 import { useState } from "react";
-import { handleAccept, handleDecline } from "./InvitesHandlers";
+import useInvites from "./useInvites";
 
 const InvitesPage = () => {
-  
   const [activeTab, setActiveTab] = useState("received");
-  const [receivedInvites, setReceivedInvites] = useState(invitesData);
-  const [connected, setConnected] = useState([]);
+
+  const { receivedInvites, connected, handleAccept, handleDecline } = useInvites();
 
   return (
     <div className="invites-page">
@@ -21,21 +19,25 @@ const InvitesPage = () => {
           className={activeTab === "received" ? "active" : ""}
           onClick={() => setActiveTab("received")}
         >
-          <Tray size={18} color=" #847062" weight="regular" style={{ marginRight: "8px" }} />
+          <Tray size={18} color="#847062" style={{ marginRight: "8px" }} />
           Received
         </button>
         <button
           className={activeTab === "sent" ? "active" : ""}
           onClick={() => setActiveTab("sent")}
         >
-          <PaperPlaneTilt size={18} color=" #847062" weight="regular" style={{ marginRight: "8px" }} />
+          <PaperPlaneTilt
+            size={18}
+            color="#847062"
+            style={{ marginRight: "8px" }}
+          />
           Sent
         </button>
         <button
           className={activeTab === "connected" ? "active" : ""}
           onClick={() => setActiveTab("connected")}
         >
-          <Users size={18} color=" #847062" weight="regular" style={{ marginRight: "8px" }} />
+          <Users size={18} color="#847062" style={{ marginRight: "8px" }} />
           Connected
         </button>
       </nav>
@@ -45,11 +47,13 @@ const InvitesPage = () => {
         {activeTab === "received" && (
           <ReceivedInvites
             invites={receivedInvites}
-            onAccept={(id) => handleAccept(id, receivedInvites, setReceivedInvites, connected, setConnected)}
-            onDecline={(id) => handleDecline(id, receivedInvites, setReceivedInvites)}
+            onAccept={handleAccept}
+            onDecline={handleDecline}
           />
         )}
-        {activeTab === "connected" && <ConnectedInvites connections={connected} />}
+        {activeTab === "connected" && (
+          <ConnectedInvites connections={connected} />
+        )}
       </div>
     </div>
   );
