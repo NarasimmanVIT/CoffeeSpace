@@ -53,9 +53,9 @@ function DiscoverPage() {
             <button className="like" onClick={handleNext}>
               <HeartStraight size={16} color="#93501f" weight="bold" />
             </button>
-            <button className="chat">
+            {/* <button className="chat">
               <ChatCircle size={16} color="#93501f" weight="bold" />
-            </button>
+            </button> */}
           </div>
         </div>
       </div>
