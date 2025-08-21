@@ -15,6 +15,8 @@ export default function useRegisterForm() {
 
   const [goal, setGoal] = useState("");
   const [experience, setExperience] = useState("");
+  const [workingStatus, setWorkingStatus] = useState("");
+
 
   const [linkedInProfileUrl, setLinkedInProfileUrl] = useState("");
   const [linkedInName, setLinkedInName] = useState("");
@@ -186,15 +188,17 @@ export default function useRegisterForm() {
   // Submit
   const handleRegister = async () => {
     try {
+      const safeString = (str) => (typeof str === "string" ? str.toUpperCase().replace(/ /g, "_") : "");
       const payload = {
         firstName,
         lastName,
         email,
         dob,
-        goal: goal.toUpperCase().replace(/ /g, "_"),
+        goal: goal?.id || null,
         priorities,
-        experience: experience.toUpperCase().replace(/ /g, "_"),
-        skills,
+        experience: experience?.id || null,
+        workingStatus: workingStatus?.id || null,
+        skills:skills.map((s) => s.id),
         industries,
         linkedInProfileUrl,
         linkedInName,
@@ -218,7 +222,7 @@ export default function useRegisterForm() {
           startYear: parseInt(edu.startYear) || null,
           endYear: parseInt(edu.endYear) || null,
         })),
-        linkedInSkills: skills,
+        linkedInSkills: skills.map((s) => s.value),
         linkedInConnectionsCount: 500,
       };
 
@@ -231,6 +235,8 @@ export default function useRegisterForm() {
       alert(err.message || "Registration failed");
     }
   };
+  // console.log("Industries selected:", industries);
+  // console.log("Priorities selected:", priorities);
 
   return {
     // States
@@ -240,6 +246,7 @@ export default function useRegisterForm() {
     dob, setDob,
     goal, setGoal,
     experience, setExperience,
+    workingStatus, setWorkingStatus, 
     priorities, setPriorities, priorityInput, setPriorityInput,
     skills, setSkills, skillInput, setSkillInput, commonSkills,
     industries, setIndustries, industryInput, setIndustryInput,

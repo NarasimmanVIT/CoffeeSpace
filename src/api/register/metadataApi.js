@@ -11,7 +11,7 @@ export const fetchMetadata = async () => {
   );
     return res.data.data; 
   } catch (err) {
-    console.error("Metadata fetch error:", err);
+    console.error("Metadata fetch error:", err);A
     throw err;
   }
 };

@@ -675,3 +675,97 @@
   font-weight: 500;
   cursor: pointer;
 }
+
+.industries-section {
+  margin-top: 30px;
+}
+
+.industries-section > label {
+  font-size: 16px;
+  font-weight: 600;
+  color: #000;
+}  
+
+.industries-counter {
+  font-size: 13px;
+  color: #000; 
+  margin-top: 6px;
+}
+
+.industry-group .sub-header {
+  font-size: 16px;
+  font-weight: 500;
+  margin-bottom: 8px;
+  color: black;
+}
+
+.industries-section h3 {
+  font-size: 18px;
+  font-weight: 600;
+  margin-bottom: 10px;
+  color: #111;
+}
+
+.industry-group {
+  margin-bottom: 15px;
+}
+
+.industry-subheader {
+  font-size: 14px;
+  font-weight: 500;
+  margin-bottom: 8px;
+  color: red;
+}
+
+.industry-options {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+}
+
+.industry-btn {
+  padding: 6px 12px;
+  font-size: 14px;
+  border: 1px solid #ccc;
+  border-radius: 20px;
+  background-color: #f9f9f9;
+  cursor: pointer;
+  transition: all 0.2s ease;
+}
+
+.industry-btn.selected {
+  background-color: #4f46e5;
+  color: #fff;
+  border-color: #4f46e5;
+}
+
+.industry-btn:hover {
+  background-color: #e0e0ff;
+}
+
+.show-more-btn {
+  margin-top: 5px;
+  font-size: 13px;
+  font-weight: 500;
+  color: #4f46e5;
+  background: none;
+  border: none;
+  cursor: pointer;
+  text-decoration: underline;
+}
+
+.show-more-btn:hover {
+  color: #3730a3;
+}
+
+/* Counter hint below section */
+.industries-counter {
+  font-size: 13px;
+  color: #555;
+  margin-top: 6px;
+}
+
+.show-more-container {
+  text-align: right; 
+  margin-top: 5px;
+}

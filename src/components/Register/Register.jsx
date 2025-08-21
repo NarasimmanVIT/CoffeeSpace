@@ -21,6 +21,8 @@ const Register = () => {
     setGoal,
     experience,
     setExperience,
+    workingStatus,
+    setWorkingStatus,
     priorities,
     priorityInput,
     setPriorityInput,
@@ -28,6 +30,7 @@ const Register = () => {
     handlePriorityKey,
     removePriority,
     skills,
+    setSkills,
     skillInput,
     setSkillInput,
     addSkill,
@@ -59,11 +62,34 @@ const Register = () => {
     MAX_PRIORITIES,
     MAX_SKILLS,
     MAX_INDUSTRIES,
+    MAX_SELECTABLE_INDUSTRIES = 5,
   } = useRegisterForm();
 
   // metadata api
 
   const { metadata, loading, error } = useMetadata();
+  // const [skills, setSkills] = useState([]);
+  const [selectedIndustries, setSelectedIndustries] = useState([]);
+  const [showMoreGroups, setShowMoreGroups] = useState({});
+
+  const toggleIndustry = (industryId) => {
+    if (selectedIndustries.includes(industryId)) {
+      setSelectedIndustries((prev) => prev.filter((id) => id !== industryId));
+    } else if (selectedIndustries.length < MAX_SELECTABLE_INDUSTRIES) {
+      setSelectedIndustries((prev) => [...prev, industryId]);
+    } else {
+      alert(
+        `You can only select up to ${MAX_SELECTABLE_INDUSTRIES} industries`
+      );
+    }
+  };
+
+  const toggleShowMore = (groupHeader) => {
+    setShowMoreGroups((prev) => ({
+      ...prev,
+      [groupHeader]: !prev[groupHeader],
+    }));
+  };
 
   // if (loading) {
   //   console.log("Loading metadata...");
@@ -93,8 +119,6 @@ const Register = () => {
 
   //  const [goal, setGoal] = useState(null);
   //  const [experience, setExperience] = useState("");
-
-
 
   return (
     <div className="register-page">
@@ -160,13 +184,17 @@ const Register = () => {
               metadata?.goals?.options?.map((opt) => ({
                 id: opt.id,
                 name: opt.value,
-              })) || [
-                { id: 1, name: "Build a startup" },
-                { id: 2, name: "Find co-founders" },
-              ]
+                value: opt.value,
+              })) || []
             }
             value={goal}
-            onChange={setGoal}
+            onChange={(selected) => {
+              if (selected && selected.value) {
+                setGoal(selected.value);
+              } else {
+                setGoal("");
+              }
+            }}
           />
 
           <CustomDropdown
@@ -175,25 +203,45 @@ const Register = () => {
               metadata?.experience?.options?.map((opt) => ({
                 id: opt.id,
                 name: opt.value,
-              })) || [
-                { id: 1, name: "Beginner" },
-                { id: 2, name: "Intermediate" },
-                { id: 3, name: "Expert" },
-              ]
+              })) || []
             }
             value={experience}
-            onChange={setExperience}
+            onChange={(selected) => {
+              if (selected && selected.value) {
+                setExperience(selected.value);
+              } else {
+                setExperience("");
+              }
+            }}
           />
         </div>
 
         {/* Priorities  */}
 
-        <div className="form-group">
+        {/* Working Status (instead of Priorities chips) */}
+        <div className="form-row">
+          <CustomDropdown
+            label={
+              metadata?.workingStatus?.header ||
+              "When do you want to start working on a startup full-time?"
+            }
+            options={
+              metadata?.workingStatus?.options?.map((opt) => ({
+                id: opt.id,
+                name: opt.value,
+              })) || []
+            }
+            value={workingStatus}
+            onChange={(selected) => setWorkingStatus(selected)}
+          />
+        </div>
+
+        {/* <div className="form-group">
           <label>
             When do you want to start working on a startup full-time?
           </label>
 
-          {/* chips */}
+          {/* chips 
           <div className="priorities-list">
             {priorities.map((p, i) => (
               <span key={i} className="priority-chip">
@@ -210,7 +258,7 @@ const Register = () => {
             ))}
           </div>
 
-          {/* input + add button */}
+          {/* input + add button 
           <div className="priority-input-wrapper">
             <input
               className="priority-input"
@@ -241,19 +289,69 @@ const Register = () => {
                 weight="bold"
                 color="#fff"
               />
-              {/* <Plus size={32} color="#ffffff" /> */}
+              {/* <Plus size={32} color="#ffffff" /> 
             </button>
           </div>
           <div className="priority-hint">
             {priorities.length}/{MAX_PRIORITIES} added
           </div>
-        </div>
+        </div> */}
 
         {/* Skills */}
         <div className="form-group">
-          <label>Skills</label>
+          <label>{metadata?.skills?.header || "Skills"}</label>
 
           {/* chips */}
+          <div className="priorities-list">
+            {skills.map((s, i) => (
+              <span key={s.id} className="priority-chip">
+                <span className="priority-text">{s.value}</span>
+                <button
+                  type="button"
+                  className="chip-remove"
+                  aria-label={`Remove ${s.value}`}
+                  onClick={() =>
+                    setSkills((prev) => prev.filter((_, idx) => idx !== i))
+                  }
+                >
+                  <X size={12} weight="bold" />
+                </button>
+              </span>
+            ))}
+          </div>
+
+          <p className="common-skills-label">Select from common skills:</p>
+
+          {/* Common skills selection */}
+          <div className="common-skills-grid">
+            {metadata?.skills?.options?.map((skill) => {
+              const isSelected = skills.some((s) => s.id === skill.id);
+              return (
+                <button
+                  key={skill.id}
+                  type="button"
+                  className={`common-skill-btn ${isSelected ? "selected" : ""}`}
+                  onClick={() => {
+                    if (isSelected) {
+                      setSkills((prev) =>
+                        prev.filter((s) => s.id !== skill.id)
+                      );
+                    } else {
+                      setSkills((prev) => [...prev, skill]);
+                    }
+                  }}
+                >
+                  {skill.value}
+                </button>
+              );
+            })}
+          </div>
+        </div>
+
+        {/* <div className="form-group">
+          <label>Skills</label>
+
+          {/* chips 
           <div className="priorities-list">
             {skills.map((s, i) => (
               <span key={i} className="priority-chip">
@@ -270,7 +368,7 @@ const Register = () => {
             ))}
           </div>
 
-          {/* input + add button */}
+          {/* input + add button 
           <div className="priority-input-wrapper">
             <input
               className="priority-input"
@@ -306,7 +404,7 @@ const Register = () => {
 
           <p className="common-skills-label">or select from common skills:</p>
 
-          {/* Common skills selection */}
+          {/* Common skills selection 
           <div className="common-skills-grid">
             {commonSkills.map((skill, idx) => {
               const isSelected = skills.includes(skill);
@@ -322,13 +420,62 @@ const Register = () => {
               );
             })}
           </div>
-        </div>
+        </div> */}
 
         {/* Industries Section */}
-        <div className="form-group">
+
+        <div className="industries-section">
+          <label>{metadata?.industries?.header || "Select Industries"}</label>
+          <p className="industries-counter">
+            {selectedIndustries.length}/{MAX_SELECTABLE_INDUSTRIES} selected
+          </p>
+
+          {metadata?.industries?.groups?.map((group) => {
+            const isExpanded = showMoreGroups[group.subHeader] || false;
+            const optionsToShow = isExpanded
+              ? group.options
+              : group.options.slice(0, 5);
+
+            return (
+              <div key={group.subHeader} className="industry-group">
+                {/* Subheader */}
+                <p className="sub-header">{group.subHeader}</p>
+
+                {/* Options */}
+                <div className="common-skills-grid">
+                  {optionsToShow.map((opt) => (
+                    <button
+                      key={opt.id}
+                      className={`common-skill-btn ${
+                        selectedIndustries.includes(opt.id) ? "selected" : ""
+                      }`}
+                      onClick={() => toggleIndustry(opt.id)}
+                    >
+                      {opt.value}
+                    </button>
+                  ))}
+                </div>
+
+                {/* Show More / Show Less below options, aligned right */}
+                {group.options.length > 5 && (
+                  <div className="show-more-container">
+                    <button
+                      className="show-more-btn"
+                      onClick={() => toggleShowMore(group.subHeader)}
+                    >
+                      {isExpanded ? "Show Less" : "Show More"}
+                    </button>
+                  </div>
+                )}
+              </div>
+            );
+          })}
+        </div>
+
+        {/* <div className="form-group">
           <label className="industry">Industries</label>
 
-          {/* Industry chips (like priorities) */}
+          {/* Industry chips (like priorities) 
           <div className="priorities-list">
             {industries.map((industry, i) => (
               <span key={i} className="priority-chip">
@@ -345,7 +492,7 @@ const Register = () => {
             ))}
           </div>
 
-          {/* Input + Add button (same as priorities) */}
+          {/* Input + Add button (same as priorities) 
           <div className="priority-input-wrapper">
             <input
               className="priority-input"
@@ -378,11 +525,11 @@ const Register = () => {
             </button>
           </div>
 
-          {/* Counter hint */}
+          {/* Counter hint
           <div className="priority-hint">
             {industries.length}/{MAX_INDUSTRIES} added
           </div>
-        </div>
+        </div> */}
 
         {/* Experience Section */}
         <div className="experience-section">
