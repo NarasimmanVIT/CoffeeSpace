@@ -1,0 +1,18 @@
+{
+    "sourceFile": "src/components/Register/Constant.js",
+    "activeCommit": 0,
+    "commits": [
+        {
+            "activePatchIndex": 0,
+            "patches": [
+                {
+                    "date": 1755008583380,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n"
+                }
+            ],
+            "date": 1755008583380,
+            "name": "Commit-0",
+            "content": "export const MAX_PRIORITIES = 10;\r\nexport const MAX_SKILLS = 10;\r\nexport const MAX_INDUSTRIES = 10;\r\n\r\nexport const commonSkills = [\r\n  \"ENGINEERING\", \"PRODUCT\", \"DESIGN\", \"MARKETING\",\r\n  \"SALES\", \"FINANCE\", \"OPERATIONS\", \"LEGAL\",\r\n  \"HR\", \"STRATEGY\", \"DATA SCIENCE\", \"AI ML\"\r\n];\r\n\r\nexport const goalOptions = [\r\n  \"Looking for Co-founder\",\r\n  \"Looking for Team Members\",\r\n  \"Looking for Investors\",\r\n  \"Networking\"\r\n];\r\n\r\nexport const experienceOptions = [\r\n  \"Founded or Co-founded Company\",\r\n  \"Startup Employee\",\r\n  \"Corporate Experience\",\r\n  \"Freelancer\",\r\n  \"Student\"\r\n];"
+        }
+    ]
+}

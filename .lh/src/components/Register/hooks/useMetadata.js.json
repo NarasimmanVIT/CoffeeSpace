@@ -1,0 +1,130 @@
+{
+    "sourceFile": "src/components/Register/hooks/useMetadata.js",
+    "activeCommit": 0,
+    "commits": [
+        {
+            "activePatchIndex": 28,
+            "patches": [
+                {
+                    "date": 1755500621984,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n"
+                },
+                {
+                    "date": 1755501430401,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,7 +1,6 @@\n import { useState, useEffect } from \"react\";\r\n-import { fetchMetadata } from \"../../api/register/metadataApi\"; \r\n-// ⬆️ corrected import path\r\n+import { fetchMetadata } from \".../../api/register/metadataApi\"; \r\n \r\n export default function useMetadata() {\r\n   const [metadata, setMetadata] = useState(null);\r\n   const [loading, setLoading] = useState(true);\r\n"
+                },
+                {
+                    "date": 1755503883483,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,7 +1,8 @@\n import { useState, useEffect } from \"react\";\r\n-import { fetchMetadata } from \".../../api/register/metadataApi\"; \r\n+import { fetchMetadata } from \"../../../api/register/metadataApi\"; \r\n \r\n+\r\n export default function useMetadata() {\r\n   const [metadata, setMetadata] = useState(null);\r\n   const [loading, setLoading] = useState(true);\r\n   const [error, setError] = useState(null);\r\n"
+                },
+                {
+                    "date": 1755503889001,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,8 +1,8 @@\n import { useState, useEffect } from \"react\";\r\n import { fetchMetadata } from \"../../../api/register/metadataApi\"; \r\n+import {}\r\n \r\n-\r\n export default function useMetadata() {\r\n   const [metadata, setMetadata] = useState(null);\r\n   const [loading, setLoading] = useState(true);\r\n   const [error, setError] = useState(null);\r\n"
+                },
+                {
+                    "date": 1755503900629,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,7 +1,7 @@\n import { useState, useEffect } from \"react\";\r\n import { fetchMetadata } from \"../../../api/register/metadataApi\"; \r\n-import {}\r\n+import \r\n \r\n export default function useMetadata() {\r\n   const [metadata, setMetadata] = useState(null);\r\n   const [loading, setLoading] = useState(true);\r\n"
+                },
+                {
+                    "date": 1755503906077,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,7 +1,7 @@\n import { useState, useEffect } from \"react\";\r\n import { fetchMetadata } from \"../../../api/register/metadataApi\"; \r\n-import \r\n+import { }\r\n \r\n export default function useMetadata() {\r\n   const [metadata, setMetadata] = useState(null);\r\n   const [loading, setLoading] = useState(true);\r\n"
+                },
+                {
+                    "date": 1755503916121,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,7 +1,7 @@\n import { useState, useEffect } from \"react\";\r\n import { fetchMetadata } from \"../../../api/register/metadataApi\"; \r\n-import { }\r\n+import { fallbackExperience } from \"../constants/metadataFallback\";\r\n \r\n export default function useMetadata() {\r\n   const [metadata, setMetadata] = useState(null);\r\n   const [loading, setLoading] = useState(true);\r\n"
+                },
+                {
+                    "date": 1755503923382,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,7 +1,7 @@\n import { useState, useEffect } from \"react\";\r\n import { fetchMetadata } from \"../../../api/register/metadataApi\"; \r\n-import { fallbackExperience } from \"../constants/metadataFallback\";\r\n+import { fallbackExperience, fallbackGoals } from \"../constants/metadataFallback\";\r\n \r\n export default function useMetadata() {\r\n   const [metadata, setMetadata] = useState(null);\r\n   const [loading, setLoading] = useState(true);\r\n"
+                },
+                {
+                    "date": 1755503994071,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -2,9 +2,9 @@\n import { fetchMetadata } from \"../../../api/register/metadataApi\"; \r\n import { fallbackExperience, fallbackGoals } from \"../constants/metadataFallback\";\r\n \r\n export default function useMetadata() {\r\n-  const [metadata, setMetadata] = useState(null);\r\n+  const [metadata, setMetadata] = useState(nul);\r\n   const [loading, setLoading] = useState(true);\r\n   const [error, setError] = useState(null);\r\n \r\n   useEffect(() => {\r\n"
+                },
+                {
+                    "date": 1755504009791,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -2,9 +2,12 @@\n import { fetchMetadata } from \"../../../api/register/metadataApi\"; \r\n import { fallbackExperience, fallbackGoals } from \"../constants/metadataFallback\";\r\n \r\n export default function useMetadata() {\r\n-  const [metadata, setMetadata] = useState(nul);\r\n+  const [metadata, setMetadata] = useState({\r\n+     goals: { options: fallbackGoals },\r\n+    experience: { options: fallbackExperience },\r\n+  });\r\n   const [loading, setLoading] = useState(true);\r\n   const [error, setError] = useState(null);\r\n \r\n   useEffect(() => {\r\n"
+                },
+                {
+                    "date": 1755504049596,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -3,9 +3,9 @@\n import { fallbackExperience, fallbackGoals } from \"../constants/metadataFallback\";\r\n \r\n export default function useMetadata() {\r\n   const [metadata, setMetadata] = useState({\r\n-     goals: { options: fallbackGoals },\r\n+    goals: { options: fallbackGoals },\r\n     experience: { options: fallbackExperience },\r\n   });\r\n   const [loading, setLoading] = useState(true);\r\n   const [error, setError] = useState(null);\r\n@@ -13,8 +13,9 @@\n   useEffect(() => {\r\n     const getMetadata = async () => {\r\n       try {\r\n         const data = await fetchMetadata();\r\n+        \r\n         setMetadata(data);\r\n       } catch (err) {\r\n         setError(err.message);\r\n       } finally {\r\n"
+                },
+                {
+                    "date": 1755504054833,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -13,9 +13,9 @@\n   useEffect(() => {\r\n     const getMetadata = async () => {\r\n       try {\r\n         const data = await fetchMetadata();\r\n-        \r\n+        if\r\n         setMetadata(data);\r\n       } catch (err) {\r\n         setError(err.message);\r\n       } finally {\r\n"
+                },
+                {
+                    "date": 1755504063511,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -13,9 +13,9 @@\n   useEffect(() => {\r\n     const getMetadata = async () => {\r\n       try {\r\n         const data = await fetchMetadata();\r\n-        if\r\n+        if (data) \r\n         setMetadata(data);\r\n       } catch (err) {\r\n         setError(err.message);\r\n       } finally {\r\n"
+                },
+                {
+                    "date": 1755504070865,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -13,10 +13,12 @@\n   useEffect(() => {\r\n     const getMetadata = async () => {\r\n       try {\r\n         const data = await fetchMetadata();\r\n-        if (data) \r\n-        setMetadata(data);\r\n+        if (data) {\r\n+\r\n+        }\r\n+        \r\n       } catch (err) {\r\n         setError(err.message);\r\n       } finally {\r\n         setLoading(false);\r\n"
+                },
+                {
+                    "date": 1755504086313,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -14,13 +14,14 @@\n     const getMetadata = async () => {\r\n       try {\r\n         const data = await fetchMetadata();\r\n         if (data) {\r\n-\r\n+            setMetadata(data);\r\n         }\r\n         \r\n       } catch (err) {\r\n         setError(err.message);\r\n+        \r\n       } finally {\r\n         setLoading(false);\r\n       }\r\n     };\r\n"
+                },
+                {
+                    "date": 1755504093955,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -19,9 +19,9 @@\n         }\r\n         \r\n       } catch (err) {\r\n         setError(err.message);\r\n-        \r\n+        console.lo\r\n       } finally {\r\n         setLoading(false);\r\n       }\r\n     };\r\n"
+                },
+                {
+                    "date": 1755504099663,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -19,9 +19,9 @@\n         }\r\n         \r\n       } catch (err) {\r\n         setError(err.message);\r\n-        console.lo\r\n+        console.war\r\n       } finally {\r\n         setLoading(false);\r\n       }\r\n     };\r\n"
+                },
+                {
+                    "date": 1755504106219,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -19,9 +19,9 @@\n         }\r\n         \r\n       } catch (err) {\r\n         setError(err.message);\r\n-        console.war\r\n+        console.warn(\"\")\r\n       } finally {\r\n         setLoading(false);\r\n       }\r\n     };\r\n"
+                },
+                {
+                    "date": 1755504111334,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -19,9 +19,9 @@\n         }\r\n         \r\n       } catch (err) {\r\n         setError(err.message);\r\n-        console.warn(\"\")\r\n+        console.warn(\"Metadata f\")\r\n       } finally {\r\n         setLoading(false);\r\n       }\r\n     };\r\n"
+                },
+                {
+                    "date": 1755504116597,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -19,9 +19,9 @@\n         }\r\n         \r\n       } catch (err) {\r\n         setError(err.message);\r\n-        console.warn(\"Metadata f\")\r\n+        console.warn(\"Metadata fetch failed\")\r\n       } finally {\r\n         setLoading(false);\r\n       }\r\n     };\r\n"
+                },
+                {
+                    "date": 1755504121694,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -19,9 +19,9 @@\n         }\r\n         \r\n       } catch (err) {\r\n         setError(err.message);\r\n-        console.warn(\"Metadata fetch failed\")\r\n+        console.warn(\"Metadata fetch failed using fallba\")\r\n       } finally {\r\n         setLoading(false);\r\n       }\r\n     };\r\n"
+                },
+                {
+                    "date": 1755504128704,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -19,9 +19,9 @@\n         }\r\n         \r\n       } catch (err) {\r\n         setError(err.message);\r\n-        console.warn(\"Metadata fetch failed using fallba\")\r\n+        console.warn(\"Metadata fetch failed using fallback:\",)\r\n       } finally {\r\n         setLoading(false);\r\n       }\r\n     };\r\n"
+                },
+                {
+                    "date": 1755504135029,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -19,9 +19,9 @@\n         }\r\n         \r\n       } catch (err) {\r\n         setError(err.message);\r\n-        console.warn(\"Metadata fetch failed using fallback:\",)\r\n+        console.warn(\"Metadata fetch failed using fallback:\", err);\r\n       } finally {\r\n         setLoading(false);\r\n       }\r\n     };\r\n"
+                },
+                {
+                    "date": 1755594586298,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,7 +1,7 @@\n import { useState, useEffect } from \"react\";\r\n import { fetchMetadata } from \"../../../api/register/metadataApi\"; \r\n-import { fallbackExperience, fallbackGoals } from \"../constants/metadataFallback\";\r\n+// import { fallbackExperience, fallbackGoals } from \"../constants/metadataFallback\";\r\n \r\n export default function useMetadata() {\r\n   const [metadata, setMetadata] = useState({\r\n     goals: { options: fallbackGoals },\r\n"
+                },
+                {
+                    "date": 1755594609724,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -2,12 +2,9 @@\n import { fetchMetadata } from \"../../../api/register/metadataApi\"; \r\n // import { fallbackExperience, fallbackGoals } from \"../constants/metadataFallback\";\r\n \r\n export default function useMetadata() {\r\n-  const [metadata, setMetadata] = useState({\r\n-    goals: { options: fallbackGoals },\r\n-    experience: { options: fallbackExperience },\r\n-  });\r\n+  const [metadata, setMetadata] = useState(});\r\n   const [loading, setLoading] = useState(true);\r\n   const [error, setError] = useState(null);\r\n \r\n   useEffect(() => {\r\n"
+                },
+                {
+                    "date": 1755594618592,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -2,9 +2,9 @@\n import { fetchMetadata } from \"../../../api/register/metadataApi\"; \r\n // import { fallbackExperience, fallbackGoals } from \"../constants/metadataFallback\";\r\n \r\n export default function useMetadata() {\r\n-  const [metadata, setMetadata] = useState(});\r\n+  const [metadata, setMetadata] = useState({});\r\n   const [loading, setLoading] = useState(true);\r\n   const [error, setError] = useState(null);\r\n \r\n   useEffect(() => {\r\n"
+                },
+                {
+                    "date": 1755594657462,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -16,9 +16,9 @@\n         }\r\n         \r\n       } catch (err) {\r\n         setError(err.message);\r\n-        console.warn(\"Metadata fetch failed using fallback:\", err);\r\n+        console.warn(\"Metadata fetch failed :\", err);\r\n       } finally {\r\n         setLoading(false);\r\n       }\r\n     };\r\n"
+                },
+                {
+                    "date": 1755597300459,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,7 +1,7 @@\n import { useState, useEffect } from \"react\";\r\n import { fetchMetadata } from \"../../../api/register/metadataApi\"; \r\n-// import { fallbackExperience, fallbackGoals } from \"../constants/metadataFallback\";\r\n+import { fallbackExperience, fallbackGoals } from \"../constants/metadataFallback\";\r\n \r\n export default function useMetadata() {\r\n   const [metadata, setMetadata] = useState({});\r\n   const [loading, setLoading] = useState(true);\r\n@@ -16,9 +16,9 @@\n         }\r\n         \r\n       } catch (err) {\r\n         setError(err.message);\r\n-        console.warn(\"Metadata fetch failed :\", err);\r\n+        console.warn(\"Metadata fetch failed:\", err);\r\n       } finally {\r\n         setLoading(false);\r\n       }\r\n     };\r\n"
+                },
+                {
+                    "date": 1755597332474,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,7 +1,7 @@\n import { useState, useEffect } from \"react\";\r\n import { fetchMetadata } from \"../../../api/register/metadataApi\"; \r\n-import { fallbackExperience, fallbackGoals } from \"../constants/metadataFallback\";\r\n+// import { fallbackExperience, fallbackGoals } from \"../constants/metadataFallback\";\r\n \r\n export default function useMetadata() {\r\n   const [metadata, setMetadata] = useState({});\r\n   const [loading, setLoading] = useState(true);\r\n"
+                }
+            ],
+            "date": 1755500621984,
+            "name": "Commit-0",
+            "content": "import { useState, useEffect } from \"react\";\r\nimport { fetchMetadata } from \"../../api/register/metadataApi\"; \r\n// ⬆️ corrected import path\r\n\r\nexport default function useMetadata() {\r\n  const [metadata, setMetadata] = useState(null);\r\n  const [loading, setLoading] = useState(true);\r\n  const [error, setError] = useState(null);\r\n\r\n  useEffect(() => {\r\n    const getMetadata = async () => {\r\n      try {\r\n        const data = await fetchMetadata();\r\n        setMetadata(data);\r\n      } catch (err) {\r\n        setError(err.message);\r\n      } finally {\r\n        setLoading(false);\r\n      }\r\n    };\r\n\r\n    getMetadata();\r\n  }, []);\r\n\r\n  return { metadata, loading, error };\r\n}"
+        }
+    ]
+}

@@ -1,0 +1,22 @@
+{
+    "sourceFile": "src/components/Messages/components/ChatBox.jsx",
+    "activeCommit": 0,
+    "commits": [
+        {
+            "activePatchIndex": 1,
+            "patches": [
+                {
+                    "date": 1755157052325,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n"
+                },
+                {
+                    "date": 1755157075912,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,6 +1,6 @@\n import React from 'react';\r\n-import MessageItem from '../MessageItem';\r\n+import MessageItem from './MessageItem';\r\n import './ChatBox.css';\r\n \r\n const ChatBox = ({ selectedUser, onBack }) => {\r\n    if (!selectedUser) {\r\n"
+                }
+            ],
+            "date": 1755157052325,
+            "name": "Commit-0",
+            "content": "import React from 'react';\r\nimport MessageItem from '../MessageItem';\r\nimport './ChatBox.css';\r\n\r\nconst ChatBox = ({ selectedUser, onBack }) => {\r\n   if (!selectedUser) {\r\n    return (\r\n      <div className=\"chat-box-empty-chat\">\r\n        <p>Select a user to start chatting</p>\r\n      </div>\r\n    );\r\n  }\r\n  return (\r\n    <div className=\"chat-box\">\r\n      <div className=\"chat-header\">\r\n          <button className=\"back-button\" onClick={onBack}>\r\n                ← \r\n              </button>\r\n        {selectedUser.name}</div>\r\n      <div className=\"chat-messages\">\r\n        <MessageItem text=\"Hey! I saw your profile and loved your fintech project ideas.\" type=\"received\" />\r\n        <MessageItem text=\"Thanks! I'd love to hear more about your development experience.\" type=\"sent\" />\r\n        <MessageItem text=\"That sounds like a great idea! When can we meet?\" type=\"received\" />\r\n      </div>\r\n      <div className=\"chat-input\">\r\n        <input type=\"text\" placeholder=\"Type a message...\" />\r\n        <button>Send</button>\r\n      </div>\r\n    </div>\r\n  );\r\n};\r\n\r\nexport default ChatBox;"
+        }
+    ]
+}

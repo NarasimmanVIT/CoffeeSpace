@@ -1,31 +1,38 @@
 import React, { useEffect, useState } from "react";
 import "./Navbar.css";
 import { Link } from "react-router-dom";
-import { Users, ChatCircle, PaperPlaneTilt, SignIn } from "phosphor-react";
+import { Users, ChatCircle, PaperPlaneTilt, SignIn, UserCircle } from "phosphor-react";
 import { useLocation } from "react-router-dom";
-import { NavLink } from "react-router-dom";
+import { useNavbar } from "./useNavbar";
 
 const Navbar = () => {
-  const [isScrolled, setIsScrolled] = useState(false);
 
-  const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
+  const {
+    isScrolled, isMobileMenuOpen, toggleMenu,location
+  } = useNavbar();
 
-  useEffect(() => {
-    const handleScroll = () => {
-      setIsScrolled(window.scrollY > 10);
-    };
+  // const [isScrolled, setIsScrolled] = useState(false);
 
-    window.addEventListener("scroll", handleScroll);
-    return () => window.removeEventListener("scroll", handleScroll);
-  }, []);
+  // const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
 
-  const toggleMenu = () => {
-   setIsMobileMenuOpen(!isMobileMenuOpen);
-  };
+  // useEffect(() => {
+  //   const handleScroll = () => {
+  //     setIsScrolled(window.scrollY > 10);
+  //   };
 
-  const [isAccountDropdownOpen, setIsAccountDropdownOpen] = useState(false);
+  //   window.addEventListener("scroll", handleScroll);
+  //   return () => window.removeEventListener("scroll", handleScroll);
+  // }, []);
 
-  const location =useLocation();
+  // const toggleMenu = () => {
+  //  setIsMobileMenuOpen(!isMobileMenuOpen);
+  // };
+
+  // const [isAccountDropdownOpen, setIsAccountDropdownOpen] = useState(false);
+
+  // const location =useLocation();
+
+
 
   return (
     <>
@@ -71,7 +78,7 @@ const Navbar = () => {
         
         </div>
 
-        <div className="navbar-account" onClick={() => setIsAccountDropdownOpen(! isAccountDropdownOpen)}>
+        {/* <div className="navbar-account" onClick={() => setIsAccountDropdownOpen(! isAccountDropdownOpen)}>
           <span className="icon">
             <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" fill="none" stroke="#2f2121" strokeWidth="2" viewBox="0 0 24 24">
               <path d="M12 12a5 5 0 1 0 0-10 5 5 0 0 0 0 10Zm0 2c-4.418 0-8 2.015-8 4.5V21h16v-2.5c0-2.485-3.582-4.5-8-4.5Z"/>
@@ -91,7 +98,14 @@ const Navbar = () => {
     </div>
   )}
 
-        </div>
+        </div> */}
+
+        <Link to="/get-started"
+        className={`navbar-account ${location.pathname === "/get-started" ? "active-nav-link" : ""}`}
+        >
+          <UserCircle size={24} />
+          Get Started
+          </Link>
 
           <div className="mobile-menu-icon" onClick={toggleMenu}>
             <svg width="28" height="28" fill="none" stroke="#2f2121" strokeWidth="2" viewBox="0 0 24 24">

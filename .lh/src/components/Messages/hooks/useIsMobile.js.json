@@ -1,0 +1,18 @@
+{
+    "sourceFile": "src/components/Messages/hooks/useIsMobile.js",
+    "activeCommit": 0,
+    "commits": [
+        {
+            "activePatchIndex": 0,
+            "patches": [
+                {
+                    "date": 1755156953301,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n"
+                }
+            ],
+            "date": 1755156953301,
+            "name": "Commit-0",
+            "content": "import { useState, useEffect } from 'react';\r\n\r\nexport default function useIsMobile(breakpoint = 1024) {\r\n  const [isMobile, setIsMobile] = useState(window.innerWidth < breakpoint);\r\n\r\n  useEffect(() => {\r\n    const handleResize = () => setIsMobile(window.innerWidth < breakpoint);\r\n    window.addEventListener('resize', handleResize);\r\n    return () => window.removeEventListener('resize', handleResize);\r\n  }, [breakpoint]);\r\n\r\n  return isMobile;\r\n}"
+        }
+    ]
+}

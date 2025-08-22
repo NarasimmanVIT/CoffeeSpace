@@ -3,7 +3,7 @@
     "activeCommit": 0,
     "commits": [
         {
-            "activePatchIndex": 69,
+            "activePatchIndex": 70,
             "patches": [
                 {
                     "date": 1753118880607,
@@ -284,6 +284,10 @@
                 {
                     "date": 1753932773214,
                     "content": "Index: \n===================================================================\n--- \n+++ \n@@ -7,9 +7,9 @@\n     <section className=\"hero-image-only\">\r\n       <div className=\"hero-image-wrapper\">\r\n         <img src={heroImg} alt=\"Hero\" className=\"hero-img\" />\r\n         <div className=\"overlay\">\r\n-          \r\n+        \r\n         </div>\r\n       </div>\r\n     \r\n       \r\n"
+                },
+                {
+                    "date": 1754569327965,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -7,9 +7,8 @@\n     <section className=\"hero-image-only\">\r\n       <div className=\"hero-image-wrapper\">\r\n         <img src={heroImg} alt=\"Hero\" className=\"hero-img\" />\r\n         <div className=\"overlay\">\r\n-        \r\n         </div>\r\n       </div>\r\n     \r\n       \r\n@@ -17,9 +16,9 @@\n         <h1>\r\n           Connect with <br />\r\n           <span className=\"highlight-text\">Entrepreneurs</span>\r\n         </h1>\r\n-        <p>who share your vision</p>\r\n+        <p>ho share your vision</p>\r\n \r\n         <div className=\"parah\">\r\n             <p>Discover and connect with entrepreneurs who share your <br /> interests, industry focus, and business vision for meaningful <br /> partnerships.</p>\r\n         </div>\r\n"
                 }
             ],
             "date": 1753118880607,
