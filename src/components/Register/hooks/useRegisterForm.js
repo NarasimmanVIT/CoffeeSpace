@@ -2,11 +2,38 @@ import { useState } from "react";
 import { registerUser } from "../../../api/register/registerApi";
 
 export default function useRegisterForm() {
-  // Api's
+
   const [firstName, setFirstName] = useState("");
   const [lastName, setLastName] = useState("");
   const [email, setEmail] = useState("");
   const [dob, setDob] = useState("");
+  const [age, setAge] = useState("");
+
+  const calculateAge = (dateString) => {
+    if (!dateString) return "";
+
+    const today = new Date();
+    const birthDate = new Date(dateString);
+
+    if (isNaN(birthDate.getTime())) return "";
+
+    let calculatedAge = today.getFullYear() - birthDate.getFullYear();
+    const monthDiff = today.getMonth() - birthDate.getMonth();
+
+    if (
+      monthDiff < 0 ||
+      (monthDiff === 0 && today.getDate() < birthDate.getDate())
+    ) {
+      calculatedAge--;
+    }
+
+    return calculatedAge.toString();
+  };
+
+  const handleDobChange = (dateString) => {
+    setDob(dateString);
+    setAge(calculateAge(dateString));
+  };
 
   const formDob = (dateStr) => {
     const [year, month, day] = dateStr.split("_");
@@ -17,12 +44,10 @@ export default function useRegisterForm() {
   const [experience, setExperience] = useState("");
   const [workingStatus, setWorkingStatus] = useState("");
 
-
   const [linkedInProfileUrl, setLinkedInProfileUrl] = useState("");
   const [linkedInName, setLinkedInName] = useState("");
   const [linkedInSummary, setLinkedInSummary] = useState("");
 
-  // priorities state
   const [priorities, setPriorities] = useState([]);
   const [priorityInput, setPriorityInput] = useState("");
   const MAX_PRIORITIES = 10;
@@ -102,24 +127,25 @@ export default function useRegisterForm() {
   };
 
   // Industries state
-  const [industries, setIndustries] = useState([]);
+  const [selectedIndustries, setSelectedIndustries] = useState([]);
   const [industryInput, setIndustryInput] = useState("");
-  const MAX_INDUSTRIES = 10;
+  const MAX_SELECTABLE_INDUSTRIES = 5;
 
-  const addIndustry = () => {
-    const value = industryInput.trim();
-    if (!value) return;
-    if (industries.includes(value)) {
-      setIndustryInput("");
-      return;
-    }
-    if (industries.length >= MAX_INDUSTRIES) return;
-    setIndustries((prev) => [...prev, value]);
-    setIndustryInput("");
+  const toggleIndustry = (id) => {
+    setSelectedIndustries((prev) => {
+      if (prev.includes(id)) {
+        return prev.filter((i) => i !== id);
+      } else {
+        if (prev.length >= MAX_SELECTABLE_INDUSTRIES) return prev;
+        return [...prev, id];
+      }
+    });
   };
 
-  const removeIndustry = (idx) => {
-    setIndustries((prev) => prev.filter((_, i) => i !== idx));
+  const removeIndustry = (id) => {
+    setSelectedIndustries((prev) =>
+      prev.filter((industryId) => industryId !== id)
+    );
   };
 
   const handleIndustryKey = (e) => {
@@ -185,21 +211,22 @@ export default function useRegisterForm() {
     setEducationList((prev) => prev.filter((edu) => edu.id !== id));
   };
 
-  // Submit
   const handleRegister = async () => {
     try {
-      const safeString = (str) => (typeof str === "string" ? str.toUpperCase().replace(/ /g, "_") : "");
+      const safeString = (str) =>
+        typeof str === "string" ? str.toUpperCase().replace(/ /g, "_") : "";
       const payload = {
         firstName,
         lastName,
         email,
         dob,
-        goal: goal?.id || null,
+        age: age || null,
+        goal: goal || null,
         priorities,
-        experience: experience?.id || null,
+        experience: experience || null,
         workingStatus: workingStatus?.id || null,
-        skills:skills.map((s) => s.id),
-        industries,
+        skills: skills.map((s) => s.id),
+        industries: selectedIndustries,
         linkedInProfileUrl,
         linkedInName,
         linkedInSummary,
@@ -235,35 +262,77 @@ export default function useRegisterForm() {
       alert(err.message || "Registration failed");
     }
   };
-  // console.log("Industries selected:", industries);
-  // console.log("Priorities selected:", priorities);
+  // console.log("goal:", goal);
+  // console.log("experience:", experience);
+  // console.log("workingStatus:", workingStatus);
+  // console.log("skills:", skills);
+  // console.log("industries:", industries);
+  // console.log("Goal state before submit:", goal);
+
+  // console.log("Industries state before submit:", selectedIndustries);
 
   return {
-    // States
-    firstName, setFirstName,
-    lastName, setLastName,
-    email, setEmail,
-    dob, setDob,
-    goal, setGoal,
-    experience, setExperience,
-    workingStatus, setWorkingStatus, 
-    priorities, setPriorities, priorityInput, setPriorityInput,
-    skills, setSkills, skillInput, setSkillInput, commonSkills,
-    industries, setIndustries, industryInput, setIndustryInput,
-    experiences, setExperiences,
-    educationList, setEducationList,
-    linkedInProfileUrl, setLinkedInProfileUrl,
-    linkedInName, setLinkedInName,
-    linkedInSummary, setLinkedInSummary,
-    // Methods
-    addPriority, handlePriorityKey, removePriority,
-    addSkill, handleSkillKey, removeSkill, toggleCommonSkill,
-    addIndustry, removeIndustry, handleIndustryKey,
-    addExperience, updateExperience, removeExperience,
-    addEducation, updateEducation, removeEducation,
+    firstName,
+    setFirstName,
+    lastName,
+    setLastName,
+    email,
+    setEmail,
+    dob,
+    setDob,
+    goal,
+    setGoal,
+    experience,
+    setExperience,
+    workingStatus,
+    setWorkingStatus,
+    priorities,
+    setPriorities,
+    priorityInput,
+    setPriorityInput,
+    skills,
+    setSkills,
+    skillInput,
+    setSkillInput,
+    commonSkills,
+    selectedIndustries,
+    setSelectedIndustries,
+    toggleIndustry,
+    removeIndustry,
+    // industries,
+    // setIndustries,
+    // industryInput,
+    // setIndustryInput,
+    experiences,
+    setExperiences,
+    educationList,
+    setEducationList,
+    linkedInProfileUrl,
+    setLinkedInProfileUrl,
+    linkedInName,
+    setLinkedInName,
+    linkedInSummary,
+    setLinkedInSummary,
+
+    addPriority,
+    handlePriorityKey,
+    removePriority,
+    addSkill,
+    handleSkillKey,
+    removeSkill,
+    toggleCommonSkill,
+    // addIndustry,
+    // removeIndustry,
+    // handleIndustryKey,
+    addExperience,
+    updateExperience,
+    removeExperience,
+    addEducation,
+    updateEducation,
+    removeEducation,
     handleRegister,
-      MAX_PRIORITIES,
-      MAX_SKILLS,
-      MAX_INDUSTRIES
+    MAX_PRIORITIES,
+    MAX_SKILLS,
+    MAX_SELECTABLE_INDUSTRIES,
   };
 }

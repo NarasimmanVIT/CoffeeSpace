@@ -18,6 +18,7 @@ const Register = () => {
     dob,
     setDob,
     goal,
+    age,
     setGoal,
     experience,
     setExperience,
@@ -38,10 +39,14 @@ const Register = () => {
     removeSkill,
     toggleCommonSkill,
     commonSkills,
+    toggleSkill,
     industries,
     industryInput,
     setIndustryInput,
     addIndustry,
+    selectedIndustries,
+    setSelectedIndustries,
+    toggleIndustry,
     removeIndustry,
     handleIndustryKey,
     experiences,
@@ -65,60 +70,21 @@ const Register = () => {
     MAX_SELECTABLE_INDUSTRIES = 5,
   } = useRegisterForm();
 
-  // metadata api
 
   const { metadata, loading, error } = useMetadata();
-  // const [skills, setSkills] = useState([]);
-  const [selectedIndustries, setSelectedIndustries] = useState([]);
+
   const [showMoreGroups, setShowMoreGroups] = useState({});
 
-  const toggleIndustry = (industryId) => {
-    if (selectedIndustries.includes(industryId)) {
-      setSelectedIndustries((prev) => prev.filter((id) => id !== industryId));
-    } else if (selectedIndustries.length < MAX_SELECTABLE_INDUSTRIES) {
-      setSelectedIndustries((prev) => [...prev, industryId]);
-    } else {
-      alert(
-        `You can only select up to ${MAX_SELECTABLE_INDUSTRIES} industries`
-      );
-    }
-  };
-
-  const toggleShowMore = (groupHeader) => {
+  const toggleShowMore = (subHeader) => {
     setShowMoreGroups((prev) => ({
       ...prev,
-      [groupHeader]: !prev[groupHeader],
+      [subHeader]: !prev[subHeader],
     }));
   };
 
-  // if (loading) {
-  //   console.log("Loading metadata...");
-  // }
-
-  // if (error) {
-  //   console.warn("Metadata fetch failed, showing fallback data:", error);
-  // }
 
   const [formValues, setFormValues] = useState({});
 
-  // Extract the data directly from metadata
-  // const goalsGroup = metadata?.goals;
-  // const experienceGroup = metadata?.experience;
-
-  //   // Api's
-
-  //   const [firstName, setFirstName] = useState("");
-  //   const [lastName, setLastName] = useState("");
-  //   const [email, setEmail] = useState("");
-  //   const [dob, setDob] = useState("");
-
-  //   const formDob = (dateStr) => {
-  //     const [year, month, day] = dateStr.split("_");
-  //     return `$ {day}-${month}-{year}`;
-  //   }
-
-  //  const [goal, setGoal] = useState(null);
-  //  const [experience, setExperience] = useState("");
 
   return (
     <div className="register-page">
@@ -173,6 +139,22 @@ const Register = () => {
             value={dob}
             onChange={(e) => setDob(e.target.value)}
           />
+
+          <div className="form-group" style={{ flex: 1 }}>
+            <label>Age</label>
+            <input
+              type="text"
+              value={age}
+              readOnly
+              placeholder="Auto-calculated"
+              className="age-input"
+              style={{
+                backgroundColor: "#f5f5f5",
+                cursor: "not-allowed",
+                color: "#666",
+              }}
+            />
+          </div>
         </div>
 
         {/* Goal & Experience */}
@@ -184,7 +166,7 @@ const Register = () => {
               metadata?.goals?.options?.map((opt) => ({
                 id: opt.id,
                 name: opt.value,
-                value: opt.value,
+                value: opt.id,
               })) || []
             }
             value={goal}
@@ -207,8 +189,8 @@ const Register = () => {
             }
             value={experience}
             onChange={(selected) => {
-              if (selected && selected.value) {
-                setExperience(selected.value);
+              if (selected && selected.id) {
+                setExperience(selected.id);
               } else {
                 setExperience("");
               }
@@ -425,10 +407,14 @@ const Register = () => {
         {/* Industries Section */}
 
         <div className="industries-section">
-          <label>{metadata?.industries?.header || "Select Industries"}</label>
-          <p className="industries-counter">
-            {selectedIndustries.length}/{MAX_SELECTABLE_INDUSTRIES} selected
-          </p>
+          <div className="industries-header">
+            <label className="industries-label">
+              {metadata?.industries?.header || "Select Industries"}
+            </label>
+            <p className="industries-counter">
+              {selectedIndustries.length}/{MAX_SELECTABLE_INDUSTRIES} selected
+            </p>
+          </div>
 
           {metadata?.industries?.groups?.map((group) => {
             const isExpanded = showMoreGroups[group.subHeader] || false;
@@ -443,23 +429,29 @@ const Register = () => {
 
                 {/* Options */}
                 <div className="common-skills-grid">
-                  {optionsToShow.map((opt) => (
-                    <button
-                      key={opt.id}
-                      className={`common-skill-btn ${
-                        selectedIndustries.includes(opt.id) ? "selected" : ""
-                      }`}
-                      onClick={() => toggleIndustry(opt.id)}
-                    >
-                      {opt.value}
-                    </button>
-                  ))}
+                  {optionsToShow.map((opt) => {
+                    const isSelected = selectedIndustries.includes(opt.id);
+                    return (
+                      <button
+                        key={opt.id}
+                        type="button"
+                        className={`common-skill-btn ${
+                          isSelected ? "selected" : ""
+                        }`}
+                        onClick={() => toggleIndustry(opt.id)}
+                        aria-pressed={isSelected}
+                      >
+                        {opt.value}
+                      </button>
+                    );
+                  })}
                 </div>
 
-                {/* Show More / Show Less below options, aligned right */}
+                {/* Show More / Show Less */}
                 {group.options.length > 5 && (
                   <div className="show-more-container">
                     <button
+                      type="button"
                       className="show-more-btn"
                       onClick={() => toggleShowMore(group.subHeader)}
                     >

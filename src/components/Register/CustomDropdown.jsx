@@ -22,6 +22,20 @@ const CustomDropdown = ({ label, options = [], value, onChange }) => {
     setIsOpen(false);
   };
 
+  const getDisplayValue = () => {
+    if (!value) return `Select ${label ? label.toLowerCase() : "option"}`;
+    
+    if (typeof value === 'string') {
+      return options.find(opt => opt.id === value)?.name || value;
+    }
+    
+    if (typeof value === 'object' && value !== null) {
+      return value.name || value.value || `Select ${label ? label.toLowerCase() : "option"}`;
+    }
+    
+    return `Select ${label ? label.toLowerCase() : "option"}`;
+  };
+
   useEffect(() => {
     const handleClickOutside = (e) => {
       if (dropdownRef.current && !dropdownRef.current.contains(e.target)) {
@@ -40,7 +54,7 @@ const CustomDropdown = ({ label, options = [], value, onChange }) => {
         onClick={toggleDropdown}
       >
         <span className="selected-value">
-          {value?.name || `Select ${label ? label.toLowerCase() : "option"}`}
+          {getDisplayValue()}
         </span>
         <CaretDown size={14} weight="bold" className="select-icon" />
       </div>
@@ -53,7 +67,7 @@ const CustomDropdown = ({ label, options = [], value, onChange }) => {
               onClick={() => handleSelect(opt)}
               className="dropdown-option"
             >
-              {opt.name}
+              {opt.name || opt.value}
             </li>
           ))}
         </ul>
