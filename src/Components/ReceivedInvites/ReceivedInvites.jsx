@@ -1,4 +1,4 @@
-import "../styles/ReceivedInvites.css"
+import "./ReceivedInvites.css"
 
 const ReceivedInvites = ({ invites, onAccept, onDecline }) => {
   return (

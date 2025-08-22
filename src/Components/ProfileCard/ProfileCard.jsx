@@ -1,5 +1,5 @@
 import React from "react";
-import "../styles/ProfileCard.css";
+import "./ProfileCard.css";
 import {MapPin, ChatCircle} from "phosphor-react";
 
 const ProfileCard = ({ image, name, role, location, bio, tags, rating, projects }) => {

@@ -1,5 +1,5 @@
 import React from 'react';
-import "../styles/ConnectedInvites.css"
+import "./ConnectedInvites.css"
 const ConnectedInvites = ({ connections }) => {
   return (
     <div className="invite-card">

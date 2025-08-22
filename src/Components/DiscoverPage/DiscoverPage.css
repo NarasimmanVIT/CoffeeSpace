@@ -5,13 +5,13 @@ body {
 }
 
 .discover-container {
-  width: 100%;
+  width: 90%;
   margin: 0 auto;
   margin-top: 60px;
   padding: 24px;
   box-sizing: border-box;
   color: black;
-  height: 100%;
+  height: 80%;
 }
 
 .discover-container h2 {
@@ -31,7 +31,7 @@ body {
   background-color: #f9f9f9;
   border-radius: 12px;
   padding: 24px;
-  min-height: 600px;
+  min-height: 670px;
   box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
   overflow: hidden;
   line-height: 1.5;
@@ -166,10 +166,10 @@ body {
   background-color: rgb(147, 80, 31, 0.2);
 }
 
-.chat:hover {
+/* .chat:hover {
   border: 2px solid #93501f;
   background-color: rgb(147, 80, 31, 0.2);
-}
+} */
 
 .remaining {
   text-align: center;
@@ -212,7 +212,7 @@ body {
   .discover-buttons {
     position: fixed;
     bottom: 10px;
-    gap: 30px;
+    /* gap: 30px; */
     flex-wrap: wrap;
     justify-content: center;
     align-items: center;

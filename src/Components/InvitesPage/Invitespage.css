@@ -1,4 +1,6 @@
 body {
+  width: 100%;
+  height: auto;
   background-color: #f8f4f1;
 }
 
@@ -63,7 +65,7 @@ body {
   }
 }
 
-/* Mobile View (≤480px) */
+
 @media (max-width: 480px) {
   .invites-page {
     padding: 12px;

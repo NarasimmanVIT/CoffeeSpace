@@ -1,5 +1,5 @@
-import '../styles/SentInvites.css';
-import sentData from '../Data/SentData';
+import './SentInvites.css';
+import sentData from '../../Data/SendData';
 
 const SentInvites = () => {
   return (

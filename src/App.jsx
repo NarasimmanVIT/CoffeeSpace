@@ -1,18 +1,17 @@
 import { useState } from 'react'
-import reactLogo from './assets/react.svg'
-import viteLogo from '/vite.svg'
 import './App.css'
 import Navbar from './components/Navbar'
 import HeroSection from './components/HeroSection'
 import ConnectSection from './components/ConnectSection'
 import { Route, Routes } from 'react-router-dom'
 import MessagesPage from './components/Messages/MessagesPage'
-import PartnershipSection from "./Components/PartnershipSection";
-import DiscoverPage from "./Components/DiscoverPage";
-import MeetPartners from "./Components/MeetPartners";
+import PartnershipSection from "./Components/PartnershipSection/PartnershipSection";
+import DiscoverPage from "./Components/DiscoverPage/DiscoverPage";
+import MeetPartners from "./Components/MeetPartners/MeetPartners";
 import Signup from './components/Signup'
 import Login from './components/Login'
-import InvitesPage from "./components/InvitesPage";
+import InvitesPage from "./Components/InvitesPage/InvitesPage";
+
 
 function App() {
 

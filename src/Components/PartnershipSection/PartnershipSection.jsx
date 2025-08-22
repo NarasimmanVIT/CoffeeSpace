@@ -1,5 +1,5 @@
 import React from "react";
-import "../styles/PartnershipSection.css";
+import "./PartnershipSection.css";
 import {Users, Lightning} from "phosphor-react";
 
 function PartnershipSection() {
