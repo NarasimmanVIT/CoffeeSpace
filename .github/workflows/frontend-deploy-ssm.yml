@@ -2,14 +2,8 @@ name: Deploy Frontend to EC2 via SSM
 
 on:
   push:
-    branches: [ master ]        # change to main if needed
+    branches: [ main ]
   workflow_dispatch:
-
-env:
-  AWS_REGION: ap-south-1
-  IMAGE_NAME: coffeespace-frontend
-  ECR_REPO: coffeespace-frontend
-  EC2_INSTANCE_IDS: i-0dbc533f9c7a8cf30   # same instance as backend
 
 jobs:
   deploy:
@@ -19,10 +13,25 @@ jobs:
       - name: Checkout repo
         uses: actions/checkout@v4
 
-      - name: Validate AWS secrets
+      # --- Load .env file ---
+      - name: Load .env
         run: |
-          [ -n "${{ secrets.AWS_ACCESS_KEY_ID }}" ] && [ -n "${{ secrets.AWS_SECRET_ACCESS_KEY }}" ] \
-            && echo "✅ AWS secrets are available." || { echo "❌ Missing AWS secrets"; exit 1; }
+          if [ -f .env ]; then
+            export $(grep -v '^#' .env | xargs)
+            echo "✅ Loaded .env variables"
+            echo "VITE_API_BASE_URL=$VITE_API_BASE_URL" >> $GITHUB_ENV
+            echo "AWS_REGION=$AWS_REGION" >> $GITHUB_ENV
+            echo "AWS_ACCOUNT_ID=$AWS_ACCOUNT_ID" >> $GITHUB_ENV
+            echo "EC2_INSTANCE_IDS=$EC2_INSTANCE_IDS" >> $GITHUB_ENV
+          else
+            echo "❌ .env file not found"
+            exit 1
+          fi
+
+      - name: Validate required env vars
+        run: |
+          [ -n "$VITE_API_BASE_URL" ] && [ -n "$AWS_REGION" ] && [ -n "$AWS_ACCOUNT_ID" ] && [ -n "$EC2_INSTANCE_IDS" ] \
+            && echo "✅ All required env vars are set" || { echo "❌ Missing required env vars"; exit 1; }
 
       - name: Configure AWS credentials
         uses: aws-actions/configure-aws-credentials@v4
@@ -31,14 +40,6 @@ jobs:
           aws-secret-access-key: ${{ secrets.AWS_SECRET_ACCESS_KEY }}
           aws-region: ${{ env.AWS_REGION }}
 
-      - name: Get AWS Account ID
-        run: echo "AWS_ACCOUNT_ID=$(aws sts get-caller-identity --query Account --output text)" >> $GITHUB_ENV
-
-      - name: Ensure ECR repo exists
-        run: |
-          aws ecr describe-repositories --repository-names "$ECR_REPO" >/dev/null 2>&1 \
-          || aws ecr create-repository --repository-name "$ECR_REPO" >/dev/null 2>&1 || true
-
       - name: Login to ECR
         run: |
           aws ecr get-login-password --region "$AWS_REGION" \
@@ -46,36 +47,21 @@ jobs:
 
       - name: Build Docker image
         run: |
-          docker build \
-            --build-arg VITE_API_BASE_URL=${{ secrets.VITE_API_BASE_URL }} \
-            -t "${IMAGE_NAME}:latest" .
+          docker build --build-arg VITE_API_BASE_URL="$VITE_API_BASE_URL" -t coffeespace-frontend:latest .
 
-      - name: Tag Docker image
+      - name: Tag & Push Docker image
         run: |
-          docker tag "${IMAGE_NAME}:latest" "${AWS_ACCOUNT_ID}.dkr.ecr.${AWS_REGION}.amazonaws.com/${ECR_REPO}:latest"
-          docker tag "${IMAGE_NAME}:latest" "${AWS_ACCOUNT_ID}.dkr.ecr.${AWS_REGION}.amazonaws.com/${ECR_REPO}:${GITHUB_SHA}"
-
-      - name: Push image to ECR
-        run: |
-          docker push "${AWS_ACCOUNT_ID}.dkr.ecr.${AWS_REGION}.amazonaws.com/${ECR_REPO}:latest"
-          docker push "${AWS_ACCOUNT_ID}.dkr.ecr.${AWS_REGION}.amazonaws.com/${ECR_REPO}:${GITHUB_SHA}"
+          docker tag coffeespace-frontend:latest "${AWS_ACCOUNT_ID}.dkr.ecr.${AWS_REGION}.amazonaws.com/coffeespace-frontend:latest"
+          docker push "${AWS_ACCOUNT_ID}.dkr.ecr.${AWS_REGION}.amazonaws.com/coffeespace-frontend:latest"
 
       - name: Deploy to EC2 via SSM
-        env:
-          AWS_REGION: ${{ env.AWS_REGION }}
-          VITE_API_BASE_URL: ${{ secrets.VITE_API_BASE_URL }}
         run: |
           read -r -d '' REMOTE_SCRIPT <<'EOSH'
           set -e
-
           FRONTEND_DIR=/home/ubuntu/frontend
-          AWS_REGION="%AWS_REGION%"
-          AWS_ACCOUNT_ID="%AWS_ACCOUNT_ID%"
-          VITE_API_BASE_URL="%VITE_API_BASE_URL%"
-
           mkdir -p "$FRONTEND_DIR"
 
-          # Docker & Compose installation
+          # Docker & Compose
           if ! command -v docker >/dev/null 2>&1; then
             sudo apt-get update -y && sudo apt-get install -y docker.io
           fi
@@ -85,14 +71,14 @@ jobs:
 
           docker network inspect app_net >/dev/null 2>&1 || docker network create app_net
 
-          # Create .env for Docker Compose
+          # Write .env for Docker Compose
           cat > "$FRONTEND_DIR/.env" <<ENVEOF
-          AWS_ACCOUNT_ID=$AWS_ACCOUNT_ID
-          AWS_REGION=$AWS_REGION
-          VITE_API_BASE_URL=$VITE_API_BASE_URL
+          AWS_ACCOUNT_ID=%AWS_ACCOUNT_ID%
+          AWS_REGION=%AWS_REGION%
+          VITE_API_BASE_URL=%VITE_API_BASE_URL%
           ENVEOF
 
-          # Write docker-compose.yml
+          # docker-compose.yml
           cat > "$FRONTEND_DIR/docker-compose.yml" <<'YAMLEOF'
           version: "3.9"
 
@@ -113,7 +99,7 @@ jobs:
                 - ./nginx.conf:/etc/nginx/conf.d/default.conf:ro
           YAMLEOF
 
-          # Nginx config
+          # nginx.conf
           cat > "$FRONTEND_DIR/nginx.conf" <<'NGINXEOF'
           server {
             listen 80;
@@ -137,7 +123,7 @@ jobs:
           }
           NGINXEOF
 
-          aws ecr get-login-password --region "$AWS_REGION" \
+          aws ecr get-login-password --region "%AWS_REGION%" \
             | docker login --username AWS --password-stdin "${AWS_ACCOUNT_ID}.dkr.ecr.${AWS_REGION}.amazonaws.com"
 
           docker network connect app_net coffeespace-backend || true
@@ -153,7 +139,7 @@ jobs:
           REMOTE_SCRIPT="${REMOTE_SCRIPT//%VITE_API_BASE_URL%/${VITE_API_BASE_URL}}"
 
           COMMAND_ID=$(aws ssm send-command \
-            --targets "Key=instanceIds,Values=${{ env.EC2_INSTANCE_IDS }}" \
+            --targets "Key=instanceIds,Values=${EC2_INSTANCE_IDS}" \
             --document-name "AWS-RunShellScript" \
             --comment "Deploy frontend stack" \
             --parameters commands="$(printf '%q' "$REMOTE_SCRIPT")" \
@@ -164,7 +150,7 @@ jobs:
 
           while true; do
             STATUS=$(aws ssm get-command-invocation \
-              --instance-id "${{ env.EC2_INSTANCE_IDS }}" \
+              --instance-id "${EC2_INSTANCE_IDS}" \
               --command-id "$COMMAND_ID" \
               --query 'Status' --output text)
             echo "Current status: $STATUS"
@@ -173,7 +159,7 @@ jobs:
           done
 
           RESPONSE_CODE=$(aws ssm get-command-invocation \
-            --instance-id "${{ env.EC2_INSTANCE_IDS }}" \
+            --instance-id "${EC2_INSTANCE_IDS}" \
             --command-id "$COMMAND_ID" \
             --query 'ResponseCode' --output text)
           [ "$RESPONSE_CODE" -eq 0 ] || exit "$RESPONSE_CODE"
