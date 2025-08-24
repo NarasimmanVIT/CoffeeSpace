@@ -159,7 +159,7 @@ jobs:
             --targets "Key=instanceIds,Values=$EC2_INSTANCE_IDS" \
             --document-name "AWS-RunShellScript" \
             --comment "Deploy latest Docker image" \
-            --parameters commands="$REMOTE_SCRIPT" \
+            --parameters commands="echo '$REMOTE_SCRIPT' > /tmp/deploy_frontend.sh && bash /tmp/deploy_frontend.sh" \
             --region "${AWS_REGION}" \
             --query "Command.CommandId" \
             --output text)
