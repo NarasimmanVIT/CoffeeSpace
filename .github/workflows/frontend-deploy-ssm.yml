@@ -56,7 +56,8 @@ jobs:
 
       - name: Deploy to EC2 via SSM
         run: |
-          read -r -d '' REMOTE_SCRIPT <<'EOSH'
+          # Store remote script safely in a variable
+          REMOTE_SCRIPT=$(cat <<'EOSH'
           set -e
           FRONTEND_DIR=/home/ubuntu/frontend
           mkdir -p "$FRONTEND_DIR"
@@ -133,21 +134,30 @@ jobs:
           docker compose up -d --remove-orphans
           docker image prune -f || true
           EOSH
+          )
 
+          # Replace placeholders
           REMOTE_SCRIPT="${REMOTE_SCRIPT//%AWS_REGION%/${AWS_REGION}}"
           REMOTE_SCRIPT="${REMOTE_SCRIPT//%AWS_ACCOUNT_ID%/${AWS_ACCOUNT_ID}}"
           REMOTE_SCRIPT="${REMOTE_SCRIPT//%VITE_API_BASE_URL%/${VITE_API_BASE_URL}}"
 
+          # Debugging: show the script that will run remotely
+          echo "----- Final Remote Script -----"
+          echo "$REMOTE_SCRIPT"
+          echo "-------------------------------"
+
+          # Send command to EC2 via SSM
           COMMAND_ID=$(aws ssm send-command \
             --targets "Key=instanceIds,Values=${EC2_INSTANCE_IDS}" \
             --document-name "AWS-RunShellScript" \
             --comment "Deploy frontend stack" \
-            --parameters commands="$(printf '%q' "$REMOTE_SCRIPT")" \
+            --parameters '{"commands":["'"$REMOTE_SCRIPT"'"]}' \
             --query "Command.CommandId" \
             --output text)
 
           echo "SSM Command ID: $COMMAND_ID"
 
+          # Poll until command finishes
           while true; do
             STATUS=$(aws ssm get-command-invocation \
               --instance-id "${EC2_INSTANCE_IDS}" \
@@ -162,4 +172,5 @@ jobs:
             --instance-id "${EC2_INSTANCE_IDS}" \
             --command-id "$COMMAND_ID" \
             --query 'ResponseCode' --output text)
+
           [ "$RESPONSE_CODE" -eq 0 ] || exit "$RESPONSE_CODE"
