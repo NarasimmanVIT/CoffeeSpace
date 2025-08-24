@@ -148,12 +148,13 @@ jobs:
 
           # Send command to EC2 via SSM
           COMMAND_ID=$(aws ssm send-command \
-            --targets "Key=instanceIds,Values=${EC2_INSTANCE_IDS}" \
-            --document-name "AWS-RunShellScript" \
-            --comment "Deploy frontend stack" \
-            --parameters '{"commands":["'"$REMOTE_SCRIPT"'"]}' \
-            --query "Command.CommandId" \
-            --output text)
+             --targets "Key=instanceIds,Values=$EC2_INSTANCE_IDS" \
+             --document-name "AWS-RunShellScript" \
+             --comment "Deploy latest Docker image" \
+             --parameters file://<(jq -n --rawfile cmd remote-script.sh '{commands: [$cmd]}') \
+             --region "${AWS_REGION}" \
+             --query "Command.CommandId" \
+             --output text)
 
           echo "SSM Command ID: $COMMAND_ID"
 
