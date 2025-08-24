@@ -101,7 +101,7 @@ jobs:
           YAMLEOF
 
           # nginx.conf
-          cat > "$FRONTEND_DIR/nginx.conf" <<'NGINXEOF'
+          cat > "$FRONTEND_DIR/nginx.conf.template" <<'NGINXEOF'
           server {
             listen 80;
             server_name _;
