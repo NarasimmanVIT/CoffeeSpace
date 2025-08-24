@@ -151,7 +151,7 @@ jobs:
              --targets "Key=instanceIds,Values=$EC2_INSTANCE_IDS" \
              --document-name "AWS-RunShellScript" \
              --comment "Deploy latest Docker image" \
-             --parameters '{"commands":["cd /home/ubuntu/frontend && docker compose pull && docker compose up -d && docker image prune -f || true"]}' \
+            --parameters commands="$REMOTE_SCRIPT" \
              --region "${AWS_REGION}" \
              --query "Command.CommandId" \
              --output text)
