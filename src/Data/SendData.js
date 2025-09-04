@@ -7,7 +7,7 @@ const sentData = [
       "Hi Alex! I'd love to discuss potential collaboration opportunities.",
     tag: "collaborate",
     time: "2 days ago",
-    image: "https://via.placeholder.com/50",
+    image: " ",
   },
   {
     id: 2,
@@ -17,7 +17,7 @@ const sentData = [
       "Hi Alex! I'd love to discuss potential collaboration opportunities.",
     tag: "collaborate",
     time: "2 days ago",
-    image: "https://via.placeholder.com/50",
+    image: " ",
   },
 ];
 

@@ -31,7 +31,7 @@ body {
   background-color: #f9f9f9;
   border-radius: 12px;
   padding: 24px;
-  min-height: 670px;
+  min-height: 660px;
   box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
   overflow: hidden;
   line-height: 1.5;
@@ -236,6 +236,6 @@ body {
 
 @media (min-width: 1024px) {
   .discover-profile-card {
-    height: 600px;
+    height: 500px;
   }
 }

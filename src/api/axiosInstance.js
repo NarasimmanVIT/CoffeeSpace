@@ -13,14 +13,14 @@ const axiosInstance = axios.create({
 // Request Interceptor
 axiosInstance.interceptors.request.use(
   (config) => {
-    const skipAuthEndpoints = ["/auth/sendOtp", "/auth/verifyOtp"];
+    const skipAuthEndpoints = ["/auth/sendOtp", "/auth/verifyOtp",];
     const shouldSkip = skipAuthEndpoints.some((endpoint) =>
       config.url.includes(endpoint)
     );
 
 
     const token = useAuthStore.getState().token;
-    // console.log("Token in store:", token); 
+    console.log("Token in store:", token); 
 
     if (token && !shouldSkip) {
       config.headers.Authorization = `Bearer ${token}`;

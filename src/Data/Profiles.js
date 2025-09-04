@@ -10,7 +10,7 @@ const profiles = [
       "Passionate about creating beautiful user experiences. Looking for a co-founder to build the next big thing in fintech.",
     skills: ["React", "TypeScript", "UI/UX"],
     interests: ["Startup", "Fintech", "AI"],
-    image: "https://i.pravatar.cc/100?img=47"
+    image: " "
   },
   {
     id: 2,
@@ -22,7 +22,7 @@ const profiles = [
     about: "Experienced with scalable systems. Passionate about AI and blockchain.",
     skills: ["Node.js", "Python", "AWS"],
     interests: ["Blockchain", "AI", "DevOps"],
-    image: "https://i.pravatar.cc/100?img=32"
+    image: " "
   },
 
   {
@@ -36,7 +36,7 @@ const profiles = [
     "Enthusiastic about building impactful apps. Open to collaboration on sustainability and education tech projects.",
   skills: ["JavaScript", "MongoDB", "Express"],
   interests: ["EdTech", "Sustainability", "Open Source"],
-  image: "https://i.pravatar.cc/100?img=32"
+  image: " "
 },
 {
   id: 4,
@@ -49,7 +49,7 @@ const profiles = [
     "10+ years in product strategy. Seeking developers to co-found a mental health startup.",
   skills: ["Agile", "Roadmapping", "User Research"],
   interests: ["Mental Health", "Startups", "Design Thinking"],
-  image: "https://i.pravatar.cc/100?img=12"
+  image: " "
 },
 {
   id: 5,
@@ -62,7 +62,7 @@ const profiles = [
     "Deep learning specialist. Looking for partners to develop healthcare AI tools.",
   skills: ["TensorFlow", "Python", "NLP"],
   interests: ["Healthcare", "AI", "Innovation"],
-  image: "https://i.pravatar.cc/100?img=56"
+  image: " "
 }
 
 ];

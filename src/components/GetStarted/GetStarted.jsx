@@ -62,7 +62,7 @@ const GetStarted = () => {
 
         setTimeout(() => {
           if (profileId && profileId !== "null") {
-            navigate("/home");
+            navigate("/discover");
           } else {
             navigate("/register");
           }
@@ -154,3 +154,4 @@ const GetStarted = () => {
 };
 
 export default GetStarted;
+

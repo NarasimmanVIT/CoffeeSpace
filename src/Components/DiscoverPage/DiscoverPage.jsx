@@ -1,10 +1,64 @@
+
 import React from "react";
 import "./DiscoverPage.css";
-import { Suitcase, MapPin, ChatCircle, X, HeartStraight } from "phosphor-react";
-import useDiscoverProfiles from "./useDiscoverProfiles"
+import { Suitcase, MapPin, X, HeartStraight } from "phosphor-react";
+import useDiscoverProfiles from "./useDiscoverProfiles";
+import { Loader2 } from "lucide-react";
+import { ToastContainer } from "react-toastify";
+import "react-toastify/dist/ReactToastify.css";
 
 function DiscoverPage() {
-  const { current, remaining, handleNext } = useDiscoverProfiles();
+  const { current, interact, loading, error } = useDiscoverProfiles();
+
+  if (loading)
+    return (
+      <div
+        style={{
+          display: "flex",
+          justifyContent: "center",
+          alignItems: "center",
+          height: "80vh",
+          flexDirection: "column",
+          gap: "10px",
+        }}
+      >
+        <Loader2 className="animate-spin" size={40} color="#93501f" />
+        <p style={{ color: "#93501f", fontWeight: "bold" }}>
+          Loading recommendations...
+        </p>
+      </div>
+    );
+
+  if (error)
+    return (
+      <p
+        style={{
+          display: "flex",
+          justifyContent: "center",
+          alignItems: "center",
+          textAlign: "center",
+          margin: "100px",
+          color: "red",
+        }}
+      >
+        {error}
+      </p>
+    );
+
+  if (!current)
+    return (
+      <h1
+        style={{
+          display: "flex",
+          justifyContent: "center",
+          alignItems: "center",
+          textAlign: "center",
+          margin: "100px",
+        }}
+      >
+        No profiles available
+      </h1>
+    );
 
   return (
     <div className="discover-container">
@@ -47,21 +101,31 @@ function DiscoverPage() {
           </div>
 
           <div className="discover-buttons">
-            <button className="x" onClick={handleNext}>
+            <button className="x" onClick={() => interact("DISLIKE")}>
               <X size={16} color="#ef4444" weight="bold" />
             </button>
-            <button className="like" onClick={handleNext}>
+
+            <button className="like" onClick={() => interact("LIKE")}>
               <HeartStraight size={16} color="#93501f" weight="bold" />
             </button>
-            {/* <button className="chat">
-              <ChatCircle size={16} color="#93501f" weight="bold" />
-            </button> */}
           </div>
         </div>
       </div>
-      <p className="remaining">{remaining} more profiles to discover</p>
+
+         <ToastContainer
+                position="top-right"
+                autoClose={2500}
+                hideProgressBar={false}
+                newestOnTop
+                closeOnClick
+                pauseOnFocusLoss
+                draggable
+                pauseOnHover
+                theme="colored"
+              />
     </div>
   );
 }
 
 export default DiscoverPage;
+

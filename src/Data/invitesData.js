@@ -6,7 +6,7 @@ const invitesData = [
     message: "Hi! I saw your profile and think we could create something amazing together!",
     tag: "connect",
     time: "1 hour ago",
-    image: "https://via.placeholder.com/50"
+    image: " "
   },
   {
     id: 2,
@@ -15,7 +15,7 @@ const invitesData = [
     message: "Would love to grab coffee and chat about your AI expertise!",
     tag: "coffee",
     time: "3 hours ago",
-    image: "https://via.placeholder.com/50"
+    image: " "
   }
 ];
 
