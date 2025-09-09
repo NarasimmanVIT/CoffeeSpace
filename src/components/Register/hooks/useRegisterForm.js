@@ -1,5 +1,6 @@
-import { useState } from "react";
-import { registerUser } from "../../../api/register/registerApi";
+import { useState, useEffect } from "react";
+import { registerUser, viewProfile, editProfile } from "../../../api/register/registerApi";
+import { hasValidProfileId, saveProfileId, getProfileId } from "../../../utils/profileUtils";
 
 export default function useRegisterForm() {
 
@@ -47,6 +48,23 @@ export default function useRegisterForm() {
   const [linkedInProfileUrl, setLinkedInProfileUrl] = useState("");
   const [linkedInName, setLinkedInName] = useState("");
   const [linkedInSummary, setLinkedInSummary] = useState("");
+
+  // Image upload state
+  const [profileImage, setProfileImage] = useState(null);
+  const [imagePreview, setImagePreview] = useState(null);
+  const [imageError, setImageError] = useState("");
+
+  // Profile fetch state
+  const [isLoadingProfile, setIsLoadingProfile] = useState(false);
+  const [profileError, setProfileError] = useState("");
+  const [isProfileLoaded, setIsProfileLoaded] = useState(false);
+
+  // Registration state
+  const [isRegistering, setIsRegistering] = useState(false);
+  const [registrationError, setRegistrationError] = useState("");
+
+  // Edit profile state
+  const [isEditingProfile, setIsEditingProfile] = useState(false);
 
   const [priorities, setPriorities] = useState([]);
   const [priorityInput, setPriorityInput] = useState("");
@@ -211,7 +229,178 @@ export default function useRegisterForm() {
     setEducationList((prev) => prev.filter((edu) => edu.id !== id));
   };
 
+  // Image upload functions
+  const validateImage = (file) => {
+    const maxSize = 5 * 1024 * 1024; // 5MB
+    const allowedTypes = ['image/jpeg', 'image/jpg', 'image/png', 'image/gif'];
+    
+    if (!file) {
+      setImageError("Please select an image file");
+      return false;
+    }
+    
+    if (!allowedTypes.includes(file.type)) {
+      setImageError("Please select a valid image file (JPEG, PNG, or GIF)");
+      return false;
+    }
+    
+    if (file.size > maxSize) {
+      setImageError("Image size must be less than 5MB");
+      return false;
+    }
+    
+    setImageError("");
+    return true;
+  };
+
+  const handleImageUpload = (event) => {
+    const file = event.target.files[0];
+    
+    if (!file) {
+      setProfileImage(null);
+      setImagePreview(null);
+      setImageError("");
+      return;
+    }
+    
+    if (validateImage(file)) {
+      setProfileImage(file);
+      
+      // Create preview
+      const reader = new FileReader();
+      reader.onload = (e) => {
+        setImagePreview(e.target.result);
+      };
+      reader.readAsDataURL(file);
+    }
+  };
+
+  const removeImage = () => {
+    setProfileImage(null);
+    setImagePreview(null);
+    setImageError("");
+    // Reset the file input
+    const fileInput = document.getElementById('profile-image-upload');
+    if (fileInput) {
+      fileInput.value = '';
+    }
+  };
+
+  // Fetch and populate profile data
+  const fetchProfileData = async () => {
+    if (isProfileLoaded) return; // Prevent multiple fetches
+    
+    setIsLoadingProfile(true);
+    setProfileError("");
+    
+    try {
+      const response = await viewProfile();
+      
+      if (response.success && response.data) {
+        const profileData = response.data;
+        
+        // Populate basic information
+        if (profileData.firstName) setFirstName(profileData.firstName);
+        if (profileData.lastName) setLastName(profileData.lastName);
+        if (profileData.email) setEmail(profileData.email);
+        if (profileData.dob) {
+          setDob(profileData.dob);
+          setAge(calculateAge(profileData.dob));
+        }
+        if (profileData.goal) setGoal(profileData.goal);
+        if (profileData.experience) setExperience(profileData.experience);
+        
+        // Handle working status - this might need to be mapped from a different field
+        // For now, we'll set it if it exists in the response
+        if (profileData.workingStatus) {
+          setWorkingStatus(profileData.workingStatus);
+        }
+        
+        // Populate priorities
+        if (profileData.priorities && Array.isArray(profileData.priorities)) {
+          setPriorities(profileData.priorities);
+        }
+        
+        // Populate skills - handle both old and new format
+        if (profileData.skills && Array.isArray(profileData.skills)) {
+          const skillsData = profileData.skills.map(skill => 
+            typeof skill === 'string' 
+              ? { id: skill, value: skill } 
+              : skill
+          );
+          setSkills(skillsData);
+        }
+        
+        // Populate industries
+        if (profileData.industries && Array.isArray(profileData.industries)) {
+          setSelectedIndustries(profileData.industries);
+        }
+        
+        // Populate LinkedIn information
+        if (profileData.linkedIn) {
+          if (profileData.linkedIn.profileUrl) setLinkedInProfileUrl(profileData.linkedIn.profileUrl);
+          if (profileData.linkedIn.name) setLinkedInName(profileData.linkedIn.name);
+          if (profileData.linkedIn.summary) setLinkedInSummary(profileData.linkedIn.summary);
+          
+          // Populate LinkedIn experience
+          if (profileData.linkedIn.experience && Array.isArray(profileData.linkedIn.experience)) {
+            const experiencesData = profileData.linkedIn.experience.map(exp => ({
+              id: Date.now() + Math.random(), // Generate unique ID
+              jobTitle: exp.title || "",
+              company: exp.company || "",
+              startDate: exp.startDate ? exp.startDate.substring(0, 7) : "", // Convert to YYYY-MM format
+              endDate: exp.endDate ? exp.endDate.substring(0, 7) : "",
+              location: exp.location || "",
+              currentlyWorking: exp.isCurrent || false
+            }));
+            setExperiences(experiencesData);
+          }
+          
+          // Populate LinkedIn education
+          if (profileData.linkedIn.education && Array.isArray(profileData.linkedIn.education)) {
+            const educationData = profileData.linkedIn.education.map(edu => ({
+              id: Date.now() + Math.random(), // Generate unique ID
+              institution: edu.institutionName || "",
+              degree: edu.degree || "",
+              field: edu.fieldOfStudy || "",
+              startYear: edu.startYear ? edu.startYear.toString() : "",
+              endYear: edu.endYear ? edu.endYear.toString() : ""
+            }));
+            setEducationList(educationData);
+          }
+        }
+        
+        setIsProfileLoaded(true);
+      }
+    } catch (error) {
+      console.error("Error fetching profile:", error);
+      setProfileError(error.message || "Failed to load profile data");
+    } finally {
+      setIsLoadingProfile(false);
+    }
+  };
+
+  // Fetch profile data on component mount only if profileId exists
+  useEffect(() => {
+    // Check if user is editing existing profile
+    const profileId = getProfileId();
+    const isEditMode = hasValidProfileId();
+    
+    setIsEditingProfile(isEditMode);
+    
+    // Only fetch profile data if profileId exists and is valid
+    if (isEditMode) {
+      fetchProfileData();
+    } else {
+      // If no profileId, mark as loaded to show the form without data
+      setIsProfileLoaded(true);
+    }
+  }, []);
+
   const handleRegister = async () => {
+    setIsRegistering(true);
+    setRegistrationError("");
+    
     try {
       const safeString = (str) =>
         typeof str === "string" ? str.toUpperCase().replace(/ /g, "_") : "";
@@ -221,6 +410,7 @@ export default function useRegisterForm() {
         email,
         dob,
         age: age || null,
+        profileImage: profileImage || null,
         goal: goal || null,
         priorities,
         experience: experience || null,
@@ -253,13 +443,100 @@ export default function useRegisterForm() {
         linkedInConnectionsCount: 500,
       };
 
-      console.log("Playload being sent:", JSON.stringify(payload, null, 2));
-      const data = await registerUser(payload);
-      console.log("Registration Success:", data);
-      alert("User registered successfully!");
+      console.log("Payload being sent:", JSON.stringify(payload, null, 2));
+      const response = await registerUser(payload);
+      
+      if (response.success) {
+        console.log("Registration Success:", response);
+        
+        // Save profileId from API response using common utility
+        if (response.data && response.data.userId) {
+          saveProfileId(response.data.userId);
+          console.log("ProfileId saved:", response.data.userId);
+        }
+        
+        alert("User registered successfully!");
+        
+        // Optionally redirect or update UI state
+        // You can add navigation logic here if needed
+        
+      } else {
+        throw new Error(response.message || "Registration failed");
+      }
+      
     } catch (err) {
       console.error("Registration Error:", err);
-      alert(err.message || "Registration failed");
+      const errorMessage = err.message || err.response?.data?.message || "Registration failed";
+      setRegistrationError(errorMessage);
+      alert(errorMessage);
+    } finally {
+      setIsRegistering(false);
+    }
+  };
+
+  const handleEditProfile = async () => {
+    setIsRegistering(true);
+    setRegistrationError("");
+    
+    try {
+      const payload = {
+        firstName,
+        lastName,
+        email,
+        dob,
+        goal: goal || null,
+        priorities,
+        experience: experience || null,
+        workingStatus: workingStatus?.id || null,
+        skills: skills.map((s) => s.id),
+        industries: selectedIndustries,
+        linkedInProfileUrl,
+        linkedInName,
+        linkedInSummary,
+        linkedInExperience: (experiences || []).map((exp) => ({
+          title: exp.jobTitle,
+          company: exp.company,
+          startDate: exp.startDate,
+          endDate: exp.currentlyWorking
+            ? null
+            : exp.endDate
+            ? `${exp.endDate}-01`
+            : null,
+          location: exp.location,
+          isCurrent: exp.currentlyWorking,
+        })),
+        linkedInEducation: (educationList || []).map((edu) => ({
+          institutionName: edu.institution,
+          degree: edu.degree,
+          fieldOfStudy: edu.field,
+          startYear: parseInt(edu.startYear) || null,
+          endYear: parseInt(edu.endYear) || null,
+        })),
+        linkedInSkills: skills.map((s) => s.value),
+        linkedInConnectionsCount: 500,
+      };
+
+      console.log("Edit Profile Payload:", JSON.stringify(payload, null, 2));
+      const response = await editProfile(payload);
+      
+      if (response.success) {
+        console.log("Profile Update Success:", response);
+        alert("Profile updated successfully!");
+        
+        // Optionally refresh the profile data
+        await fetchProfileData();
+        
+      } else {
+        throw new Error(response.message || "Profile update failed");
+      }
+      
+    } catch (err) {
+      console.error("Profile Update Error:", err);
+      const errorMessage = err.message || err.response?.data?.message || "Profile update failed";
+      setRegistrationError(errorMessage);
+      alert(errorMessage);
+    } finally {
+      setIsRegistering(false);
     }
   };
   // console.log("goal:", goal);
@@ -313,6 +590,12 @@ export default function useRegisterForm() {
     setLinkedInName,
     linkedInSummary,
     setLinkedInSummary,
+    profileImage,
+    setProfileImage,
+    imagePreview,
+    setImagePreview,
+    imageError,
+    setImageError,
 
     addPriority,
     handlePriorityKey,
@@ -330,7 +613,19 @@ export default function useRegisterForm() {
     addEducation,
     updateEducation,
     removeEducation,
+    handleImageUpload,
+    removeImage,
+    validateImage,
+    isLoadingProfile,
+    profileError,
+    isProfileLoaded,
+    fetchProfileData,
+    isRegistering,
+    registrationError,
+    setRegistrationError,
+    isEditingProfile,
     handleRegister,
+    handleEditProfile,
     MAX_PRIORITIES,
     MAX_SKILLS,
     MAX_SELECTABLE_INDUSTRIES,

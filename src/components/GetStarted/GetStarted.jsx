@@ -6,6 +6,7 @@ import useAuthStore from "../../store/authStore";
 import { Phone, Lock, Loader2 } from "lucide-react";
 import { ToastContainer, toast } from "react-toastify";
 import "react-toastify/dist/ReactToastify.css";
+import { saveProfileId } from "../../utils/profileUtils";
 
 
 
@@ -59,6 +60,9 @@ const GetStarted = () => {
         const { token, profileId } = response.data.data;
 
         setToken(token);
+        
+        // Save profileId to localStorage (even if it's null)
+        saveProfileId(profileId);
 
         setTimeout(() => {
           if (profileId && profileId !== "null") {

@@ -63,7 +63,25 @@ const Register = () => {
     setLinkedInName,
     linkedInSummary,
     setLinkedInSummary,
+    profileImage,
+    setProfileImage,
+    imagePreview,
+    setImagePreview,
+    imageError,
+    setImageError,
+    handleImageUpload,
+    removeImage,
+    validateImage,
+    isLoadingProfile,
+    profileError,
+    isProfileLoaded,
+    fetchProfileData,
+    isRegistering,
+    registrationError,
+    setRegistrationError,
+    isEditingProfile,
     handleRegister,
+    handleEditProfile,
     MAX_PRIORITIES,
     MAX_SKILLS,
     MAX_INDUSTRIES,
@@ -86,13 +104,55 @@ const Register = () => {
   const [formValues, setFormValues] = useState({});
 
 
+  // Show loading state
+  if (isLoadingProfile) {
+    return (
+      <div className="register-page">
+        <div className="register-box">
+          <div className="loading-container">
+            <div className="loading-spinner"></div>
+            <p>Loading your profile...</p>
+          </div>
+        </div>
+      </div>
+    );
+  }
+
+  // Show error state
+  if (profileError && !isProfileLoaded) {
+    return (
+      <div className="register-page">
+        <div className="register-box">
+          <div className="error-container">
+            <h2>Error Loading Profile</h2>
+            <p>{profileError}</p>
+            <button onClick={fetchProfileData} className="retry-button">
+              Try Again
+            </button>
+          </div>
+        </div>
+      </div>
+    );
+  }
+
   return (
     <div className="register-page">
       <div className="register-box">
-        <h1 className="register-heading">Complete Your Profile</h1>
+        <h1 className="register-heading">
+          {isEditingProfile ? "Edit Profile" : "Complete Your Profile"}
+        </h1>
         <p className="register-para">
-          Help us match you with the right connections
+          {isEditingProfile 
+            ? "Update your profile information" 
+            : "Help us match you with the right connections"
+          }
         </p>
+        
+        {isProfileLoaded && isEditingProfile && (
+          <div className="profile-loaded-notice">
+            <p>✓ Profile data loaded successfully - You can now edit your information</p>
+          </div>
+        )}
 
         {/* Name */}
 
@@ -130,30 +190,67 @@ const Register = () => {
           />
         </div>
 
-        {/* DOB */}
+        {/* DOB and Profile Image */}
 
-        <div className="form-group">
-          <label>Date of Birth</label>
-          <input
-            type="date"
-            value={dob}
-            onChange={(e) => setDob(e.target.value)}
-          />
-
-          <div className="form-group" style={{ flex: 1 }}>
-            <label>Age</label>
+        <div className="form-row">
+          <div className="form-group">
+            <label>Date of Birth</label>
             <input
-              type="text"
-              value={age}
-              readOnly
-              placeholder="Auto-calculated"
-              className="age-input"
-              style={{
-                backgroundColor: "#f5f5f5",
-                cursor: "not-allowed",
-                color: "#666",
-              }}
+              type="date"
+              value={dob}
+              onChange={(e) => setDob(e.target.value)}
             />
+            <div className="form-group" style={{ flex: 1, marginTop: '0.5rem' }}>
+              <label>Age</label>
+              <input
+                type="text"
+                value={age}
+                readOnly
+                placeholder="Auto-calculated"
+                className="age-input"
+                style={{
+                  backgroundColor: "#f5f5f5",
+                  cursor: "not-allowed",
+                  color: "#666",
+                }}
+              />
+            </div>
+          </div>
+
+          <div className="form-group">
+            <label>Profile Image</label>
+            <div className="image-upload-container">
+              {imagePreview ? (
+                <div className="image-preview-container">
+                  <img src={imagePreview} alt="Profile preview" className="image-preview" />
+                  <button
+                    type="button"
+                    className="remove-image-btn"
+                    onClick={removeImage}
+                    aria-label="Remove image"
+                  >
+                    <X size={16} weight="bold" />
+                  </button>
+                </div>
+              ) : (
+                <div className="image-upload-placeholder">
+                  <input
+                    type="file"
+                    id="profile-image-upload"
+                    accept="image/jpeg,image/jpg,image/png,image/gif"
+                    onChange={handleImageUpload}
+                    style={{ display: 'none' }}
+                  />
+                  <label htmlFor="profile-image-upload" className="image-upload-label">
+                    <Plus size={24} weight="bold" />
+                    <span>Upload Image</span>
+                  </label>
+                </div>
+              )}
+              {imageError && (
+                <div className="image-error">{imageError}</div>
+              )}
+            </div>
           </div>
         </div>
 
@@ -765,12 +862,38 @@ const Register = () => {
           </div>
         </div>
 
+        {/* Registration Error Display */}
+        {registrationError && (
+          <div className="registration-error">
+            <p>❌ {registrationError}</p>
+            <button 
+              onClick={() => setRegistrationError("")}
+              className="error-dismiss"
+            >
+              ✕
+            </button>
+          </div>
+        )}
+
         {/* Buttons */}
 
         <div className="button-container">
-          <button className="btn-draft">Save as Draft</button>
-          <button className="btn-complete" onClick={handleRegister}>
-            Complete Profile
+          <button className="btn-draft" disabled={isRegistering}>
+            Save as Draft
+          </button>
+          <button 
+            className="btn-complete" 
+            onClick={isEditingProfile ? handleEditProfile : handleRegister}
+            disabled={isRegistering}
+          >
+            {isRegistering ? (
+              <>
+                <div className="loading-spinner-small"></div>
+                {isEditingProfile ? "Updating..." : "Registering..."}
+              </>
+            ) : (
+              isEditingProfile ? "Update Profile" : "Complete Profile"
+            )}
           </button>
         </div>
       </div>
