@@ -1,5 +1,4 @@
-
-import React from "react";
+import React, { useState } from "react";
 import "./DiscoverPage.css";
 import { Suitcase, MapPin, X, HeartStraight } from "phosphor-react";
 import useDiscoverProfiles from "./useDiscoverProfiles";
@@ -7,8 +6,32 @@ import { Loader2 } from "lucide-react";
 import { ToastContainer } from "react-toastify";
 import "react-toastify/dist/ReactToastify.css";
 
+
 function DiscoverPage() {
   const { current, interact, loading, error } = useDiscoverProfiles();
+  const [showModal, setShowModal] = useState(false);
+  const [message, setMessage] = useState("");
+  const [sending, setSending] = useState(false);
+
+  const handleLike = () => {
+    setShowModal(true);
+  };
+
+  const handleSend = async () => {
+    setSending(true);
+    await interact("LIKE", message);
+    setMessage("");
+    setSending(false);
+    setShowModal(false);
+  };
+
+  const handleSkip = async () => {
+    setSending(true);
+    await interact("LIKE", "");
+    setMessage("");
+    setSending(false);
+    setShowModal(false);
+  };
 
   if (loading)
     return (
@@ -80,7 +103,10 @@ function DiscoverPage() {
             <MapPin size={20} color="#847062" />
             <span style={{ marginLeft: "8px" }}>{current.location}</span>
           </p>
-          <p className="about">{current.about}</p>
+          <p className="about">
+            {/* {current.about} */}
+            ibvievnqeuhvnqv9qe9nvi9ernvnribniofnvonjnhbygebyheurtjjocvhbyt8hfjmlsmjnv,mmsdiufaehgruhrfiubyuvbu berugiunebgbyehjnuishgiubawefubpivnjiaeb
+          </p>
 
           <div className="discover-tags">
             <p className="tag-heading">Skills</p>
@@ -105,27 +131,72 @@ function DiscoverPage() {
               <X size={16} color="#ef4444" weight="bold" />
             </button>
 
-            <button className="like" onClick={() => interact("LIKE")}>
+            <button className="like" onClick={handleLike}>
               <HeartStraight size={16} color="#93501f" weight="bold" />
             </button>
           </div>
         </div>
       </div>
 
-         <ToastContainer
-                position="top-right"
-                autoClose={2500}
-                hideProgressBar={false}
-                newestOnTop
-                closeOnClick
-                pauseOnFocusLoss
-                draggable
-                pauseOnHover
-                theme="colored"
-              />
+      {showModal && (
+        <div className="modal-overlay">
+          <div className="modal-content animate-popup">
+            <h3>Add a message</h3>
+            <textarea
+              value={message}
+              onChange={(e) => setMessage(e.target.value)}
+              placeholder="Write a message..."
+              rows={4}
+              disabled={sending}
+            />
+            <div className="modal-actions">
+              <button
+                onClick={handleSend}
+                className="send-btn"
+                disabled={sending}
+              >
+                {sending ? (
+                  <Loader2 className="animate-spin" size={16} />
+                ) : (
+                  "Send"
+                )}
+              </button>
+              <button
+                onClick={handleSkip}
+                className="skip-btn"
+                disabled={sending}
+              >
+                {sending ? (
+                  <Loader2 className="animate-spin" size={16} />
+                ) : (
+                  "Skip"
+                )}
+              </button>
+              <button
+                onClick={() => setShowModal(false)}
+                className="cancel-btn"
+                disabled={sending}
+              >
+                Cancel
+              </button>
+            </div>
+          </div>
+        </div>
+      )}
+
+      <ToastContainer
+        position="top-right"
+        autoClose={2500}
+        hideProgressBar={false}
+        newestOnTop
+        closeOnClick
+        pauseOnFocusLoss
+        draggable
+        pauseOnHover
+        theme="colored"
+      />
     </div>
   );
 }
 
 export default DiscoverPage;
-

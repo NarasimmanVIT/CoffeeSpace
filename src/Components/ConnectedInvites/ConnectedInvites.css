@@ -7,10 +7,11 @@
 }
 
 .invite-card h1 {
-  margin: 0 0 16px;
+  margin: 0; 
   font-size: 24px;
   font-weight: 500;
-  color: #30251d
+  color: #30251d;
+  padding-bottom: 8px; 
 }
 
 .Profiles {

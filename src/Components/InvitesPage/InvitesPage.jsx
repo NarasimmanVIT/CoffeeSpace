@@ -8,8 +8,6 @@ import useInvites from "./useInvites";
 
 const InvitesPage = () => {
   const [activeTab, setActiveTab] = useState("received");
-
-  
   const { receivedInvites, connected, handleAccept, handleDecline } = useInvites();
 
   return (

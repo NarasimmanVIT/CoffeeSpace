@@ -1,23 +1,31 @@
+
 body {
+  margin: 0;
+  padding: 0;
   width: 100%;
-  height: auto;
+  min-height: 100vh;
   background-color: #f8f4f1;
+  overflow-x: hidden; 
 }
+
 
 .invites-page {
   font-family: Arial, sans-serif;
   padding: 24px;
   color: #30251d;
-  margin-left: 10rem;
-  margin-right: 10rem;
-  font: ui-sans-serif, system-ui, sans-serif;
+  margin-left: auto;
+  margin-right: auto;
+  max-width: 1100px; 
   font-weight: 700;
 }
 
+
 .invites-page h2 {
   margin-top: 5rem;
+  padding-bottom: 10px;
   font-size: 1.5rem;
 }
+
 
 .sub-navbar {
   border-radius: 8px;
@@ -25,7 +33,9 @@ body {
   display: flex;
   justify-content: space-around;
   border-bottom: 1px solid #ddd;
-  padding: 5px 5px;
+  padding: 5px;
+  width: 100%;
+  box-sizing: border-box;
 }
 
 .sub-navbar button {
@@ -35,19 +45,22 @@ body {
   color: #847062;
   cursor: pointer;
   padding: 6px 12px;
-  width: 100%;
+  flex: 1; 
 }
 
 .sub-navbar .active {
   background-color: #f9f8f5;
 }
 
+
 .placeholder {
   display: flex;
   justify-content: center;
   align-items: center;
   height: 120px;
+  text-align: center;
 }
+
 
 .simple-btn {
   padding: 8px 16px;
@@ -57,11 +70,16 @@ body {
   cursor: pointer;
 }
 
+
 @media (max-width: 1100px) {
   .invites-page {
     width: 100%;
-    margin-left: 5px;
-    margin-right: 5px;
+    margin-left: 10px;
+    margin-right: 10px;
+  }
+
+  .invites-page h2 {
+    padding-top: 10px;
   }
 }
 
@@ -69,11 +87,13 @@ body {
 @media (max-width: 480px) {
   .invites-page {
     padding: 12px;
+    margin: 0 auto;
   }
 
   .invites-page h2 {
     font-size: 20px;
     margin-top: 2.5rem;
+    padding-top: 10px;
   }
 
   .sub-navbar button {
@@ -89,6 +109,5 @@ body {
   .placeholder {
     height: 80px;
     font-size: 14px;
-    text-align: center;
   }
 }

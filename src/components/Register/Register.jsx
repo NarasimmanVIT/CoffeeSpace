@@ -1,7 +1,6 @@
 import React, { useState, useRef, useEffect } from "react";
 import "./Register.css";
 import { CaretDown, Plus, X } from "phosphor-react";
-
 import axiosInstance from "../../api/axiosInstance";
 import useRegisterForm from "./hooks/useRegisterForm";
 import CustomDropdown from "./CustomDropdown";

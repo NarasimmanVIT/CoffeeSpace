@@ -1,8 +1,7 @@
 import { useState } from "react";
-import invitesData from "../../Data/invitesData";
 
 const useInvites = () => {
-  const [receivedInvites, setReceivedInvites] = useState(invitesData);
+  const [receivedInvites, setReceivedInvites] = useState([]);
   const [connected, setConnected] = useState([]);
 
   const handleAccept = (id) => {
