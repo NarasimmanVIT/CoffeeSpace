@@ -1,0 +1,117 @@
+name: Deploy Frontend to EC2
+
+on:
+  push:
+    branches: [ main ]
+  workflow_dispatch:
+
+env:
+  AWS_REGION: ap-south-1
+  AWS_ACCOUNT_ID: 312471576153
+  ECR_REPO: coffeespace-frontend
+  EC2_INSTANCE_IDS: i-0dbc533f9c7a8cf30
+
+jobs:
+  deploy:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout repo
+        uses: actions/checkout@v4
+
+      - name: Load environment variables
+        run: |
+          if [ -f .env ]; then
+            export $(grep -v '^#' .env | xargs)
+            echo "VITE_API_BASE_URL=${VITE_API_BASE_URL:-https://15.207.98.173:9443}" >> $GITHUB_ENV
+            echo "✅ Environment variables loaded"
+          else
+            echo "VITE_API_BASE_URL=https://15.207.98.173:9443" >> $GITHUB_ENV
+            echo "⚠️  Using default API URL"
+          fi
+
+      - name: Configure AWS credentials
+        uses: aws-actions/configure-aws-credentials@v4
+        with:
+          aws-access-key-id: ${{ secrets.AWS_ACCESS_KEY_ID }}
+          aws-secret-access-key: ${{ secrets.AWS_SECRET_ACCESS_KEY }}
+          aws-region: ${{ env.AWS_REGION }}
+
+      - name: Ensure ECR repo exists
+        run: |
+          aws ecr describe-repositories --repository-names "$ECR_REPO" >/dev/null 2>&1 \
+          || aws ecr create-repository --repository-name "$ECR_REPO" >/dev/null 2>&1
+
+      - name: Login to ECR
+        run: |
+          aws ecr get-login-password --region "$AWS_REGION" \
+            | docker login --username AWS --password-stdin "${AWS_ACCOUNT_ID}.dkr.ecr.${AWS_REGION}.amazonaws.com"
+
+      - name: Build and push Docker image
+        run: |
+          # Build image with build args
+          docker build \
+            --build-arg VITE_API_BASE_URL="$VITE_API_BASE_URL" \
+            -t coffeespace-frontend:latest .
+          
+          # Tag and push
+          docker tag coffeespace-frontend:latest "${AWS_ACCOUNT_ID}.dkr.ecr.${AWS_REGION}.amazonaws.com/${ECR_REPO}:latest"
+          docker tag coffeespace-frontend:latest "${AWS_ACCOUNT_ID}.dkr.ecr.${AWS_REGION}.amazonaws.com/${ECR_REPO}:${GITHUB_SHA}"
+          
+          docker push "${AWS_ACCOUNT_ID}.dkr.ecr.${AWS_REGION}.amazonaws.com/${ECR_REPO}:latest"
+          docker push "${AWS_ACCOUNT_ID}.dkr.ecr.${AWS_REGION}.amazonaws.com/${ECR_REPO}:${GITHUB_SHA}"
+
+      - name: Deploy Frontend via SSM
+        run: |
+          echo "🚀 Deploying frontend service..."
+          
+          COMMAND_ID=$(aws ssm send-command \
+            --targets "Key=instanceIds,Values=$EC2_INSTANCE_IDS" \
+            --document-name "AWS-RunShellScript" \
+            --comment "Deploy frontend service" \
+            --parameters '{
+              "commands": [
+                "echo \"=== Frontend Deployment Started ===\"",
+                "cd /home/ubuntu/app",
+                
+                "echo \"Logging in to ECR...\"",
+                "aws ecr get-login-password --region '"$AWS_REGION"' | docker login --username AWS --password-stdin '"$AWS_ACCOUNT_ID"'.dkr.ecr.'"$AWS_REGION"'.amazonaws.com",
+                
+                "echo \"Setting up environment variables...\"",
+                "export AWS_ACCOUNT_ID='"$AWS_ACCOUNT_ID"'",
+                "export AWS_REGION='"$AWS_REGION"'",
+                
+                "echo \"Pulling latest frontend image...\"",
+                "docker pull '"$AWS_ACCOUNT_ID"'.dkr.ecr.'"$AWS_REGION"'.amazonaws.com/coffeespace-frontend:latest",
+                
+                "echo \"Recreating frontend container...\"",
+                "docker compose up -d frontend nginx --remove-orphans",
+                
+                "echo \"Waiting for services to be ready...\"",
+                "sleep 10",
+                
+                "echo \"Verifying frontend deployment...\"",
+                "docker ps | grep -E \"coffeespace-frontend|coffeespace-nginx\"",
+                "docker logs coffeespace-frontend --tail 10",
+                "docker logs coffeespace-nginx --tail 10",
+                
+                "echo \"Testing frontend accessibility...\"",
+                "curl -k -I https://localhost:9443/ || echo \"Frontend not yet ready\"",
+                
+                "echo \"=== Frontend Deployment Completed ===\""
+              ]
+            }' \
+            --region "${AWS_REGION}" \
+            --query "Command.CommandId" \
+            --output text)
+
+          echo "SSM Command ID: $COMMAND_ID"
+          
+          # Monitor command execution
+          ./scripts/monitor_ssm_command.sh "$COMMAND_ID" "$EC2_INSTANCE_IDS" "$AWS_REGION"
+
+      - name: Verify deployment
+        run: |
+          echo "✅ Frontend deployment completed successfully!"
+          echo "Frontend image: ${AWS_ACCOUNT_ID}.dkr.ecr.${AWS_REGION}.amazonaws.com/${ECR_REPO}:${GITHUB_SHA}"
+          echo "Access your app at: https://15.207.98.173:9443"
