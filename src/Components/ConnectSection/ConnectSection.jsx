@@ -1,7 +1,7 @@
 import React from "react";
 import "./ConnectSection.css";
-import ConnectBox from "./ConnectBoxes";
-import connectData from "./ConnectData"
+import ConnectBox from "../Connect/ConnectBoxes";
+import connectData from "../Connect/ConnectData"
 
 // import {  Coffee, Handshake, Lightbulb, RocketLaunch } from "phosphor-react";
 
@@ -40,7 +40,7 @@ const ConnectSection = () => {
       <div className="connect-top">
         <h1>Connect Based on Shared Interests</h1>
         <p>
-         CoffeeSpace brings together entrepreneurs who share similar business interests, <br /> industry focus, and collaborative goals. Find your ideal business partners through meaningful connections.
+          CoffeeSpace brings together entrepreneurs who share similar business interests, <br /> industry focus, and collaborative goals. Find your ideal business partners through meaningful connections.
         </p>
 
         <div className="connect-boxes">
@@ -54,7 +54,7 @@ const ConnectSection = () => {
               {item}
             </div>
           ))} */}
-           {connectData.map((box, index) => (
+          {connectData.map((box, index) => (
             <ConnectBox
               key={index}
               icon={box.icon}
@@ -69,7 +69,7 @@ const ConnectSection = () => {
       <div className="connect-bottom">
         <h2>Ready to Find Your Business Partners?</h2>
         <p>
-         Join a community where entrepreneurial minds connect based on shared interests and business goals. Your next <br /> business partner or collaborator is waiting to connect with you.
+          Join a community where entrepreneurial minds connect based on shared interests and business goals. Your next <br /> business partner or collaborator is waiting to connect with you.
         </p>
 
         <div className="connect-buttons">
