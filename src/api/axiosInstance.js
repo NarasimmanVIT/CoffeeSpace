@@ -10,17 +10,16 @@ const axiosInstance = axios.create({
   },
 });
 
-// Request Interceptor
 axiosInstance.interceptors.request.use(
   (config) => {
-    const skipAuthEndpoints = ["/auth/sendOtp", "/auth/verifyOtp"];
+    const skipAuthEndpoints = ["/auth/sendOtp", "/auth/verifyOtp",];
     const shouldSkip = skipAuthEndpoints.some((endpoint) =>
       config.url.includes(endpoint)
     );
 
 
     const token = useAuthStore.getState().token;
-    // console.log("Token in store:", token); 
+    console.log("Token in store:", token); 
 
     if (token && !shouldSkip) {
       config.headers.Authorization = `Bearer ${token}`;
@@ -31,7 +30,7 @@ axiosInstance.interceptors.request.use(
   (error) => Promise.reject(error)
 );
 
-// Response Interceptor
+
 axiosInstance.interceptors.response.use(
   (response) => response,
   (error) => {
@@ -45,32 +44,3 @@ axiosInstance.interceptors.response.use(
 
 export default axiosInstance;
 
-
-
-
-// import axios from "axios";
-// import useAuthStore from "../store/authStore";
-
-// const axiosInstance = axios.create({
-//   baseURL: import.meta.env.VITE_BASE_URL,
-//   timeout: 10000,
-//   headers: {
-//     "Content-Type": "application/json",
-//     "ngrok-skip-browser-warning": "true",
-//   },
-// });
-
-// // Attach token before each request
-// axiosInstance.interceptors.request.use(
-//   (config) => {
-//     // console.log("Token in store:", useAuthStore.getState().token);
-//     const token = useAuthStore.getState().token;
-//     if (token) {
-//       config.headers.Authorization = `Bearer ${token}`;
-//     }
-//     return config;
-//   },
-//   (error) => Promise.reject(error)
-// );
-
-// export default axiosInstance;

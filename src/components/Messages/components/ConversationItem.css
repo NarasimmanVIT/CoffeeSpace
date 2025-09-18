@@ -1,11 +1,10 @@
 .conversation-item {
   display: flex;
   align-items: center;
-  padding: 10px;
-  border-radius: 6px;
+  padding: 12px;
   cursor: pointer;
-  margin-bottom: 10px;
-  transition: background-color 0.3s ease;
+  height: 70px; 
+  border-bottom: 1px solid #eee;
 }
 
 .conversation-item:hover {
@@ -14,6 +13,19 @@
 
 .conversation-item.active {
     background-color: rgb(235, 138, 102);
+}
+.profile-pic, .profile-placeholder {
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  background-color: #d9d9d9;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-weight: bold;
+  color: white;
+  font-size: 18px;
+  margin-right: 12px;
 }
 
 .profile-pic{
@@ -25,21 +37,24 @@
 }
 
 .conversation-text {
-    display: flex;
-    flex-direction: column;
+  flex: 1;
+  overflow: hidden;
 }
 
 .conversation-name {
-    font-size: 16px;
-    font-weight: bold;
-    color: #333;
-    margin: 0;
+  margin: 0;
+  font-size: 14px;
+  font-weight: bold;
+  color: #333;
 }
 
 .conversation-message {
-    font-size: 14ox;
-    color: #666;
-    margin: 4px 0 0;
+  margin: 0;
+  font-size: 13px;
+  color: #777;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis; 
 }
 
 .conversation-image {
@@ -66,4 +81,14 @@
   margin: 4px 0 0;
   font-size: 14px;
   color: #666;
+}
+
+.unread-badge {
+  background-color: #93501f;
+  color: #fff;
+  font-size: 12px;
+  padding: 2px 8px;
+  border-radius: 50%;
+  font-weight: bold;
+  margin-left: 8px;
 }

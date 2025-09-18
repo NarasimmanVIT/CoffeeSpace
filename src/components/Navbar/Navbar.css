@@ -36,11 +36,7 @@ body, html{
   font-weight: bold;
   font-size: 20px;
   color: #2f2121;
-  /* margin-left: 40px; */
-  /* white-space: nowrap;
-  overflow: hidden;
-  text-overflow: ellipsis;
-  max-width: 150px; */
+  
 }
 
 .navbar-links {
@@ -62,7 +58,7 @@ body, html{
   align-items: center;
   margin-right: 14px; 
   text-decoration: none;
-  /* color: #2f2121; */
+
   font-size: 18px;
   padding: 6px 10px;
   border-radius: 6px;
@@ -87,6 +83,8 @@ body, html{
     background-color: #f0f0f0;
     color: black;
 }
+
+
 .navbar-links a{
     display: flex;
     align-items: center;
@@ -253,5 +251,59 @@ body, html{
 .account-dropdown a:hover {
   background-color: #ED8E5E;
   border-radius: 5px;
-  /* color: #ed8e5e; */
+}
+
+.navbar-account {
+  position: relative;
+  display: flex;
+  align-items: center;
+  cursor: pointer;
+  font-weight: 500;
+}
+
+.account-dropdown {
+  position: absolute;
+  top: 110%;
+  right: 0;
+  background: white;
+  border: 1px solid #ddd;
+  border-radius: 8px;
+  box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
+  min-width: 180px;
+  z-index: 1000;
+  display: flex;
+  flex-direction: column;
+}
+
+.account-dropdown a,
+.account-dropdown button {
+  padding: 10px 14px;
+  text-decoration: none;
+  color: #444;
+  font-size: 14px;
+  display: flex;
+  align-items: center;
+  transition: background 0.2s ease;
+  border: none;
+  background: transparent;
+  cursor: pointer;
+  text-align: left;
+  width: 100%;
+}
+
+.account-dropdown a:hover,
+.account-dropdown button:hover {
+  background: #f5f5f5;
+}
+
+.logout-btn {
+  color: #b64b3b;
+  font-weight: 600;
+}
+
+@media screen and (max-width: 768px) {
+  .navbar-links,
+  .navbar-account {
+    display: none 
+  }
 }

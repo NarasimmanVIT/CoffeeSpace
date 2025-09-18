@@ -1,42 +1,48 @@
-import React from 'react';
-import ConversationItem from './ConversationItem';
-import './Sidebar.css';
-import { users } from "../constants/usersData";
+import React from "react";
+import ConversationItem from "./ConversationItem";
+import useSidebar from "../hooks/useSidebar"
+import "./Sidebar.css";
 
-// const users = [
-//   {
-//     id: 1,
-//     name: 'Sarah Chen',
-//     lastMessage: 'That sounds like a great idea! When can we meet?',
-//     image: 'https://via.placeholder.com/40',
-//   },
-//   {
-//     id: 2,
-//     name: 'Marcus Rodriguez',
-//     lastMessage: "I'd love to discuss the project further",
-//     image: 'https://via.placeholder.com/40',
-//   },
-// ];
 
 const Sidebar = ({ selectedUser, setSelectedUser }) => {
+  const {
+    loading,
+    error,
+    search,
+    setSearch,
+    filteredConversations,
+    formatTimestamp,
+  } = useSidebar();
+
   return (
     <div className="sidebar">
       <input
         type="text"
         placeholder="Search conversations..."
         className="sidebar-search sidebar-search-desktop"
+        value={search}
+        onChange={(e) => setSearch(e.target.value)}
       />
 
-      {users.map((user) => (
+      {loading && <p>Loading conversations...</p>}
+      {error && <p className="error">{error}</p>}
+
+      {filteredConversations.map((user) => (
         <ConversationItem
-          key={user.id}
+          key={user.conversationId}
           name={user.name}
           lastMessage={user.lastMessage}
-          image={user.image}
-          isActive={selectedUser?.id === user.id}
+          image={user.avatar}
+          unreadCount={user.unreadCount}
+          isActive={selectedUser?.conversationId === user.conversationId}
           onClick={() => setSelectedUser(user)}
+          time={formatTimestamp(user.lastMessageAt)}
         />
       ))}
+
+      {!loading && !error && filteredConversations.length === 0 && (
+        <p>No conversations found</p>
+      )}
     </div>
   );
 };

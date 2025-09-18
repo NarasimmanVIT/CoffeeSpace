@@ -4,12 +4,10 @@ import ReceivedInvites from "../ReceivedInvites/ReceivedInvites";
 import ConnectedInvites from "../ConnectedInvites/ConnectedInvites";
 import { Tray, PaperPlaneTilt, Users } from "phosphor-react";
 import "./Invitespage.css";
-import useInvites from "./useInvites"; // custom hook for invite handling
+import useInvites from "./useInvites"; 
 
 const InvitesPage = () => {
   const [activeTab, setActiveTab] = useState("received");
-
-  // from custom hook
   const { receivedInvites, connected, handleAccept, handleDecline } = useInvites();
 
   return (
