@@ -1,20 +1,19 @@
-import { create } from 'zustand';
-import { persist } from 'zustand/middleware';
+import { create } from "zustand";
+import { persist } from "zustand/middleware";
 
 const useAuthStore = create(
   persist(
     (set) => ({
       token: null,
+      userId: null,           
       setToken: (token) => set({ token }),
-      clearToken: () => set({ token: null }),
+      setUserId: (id) => set({ userId: id }), 
+      clearToken: () => set({ token: null, userId: null }), 
     }),
     {
-      name: 'auth-storage',
+      name: "auth-storage",
     }
   )
 );
 
 export default useAuthStore;
-
-
-

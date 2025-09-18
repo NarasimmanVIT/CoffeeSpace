@@ -7,29 +7,24 @@ import { Phone, Lock, Loader2 } from "lucide-react";
 import { ToastContainer, toast } from "react-toastify";
 import "react-toastify/dist/ReactToastify.css";
 
-
-
 const GetStarted = () => {
   const navigate = useNavigate();
   const [phoneNumber, setPhoneNumber] = useState("");
   const [otp, setOtp] = useState("");
   const [step, setStep] = useState(1);
   const [loading, setLoading] = useState(false);
-  
+
   const setToken = useAuthStore((state) => state.setToken);
-  
+  const setUserId = useAuthStore((state) => state.setUserId); 
 
   const handleSendOtp = async () => {
     if (!phoneNumber) return toast.warn("Please enter a phone number");
     setLoading(true);
-    
-  
 
     try {
       const response = await axiosInstance.post("/auth/sendOtp", {
-        phoneNumber : phoneNumber,
+        phoneNumber: phoneNumber,
       });
-      
 
       if (response.data.success) {
         toast.success("OTP sent successfully");
@@ -59,6 +54,7 @@ const GetStarted = () => {
         const { token, profileId } = response.data.data;
 
         setToken(token);
+        setUserId(profileId);
 
         setTimeout(() => {
           if (profileId && profileId !== "null") {
@@ -154,4 +150,3 @@ const GetStarted = () => {
 };
 
 export default GetStarted;
-

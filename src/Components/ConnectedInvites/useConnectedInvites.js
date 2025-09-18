@@ -9,7 +9,7 @@ const useConnectedInvites = () => {
   useEffect(() => {
     const fetchConnections = async () => {
       try {
-        const response = await axiosInstance.get("/api/connections?page=0&size=10");
+        const response = await axiosInstance.get("api/connections?page=0&size=10");
         if (response.data.success && response.data.data?.items) {
           setConnections(response.data.data.items);
           console.log("Connections:", response.data.data.items);

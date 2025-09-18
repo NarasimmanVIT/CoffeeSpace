@@ -1,86 +1,21 @@
-import React, { useEffect, useState } from "react";
+import React from "react";
 import MessageItem from "./MessageItem";
 import "./ChatBox.css";
-import { Phone, VideoCamera, DotsThreeVertical } from "phosphor-react";
-import axiosInstance from "../../../api/axiosInstance";
+import { DotsThreeVertical, ArrowLeft } from "phosphor-react";
+import useChatBox from "../hooks/useChatBox";
 
 const ChatBox = ({ selectedUser, onBack }) => {
-  const [messages, setMessages] = useState([]);
-  const [loading, setLoading] = useState(true);
-  const [error, setError] = useState(null);
-  const [newMessage, setNewMessage] = useState("");
-  const [sending, setSending] = useState(false);
-  const [myId, setMyId] = useState(null);
-
-  const formatTime = (timestamp) => {
-    if (!timestamp) return "";
-    const date = new Date(timestamp);
-    return date.toLocaleTimeString([], { hour: "2-digit", minute: "2-digit" });
-  };
-
-  useEffect(() => {
-    if (!selectedUser?.conversationId) return;
-
-    const fetchMessages = async () => {
-      setLoading(true);
-      try {
-        const res = await axiosInstance.get(
-          `api/conversations/${selectedUser.conversationId}/messages?page=0&size=20`
-        );
-
-        if (res.data.success) {
-          const msgs = res.data.data.messages || [];
-          setMessages(msgs);
-
-          if (msgs.length > 0) {
-            const ownId = msgs.find(msg => msg.senderId !== selectedUser.participantId)?.senderId;
-            setMyId(ownId || msgs[0].receiverId); 
-          } else {
-            setMyId(1);
-          }
-        } else {
-          setError(res.data.message || "Failed to fetch messages");
-        }
-      } catch (err) {
-        setError(err.message || "Something went wrong");
-      } finally {
-        setLoading(false);
-      }
-    };
-
-    fetchMessages();
-  }, [selectedUser?.conversationId]);
-
-  const handleSendMessage = async () => {
-    if (!newMessage.trim()) return;
-    setSending(true);
-
-    try {
-      const res = await axiosInstance.post(
-        "/api/messages",
-        {
-          conversationId: selectedUser.conversationId,
-          receiverId: selectedUser.participantId,
-          text: newMessage.trim(),
-        }
-      );
-
-      if (res.data.success) {
-        const sentMessage = res.data.data;
-        setMessages((prev) => [...prev, sentMessage]);
-
-        if (!myId) setMyId(sentMessage.senderId);
-
-        setNewMessage("");
-      } else {
-        alert(res.data.message || "Failed to send message");
-      }
-    } catch (err) {
-      alert(err.message || "Error sending message");
-    } finally {
-      setSending(false);
-    }
-  };
+  const {
+    messages,
+    loading,
+    error,
+    newMessage,
+    setNewMessage,
+    sending,
+    handleSendMessage,
+    myId,
+    formatTime,
+  } = useChatBox(selectedUser);
 
   if (!selectedUser) {
     return (
@@ -93,14 +28,16 @@ const ChatBox = ({ selectedUser, onBack }) => {
   return (
     <div className="chat-box">
       <div className="chat-header">
-        <button className="back-button" onClick={onBack}>
-          ←
-        </button>
+        <div className="chat-header-icons">
+          <button onClick={onBack}>
+            <ArrowLeft size={22} color={black}/>
+          </button>
+        </div>
         <div className="chat-user-info">{selectedUser.name}</div>
         <div className="chat-header-icons">
-          <Phone size={20} />
-          <VideoCamera size={20} />
-          <DotsThreeVertical size={20} />
+          <button>
+            <DotsThreeVertical size={20} color={black}/>
+          </button>
         </div>
       </div>
 
@@ -115,9 +52,9 @@ const ChatBox = ({ selectedUser, onBack }) => {
           myId &&
           messages.map((msg) => (
             <MessageItem
-              key={msg.messageId}
+              key={msg.messageId || msg.sentAt}
               text={msg.text}
-              type={msg.senderId === myId ? "sent" : "received"}
+              type={String(msg.senderId) === String(myId) ? "sent" : "received"}
               time={formatTime(msg.sentAt)}
             />
           ))}
@@ -129,7 +66,14 @@ const ChatBox = ({ selectedUser, onBack }) => {
           rows="1"
           value={newMessage}
           onChange={(e) => setNewMessage(e.target.value)}
+          onKeyDown={(e) => {
+            if (e.key === "Enter" && !e.shiftKey) {
+              e.preventDefault(); 
+              handleSendMessage();
+            }
+          }}
         ></textarea>
+
         <button onClick={handleSendMessage} disabled={sending}>
           {sending ? "Sending..." : "Send"}
         </button>

@@ -6,16 +6,14 @@ import { Loader2 } from "lucide-react";
 import { ToastContainer } from "react-toastify";
 import "react-toastify/dist/ReactToastify.css";
 
-
 function DiscoverPage() {
   const { current, interact, loading, error } = useDiscoverProfiles();
   const [showModal, setShowModal] = useState(false);
   const [message, setMessage] = useState("");
   const [sending, setSending] = useState(false);
 
-  const handleLike = () => {
-    setShowModal(true);
-  };
+
+  const handleLike = () => setShowModal(true);
 
   const handleSend = async () => {
     setSending(true);
@@ -31,6 +29,13 @@ function DiscoverPage() {
     setMessage("");
     setSending(false);
     setShowModal(false);
+  };
+
+
+  const handleDislike = async () => {
+    setSending(true);
+    await interact("DISLIKE"); 
+    setSending(false);
   };
 
   if (loading)
@@ -103,10 +108,7 @@ function DiscoverPage() {
             <MapPin size={20} color="#847062" />
             <span style={{ marginLeft: "8px" }}>{current.location}</span>
           </p>
-          <p className="about">
-            {/* {current.about} */}
-            ibvievnqeuhvnqv9qe9nvi9ernvnribniofnvonjnhbygebyheurtjjocvhbyt8hfjmlsmjnv,mmsdiufaehgruhrfiubyuvbu berugiunebgbyehjnuishgiubawefubpivnjiaeb
-          </p>
+          <p className="about">{current.about}</p>
 
           <div className="discover-tags">
             <p className="tag-heading">Skills</p>
@@ -127,11 +129,11 @@ function DiscoverPage() {
           </div>
 
           <div className="discover-buttons">
-            <button className="x" onClick={() => interact("DISLIKE")}>
+            <button className="x" onClick={handleDislike} disabled={sending}>
               <X size={16} color="#ef4444" weight="bold" />
             </button>
 
-            <button className="like" onClick={handleLike}>
+            <button className="like" onClick={handleLike} disabled={sending}>
               <HeartStraight size={16} color="#93501f" weight="bold" />
             </button>
           </div>
@@ -155,22 +157,14 @@ function DiscoverPage() {
                 className="send-btn"
                 disabled={sending}
               >
-                {sending ? (
-                  <Loader2 className="animate-spin" size={16} />
-                ) : (
-                  "Send"
-                )}
+                {sending ? <Loader2 className="animate-spin" size={16} /> : "Send"}
               </button>
               <button
                 onClick={handleSkip}
                 className="skip-btn"
                 disabled={sending}
               >
-                {sending ? (
-                  <Loader2 className="animate-spin" size={16} />
-                ) : (
-                  "Skip"
-                )}
+                {sending ? <Loader2 className="animate-spin" size={16} /> : "Skip"}
               </button>
               <button
                 onClick={() => setShowModal(false)}

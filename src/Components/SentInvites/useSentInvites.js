@@ -9,7 +9,7 @@ const useSentInvites = () => {
   useEffect(() => {
     const fetchSentInvites = async () => {
       try {
-        const response = await axiosInstance.get("/api/invites/sent?page=0&size=10");
+        const response = await axiosInstance.get("api/invites/sent?page=0&size=10");
 
         if (response.data.success && response.data.data?.items) {
           setInvites(response.data.data.items);

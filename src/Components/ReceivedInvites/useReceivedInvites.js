@@ -11,7 +11,7 @@ const useReceivedInvites = () => {
     const fetchInvites = async () => {
       try {
         const response = await axiosInstance.get(
-          "/api/invites/received?page=0&size=10"
+          "api/invites/received?page=0&size=10"
         );
         if (response.data.success && response.data.data?.items) {
           setInvites(response.data.data.items);
@@ -31,7 +31,7 @@ const useReceivedInvites = () => {
 
   const handleResponse = async (inviteId, action) => {
     try {
-      const response = await axiosInstance.post("/api/invite/response", {
+      const response = await axiosInstance.post("api/invite/response", {
         inviteId,
         type: action,
       });
