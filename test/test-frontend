@@ -1,0 +1,18 @@
+version: "3.8"
+
+networks:
+  app_net:
+    driver: bridge
+    external: false
+
+services:
+  frontend:
+    image: "${AWS_ACCOUNT_ID}.dkr.ecr.${AWS_REGION}.amazonaws.com/coffeespace-frontend:latest"
+    container_name: coffeespace-frontend
+    restart: always
+    ports:
+      - "80:80"
+    networks:
+      - app_net
+    environment:
+      VITE_API_BASE_URL: "https://c39de131bdbd.ngrok-free.app/"
