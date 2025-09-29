@@ -29,7 +29,10 @@ export const useNavbar = () => {
     isMobileMenuOpen,
     toggleMenu,
     isAccountDropdownOpen,
+    setIsAccountDropdownOpen, 
     toggleAccountDropdown,
-    location
+    location,
   };
 };
+
+

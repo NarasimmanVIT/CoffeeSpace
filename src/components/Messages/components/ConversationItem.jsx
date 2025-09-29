@@ -1,6 +1,6 @@
 import React from "react";
 import "./ConversationItem.css";
-import { flushSync } from "react-dom";
+
 
 const ConversationItem = ({ name, lastMessage, isActive, image, unreadCount, onClick }) => {
   const getInitial = (name) => {

@@ -1,4 +1,6 @@
-import React from "react";
+import axiosInstance from "../../api/axiosInstance";
+import useAuthStore from "../../store/authStore";
+import React, { useRef, useEffect } from "react";
 import "./Navbar.css";
 import { Link, useNavigate } from "react-router-dom";
 import {
@@ -13,7 +15,7 @@ import {
   IdentificationCard,
 } from "phosphor-react";
 import { useNavbar } from "./useNavbar";
-import useAuthStore from "../../store/authStore";
+
 
 const Navbar = () => {
   const {
@@ -21,6 +23,7 @@ const Navbar = () => {
     isMobileMenuOpen,
     toggleMenu,
     isAccountDropdownOpen,
+    setIsAccountDropdownOpen,
     toggleAccountDropdown,
     location,
   } = useNavbar();
@@ -29,10 +32,30 @@ const Navbar = () => {
   const clearToken = useAuthStore((state) => state.clearToken);
   const navigate = useNavigate();
 
-  const handleLogout = () => {
-    clearToken();
-    navigate("/");
+  const accountRef = useRef(null);
+
+  const handleLogout = async () => {
+    try {
+      await axiosInstance.post("/auth/logout"); 
+    } catch (error) {
+      console.error("Logout failed:", error.response?.data || error.message);
+    } finally {
+      clearToken(); 
+      navigate("/"); 
+    }
   };
+
+  useEffect(() => {
+    const handleClickOutside = (event) => {
+      if (accountRef.current && !accountRef.current.contains(event.target)) {
+        setIsAccountDropdownOpen(false);
+      }
+    };
+    document.addEventListener("mousedown", handleClickOutside);
+    return () => {
+      document.removeEventListener("mousedown", handleClickOutside);
+    };
+  }, [setIsAccountDropdownOpen]);
 
   return (
     <>
@@ -112,8 +135,12 @@ const Navbar = () => {
             )}
           </div>
 
-
-          <div className="navbar-account" onClick={toggleAccountDropdown}>
+          {/* Account Dropdown */}
+          <div
+            className="navbar-account"
+            ref={accountRef}
+            onClick={toggleAccountDropdown}
+          >
             <UserCircle size={22} style={{ marginRight: "6px" }} />
             {token ? "Account" : "Get Started"}
             {isAccountDropdownOpen && (
@@ -152,6 +179,7 @@ const Navbar = () => {
             )}
           </div>
 
+          {/* Mobile Menu */}
           <div className="mobile-menu-icon" onClick={toggleMenu}>
             <svg
               width="28"
@@ -166,7 +194,6 @@ const Navbar = () => {
           </div>
         </div>
       </nav>
-
 
       <div className={`mobile-menu ${isMobileMenuOpen ? "open" : ""}`}>
         <div className="close-icon" onClick={toggleMenu}>

@@ -1,8 +1,7 @@
 import React from "react";
 import ConversationItem from "./ConversationItem";
-import useSidebar from "../hooks/useSidebar"
+import useSidebar from "../hooks/useSidebar";
 import "./Sidebar.css";
-
 
 const Sidebar = ({ selectedUser, setSelectedUser }) => {
   const {
@@ -12,6 +11,7 @@ const Sidebar = ({ selectedUser, setSelectedUser }) => {
     setSearch,
     filteredConversations,
     formatTimestamp,
+    markAsReadLocal
   } = useSidebar();
 
   return (
@@ -34,8 +34,12 @@ const Sidebar = ({ selectedUser, setSelectedUser }) => {
           lastMessage={user.lastMessage}
           image={user.avatar}
           unreadCount={user.unreadCount}
+          online={user.isOnline}
           isActive={selectedUser?.conversationId === user.conversationId}
-          onClick={() => setSelectedUser(user)}
+          onClick={() => {
+            setSelectedUser(user);
+            markAsReadLocal(user.conversationId); 
+          }}
           time={formatTimestamp(user.lastMessageAt)}
         />
       ))}

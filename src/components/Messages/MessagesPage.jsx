@@ -1,6 +1,4 @@
 import React, { useState, useEffect } from 'react';
-// import Sidebar from './Sidebar';
-// import ChatBox from './ChatBox';
 import Sidebar from './components/Sidebar';
 import ChatBox from "./components/ChatBox";
 import './MessagesPage.css';
@@ -9,17 +7,6 @@ import useIsMobile from './hooks/useIsMobile';
 const MessagesPage = () => {
   const [selectedUser, setSelectedUser] = useState(null);
   const isMobile = useIsMobile();
-  // const [isMobile, setIsMobile] = useState(window.innerWidth < 1024);
-
-  // useEffect(() => {
-  //   const handleResize = () => {
-  //     setIsMobile(window.innerWidth < 1024);
-  //   };
-
-  //   window.addEventListener('resize', handleResize);
-  //   return () => window.removeEventListener('resize', handleResize);
-  // }, []);
-
   return (
     <main className="messages-page">
       {!(isMobile && selectedUser) && (

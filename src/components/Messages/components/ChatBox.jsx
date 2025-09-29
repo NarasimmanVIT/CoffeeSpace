@@ -15,6 +15,8 @@ const ChatBox = ({ selectedUser, onBack }) => {
     handleSendMessage,
     myId,
     formatTime,
+    online,
+    messagesEndRef,
   } = useChatBox(selectedUser);
 
   if (!selectedUser) {
@@ -30,13 +32,18 @@ const ChatBox = ({ selectedUser, onBack }) => {
       <div className="chat-header">
         <div className="chat-header-icons">
           <button onClick={onBack}>
-            <ArrowLeft size={22} color={black}/>
+            <ArrowLeft size={22} />
           </button>
         </div>
-        <div className="chat-user-info">{selectedUser.name}</div>
+
+        <div className="chat-user-info">
+          <span>{selectedUser.name}</span>
+          {selectedUser.isOnline && <p className="online">Online</p>}
+        </div>
+
         <div className="chat-header-icons">
           <button>
-            <DotsThreeVertical size={20} color={black}/>
+            <DotsThreeVertical size={20} />
           </button>
         </div>
       </div>
@@ -44,7 +51,6 @@ const ChatBox = ({ selectedUser, onBack }) => {
       <div className="chat-messages">
         {loading && <p>Loading messages...</p>}
         {error && <p className="error">{error}</p>}
-
         {!loading && !error && messages.length === 0 && <p>No messages yet</p>}
 
         {!loading &&
@@ -58,6 +64,7 @@ const ChatBox = ({ selectedUser, onBack }) => {
               time={formatTime(msg.sentAt)}
             />
           ))}
+        <div ref={messagesEndRef} />
       </div>
 
       <div className="chat-input">
@@ -68,7 +75,7 @@ const ChatBox = ({ selectedUser, onBack }) => {
           onChange={(e) => setNewMessage(e.target.value)}
           onKeyDown={(e) => {
             if (e.key === "Enter" && !e.shiftKey) {
-              e.preventDefault(); 
+              e.preventDefault();
               handleSendMessage();
             }
           }}
